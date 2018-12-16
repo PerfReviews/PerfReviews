@@ -3,8 +3,8 @@
 - [Home](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.mediamarkt.es)
 
 ### Cloudinary (imágenes)
-- Informe de Cloudinary `Product detail`. [Potential Compressed Weight](https://webspeedtest.cloudinary.com/results/181215_AE_b0523a71f4f59676465f4420312bb491) `40.3%`
-- Informe de Cloudinary report of `Home`. [Potential Compressed Weight](https://webspeedtest.cloudinary.com/results/181215_XY_a5f9c96e136757a81118a0dc5e834acc) `52.1%`
+- Informe de Cloudinary de la página de producto. [Potential Compressed Weight](https://webspeedtest.cloudinary.com/results/181215_AE_b0523a71f4f59676465f4420312bb491) `40.3%`
+- Informe de Cloudinary de la página de home. [Potential Compressed Weight](https://webspeedtest.cloudinary.com/results/181215_XY_a5f9c96e136757a81118a0dc5e834acc) `52.1%`
 
 ### Webpagetest
 - [Home](https://www.webpagetest.org/result/181215_TR_577ac40f47576d36c4f3370ac783db7d/) | _Chrome - 4G_ | [📺 **Video**](https://www.webpagetest.org/video/view.php?id=181215_TR_577ac40f47576d36c4f3370ac783db7d.1.0)
