@@ -1,4 +1,7 @@
 ## Informes y herramientas
+### PageSpeed Insights
+- [Home](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.mediamarkt.es)
+
 ### Cloudinary (imágenes)
 - Informe de Cloudinary `Product detail`. [Potential Compressed Weight](https://webspeedtest.cloudinary.com/results/181215_AE_b0523a71f4f59676465f4420312bb491) `40.3%`
 - Informe de Cloudinary report of `Home`. [Potential Compressed Weight](https://webspeedtest.cloudinary.com/results/181215_XY_a5f9c96e136757a81118a0dc5e834acc) `52.1%`
