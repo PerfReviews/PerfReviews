@@ -18,3 +18,6 @@
 26 Unique Font Families
 67 Media Queries
 ```
+
+### Woff2
+- [Google Woff2](https://github.com/google/woff2), una herramienta para generar ficheros de fuentes en formato woff2.
