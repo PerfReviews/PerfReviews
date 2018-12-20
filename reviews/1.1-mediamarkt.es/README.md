@@ -34,7 +34,7 @@
 
 ### Enlaces a otros recursos mencionados
 
-- [You might not need jQuery](http://youmightnotneedjquery.com)
+- [You might not need jQuery](http://youmightnotneedjquery.com), que muestra el código equivalente para reemplazar jQuery con JS estándar.
 - [Google Woff2](https://github.com/google/woff2), una herramienta para generar ficheros de fuentes en formato woff2.
 
 ## Recurso del día
