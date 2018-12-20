@@ -32,11 +32,11 @@
 - [Home Coverage](./reports/Coverage-Home.jpg) `3.0Mb of 4.5Mb are not used (67%)`
 - [Product Coverage](./reports/Coverate-Product.jpg) `3.3Mb of 4.9Mb are not used (67%)`
 
-### Otros
+### Enlaces a otros recursos mencionados
 
 - [You might not need jQuery](http://youmightnotneedjquery.com)
 - [Google Woff2](https://github.com/google/woff2), una herramienta para generar ficheros de fuentes en formato woff2.
 
-## Resource
+## Recurso del día
 
 - [web.dev/Learn](https://web.dev/learn)
