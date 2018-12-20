@@ -8,8 +8,8 @@
 
 ### Cloudinary (imágenes)
 
-- Informe de Cloudinary de la página de producto. [Potential Compressed Weight](https://webspeedtest.cloudinary.com/results/181215_AE_b0523a71f4f59676465f4420312bb491) `40.3%`
-- Informe de Cloudinary de la página de home. [Potential Compressed Weight](https://webspeedtest.cloudinary.com/results/181215_XY_a5f9c96e136757a81118a0dc5e834acc) `52.1%`
+- Informe de Cloudinary de la página de home. [Potential Compressed Weight](https://webspeedtest.cloudinary.com/results/181220_DW_0817ab3a3c86ce6a352222b1946bb95c) `53.1%`
+- Informe de Cloudinary de la página de producto. [Potential Compressed Weight](https://webspeedtest.cloudinary.com/results/181220_5Z_2d2491cec6ab46d20fb922681d5afcb6) `52.5%`
 
 ### Webpagetest
 
