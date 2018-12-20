@@ -36,3 +36,7 @@
 
 - [You might not need jQuery](http://youmightnotneedjquery.com)
 - [Google Woff2](https://github.com/google/woff2), una herramienta para generar ficheros de fuentes en formato woff2.
+
+## Resource
+
+- [web.dev/Learn](https://web.dev/learn)
