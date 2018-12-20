@@ -5,7 +5,8 @@
 ### PageSpeed Insights
 
 - [Home](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.mediamarkt.es)
-
+- [Product](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.mediamarkt.es%2Fes%2Fproduct%2F_consola-nintendo-switch-6-2-joy-con-azul-y-rojo-ne%25C3%25B3n-1353575.html
+)
 ### Cloudinary (imágenes)
 
 - Informe de Cloudinary de la página de home. [Potential Compressed Weight](https://webspeedtest.cloudinary.com/results/181220_DW_0817ab3a3c86ce6a352222b1946bb95c) `53.1%`
@@ -13,8 +14,8 @@
 
 ### Webpagetest
 
-- [Home](https://www.webpagetest.org/result/181215_TR_577ac40f47576d36c4f3370ac783db7d/) | _Chrome - 4G_ | [📺 **Video**](https://www.webpagetest.org/video/view.php?id=181215_TR_577ac40f47576d36c4f3370ac783db7d.1.0)
-- [Product detail](https://www.webpagetest.org/result/181215_3A_26ff76e33767c42eac4496483f2480dc/) | _Chrome - Emulated Motorola G (gen 4) - 4G - Mobile_ | [📺 **Video**](https://www.webpagetest.org/video/view.php?id=181215_3A_26ff76e33767c42eac4496483f2480dc.1.0)
+- [Home](https://www.webpagetest.org/result/181220_8H_72dfccbb0939ab9689666e864bfc0763/) | _Chrome - Cable_ | [📺 **Video**](https://www.webpagetest.org/result/181220_8H_72dfccbb0939ab9689666e864bfc0763/1/screen_shot/)
+- [Home](https://www.webpagetest.org/result/181220_6A_ed64940a66a1820907b2a0b7cda4d05e/) | _Chrome - Emulated Samsung Galaxy S8/S8+/Note 8 - 3GFast - Mobile_ | [📺 **Video**](https://www.webpagetest.org/result/181220_6A_ed64940a66a1820907b2a0b7cda4d05e/1/screen_shot/)
 
 ### CSS Stats
 
@@ -25,6 +26,11 @@
 26 Unique Font Families
 67 Media Queries
 ```
+
+### DevTools Coverage
+
+- [Home Coverage](./reports/Coverage-Home.jpg) `3.0Mb of 4.5Mb are not used (67%)`
+- [Product Coverage](./reports/Coverate-Product.jpg) `3.3Mb of 4.9Mb are not used (67%)`
 
 ### Woff2
 
