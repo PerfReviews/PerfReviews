@@ -7,6 +7,7 @@ Performance Reviews por [Jose M. Pérez](https://github.com/JMPerez) y [Joan Le�
 - [PerfReviews 1.1](./reviews/1.1-mediamarkt.es/) - Mediamarkt España
 - [PerfReviews 1.2](./reviews/1.2-elcorteingles.es/) - El Corte Inglés
 - [PerfReviews 1.3](./reviews/1.3-zara.com/) - Zara
+- [PerfReviews 1.4](./reviews/1.4-smashingmagazine.com/) - Smashing Magazine
 
 ### Contacto
 
