@@ -1,41 +1,14 @@
 # Smashing Magazine
 
-[![PerfReviews 1.4](./poster.jpg)]()
+[![PerfReviews 1.4](./poster.jpg)](https://youtu.be/NalgDNrjHUg)
 
 
 ## Review
 
-### Estáticos
+### Referencias
 
-- 
+- [Preload, Prefetch And Priorities in Chrome](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf)
 
-### Fuentes
-
-- 
-
-### Imágenes
-
-- 
-
-### Scripts
-
-- 
-
-### CSS
-
-- 
-
-### SVG
-
-- 
-
-### Más cosas
-
-- 
-
-### Performance una vez cargada
-
-- 
 
 ## Informes
 
@@ -73,4 +46,4 @@
 
 ## Recurso
 
-- []()
+- [lozad.js](https://github.com/ApoorvSaxena/lozad.js)
