@@ -23,4 +23,4 @@ Dado que los sitios web son proyectos dinámicos, es posible que los análisis m
 
 ### Contacto 
 
-[YouTube](https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww) | [Twitter](https://twitter.com/perfreviews_) | [Facebook](https://www.facebook.com/PerfReviews-221286588787407/) | [GitHub](https://github.com/PerfReviews/) | [Mail](mailto:perfreviews.mail@gmail.com)
+[YouTube](https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww) | [Twitter](https://twitter.com/perfreviews_) | [Newsletter](https://mailchi.mp/b309deb154c1/perfreviews) | [Facebook](https://www.facebook.com/PerfReviews-221286588787407/) | [GitHub](https://github.com/PerfReviews/) | [Mail](mailto:perfreviews.mail@gmail.com)
