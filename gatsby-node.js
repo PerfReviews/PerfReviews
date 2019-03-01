@@ -60,5 +60,16 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node,
       value,
     })
+
+    // Create a field on this node for the "collection" of the parent
+    // NOTE: This is necessary so we can filter `allMarkdownRemark` by
+    // `collection` otherwise there is no way to filter for only markdown
+    // documents of type `post`.
+    const parent = getNode(node.parent);
+    createNodeField({
+      node,
+      name: 'collection',
+      value: parent.sourceInstanceName
+    });
   }
 }
