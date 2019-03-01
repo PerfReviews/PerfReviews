@@ -1,21 +1,14 @@
 module.exports = {
   siteMetadata: {
     title: `PerfReviews`,
-    author: `Joan Leon & Jose M. Perez`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    author: `Joan León y José M. Pérez`,
+    description: `Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `PerfReviews_`,
     },
   },
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -64,13 +57,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `PerfReviews`,
+        short_name: `PerfReviews`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/logo.svg`,
       },
     },
     `gatsby-plugin-offline`,

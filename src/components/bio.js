@@ -7,10 +7,10 @@
 
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-
+import logo from "./logo.svg"
 import { rhythm } from "../utils/typography"
 
+console.log(logo)
 function Bio() {
   return (
     <StaticQuery
@@ -24,25 +24,21 @@ function Bio() {
               marginBottom: rhythm(2.5),
             }}
           >
-            <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
+            <img
+              src={logo}
+              alt={'PerfReviews'}
               style={{
+                height: 56,
                 marginRight: rhythm(1 / 2),
                 marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
+                width: 56,
                 borderRadius: `50%`,
               }}
             />
             <p>
-              Con <strong>{author}</strong>.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                Síguenos en Twitter
-              </a>
+              Con <strong>{author}</strong>.<br/>
+              Hablamos sobre web performance en <a href={`https://twitter.com/${social.twitter}`}>Twitter</a> y{' '}
+              <a href={'https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww'}>Youtube</a>.
             </p>
           </div>
         )
@@ -53,13 +49,6 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-      childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     site {
       siteMetadata {
         author

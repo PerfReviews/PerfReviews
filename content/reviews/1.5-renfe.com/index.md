@@ -1,6 +1,11 @@
-# Renfe
+---
+title: Renfe
+date: "2019-02-26"
+description: Analizamos la web de Renfe. Es un caso interesante de una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, combinación de recursos "a mano" y problemas de repintado debido a librerías de tracking.
+image: poster.jpg
+---
 
-[![PerfReviews 1.5](./poster.jpg)](https://www.youtube.com/watch?v=pi02YqNHjJs)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pi02YqNHjJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Referencias
 

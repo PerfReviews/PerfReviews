@@ -83,6 +83,22 @@ class Layout extends React.Component {
         </a>{' '}
         &bull;{' '}
         <a
+          href="https://mailchi.mp/b309deb154c1/perfreviews"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          newsletter
+        </a>{' '}
+        &bull;{' '}
+        <a
+          href="https://www.facebook.com/PerfReviews-221286588787407/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          facebook
+        </a>{' '}
+        &bull;{' '}
+        <a
           href="https://github.com/PerfReviews/PerfReviews"
           target="_blank"
           rel="noopener noreferrer"
@@ -91,12 +107,12 @@ class Layout extends React.Component {
         </a>{' '}
         &bull;{' '}
         <a
-          href="https://stackoverflow.com/users/458193/dan-abramov"
+          href="mailto:perfreviews.mail@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          stack overflow
-        </a>
+          mail
+        </a>{' '}
         </footer>
       </div>
     )

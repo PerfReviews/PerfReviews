@@ -1,11 +1,14 @@
-# Zara
+---
+title: Zara
+date: "2019-01-07"
+description: Analizamos la web de Zara y encontramos buenas técnicas para tener un buen rendimiento pero también margen de mejora. Imágenes enormes que se escalan a un tamaño pequeño, SVG optimizables, optimizely bloqueante...
+image: poster.jpg
+---
 
-[![PerfReviews 1.3](./poster.jpg)]()
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QbJAf5Oa64Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 > Gracias a [Paco Segovia](https://twitter.com/SeGo) y [Jaime Lozano](https://twitter.com/jlozanospain) por sugerirnos este site para la review.
 [Análisis](https://threadreaderapp.com/thread/962255893663502336.html) de Accesibilidad y Usabilidad de [Paco Segovia](https://twitter.com/SeGo)
-
-## Review
 
 ### Estáticos
 
@@ -49,7 +52,7 @@
 
 ### Performance una vez cargada
 
-- ❌ Hay un problema de performance al hacer scroll y setear el top del menú de la izquierda. 
+- ❌ Hay un problema de performance al hacer scroll y setear el top del menú de la izquierda.
 En app-std > adjustVerticalPos > this.$navigationMenu.css. Además, onScroll() no tiene throttling. Esto da para una buena demo mostrando Rendering > Paint flashing y un performance recording.
 - ❌ Hablando de flashing, el loader.gif de las imágenes sigue pintándose. En Spotify tuvimos el mismo problema. Basta con ocultarlo.
 - ❌ Hay un raf ejecutándose todo el tiempo. Probablemente sólo usado en la página principal en desktop y mobile.
