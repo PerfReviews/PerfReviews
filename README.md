@@ -16,7 +16,7 @@ Dado que los sitios web son proyectos dinámicos, es posible que los análisis m
 
 ## <span style="color: #00aa58">Perf</span>Tools
 
-- [PerfTools 1.1](/PerfReviews/PerfTools/tree/master/Lighthouse-Report) - Lighthouse Report
+- [PerfTools 1.1](https://github.com/PerfReviews/PerfTools/tree/master/Lighthouse-Report) - Lighthouse Report
 
 ## <span style="color: #00aa58">Perf</span>Tips
 
