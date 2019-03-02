@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Bio from "../components/bio"
+import Img from 'gatsby-image'
 
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -15,7 +16,7 @@ class Reviews extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Reviews" />
+        <SEO title="PerfReviews - Promoviendo web performance" />
         <Bio />
         <h2>Análisis de web performance</h2>
         {reviews.map(({ node }) => {
@@ -32,6 +33,9 @@ class Reviews extends React.Component {
                 </Link>
               </h3>
               <small>{node.frontmatter.date}</small>
+              {node.frontmatter.image ?
+                <Img sizes={node.frontmatter.image.childImageSharp.sizes} />
+                 : null}
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
@@ -87,3 +91,13 @@ export const pageQuery = graphql`
     }
   }
 `
+
+/*
+image {
+  childImageSharp{
+    sizes(maxWidth: 630) {
+        ...GatsbyImageSharpSizes
+    }
+  }
+}
+*/
