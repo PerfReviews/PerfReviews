@@ -13,17 +13,35 @@
       
       
       }
-      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-pages-index-js","jsonName":"index","path":"/"};window.dataPath="205/path---index-6a9-sBez7GhonwLZIIWZeCvfVNb4";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-7cdd82ce71b5a62d346b.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-757facd6782ed4b633a5.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-92b576f73a9d363ce8ba.js"],"component---src-pages-404-js":["/component---src-pages-404-js-ffdb342ee592644e3030.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-b39118b0ddc71500c9b3.js"],"component---src-pages-index-js":["/component---src-pages-index-js-c729e66d4833363ebc98.js"],"pages-manifest":["/pages-manifest-f49382dfea02242b13a2.js"]};/*]]>*/</script><script src="/component---src-pages-index-js-c729e66d4833363ebc98.js" async=""></script><script src="/0-acf7418b18fbdf8abd26.js" async=""></script><script src="/app-7cdd82ce71b5a62d346b.js" async=""></script><script src="/styles-d0768c95df2079fc3d53.js" async=""></script><script src="/webpack-runtime-e898e4091a303d45d797.js" async=""></script><script>!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
-a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-twq('init','o1fkn');
-twq('track','PageView');</script><script>!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1251206408378715');
-fbq('track', 'PageView');</script></body></html>
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-pages-index-js","jsonName":"index","path":"/"};window.dataPath="205/path---index-6a9-sBez7GhonwLZIIWZeCvfVNb4";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-7cdd82ce71b5a62d346b.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-757facd6782ed4b633a5.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-92b576f73a9d363ce8ba.js"],"component---src-pages-404-js":["/component---src-pages-404-js-ffdb342ee592644e3030.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-b39118b0ddc71500c9b3.js"],"component---src-pages-index-js":["/component---src-pages-index-js-c729e66d4833363ebc98.js"],"pages-manifest":["/pages-manifest-f49382dfea02242b13a2.js"]};/*]]>*/</script><script src="/component---src-pages-index-js-c729e66d4833363ebc98.js" async=""></script><script src="/0-acf7418b18fbdf8abd26.js" async=""></script><script src="/app-7cdd82ce71b5a62d346b.js" async=""></script><script src="/styles-d0768c95df2079fc3d53.js" async=""></script><script src="/webpack-runtime-e898e4091a303d45d797.js" async=""></script><script>
+    (function() {
+      if (location.host === 'perf.reviews') {
+        function loadTwitter() {
+          (function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+          },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+          a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))})(window,document,'script');
+          twq('init','o1fkn');
+          twq('track','PageView')
+        }
+        function loadFacebook() {
+          (function(f,b,e,v,n,t,s) {
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)})(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1251206408378715');
+          fbq('track', 'PageView');
+        }
+
+        if (window.requestIdleCallback) {
+            window.requestIdleCallback(loadTwitter, {timeout: 3000});
+            window.requestIdleCallback(loadFacebook, {timeout: 5000});
+        } else {
+            setTimeout(loadTwitter, 3000);
+            setTimeout(loadFacebook, 5000);
+        }
+      }
+    })();</script></body></html>
