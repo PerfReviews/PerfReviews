@@ -3,7 +3,7 @@ module.exports = {
     title: `PerfReviews`,
     author: `Joan León y José M. Pérez`,
     description: `Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://perf.reviews/`,
     social: {
       twitter: `PerfReviews_`,
     },
@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/reviews`,
+        path: `${__dirname}/content/`,
         name: `reviews`,
       },
     },

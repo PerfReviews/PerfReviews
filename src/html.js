@@ -25,22 +25,38 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
         <script dangerouslySetInnerHTML={{
-    __html: `!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
-a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-twq('init','o1fkn');
-twq('track','PageView');`}}></script>
-        <script dangerouslySetInnerHTML={{
-__html: `!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1251206408378715');
-fbq('track', 'PageView');`}}></script>
+    __html: `
+    (function() {
+      if (location.host === 'perf.reviews') {
+        function loadTwitter() {
+          (function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+          },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+          a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))})(window,document,'script');
+          twq('init','o1fkn');
+          twq('track','PageView')
+        }
+        function loadFacebook() {
+          (function(f,b,e,v,n,t,s) {
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)})(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1251206408378715');
+          fbq('track', 'PageView');
+        }
+
+        if (window.requestIdleCallback) {
+            window.requestIdleCallback(loadTwitter, {timeout: 3000});
+            window.requestIdleCallback(loadFacebook, {timeout: 5000});
+        } else {
+            setTimeout(loadTwitter, 3000);
+            setTimeout(loadFacebook, 5000);
+        }
+      }
+    })();`}}></script>
       </body>
     </html>
   )
