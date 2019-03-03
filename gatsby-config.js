@@ -3,12 +3,13 @@ module.exports = {
     title: `PerfReviews`,
     author: `Joan León y José M. Pérez`,
     description: `Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web.`,
-    siteUrl: `https://perf.reviews/`,
+    siteUrl: `https://perf.reviews`,
     social: {
       twitter: `PerfReviews_`,
     },
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
