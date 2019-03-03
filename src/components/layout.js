@@ -68,7 +68,7 @@ class Layout extends React.Component {
             paddingTop: rhythm(1),
           }}>
           <a
-          href="/servicios"
+          href="/servicios/"
           target="_blank"
           rel="noopener noreferrer"
         >servicios
