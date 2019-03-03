@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PerfReviews]]></title><description><![CDATA[Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web.]]></description><link>https://perf.reviews/</link><generator>RSS for Node</generator><lastBuildDate>Sun, 03 Mar 2019 08:16:18 GMT</lastBuildDate><item><title><![CDATA[Renfe]]></title><description><![CDATA[Analizamos  la web de Renfe . Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de…]]></description><link>https://perf.reviews//reviews/1.5-renfe.com/</link><guid isPermaLink="false">https://perf.reviews//reviews/1.5-renfe.com/</guid><pubDate>Tue, 26 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Analizamos &lt;a href=&quot;https://www.renfe.com&quot;&gt;la web de Renfe&lt;/a&gt;. Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PerfReviews]]></title><description><![CDATA[Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web.]]></description><link>https://perf.reviews</link><generator>RSS for Node</generator><lastBuildDate>Sun, 03 Mar 2019 08:23:13 GMT</lastBuildDate><item><title><![CDATA[Renfe]]></title><description><![CDATA[Analizamos  la web de Renfe . Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de…]]></description><link>https://perf.reviews/reviews/1.5-renfe.com/</link><guid isPermaLink="false">https://perf.reviews/reviews/1.5-renfe.com/</guid><pubDate>Tue, 26 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Analizamos &lt;a href=&quot;https://www.renfe.com&quot;&gt;la web de Renfe&lt;/a&gt;. Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.&lt;/p&gt;
 &lt;div&gt;
           &lt;div
             class=&quot;gatsby-resp-iframe-wrapper&quot;
@@ -26,7 +26,7 @@
 &lt;h2&gt;Recurso&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://addyosmani.com/blog/script-priorities/&quot;&gt;JavaScript Loading Priorities in Chrome&lt;/a&gt; por Addy Osmani.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Smashing Magazine]]></title><description><![CDATA[Referencias Preload, Prefetch And Priorities in Chrome Informes PageSpeed Insights Mobile Home Articles Article Desktop Home Articles…]]></description><link>https://perf.reviews//reviews/1.4-smashingmagazine.com/</link><guid isPermaLink="false">https://perf.reviews//reviews/1.4-smashingmagazine.com/</guid><pubDate>Mon, 28 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Smashing Magazine]]></title><description><![CDATA[Referencias Preload, Prefetch And Priorities in Chrome Informes PageSpeed Insights Mobile Home Articles Article Desktop Home Articles…]]></description><link>https://perf.reviews/reviews/1.4-smashingmagazine.com/</link><guid isPermaLink="false">https://perf.reviews/reviews/1.4-smashingmagazine.com/</guid><pubDate>Mon, 28 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;
           &lt;div
             class=&quot;gatsby-resp-iframe-wrapper&quot;
             style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
@@ -80,7 +80,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ApoorvSaxena/lozad.js&quot;&gt;lozad.js&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Zara]]></title><description><![CDATA[Gracias a  Paco Segovia  y  Jaime Lozano  por sugerirnos este site para la review.
- Análisis  de Accesibilidad y Usabilidad de  Paco Segovia…]]></description><link>https://perf.reviews//reviews/1.3-zara.com/</link><guid isPermaLink="false">https://perf.reviews//reviews/1.3-zara.com/</guid><pubDate>Mon, 07 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;
+ Análisis  de Accesibilidad y Usabilidad de  Paco Segovia…]]></description><link>https://perf.reviews/reviews/1.3-zara.com/</link><guid isPermaLink="false">https://perf.reviews/reviews/1.3-zara.com/</guid><pubDate>Mon, 07 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;
           &lt;div
             class=&quot;gatsby-resp-iframe-wrapper&quot;
             style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
@@ -169,7 +169,7 @@ En app-std &gt; adjustVerticalPos &gt; this.$navigationMenu.css. Además, onScro
 &lt;h2&gt;Recurso&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://calendar.perfplanet.com/&quot;&gt;Performance Calendar&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[El Corte Inglés]]></title><description><![CDATA[Informes y herramientas PageSpeed Insights Home Producto Cloudinary (imágenes) Informe de Cloudinary de la página de home.  Potential…]]></description><link>https://perf.reviews//reviews/1.2-elcorteingles.es/</link><guid isPermaLink="false">https://perf.reviews//reviews/1.2-elcorteingles.es/</guid><pubDate>Mon, 31 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[El Corte Inglés]]></title><description><![CDATA[Informes y herramientas PageSpeed Insights Home Producto Cloudinary (imágenes) Informe de Cloudinary de la página de home.  Potential…]]></description><link>https://perf.reviews/reviews/1.2-elcorteingles.es/</link><guid isPermaLink="false">https://perf.reviews/reviews/1.2-elcorteingles.es/</guid><pubDate>Mon, 31 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;
           &lt;div
             class=&quot;gatsby-resp-iframe-wrapper&quot;
             style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
@@ -211,7 +211,7 @@ En app-std &gt; adjustVerticalPos &gt; this.$navigationMenu.css. Además, onScro
 &lt;h2&gt;Recurso del día&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://squoosh.app&quot;&gt;Squoosh&lt;/a&gt; - Optimizador de imágenes online&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Mediamarkt España]]></title><description><![CDATA[Informes y herramientas PageSpeed Insights Home Product Cloudinary (imágenes) Informe de Cloudinary de la página de home.  Potential…]]></description><link>https://perf.reviews//reviews/1.1-mediamarkt.es/</link><guid isPermaLink="false">https://perf.reviews//reviews/1.1-mediamarkt.es/</guid><pubDate>Fri, 28 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Mediamarkt España]]></title><description><![CDATA[Informes y herramientas PageSpeed Insights Home Product Cloudinary (imágenes) Informe de Cloudinary de la página de home.  Potential…]]></description><link>https://perf.reviews/reviews/1.1-mediamarkt.es/</link><guid isPermaLink="false">https://perf.reviews/reviews/1.1-mediamarkt.es/</guid><pubDate>Fri, 28 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;
           &lt;div
             class=&quot;gatsby-resp-iframe-wrapper&quot;
             style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
