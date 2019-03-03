@@ -1,9 +1,11 @@
 ---
 title: Renfe
 date: "2019-02-26"
-description: Analizamos la web de Renfe. Es un caso interesante de una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, combinación de recursos “a mano” y problemas de repintado debido a librerías de tracking.
 image: poster.jpg
+description: Analizamos la web de Renfe. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.
 ---
+
+Analizamos [la web de Renfe](https://www.renfe.com). Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pi02YqNHjJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
