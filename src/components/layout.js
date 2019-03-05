@@ -67,12 +67,10 @@ class Layout extends React.Component {
             marginTop: rhythm(2.5),
             paddingTop: rhythm(1),
           }}>
-          <a
-          href="/servicios/"
-          target="_blank"
-          rel="noopener noreferrer"
+          <Link
+          to="/servicios/"
         >servicios
-        </a>{' '}
+      </Link>{' '}
         &bull;{' '}
           <a
           href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww"
