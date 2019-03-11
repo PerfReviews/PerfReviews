@@ -2,7 +2,7 @@
 title: El Corte Inglés
 date: "2018-12-31"
 description: Revisamos la web de El Corte Inglés y encontramos muchas peticiones a imágenes que no se llegan a mostrar, JS y CSS grandes de los que se usan una mínima parte y otros problemas.
-image: poster.jpg
+featuredImage: ../../assets/review-eci.png
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yyLAPxgwSGM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

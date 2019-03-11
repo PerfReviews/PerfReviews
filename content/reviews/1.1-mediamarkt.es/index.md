@@ -2,7 +2,7 @@
 title: Mediamarkt España
 date: "2018-12-28"
 description: En nuestro primer análisis revisamos la nueva web de Mediamarkt España. Encontramos problemas con el cacheo, falta de compresión, múltiples versiones de jQuery y más.
-image: poster.jpg
+featuredImage: ../../assets/review-mediamarkt.png
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xD8MbFUZPKQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -7,10 +7,10 @@
 
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
-import logo from "./logo.svg"
-import { rhythm } from "../utils/typography"
+import logo from "../logo.svg"
+import { rhythm } from "../../utils/typography"
 
-function Bio() {
+function BioEn() {
   return (
     <StaticQuery
       query={bioQuery}
@@ -35,10 +35,10 @@ function Bio() {
               }}
             />
             <p>
-              PerfReviews es un proyecto de <Link
+              PerfReviews is a project by <Link
               to="/nosotros/"
             ><strong>{author}</strong></Link>.<br/>
-              Hablamos sobre web performance en <a href={`https://twitter.com/${social.twitter}`}>Twitter</a> y{' '}
+              We speak about web performance on <a href={`https://twitter.com/${social.twitter}`}>Twitter</a> and{' '}
               <a href={'https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww'}>Youtube</a>.
             </p>
           </div>
@@ -49,7 +49,7 @@ function Bio() {
 }
 
 const bioQuery = graphql`
-  query BioEnQuery {
+  query BioQuery {
     site {
       siteMetadata {
         author
@@ -61,4 +61,4 @@ const bioQuery = graphql`
   }
 `
 
-export default Bio
+export default BioEn

@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { rhythm } from "../../utils/typography"
+import Bio from "../../components/en/bio"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
@@ -20,6 +22,11 @@ class Services extends React.Component {
         <h2>Workshops</h2>
         <p>Learn about the main culprits in web performance, how to fix them and keep them under control.</p>
         <p><strong><a href="mailto:perfreviews.mail@gmail.com">Contact us by email</a> to know more.</strong></p>
+        <hr style={{
+          marginTop: rhythm(2.5),
+          marginBottom: rhythm(2.5),
+        }} />
+        <Bio />
       </Layout>
     )
   }

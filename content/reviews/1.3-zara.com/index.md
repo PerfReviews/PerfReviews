@@ -2,7 +2,7 @@
 title: Zara
 date: "2019-01-07"
 description: Analizamos la web de Zara y encontramos buenas técnicas para tener un buen rendimiento pero también margen de mejora. Imágenes enormes que se escalan a un tamaño pequeño, SVG optimizables, optimizely bloqueante...
-image: poster.jpg
+featuredImage: ../../assets/review-zara.png
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QbJAf5Oa64Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
