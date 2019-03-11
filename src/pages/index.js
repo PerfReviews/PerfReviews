@@ -16,31 +16,37 @@ class Reviews extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="PerfReviews - Promoviendo web performance" />
+        <SEO title="Promoviendo web performance" />
         <Bio />
         <h2>Análisis de web performance</h2>
         {reviews.map(({ node }) => {
           const title = node.frontmatter.title || node.headings[0].value || node.fields.slug
           return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              {node.frontmatter.image ?
-                <Img sizes={node.frontmatter.image.childImageSharp.sizes} />
-                 : null}
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
+            <div key={node.fields.slug} style={{
+              display: `flex`,
+              marginTop: rhythm(1),
+            }}>
+              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <Img style={{height: 100, width: 100, flexShrink: 0, marginRight: rhythm(1 / 2)}} sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
+              </Link>
+              <div>
+                <h3
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                    marginTop: 0,
+                  }}
+                >
+                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <small>{node.frontmatter.date}</small>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+              </div>
             </div>
           )
         })}
@@ -50,6 +56,9 @@ class Reviews extends React.Component {
         <h2>Tools</h2>
         <h3><a style={{ boxShadow: `none` }} href={'https://github.com/PerfReviews/PerfTools/tree/master/Lighthouse-Report'}>Lighthouse report</a></h3>
         <p>Cómo escribir un script para generar informes de lighthouse para un conjunto de webs automáticamente.</p>
+        <h2>Colaboraciones</h2>
+        <h3><a style={{ boxShadow: `none` }} href={'https://www.youtube.com/watch?v=bhSEp44mrKQ'}>Análisis del performance de sitios web con Escuela IT</a></h3>
+        <p>En esta colaboración con la plataforma de aprendizaje online Escuela IT analizamos el rendimiento de 3 sitios web sugeridos por los asistentes a la sesión.</p>
         <hr style={{
           marginTop: rhythm(2.5),
           marginBottom: rhythm(2.5),
@@ -82,6 +91,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            featuredImage {
+                childImageSharp{
+                    sizes(maxWidth: 100) {
+                        ...GatsbyImageSharpSizes
+                    }
+                }
+            }
           }
           headings {
             value
