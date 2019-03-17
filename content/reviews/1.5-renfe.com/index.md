@@ -7,7 +7,14 @@ featuredImage: ../../assets/review-renfe.png
 
 Analizamos [la web de Renfe](https://www.renfe.com). Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.
 
+Aquí tienes nuestro análisis:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pi02YqNHjJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+<div style="font-size: 0.9em; color: #0c5460;background-color: #d1ecf1;border: 1px solid #bee5eb;padding: .75rem 1.25rem;">
+<strong>¿Te gusta nuestro proyecto y quieres trabajar con nosotros?</strong> <br/> Somos expertos en web performance y ofrecemos formaciones a equipos de desarrollo y auditorías de sitios web.<br/><a href="/servicios/">Más información sobre nuestros servicios</a>.
+</div>
 
 ----
 
