@@ -58,7 +58,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           name: `twitter:image`,
-          content: `${site.siteMetadata.siteUrl}icons/icon-512x512.png`,
+          content: `${site.siteMetadata.siteUrl}/icons/icon-512x512.png`,
         },
         {
           name: `twitter:creator`,
