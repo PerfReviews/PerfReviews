@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PerfReviews]]></title><description><![CDATA[Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web.]]></description><link>https://perf.reviews</link><generator>RSS for Node</generator><lastBuildDate>Mon, 18 Mar 2019 08:31:21 GMT</lastBuildDate><item><title><![CDATA[Renfe]]></title><description><![CDATA[Analizamos  la web de Renfe . Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de…]]></description><link>https://perf.reviews/reviews/1.5-renfe.com/</link><guid isPermaLink="false">https://perf.reviews/reviews/1.5-renfe.com/</guid><pubDate>Tue, 26 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Analizamos &lt;a href=&quot;https://www.renfe.com&quot;&gt;la web de Renfe&lt;/a&gt;. Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PerfReviews]]></title><description><![CDATA[Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web.]]></description><link>https://perf.reviews</link><generator>RSS for Node</generator><lastBuildDate>Mon, 18 Mar 2019 21:08:49 GMT</lastBuildDate><item><title><![CDATA[Renfe]]></title><description><![CDATA[Analizamos  la web de Renfe . Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de…]]></description><link>https://perf.reviews/reviews/1.5-renfe.com/</link><guid isPermaLink="false">https://perf.reviews/reviews/1.5-renfe.com/</guid><pubDate>Tue, 26 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Analizamos &lt;a href=&quot;https://www.renfe.com&quot;&gt;la web de Renfe&lt;/a&gt;. Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.&lt;/p&gt;
 &lt;p&gt;Aquí tienes nuestro análisis:&lt;/p&gt;
 &lt;div&gt;
           &lt;div
@@ -15,12 +15,11 @@
           &lt;/div&gt;
           &lt;/div&gt;
 &lt;hr&gt;
-&lt;div style=&quot;font-size: 0.9em; color: #0c5460;background-color: #d1ecf1;border: 1px solid #bee5eb;padding: .75rem 1.25rem;&quot;&gt;
+&lt;div style=&quot;font-size: 0.9em; color: #0c5460;background-color: #ebf5f7;border: 1px solid #bee5eb;padding: .75rem 1.25rem;margin-bottom:calc(1.75rem - 1px);&quot;&gt;
 &lt;strong&gt;¿Te gusta nuestro proyecto y quieres trabajar con nosotros?&lt;/strong&gt; &lt;br/&gt; Somos expertos en web performance y ofrecemos formaciones a equipos de desarrollo y auditorías de sitios web.&lt;br/&gt;&lt;a href=&quot;/servicios/&quot;&gt;Más información sobre nuestros servicios&lt;/a&gt;.
 &lt;/div&gt;
-&lt;hr&gt;
 &lt;h2&gt;Resumen del vídeo&lt;/h2&gt;
-&lt;p&gt;En esta review hemos elegido &lt;a href=&quot;https://www.renfe.com&quot;&gt;la web de renfe&lt;/a&gt;. La hemos sufrido muchos y es importante dar un punto de vista desde la performance en esta web. Mucha gente ha estado criticándolo desde varios puntos y está bien que demos nuestra opinión.&lt;/p&gt;
+&lt;p&gt;En esta review hemos elegido &lt;a href=&quot;https://www.renfe.com&quot;&gt;la web de renfe&lt;/a&gt;. Es una web que históricamente ha recibido críticas por &lt;a href=&quot;http://accesibilidadweb.dlsi.ua.es/?menu=accesibilidad-web-renfe&quot;&gt;sus problemas de accesibilidad&lt;/a&gt;, &lt;a href=&quot;https://www.mastermarketingdigital.com/everriculum/2017/06/10/hands-on-informe-de-usabilidad-renfe-app/&quot;&gt;usabilidad&lt;/a&gt; y &lt;a href=&quot;https://www.elplural.com/politica/twitter-se-ceba-con-los-errores-en-la-web-de-renfe_103904102&quot;&gt;disponibilidad&lt;/a&gt;. Hasta ahora no habíamos visto un análisis de performance de su web, y como esto es lo que nos gusta hacer en Perf Reviews, decidimos ponernos manos a la obra.&lt;/p&gt;
 &lt;p&gt;
   &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
@@ -63,7 +62,7 @@
       &lt;/span&gt;
   &lt;/span&gt;
   &lt;/p&gt;
-&lt;p&gt;El detonante ha sido el anuncio de que van a hacer un cambio en la web. Hay varias noticias al respecto sobre el cambio que van a hacer &lt;a href=&quot;https://www.xataka.com/empresas-y-economia/que-700-000-euros-presupuesto-ridiculo-para-arreglar-web-renfe&quot;&gt;e incluso el presupuesto&lt;/a&gt;. Hay gente que le asusta esas cantidades y hay otros que dice que no trabajarían en esa web por ese importe. Nosotros nos queremos centrar en hacer una revisión del rendimiento.&lt;/p&gt;
+&lt;p&gt;Decidimos hacer la revisión aprovechando el anuncio de que van a hacer ciertas mejoras en su web. Hay varias noticias al respecto sobre el cambio que van a hacer &lt;a href=&quot;https://www.xataka.com/empresas-y-economia/que-700-000-euros-presupuesto-ridiculo-para-arreglar-web-renfe&quot;&gt;e incluso el presupuesto&lt;/a&gt;. Hay gente que le asusta esas cantidades y hay otros que dicen que no trabajarían en esa web por ese importe. Nosotros nos queremos centrar en hacer una revisión del rendimiento.&lt;/p&gt;
 &lt;h3&gt;Informes de Lighthouse, WebPageTest, Cloudinary y CSS Stats&lt;/h3&gt;
 &lt;p&gt;Como suele ser habitual hacemos una primera pasada usando de &lt;a href=&quot;https://web.dev&quot;&gt;web.dev&lt;/a&gt;. A nivel de performance la puntuación es muy muy baja.&lt;/p&gt;
 &lt;p&gt;
@@ -544,7 +543,7 @@
   &lt;/span&gt;
   &lt;/p&gt;
 &lt;h3&gt;Código condicional&lt;/h3&gt;
-&lt;p&gt;Hay detalles como por ejemplo el awesomplete.css que parece ser que sólo se aplica a Safari, o esa era la idea que tenían, y también hay un awesomplete.min.js que es la parte de JS de esa librería, que es un auto completado que desarrolló &lt;a href=&quot;https://twitter.com/leaverou&quot;&gt;Lea Verou&lt;/a&gt;. Si lo estaban sirviendo sólo para Safari, una buena solución es comprobar el navegador que está haciendo la petición. Aunque tampoco hay que abogar mucho for hacer la detección de user agent en el lado del servidor y deberíamos usar feature detection en el lado del cliente.&lt;/p&gt;
+&lt;p&gt;Hay detalles como por ejemplo el awesomplete.css que parece ser que sólo se aplica a Safari, o esa era la idea que tenían, y también hay un awesomplete.min.js que es la parte de JS de &lt;a href=&quot;https://leaverou.github.io/awesomplete/&quot;&gt;esa librería&lt;/a&gt;, que es un auto completado que desarrolló &lt;a href=&quot;https://twitter.com/leaverou&quot;&gt;Lea Verou&lt;/a&gt;. Si lo estaban sirviendo sólo para Safari, una buena solución es comprobar el navegador que está haciendo la petición. Aunque tampoco hay que abogar mucho por hacer la detección de user agent en el lado del servidor y deberíamos usar feature detection en el lado del cliente.&lt;/p&gt;
 &lt;h3&gt;Código comentado&lt;/h3&gt;
 &lt;p&gt;Hay mucho código comentado en el CSS y en JS. A veces parece que no hay ni siquiera una herramienta de control de versiones del código fuente.&lt;/p&gt;
 &lt;p&gt;
