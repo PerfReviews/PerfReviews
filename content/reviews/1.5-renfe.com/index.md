@@ -18,11 +18,11 @@ Aquí tienes nuestro análisis:
 
 ## Resumen del vídeo
 
-En esta review hemos elegido [la web de renfe](https://www.renfe.com). La hemos sufrido muchos y es importante dar un punto de vista desde la performance en esta web. Mucha gente ha estado criticándolo desde varios puntos y está bien que demos nuestra opinión.
+En esta review hemos elegido [la web de renfe](https://www.renfe.com). Es una web que históricamente ha recibido críticas por [sus problemas de accesibilidad](http://accesibilidadweb.dlsi.ua.es/?menu=accesibilidad-web-renfe), [usabilidad](https://www.mastermarketingdigital.com/everriculum/2017/06/10/hands-on-informe-de-usabilidad-renfe-app/) y [disponibilidad](https://www.elplural.com/politica/twitter-se-ceba-con-los-errores-en-la-web-de-renfe_103904102). Hasta ahora no habíamos visto un análisis de performance de su web, y como esto es lo que nos gusta hacer en Perf Reviews, decidimos ponernos manos a la obra.
 
 ![La web de Renfe.com](assets/img010.jpg)
 
-El detonante ha sido el anuncio de que van a hacer un cambio en la web. Hay varias noticias al respecto sobre el cambio que van a hacer [e incluso el presupuesto](https://www.xataka.com/empresas-y-economia/que-700-000-euros-presupuesto-ridiculo-para-arreglar-web-renfe). Hay gente que le asusta esas cantidades y hay otros que dice que no trabajarían en esa web por ese importe. Nosotros nos queremos centrar en hacer una revisión del rendimiento.
+Decidimos hacer la revisión aprovechando el anuncio de que van a hacer ciertas mejoras en su web. Hay varias noticias al respecto sobre el cambio que van a hacer [e incluso el presupuesto](https://www.xataka.com/empresas-y-economia/que-700-000-euros-presupuesto-ridiculo-para-arreglar-web-renfe). Hay gente que le asusta esas cantidades y hay otros que dicen que no trabajarían en esa web por ese importe. Nosotros nos queremos centrar en hacer una revisión del rendimiento.
 
 ### Informes de Lighthouse, WebPageTest, Cloudinary y CSS Stats
 
@@ -81,7 +81,7 @@ Encima, justo después del CSS se piden recursos JS, con lo que el navegador no 
 ![JS bloqueantes justo después del CSS en Renfe.com](assets/img143.jpg)
 
 ### Código condicional
-Hay detalles como por ejemplo el awesomplete.css que parece ser que sólo se aplica a Safari, o esa era la idea que tenían, y también hay un awesomplete.min.js que es la parte de JS de esa librería, que es un auto completado que desarrolló [Lea Verou](https://twitter.com/leaverou). Si lo estaban sirviendo sólo para Safari, una buena solución es comprobar el navegador que está haciendo la petición. Aunque tampoco hay que abogar mucho for hacer la detección de user agent en el lado del servidor y deberíamos usar feature detection en el lado del cliente.
+Hay detalles como por ejemplo el awesomplete.css que parece ser que sólo se aplica a Safari, o esa era la idea que tenían, y también hay un awesomplete.min.js que es la parte de JS de [esa librería](https://leaverou.github.io/awesomplete/), que es un auto completado que desarrolló [Lea Verou](https://twitter.com/leaverou). Si lo estaban sirviendo sólo para Safari, una buena solución es comprobar el navegador que está haciendo la petición. Aunque tampoco hay que abogar mucho por hacer la detección de user agent en el lado del servidor y deberíamos usar feature detection en el lado del cliente.
 
 ### Código comentado
 
