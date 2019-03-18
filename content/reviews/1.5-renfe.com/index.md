@@ -36,7 +36,7 @@ Los tiempos de First Contentful Paint se disparan a 8 segundos, el número de re
 
 ![WebPageTest para la web de Renfe.com](assets/img034.jpg)
 
-La web de renfe en escritorio es relativamente rápida. Tampoco tiene mucho contenido: el formulario de venta, un slider, unas pocas imágenes y un menú. La home es relativamente ligera para un análisis de performance pero sí es verdad que en cuanto a la estructura y la arquitectura que tienen en el html y en las peticiones de los recursos veremos que hay bastantes puntos de mejora.
+La web de Renfe en escritorio es relativamente rápida. Tampoco tiene mucho contenido: el formulario de venta, un slider, unas pocas imágenes y un menú. La home es relativamente ligera para un análisis de performance pero sí es verdad que en cuanto a la estructura y la arquitectura que tienen en el html y en las peticiones de los recursos veremos que hay bastantes puntos de mejora.
 
 Las imágenes están bien, aunque se puede aumentar su compresión bastante manteniendo el formato JPG.
 
@@ -56,7 +56,7 @@ El estado del CSS es relativamente positivo. Tiene una especificidad en forma de
 
 ### Redirecciones y falta de SSL
 
-Una de las cosas que llama la atención en Renfe es que el dominio no hace una redirección uniforme. Renfe.es no funciona, pero www.renfe.es sí, redirigiendo a renfe.com. La página principal no se sirve usando HTTPS. Este es un punto de mejora, ya que aparte de mejorar la seguridad e integridad de los datos permite implementar una serie de mejoras como service workerso http/2 que sólo funcionan sobre HTTPS.
+Una de las cosas que llama la atención en Renfe es que el dominio no hace una redirección uniforme. Renfe.es no funciona, pero www.renfe.es sí, redirigiendo a renfe.com. La página principal no se sirve usando HTTPS. Este es un punto de mejora, ya que aparte de mejorar la seguridad e integridad de los datos permite implementar una serie de mejoras como service workers o http/2 que sólo funcionan sobre HTTPS.
 
 La web de venta a la que el usuario llega después de elegir origen y destino sí soporta HTTPS.
 
@@ -68,7 +68,7 @@ Si analizamos los estáticos vamos a ver que hay CSS y JS sin minificar.
 
 ![CSS sin minificar en Renfe.com](assets/img120.jpg)
 
-Librerías como jquery y jqueryui por lo menos sí lo están. Hay ficheros que son el resultante de una combinación "a mano" de 2 estáticos.
+Librerías como jQuery y jQuery UI por lo menos sí lo están. Hay ficheros que son el resultante de una combinación "a mano" de 2 estáticos.
 
 ![Combinación de JS a mano en Renfe.com](assets/img127.jpg)
 
@@ -83,7 +83,7 @@ Encima, justo después del CSS se piden recursos JS, con lo que el navegador no 
 ![JS bloqueantes justo después del CSS en Renfe.com](assets/img143.jpg)
 
 ### Código condicional
-Hay detalles como por ejemplo el awesomplete.css que parece ser que sólo se aplica a Safari, o esa era la idea que tenían, y también hay un awesomplete.min.js que es la parte de JS de esa librería, que es un auto completado que desarrolló Lea Verou. Si lo estaban sirviendo sólo para Safari, una buena solución es comprobar el navegador que está haciendo la petición. Aunque tampoco hay que abogar mucho for hacer la detección de user agent en el lado del servidor y deberíamos usar feature detection en el lado del cliente.
+Hay detalles como por ejemplo el awesomplete.css que parece ser que sólo se aplica a Safari, o esa era la idea que tenían, y también hay un awesomplete.min.js que es la parte de JS de esa librería, que es un auto completado que desarrolló [Lea Verou](https://twitter.com/leaverou). Si lo estaban sirviendo sólo para Safari, una buena solución es comprobar el navegador que está haciendo la petición. Aunque tampoco hay que abogar mucho for hacer la detección de user agent en el lado del servidor y deberíamos usar feature detection en el lado del cliente.
 
 ### Código comentado
 
@@ -91,7 +91,7 @@ Hay mucho código comentado en el CSS y en JS. A veces parece que no hay ni siqu
 
 ![Código comentado en Renfe.com](assets/img153.jpg)
 
-En otro fichero se lee "todo esto tampoco va" seguido de un código comentado.  Este código se puede se puede eliminar y dejar de servirlo al navegador.
+En otro fichero se lee "todo esto tampoco va" seguido de un código comentado.  Este código se puede eliminar y dejar de servirlo al navegador.
 
 ![Código comentado en Renfe.com](assets/img160.jpg)
 
@@ -137,7 +137,9 @@ El fichero de i18n tiene una extensa introducción listando todos los cambios de
 
 ### Conclusión
 
-Esto ha sido todo esperamos que os haya gustado esta review. Como veis queríamos dar un punto de vista diferente a la hora de analizar la web de renfe.
+Desde un punto de vista de la web performance hay muchos puntos de mejora. Se puede ver perfectamente que es un proyecto que se ha ido modificando durante el tiempo por diferentes equipos, y nunca se ha hecho un seguimiento desde un punto de vista global y de consistencia.
+
+Esto ha sido todo esperamos que os haya gustado esta review. Como veis queríamos dar un punto de vista diferente a la hora de analizar la web de Renfe.
 
 ---
 
