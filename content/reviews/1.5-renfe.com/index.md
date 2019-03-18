@@ -12,11 +12,9 @@ Aquí tienes nuestro análisis:
 
 ----
 
-<div style="font-size: 0.9em; color: #0c5460;background-color: #d1ecf1;border: 1px solid #bee5eb;padding: .75rem 1.25rem;">
+<div style="font-size: 0.9em; color: #0c5460;background-color: #ebf5f7;border: 1px solid #bee5eb;padding: .75rem 1.25rem;margin-bottom:calc(1.75rem - 1px);">
 <strong>¿Te gusta nuestro proyecto y quieres trabajar con nosotros?</strong> <br/> Somos expertos en web performance y ofrecemos formaciones a equipos de desarrollo y auditorías de sitios web.<br/><a href="/servicios/">Más información sobre nuestros servicios</a>.
 </div>
-
-----
 
 ## Resumen del vídeo
 
