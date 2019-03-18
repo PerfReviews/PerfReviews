@@ -23,12 +23,8 @@ class Reviews extends React.Component {
           const title = node.frontmatter.title || node.headings[0].value || node.fields.slug
           return (
             <div key={node.fields.slug} style={{
-              display: `flex`,
-              marginTop: rhythm(1),
+              marginTop: rhythm(2),
             }}>
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                <Img style={{height: 100, width: 100, flexShrink: 0, marginRight: rhythm(1 / 2)}} sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
-              </Link>
               <div>
                 <h3
                   style={{
