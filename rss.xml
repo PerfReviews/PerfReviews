@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PerfReviews]]></title><description><![CDATA[Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web.]]></description><link>https://perf.reviews</link><generator>RSS for Node</generator><lastBuildDate>Sun, 03 Mar 2019 13:25:43 GMT</lastBuildDate><item><title><![CDATA[Renfe]]></title><description><![CDATA[Analizamos  la web de Renfe . Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de…]]></description><link>https://perf.reviews/reviews/1.5-renfe.com/</link><guid isPermaLink="false">https://perf.reviews/reviews/1.5-renfe.com/</guid><pubDate>Tue, 26 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Analizamos &lt;a href=&quot;https://www.renfe.com&quot;&gt;la web de Renfe&lt;/a&gt;. Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PerfReviews]]></title><description><![CDATA[Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web.]]></description><link>https://perf.reviews</link><generator>RSS for Node</generator><lastBuildDate>Mon, 18 Mar 2019 08:31:21 GMT</lastBuildDate><item><title><![CDATA[Renfe]]></title><description><![CDATA[Analizamos  la web de Renfe . Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de…]]></description><link>https://perf.reviews/reviews/1.5-renfe.com/</link><guid isPermaLink="false">https://perf.reviews/reviews/1.5-renfe.com/</guid><pubDate>Tue, 26 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Analizamos &lt;a href=&quot;https://www.renfe.com&quot;&gt;la web de Renfe&lt;/a&gt;. Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.&lt;/p&gt;
+&lt;p&gt;Aquí tienes nuestro análisis:&lt;/p&gt;
 &lt;div&gt;
           &lt;div
             class=&quot;gatsby-resp-iframe-wrapper&quot;
@@ -13,6 +14,977 @@
           &quot;&gt;&lt;/iframe&gt;
           &lt;/div&gt;
           &lt;/div&gt;
+&lt;hr&gt;
+&lt;div style=&quot;font-size: 0.9em; color: #0c5460;background-color: #d1ecf1;border: 1px solid #bee5eb;padding: .75rem 1.25rem;&quot;&gt;
+&lt;strong&gt;¿Te gusta nuestro proyecto y quieres trabajar con nosotros?&lt;/strong&gt; &lt;br/&gt; Somos expertos en web performance y ofrecemos formaciones a equipos de desarrollo y auditorías de sitios web.&lt;br/&gt;&lt;a href=&quot;/servicios/&quot;&gt;Más información sobre nuestros servicios&lt;/a&gt;.
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2&gt;Resumen del vídeo&lt;/h2&gt;
+&lt;p&gt;En esta review hemos elegido &lt;a href=&quot;https://www.renfe.com&quot;&gt;la web de renfe&lt;/a&gt;. La hemos sufrido muchos y es importante dar un punto de vista desde la performance en esta web. Mucha gente ha estado criticándolo desde varios puntos y está bien que demos nuestra opinión.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAB6WOYMpYM/wD/xAAbEAACAQUAAAAAAAAAAAAAAAAAAQMCEBESQ//aAAgBAQABBQKnUUiFIdMW/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAHhAAAAQHAAAAAAAAAAAAAAAAAAECkRAREiExcaH/2gAIAQEABj8CnX0XNDjKHBaj/8QAGxAAAgMBAQEAAAAAAAAAAAAAAAERITFBUWH/2gAIAQEAAT8hdJdH8atD2C/Ai51qg8uSITnSF4j/2gAMAwEAAgADAAAAENvf/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/ELWP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHRAAAgICAwEAAAAAAAAAAAAAAREAITFBcZGh8f/aAAgBAQABPxAUnGOCDKokzYEIWVABBsHc1wtLWYEyjt4p8Cf/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/f7b498ffaec6807dc72c4f70ac607f69/eff50/img010.webp 158w,
+/static/f7b498ffaec6807dc72c4f70ac607f69/46f96/img010.webp 315w,
+/static/f7b498ffaec6807dc72c4f70ac607f69/8fa24/img010.webp 630w,
+/static/f7b498ffaec6807dc72c4f70ac607f69/437f1/img010.webp 945w,
+/static/f7b498ffaec6807dc72c4f70ac607f69/6f2ae/img010.webp 1260w,
+/static/f7b498ffaec6807dc72c4f70ac607f69/1208a/img010.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/f7b498ffaec6807dc72c4f70ac607f69/da84f/img010.jpg 158w,
+/static/f7b498ffaec6807dc72c4f70ac607f69/f31d6/img010.jpg 315w,
+/static/f7b498ffaec6807dc72c4f70ac607f69/ddfb8/img010.jpg 630w,
+/static/f7b498ffaec6807dc72c4f70ac607f69/d198f/img010.jpg 945w,
+/static/f7b498ffaec6807dc72c4f70ac607f69/63ef2/img010.jpg 1260w,
+/static/f7b498ffaec6807dc72c4f70ac607f69/7edc3/img010.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/f7b498ffaec6807dc72c4f70ac607f69/ddfb8/img010.jpg&quot;
+          alt=&quot;La web de Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/f7b498ffaec6807dc72c4f70ac607f69/ddfb8/img010.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;El detonante ha sido el anuncio de que van a hacer un cambio en la web. Hay varias noticias al respecto sobre el cambio que van a hacer &lt;a href=&quot;https://www.xataka.com/empresas-y-economia/que-700-000-euros-presupuesto-ridiculo-para-arreglar-web-renfe&quot;&gt;e incluso el presupuesto&lt;/a&gt;. Hay gente que le asusta esas cantidades y hay otros que dice que no trabajarían en esa web por ese importe. Nosotros nos queremos centrar en hacer una revisión del rendimiento.&lt;/p&gt;
+&lt;h3&gt;Informes de Lighthouse, WebPageTest, Cloudinary y CSS Stats&lt;/h3&gt;
+&lt;p&gt;Como suele ser habitual hacemos una primera pasada usando de &lt;a href=&quot;https://web.dev&quot;&gt;web.dev&lt;/a&gt;. A nivel de performance la puntuación es muy muy baja.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIBBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe6rAof/xAAXEAADAQAAAAAAAAAAAAAAAAAAESAh/9oACAEBAAEFAkYKP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CX//EABkQAAIDAQAAAAAAAAAAAAAAAAARARBRMf/aAAgBAQABPyFcEFwnl//aAAwDAQACAAMAAAAQkA//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAbEAEAAgIDAAAAAAAAAAAAAAABAJEQETFBYf/aAAgBAQABPxB6RUGdaKnioxcJj//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/00605eea620a1e2bad657b687bfec0c7/eff50/img024.webp 158w,
+/static/00605eea620a1e2bad657b687bfec0c7/46f96/img024.webp 315w,
+/static/00605eea620a1e2bad657b687bfec0c7/8fa24/img024.webp 630w,
+/static/00605eea620a1e2bad657b687bfec0c7/437f1/img024.webp 945w,
+/static/00605eea620a1e2bad657b687bfec0c7/6f2ae/img024.webp 1260w,
+/static/00605eea620a1e2bad657b687bfec0c7/1208a/img024.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/00605eea620a1e2bad657b687bfec0c7/da84f/img024.jpg 158w,
+/static/00605eea620a1e2bad657b687bfec0c7/f31d6/img024.jpg 315w,
+/static/00605eea620a1e2bad657b687bfec0c7/ddfb8/img024.jpg 630w,
+/static/00605eea620a1e2bad657b687bfec0c7/d198f/img024.jpg 945w,
+/static/00605eea620a1e2bad657b687bfec0c7/63ef2/img024.jpg 1260w,
+/static/00605eea620a1e2bad657b687bfec0c7/7edc3/img024.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/00605eea620a1e2bad657b687bfec0c7/ddfb8/img024.jpg&quot;
+          alt=&quot;Lighthouse para la web de Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/00605eea620a1e2bad657b687bfec0c7/ddfb8/img024.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;Los tiempos de First Contentful Paint se disparan a 8 segundos, el número de recursos que están solicitando, la forma en que está estructurado ese HTML para pedir esos recursos se pueden mejorar. En WebPageTest la parte negativa es principalmente el cacheo.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAFVjWkzI3f/xAAbEAABBAMAAAAAAAAAAAAAAAADAAECMwQFFP/aAAgBAQABBQLCJMhSV9BVr7i1Dizx/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFhEAAwAAAAAAAAAAAAAAAAAAARAx/9oACAECAQE/ATV//8QAGhAAAwADAQAAAAAAAAAAAAAAAAECITFyM//aAAgBAQAGPwJqqbwU09I9GVyXyzJ//8QAHBABAAICAwEAAAAAAAAAAAAAAQARIfAQUWFx/9oACAEBAAE/ISFhfP2FK4qlcLsezQdS/C8z/9oADAMBAAIAAwAAABCMD//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAwEBPxARf//EABYRAQEBAAAAAAAAAAAAAAAAAAAhQf/aAAgBAgEBPxDBH//EABsQAQEBAAMBAQAAAAAAAAAAAAERAEFhwaGx/9oACAEBAAE/EEs8BCWOs2liRwPWI+pvufjEvC+zIqxFqcG//9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/be073cdb133b89f0ff419945f2e7f22f/eff50/img034.webp 158w,
+/static/be073cdb133b89f0ff419945f2e7f22f/46f96/img034.webp 315w,
+/static/be073cdb133b89f0ff419945f2e7f22f/8fa24/img034.webp 630w,
+/static/be073cdb133b89f0ff419945f2e7f22f/437f1/img034.webp 945w,
+/static/be073cdb133b89f0ff419945f2e7f22f/6f2ae/img034.webp 1260w,
+/static/be073cdb133b89f0ff419945f2e7f22f/1208a/img034.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/be073cdb133b89f0ff419945f2e7f22f/da84f/img034.jpg 158w,
+/static/be073cdb133b89f0ff419945f2e7f22f/f31d6/img034.jpg 315w,
+/static/be073cdb133b89f0ff419945f2e7f22f/ddfb8/img034.jpg 630w,
+/static/be073cdb133b89f0ff419945f2e7f22f/d198f/img034.jpg 945w,
+/static/be073cdb133b89f0ff419945f2e7f22f/63ef2/img034.jpg 1260w,
+/static/be073cdb133b89f0ff419945f2e7f22f/7edc3/img034.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/be073cdb133b89f0ff419945f2e7f22f/ddfb8/img034.jpg&quot;
+          alt=&quot;WebPageTest para la web de Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/be073cdb133b89f0ff419945f2e7f22f/ddfb8/img034.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;La web de Renfe en escritorio es relativamente rápida. Tampoco tiene mucho contenido: el formulario de venta, un slider, unas pocas imágenes y un menú. La home es relativamente ligera para un análisis de performance pero sí es verdad que en cuanto a la estructura y la arquitectura que tienen en el html y en las peticiones de los recursos veremos que hay bastantes puntos de mejora.&lt;/p&gt;
+&lt;p&gt;Las imágenes están bien, aunque se puede aumentar su compresión bastante manteniendo el formato JPG.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHupSsk/8QAGBAAAgMAAAAAAAAAAAAAAAAAABEBECH/2gAIAQEAAQUCRgoHf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CX//EABoQAQEAAgMAAAAAAAAAAAAAAAEAESFRYZH/2gAIAQEAAT8hRwTgbDy6CVG7Lf/aAAwDAQACAAMAAAAQg9//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAbEAADAAIDAAAAAAAAAAAAAAAAAREhUWGR0f/aAAgBAQABPxBN1dQ1iiFPI2Boycx//9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/c09ed70a64a8027c7fdcb493c693a897/eff50/img044.webp 158w,
+/static/c09ed70a64a8027c7fdcb493c693a897/46f96/img044.webp 315w,
+/static/c09ed70a64a8027c7fdcb493c693a897/8fa24/img044.webp 630w,
+/static/c09ed70a64a8027c7fdcb493c693a897/437f1/img044.webp 945w,
+/static/c09ed70a64a8027c7fdcb493c693a897/6f2ae/img044.webp 1260w,
+/static/c09ed70a64a8027c7fdcb493c693a897/1208a/img044.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/c09ed70a64a8027c7fdcb493c693a897/da84f/img044.jpg 158w,
+/static/c09ed70a64a8027c7fdcb493c693a897/f31d6/img044.jpg 315w,
+/static/c09ed70a64a8027c7fdcb493c693a897/ddfb8/img044.jpg 630w,
+/static/c09ed70a64a8027c7fdcb493c693a897/d198f/img044.jpg 945w,
+/static/c09ed70a64a8027c7fdcb493c693a897/63ef2/img044.jpg 1260w,
+/static/c09ed70a64a8027c7fdcb493c693a897/7edc3/img044.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/c09ed70a64a8027c7fdcb493c693a897/ddfb8/img044.jpg&quot;
+          alt=&quot;Cloudinary para la web de Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/c09ed70a64a8027c7fdcb493c693a897/ddfb8/img044.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;La mayoría de imágenes se están sirviendo al tamaño  adecuado. Hay varias imágenes como el logo de Renfe y varios iconos que podrían convertirse a SVG. En móvil las imágenes del slider se cortan.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAgX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB1GFHIqSH/8QAGRAAAwADAAAAAAAAAAAAAAAAAQIQAxIz/9oACAEBAAEFAnOrGZek/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFxAAAwEAAAAAAAAAAAAAAAAAARAxkf/aAAgBAQAGPwKjGH//xAAZEAEBAAMBAAAAAAAAAAAAAAABABEhMaH/2gAIAQEAAT8hcQDXHPMAgI+E9hb/2gAMAwEAAgADAAAAEK//AP/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAgBAwEBPxDYj//EABcRAAMBAAAAAAAAAAAAAAAAAAABEUH/2gAIAQIBAT8QV0p//8QAGxABAQEBAAMBAAAAAAAAAAAAAREAMVFxkaH/2gAIAQEAAT8QMOw0unyJMoQ/Mo4fMarbB325N6Lu/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/6462a414723b141d075334b422b35927/eff50/img060.webp 158w,
+/static/6462a414723b141d075334b422b35927/46f96/img060.webp 315w,
+/static/6462a414723b141d075334b422b35927/8fa24/img060.webp 630w,
+/static/6462a414723b141d075334b422b35927/437f1/img060.webp 945w,
+/static/6462a414723b141d075334b422b35927/6f2ae/img060.webp 1260w,
+/static/6462a414723b141d075334b422b35927/1208a/img060.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/6462a414723b141d075334b422b35927/da84f/img060.jpg 158w,
+/static/6462a414723b141d075334b422b35927/f31d6/img060.jpg 315w,
+/static/6462a414723b141d075334b422b35927/ddfb8/img060.jpg 630w,
+/static/6462a414723b141d075334b422b35927/d198f/img060.jpg 945w,
+/static/6462a414723b141d075334b422b35927/63ef2/img060.jpg 1260w,
+/static/6462a414723b141d075334b422b35927/7edc3/img060.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/6462a414723b141d075334b422b35927/ddfb8/img060.jpg&quot;
+          alt=&quot;Imágenes que se cortan en móvil en la web de Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/6462a414723b141d075334b422b35927/ddfb8/img060.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;Son imágenes de 1600 píxeles de ancho y están maquetadas para que la parte central de la imagen sea la que tiene el contenido con el texto. Aquí estaría bien que utilizasen responsive images para servir imágenes que se adapten al dispositivo y no hacer peticiones a imágenes de gran tamaño. Además, las imágenes se referencian en el HTML, lo que no permite hacer lazy loading, solicitando todas las imágenes al cargar la página.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgAF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB3JEUo//EABYQAQEBAAAAAAAAAAAAAAAAABEQIP/aAAgBAQABBQIhj//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CX//EABsQAQACAgMAAAAAAAAAAAAAAAEAERCRMVGB/9oACAEBAAE/IUWUGp4alOiPJn//2gAMAwEAAgADAAAAEIMP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHxAAAgAFBQAAAAAAAAAAAAAAAAEQETFB8CFRgcHx/9oACAEBAAE/EFKzmEneVx7PGH0sqhWzaH//2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/8a6ac9d9240dac27c35cc4bab5f15c44/eff50/img077.webp 158w,
+/static/8a6ac9d9240dac27c35cc4bab5f15c44/46f96/img077.webp 315w,
+/static/8a6ac9d9240dac27c35cc4bab5f15c44/8fa24/img077.webp 630w,
+/static/8a6ac9d9240dac27c35cc4bab5f15c44/437f1/img077.webp 945w,
+/static/8a6ac9d9240dac27c35cc4bab5f15c44/6f2ae/img077.webp 1260w,
+/static/8a6ac9d9240dac27c35cc4bab5f15c44/1208a/img077.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/8a6ac9d9240dac27c35cc4bab5f15c44/da84f/img077.jpg 158w,
+/static/8a6ac9d9240dac27c35cc4bab5f15c44/f31d6/img077.jpg 315w,
+/static/8a6ac9d9240dac27c35cc4bab5f15c44/ddfb8/img077.jpg 630w,
+/static/8a6ac9d9240dac27c35cc4bab5f15c44/d198f/img077.jpg 945w,
+/static/8a6ac9d9240dac27c35cc4bab5f15c44/63ef2/img077.jpg 1260w,
+/static/8a6ac9d9240dac27c35cc4bab5f15c44/7edc3/img077.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/8a6ac9d9240dac27c35cc4bab5f15c44/ddfb8/img077.jpg&quot;
+          alt=&quot;CSS Stats para la web de Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/8a6ac9d9240dac27c35cc4bab5f15c44/ddfb8/img077.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;El estado del CSS es relativamente positivo. Tiene una especificidad en forma de sierra, lo que se puede interpretar como que conforme va pasando el tiempo se han ido añadiendo selectores más específicos para sobreescribir lo anterior. Más adelante explicaremos algunos CSS que se sirven sin minificar.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAgX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB3Cq6OEi//8QAGxAAAgEFAAAAAAAAAAAAAAAAABEBAgMQEyH/2gAIAQEAAQUCXRFyGa6Zx//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABoQAAICAwAAAAAAAAAAAAAAAAAQAREhQZH/2gAIAQEABj8CNKDN9X//xAAbEAACAgMBAAAAAAAAAAAAAAABEQAhQVGBEP/aAAgBAQABPyE1IBZiOliaEBY+FQ5J35//2gAMAwEAAgADAAAAEI/P/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAIhAAAgEBCAMAAAAAAAAAAAAAAREAITFRYXGBobHB0eHx/9oACAEBAAE/EKxRiiyXcITZ3Dp72nxoAYKJIbwMXABY+WKf/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/ab431eca9c7702f68f0790858bb7d72e/eff50/img084.webp 158w,
+/static/ab431eca9c7702f68f0790858bb7d72e/46f96/img084.webp 315w,
+/static/ab431eca9c7702f68f0790858bb7d72e/8fa24/img084.webp 630w,
+/static/ab431eca9c7702f68f0790858bb7d72e/437f1/img084.webp 945w,
+/static/ab431eca9c7702f68f0790858bb7d72e/6f2ae/img084.webp 1260w,
+/static/ab431eca9c7702f68f0790858bb7d72e/1208a/img084.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/ab431eca9c7702f68f0790858bb7d72e/da84f/img084.jpg 158w,
+/static/ab431eca9c7702f68f0790858bb7d72e/f31d6/img084.jpg 315w,
+/static/ab431eca9c7702f68f0790858bb7d72e/ddfb8/img084.jpg 630w,
+/static/ab431eca9c7702f68f0790858bb7d72e/d198f/img084.jpg 945w,
+/static/ab431eca9c7702f68f0790858bb7d72e/63ef2/img084.jpg 1260w,
+/static/ab431eca9c7702f68f0790858bb7d72e/7edc3/img084.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/ab431eca9c7702f68f0790858bb7d72e/ddfb8/img084.jpg&quot;
+          alt=&quot;CSS Stats para la web de Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/ab431eca9c7702f68f0790858bb7d72e/ddfb8/img084.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;h3&gt;Redirecciones y falta de SSL&lt;/h3&gt;
+&lt;p&gt;Una de las cosas que llama la atención en Renfe es que el dominio no hace una redirección uniforme. Renfe.es no funciona, pero www.renfe.es sí, redirigiendo a renfe.com. La página principal no se sirve usando HTTPS. Este es un punto de mejora, ya que aparte de mejorar la seguridad e integridad de los datos permite implementar una serie de mejoras como service workers o http/2 que sólo funcionan sobre HTTPS.&lt;/p&gt;
+&lt;p&gt;La web de venta a la que el usuario llega después de elegir origen y destino sí soporta HTTPS.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAABBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFbToXnrJP/xAAbEAACAgMBAAAAAAAAAAAAAAABAgMFABEzI//aAAgBAQABBQKFHMKqQLHvAfDeWHf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwGn/8QAHRAAAgIBBQAAAAAAAAAAAAAAAAEDciECEBESUf/aAAgBAQAGPwLQ1Lxjwy+wqkddlU//xAAdEAADAAEFAQAAAAAAAAAAAAAAARGxITFBcYGh/9oACAEBAAE/IXyEaxcNCTuu58bLGeQoa9DLP//aAAwDAQACAAMAAAAQhw//xAAWEQEBAQAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8QVTJ//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxAf/8QAHBABAAICAwEAAAAAAAAAAAAAAQARIVExYYGh/9oACAEBAAE/EFIdiXgxcvbtZlY1RKBBIOA+PUN/yMtgf//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/cc318e2da1f64dc27ba5d3ff27c75fa1/eff50/img110.webp 158w,
+/static/cc318e2da1f64dc27ba5d3ff27c75fa1/46f96/img110.webp 315w,
+/static/cc318e2da1f64dc27ba5d3ff27c75fa1/8fa24/img110.webp 630w,
+/static/cc318e2da1f64dc27ba5d3ff27c75fa1/437f1/img110.webp 945w,
+/static/cc318e2da1f64dc27ba5d3ff27c75fa1/6f2ae/img110.webp 1260w,
+/static/cc318e2da1f64dc27ba5d3ff27c75fa1/1208a/img110.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/cc318e2da1f64dc27ba5d3ff27c75fa1/da84f/img110.jpg 158w,
+/static/cc318e2da1f64dc27ba5d3ff27c75fa1/f31d6/img110.jpg 315w,
+/static/cc318e2da1f64dc27ba5d3ff27c75fa1/ddfb8/img110.jpg 630w,
+/static/cc318e2da1f64dc27ba5d3ff27c75fa1/d198f/img110.jpg 945w,
+/static/cc318e2da1f64dc27ba5d3ff27c75fa1/63ef2/img110.jpg 1260w,
+/static/cc318e2da1f64dc27ba5d3ff27c75fa1/7edc3/img110.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/cc318e2da1f64dc27ba5d3ff27c75fa1/ddfb8/img110.jpg&quot;
+          alt=&quot;Soporte de HTTPS en venta.renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/cc318e2da1f64dc27ba5d3ff27c75fa1/ddfb8/img110.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;h3&gt;Falta de minificación y combinación&lt;/h3&gt;
+&lt;p&gt;Si analizamos los estáticos vamos a ver que hay CSS y JS sin minificar.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAG/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABa4LhzlSf/8QAHRAAAAUFAAAAAAAAAAAAAAAAAAECBTQDBBETI//aAAgBAQABBQK1TywHGRRQnQQcZH//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPwFn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxAAAQUBAQAAAAAAAAAAAAAAAQAQITFyAgP/2gAIAQEABj8C5M0wyvOLAYZX/8QAHBAAAgICAwAAAAAAAAAAAAAAAAERITGxQXGh/9oACAEBAAE/IWtt4ousClBXobYsyMyjgeRtn//aAAwDAQACAAMAAAAQCA//xAAVEQEBAAAAAAAAAAAAAAAAAAAQIf/aAAgBAwEBPxCj/8QAFhEAAwAAAAAAAAAAAAAAAAAAARAx/9oACAECAQE/EBF//8QAHBABAQEAAQUAAAAAAAAAAAAAAREAITFBYXGR/9oACAEBAAE/EA/pMpR4dNJUvrACaCiCCO7M0+tz3H//2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/659d3e710974cf7471ab3738594a33f7/eff50/img120.webp 158w,
+/static/659d3e710974cf7471ab3738594a33f7/46f96/img120.webp 315w,
+/static/659d3e710974cf7471ab3738594a33f7/8fa24/img120.webp 630w,
+/static/659d3e710974cf7471ab3738594a33f7/437f1/img120.webp 945w,
+/static/659d3e710974cf7471ab3738594a33f7/6f2ae/img120.webp 1260w,
+/static/659d3e710974cf7471ab3738594a33f7/1208a/img120.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/659d3e710974cf7471ab3738594a33f7/da84f/img120.jpg 158w,
+/static/659d3e710974cf7471ab3738594a33f7/f31d6/img120.jpg 315w,
+/static/659d3e710974cf7471ab3738594a33f7/ddfb8/img120.jpg 630w,
+/static/659d3e710974cf7471ab3738594a33f7/d198f/img120.jpg 945w,
+/static/659d3e710974cf7471ab3738594a33f7/63ef2/img120.jpg 1260w,
+/static/659d3e710974cf7471ab3738594a33f7/7edc3/img120.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/659d3e710974cf7471ab3738594a33f7/ddfb8/img120.jpg&quot;
+          alt=&quot;CSS sin minificar en Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/659d3e710974cf7471ab3738594a33f7/ddfb8/img120.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;Librerías como jQuery y jQuery UI por lo menos sí lo están. Hay ficheros que son el resultante de una combinación “a mano” de 2 estáticos.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBBQb/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABsG0XIzpBX//EAB0QAAECBwAAAAAAAAAAAAAAAAIABQMEERMjMzT/2gAIAQEAAQUClww0Tj0QQGwnDf8A/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxAAAQUBAQAAAAAAAAAAAAAAAQADECFyMTL/2gAIAQEABj8CbN+YGU3XQIGV/8QAHBAAAgICAwAAAAAAAAAAAAAAAAERITGxQXGh/9oACAEBAAE/IVWcXNYFJFOhtk4hMowqPM2z/9oADAMBAAIAAwAAABAfz//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EGf/xAAWEQEBAQAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8QHZ//xAAbEAEAAgIDAAAAAAAAAAAAAAABABEhQTGBkf/aAAgBAQABPxBAbraW9HEAHcNHygUJII21DCYR3fI//9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/f0ce2bd479821a0ac39b541861d9c1ff/eff50/img127.webp 158w,
+/static/f0ce2bd479821a0ac39b541861d9c1ff/46f96/img127.webp 315w,
+/static/f0ce2bd479821a0ac39b541861d9c1ff/8fa24/img127.webp 630w,
+/static/f0ce2bd479821a0ac39b541861d9c1ff/437f1/img127.webp 945w,
+/static/f0ce2bd479821a0ac39b541861d9c1ff/6f2ae/img127.webp 1260w,
+/static/f0ce2bd479821a0ac39b541861d9c1ff/1208a/img127.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/f0ce2bd479821a0ac39b541861d9c1ff/da84f/img127.jpg 158w,
+/static/f0ce2bd479821a0ac39b541861d9c1ff/f31d6/img127.jpg 315w,
+/static/f0ce2bd479821a0ac39b541861d9c1ff/ddfb8/img127.jpg 630w,
+/static/f0ce2bd479821a0ac39b541861d9c1ff/d198f/img127.jpg 945w,
+/static/f0ce2bd479821a0ac39b541861d9c1ff/63ef2/img127.jpg 1260w,
+/static/f0ce2bd479821a0ac39b541861d9c1ff/7edc3/img127.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/f0ce2bd479821a0ac39b541861d9c1ff/ddfb8/img127.jpg&quot;
+          alt=&quot;Combinación de JS a mano en Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/f0ce2bd479821a0ac39b541861d9c1ff/ddfb8/img127.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;En general la gestión de estáticos de la web de Renfe parece que se ha congelado en el tiempo, pero bastante atrás en el tiempo. No usan ningún tipo de herramientas para minificar o para combinar los estáticos y los ficheros se han ido añadiendo al HTML sin mucho cuidado.&lt;/p&gt;
+&lt;p&gt;Se solicitan 4 recursos CSS sin combinar, y hace que el navegador tenga que esperar a que se descarguen para poder empezar a pintar.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQFBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGrQlsXmgn/xAAbEAABBAMAAAAAAAAAAAAAAAABAAQFMwIDE//aAAgBAQABBQJoDyAUje2xA0hSN/8A/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8BZ//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABsQAAEFAQEAAAAAAAAAAAAAAAEAAhARMXIh/9oACAEBAAY/ArN55A5TCBrYHK//xAAbEAACAgMBAAAAAAAAAAAAAAABEQAQIaGxUf/aAAgBAQABPyFeVEy8p03TE0CB003TP//aAAwDAQACAAMAAAAQ8A//xAAWEQEBAQAAAAAAAAAAAAAAAAABERD/2gAIAQMBAT8QVbn/xAAWEQEBAQAAAAAAAAAAAAAAAAABECH/2gAIAQIBAT8QHJ//xAAaEAEAAwADAAAAAAAAAAAAAAABABEhEDFB/9oACAEBAAE/EErtErCh0QHW8mMKkFoVs9wgC64Ef//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/8d188d2059a8a91fc1e9a9e263c56e97/eff50/img136.webp 158w,
+/static/8d188d2059a8a91fc1e9a9e263c56e97/46f96/img136.webp 315w,
+/static/8d188d2059a8a91fc1e9a9e263c56e97/8fa24/img136.webp 630w,
+/static/8d188d2059a8a91fc1e9a9e263c56e97/437f1/img136.webp 945w,
+/static/8d188d2059a8a91fc1e9a9e263c56e97/6f2ae/img136.webp 1260w,
+/static/8d188d2059a8a91fc1e9a9e263c56e97/1208a/img136.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/8d188d2059a8a91fc1e9a9e263c56e97/da84f/img136.jpg 158w,
+/static/8d188d2059a8a91fc1e9a9e263c56e97/f31d6/img136.jpg 315w,
+/static/8d188d2059a8a91fc1e9a9e263c56e97/ddfb8/img136.jpg 630w,
+/static/8d188d2059a8a91fc1e9a9e263c56e97/d198f/img136.jpg 945w,
+/static/8d188d2059a8a91fc1e9a9e263c56e97/63ef2/img136.jpg 1260w,
+/static/8d188d2059a8a91fc1e9a9e263c56e97/7edc3/img136.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/8d188d2059a8a91fc1e9a9e263c56e97/ddfb8/img136.jpg&quot;
+          alt=&quot;Múltiples CSS bloqueantes en Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/8d188d2059a8a91fc1e9a9e263c56e97/ddfb8/img136.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;Encima, justo después del CSS se piden recursos JS, con lo que el navegador no va a poder empezar a renderizar nada porque la request al JS va a bloquear el renderizado del contenido que está en el body. Son una serie de recursos que se están añadiendo en el critical path que va a hacer que nuestro contenido tarde mucho en cargar.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAG/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAABa8bDNVH/xAAbEAABBAMAAAAAAAAAAAAAAAABAAQFMwIDI//aAAgBAQABBQJqOIUje2xA0qRv/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGhAAAQUBAAAAAAAAAAAAAAAAAQACEDFyIf/aAAgBAQAGPwJp7UDKYQLbAyv/xAAbEAACAgMBAAAAAAAAAAAAAAAAAREhQaGxUf/aAAgBAQABPyG04Uk3RDw03WQ0GiRGm6z/2gAMAwEAAgADAAAAELQP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8QZ//EABURAQEAAAAAAAAAAAAAAAAAABEQ/9oACAECAQE/EFn/xAAaEAEAAgMBAAAAAAAAAAAAAAABABEQIUFR/9oACAEBAAE/EGvrrCaUbCFDfHk00VIDQrR1ohBwI//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/bd328778ec544d354da0d9244c4bc7ff/eff50/img143.webp 158w,
+/static/bd328778ec544d354da0d9244c4bc7ff/46f96/img143.webp 315w,
+/static/bd328778ec544d354da0d9244c4bc7ff/8fa24/img143.webp 630w,
+/static/bd328778ec544d354da0d9244c4bc7ff/437f1/img143.webp 945w,
+/static/bd328778ec544d354da0d9244c4bc7ff/6f2ae/img143.webp 1260w,
+/static/bd328778ec544d354da0d9244c4bc7ff/1208a/img143.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/bd328778ec544d354da0d9244c4bc7ff/da84f/img143.jpg 158w,
+/static/bd328778ec544d354da0d9244c4bc7ff/f31d6/img143.jpg 315w,
+/static/bd328778ec544d354da0d9244c4bc7ff/ddfb8/img143.jpg 630w,
+/static/bd328778ec544d354da0d9244c4bc7ff/d198f/img143.jpg 945w,
+/static/bd328778ec544d354da0d9244c4bc7ff/63ef2/img143.jpg 1260w,
+/static/bd328778ec544d354da0d9244c4bc7ff/7edc3/img143.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/bd328778ec544d354da0d9244c4bc7ff/ddfb8/img143.jpg&quot;
+          alt=&quot;JS bloqueantes justo después del CSS en Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/bd328778ec544d354da0d9244c4bc7ff/ddfb8/img143.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;h3&gt;Código condicional&lt;/h3&gt;
+&lt;p&gt;Hay detalles como por ejemplo el awesomplete.css que parece ser que sólo se aplica a Safari, o esa era la idea que tenían, y también hay un awesomplete.min.js que es la parte de JS de esa librería, que es un auto completado que desarrolló &lt;a href=&quot;https://twitter.com/leaverou&quot;&gt;Lea Verou&lt;/a&gt;. Si lo estaban sirviendo sólo para Safari, una buena solución es comprobar el navegador que está haciendo la petición. Aunque tampoco hay que abogar mucho for hacer la detección de user agent en el lado del servidor y deberíamos usar feature detection en el lado del cliente.&lt;/p&gt;
+&lt;h3&gt;Código comentado&lt;/h3&gt;
+&lt;p&gt;Hay mucho código comentado en el CSS y en JS. A veces parece que no hay ni siquiera una herramienta de control de versiones del código fuente.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQFBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHQsisjnBX/xAAcEAAABgMAAAAAAAAAAAAAAAAAAQIEBTQDESP/2gAIAQEAAQUCbp46EjYbpIsIkbH/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAdEAABAwUBAAAAAAAAAAAAAAABABByAgMRITEy/9oACAEBAAY/ArZ35YRVBx0MIr//xAAcEAACAgIDAAAAAAAAAAAAAAAAAREhMbFRcaH/2gAIAQEAAT8hVySZdEJwV6G2JlBpkmzyNs//2gAMAwEAAgADAAAAEBgP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8QZ//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAECAQE/EKf/xAAZEAEAAwEBAAAAAAAAAAAAAAABABExEEH/2gAIAQEAAT8QJYSVEcGELAqACEg7StHrRLceP//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/ddd6441a4232aed60d3ff952cfac1f65/eff50/img153.webp 158w,
+/static/ddd6441a4232aed60d3ff952cfac1f65/46f96/img153.webp 315w,
+/static/ddd6441a4232aed60d3ff952cfac1f65/8fa24/img153.webp 630w,
+/static/ddd6441a4232aed60d3ff952cfac1f65/437f1/img153.webp 945w,
+/static/ddd6441a4232aed60d3ff952cfac1f65/6f2ae/img153.webp 1260w,
+/static/ddd6441a4232aed60d3ff952cfac1f65/1208a/img153.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/ddd6441a4232aed60d3ff952cfac1f65/da84f/img153.jpg 158w,
+/static/ddd6441a4232aed60d3ff952cfac1f65/f31d6/img153.jpg 315w,
+/static/ddd6441a4232aed60d3ff952cfac1f65/ddfb8/img153.jpg 630w,
+/static/ddd6441a4232aed60d3ff952cfac1f65/d198f/img153.jpg 945w,
+/static/ddd6441a4232aed60d3ff952cfac1f65/63ef2/img153.jpg 1260w,
+/static/ddd6441a4232aed60d3ff952cfac1f65/7edc3/img153.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/ddd6441a4232aed60d3ff952cfac1f65/ddfb8/img153.jpg&quot;
+          alt=&quot;Código comentado en Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/ddd6441a4232aed60d3ff952cfac1f65/ddfb8/img153.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;En otro fichero se lee “todo esto tampoco va” seguido de un código comentado.  Este código se puede eliminar y dejar de servirlo al navegador.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAWuG6M1VX//EABwQAAEDBQAAAAAAAAAAAAAAAAEEBTQAAgMjQf/aAAgBAQABBQJKNXXGQntAw04yP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABoQAAEFAQAAAAAAAAAAAAAAAAEAAhAxciH/2gAIAQEABj8Cae1AymECxAyv/8QAGxABAAICAwAAAAAAAAAAAAAAAQARIbExcaH/2gAIAQEAAT8hW3yIW4lEY9DbK5CNwnkbZ//aAAwDAQACAAMAAAAQrA//xAAWEQADAAAAAAAAAAAAAAAAAAABEDH/2gAIAQMBAT8QNX//xAAWEQADAAAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8QEX//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFh/9oACAEBAAE/EOXQRGlHCFwc+QAQokB8Vo9aIsm5x//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/52db9eba31965d9abd546ef1a08bd9d7/eff50/img160.webp 158w,
+/static/52db9eba31965d9abd546ef1a08bd9d7/46f96/img160.webp 315w,
+/static/52db9eba31965d9abd546ef1a08bd9d7/8fa24/img160.webp 630w,
+/static/52db9eba31965d9abd546ef1a08bd9d7/437f1/img160.webp 945w,
+/static/52db9eba31965d9abd546ef1a08bd9d7/6f2ae/img160.webp 1260w,
+/static/52db9eba31965d9abd546ef1a08bd9d7/1208a/img160.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/52db9eba31965d9abd546ef1a08bd9d7/da84f/img160.jpg 158w,
+/static/52db9eba31965d9abd546ef1a08bd9d7/f31d6/img160.jpg 315w,
+/static/52db9eba31965d9abd546ef1a08bd9d7/ddfb8/img160.jpg 630w,
+/static/52db9eba31965d9abd546ef1a08bd9d7/d198f/img160.jpg 945w,
+/static/52db9eba31965d9abd546ef1a08bd9d7/63ef2/img160.jpg 1260w,
+/static/52db9eba31965d9abd546ef1a08bd9d7/7edc3/img160.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/52db9eba31965d9abd546ef1a08bd9d7/ddfb8/img160.jpg&quot;
+          alt=&quot;Código comentado en Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/52db9eba31965d9abd546ef1a08bd9d7/ddfb8/img160.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;Hay también comentarios que son un pseudo changelog, con las fechas en las que se han hecho cambios en los ficheros. Esta información debería ir a un control de versiones.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBBQb/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFqxTdHNEif/8QAGxAAAQQDAAAAAAAAAAAAAAAAAQAEBTQCAxP/2gAIAQEAAQUCaA81I2G+IGlSNj//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPwFn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxABAAICAwAAAAAAAAAAAAAAAQACEHIRMWH/2gAIAQEABj8CF58wayiHdcGs/8QAHBAAAwABBQAAAAAAAAAAAAAAAAERsSExYXGh/9oACAEBAAE/IbZiJVtITg09LLJaGiiR5GWf/9oADAMBAAIAAwAAABC7D//EABYRAQEBAAAAAAAAAAAAAAAAAAEREP/aAAgBAwEBPxBVuf/EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAgEBPxARf//EABsQAQACAgMAAAAAAAAAAAAAAAEAERBBITGR/9oACAEBAAE/EHrqNWh0QNvD2AAEgSilG2iFV0Xjx//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/a53dbb5c7ba791f07916f968cabf059a/eff50/img170.webp 158w,
+/static/a53dbb5c7ba791f07916f968cabf059a/46f96/img170.webp 315w,
+/static/a53dbb5c7ba791f07916f968cabf059a/8fa24/img170.webp 630w,
+/static/a53dbb5c7ba791f07916f968cabf059a/437f1/img170.webp 945w,
+/static/a53dbb5c7ba791f07916f968cabf059a/6f2ae/img170.webp 1260w,
+/static/a53dbb5c7ba791f07916f968cabf059a/1208a/img170.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/a53dbb5c7ba791f07916f968cabf059a/da84f/img170.jpg 158w,
+/static/a53dbb5c7ba791f07916f968cabf059a/f31d6/img170.jpg 315w,
+/static/a53dbb5c7ba791f07916f968cabf059a/ddfb8/img170.jpg 630w,
+/static/a53dbb5c7ba791f07916f968cabf059a/d198f/img170.jpg 945w,
+/static/a53dbb5c7ba791f07916f968cabf059a/63ef2/img170.jpg 1260w,
+/static/a53dbb5c7ba791f07916f968cabf059a/7edc3/img170.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/a53dbb5c7ba791f07916f968cabf059a/ddfb8/img170.jpg&quot;
+          alt=&quot;Código comentado en Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/a53dbb5c7ba791f07916f968cabf059a/ddfb8/img170.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;h3&gt;Potenciales mejoras al servir los estáticos&lt;/h3&gt;
+&lt;p&gt;Los estáticos JS podrían cargarse de forma asíncrona al final del body. No se utiliza CDN y se piden muchos recursos al mismo dominio, lo que combinado con no usar http/2 hace aumentar el tiempo de carga.&lt;/p&gt;
+&lt;p&gt;El tiempo de cacheo es muy corto. En algunos casos, como en las fuentes woff2, de 1 segundo. Además, combinado con ETags hace que siempre sea necesaria hacer una petición al navegador para recursos que podrían ser versionados y cacheados durante un periodo largo.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBBQb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGwbScM6QH/xAAcEAABAwUAAAAAAAAAAAAAAAABAAQFAhMjMzT/2gAIAQEAAQUCb04QFI9DcC0pHf8A/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxAAAQQDAAAAAAAAAAAAAAAAAQACEHIDITL/2gAIAQEABj8CxnfMCqZUQKr/xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhsVFx/9oACAEBAAE/ISLOhi5AZmjx1gFAkLc18nWf/9oADAMBAAIAAwAAABBUD//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPxCsf//EABURAQEAAAAAAAAAAAAAAAAAABEA/9oACAECAQE/EFm//8QAGRABAQADAQAAAAAAAAAAAAAAAQARITFB/9oACAEBAAE/EDKyVQjRw8kEQgBGCgwJUXHdRkDrMlbR/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/ae8d03a9aaf52de486d333baf1357e21/eff50/img180.webp 158w,
+/static/ae8d03a9aaf52de486d333baf1357e21/46f96/img180.webp 315w,
+/static/ae8d03a9aaf52de486d333baf1357e21/8fa24/img180.webp 630w,
+/static/ae8d03a9aaf52de486d333baf1357e21/437f1/img180.webp 945w,
+/static/ae8d03a9aaf52de486d333baf1357e21/6f2ae/img180.webp 1260w,
+/static/ae8d03a9aaf52de486d333baf1357e21/1208a/img180.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/ae8d03a9aaf52de486d333baf1357e21/da84f/img180.jpg 158w,
+/static/ae8d03a9aaf52de486d333baf1357e21/f31d6/img180.jpg 315w,
+/static/ae8d03a9aaf52de486d333baf1357e21/ddfb8/img180.jpg 630w,
+/static/ae8d03a9aaf52de486d333baf1357e21/d198f/img180.jpg 945w,
+/static/ae8d03a9aaf52de486d333baf1357e21/63ef2/img180.jpg 1260w,
+/static/ae8d03a9aaf52de486d333baf1357e21/7edc3/img180.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/ae8d03a9aaf52de486d333baf1357e21/ddfb8/img180.jpg&quot;
+          alt=&quot;Tiempos de cacheo muy cortos para fuentes en Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/ae8d03a9aaf52de486d333baf1357e21/ddfb8/img180.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;La imagen del logo de Renfe podría servirse en SVG e incluso hacerlo inline, dado que va a aparecer &lt;em&gt;above the fold&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Los recursos están bien comprimidos pero el favicon.ico tiene un tamaño de 32 kb. Es bastante grande para ser un favicon, pero aparte de ello está sin comprimir. El formato ico es compresible así que no hay excusa para olvidar servirlo comprimido.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBBQb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGxcVaMySH/xAAbEAABBAMAAAAAAAAAAAAAAAAAAgQFNBIjM//aAAgBAQABBQJsnViSNhtwJGx//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGhAAAQUBAAAAAAAAAAAAAAAAAQACECFyMv/aAAgBAQAGPwJhvmBlMzAyv//EABsQAAIDAAMAAAAAAAAAAAAAAAABESGxcYGh/9oACAEBAAE/IV37JTdECvA1jPpYSzyNZ//aAAwDAQACAAMAAAAQhw//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxBn/8QAFREBAQAAAAAAAAAAAAAAAAAAERD/2gAIAQIBAT8QWf/EAB0QAQACAQUBAAAAAAAAAAAAAAEAIREQMUFhcbH/2gAIAQEAAT8Qt7ctKKNjiesAUKkYTmj4p3aeP//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/29171876f662d49bb0a4fca798f6877c/eff50/img224.webp 158w,
+/static/29171876f662d49bb0a4fca798f6877c/46f96/img224.webp 315w,
+/static/29171876f662d49bb0a4fca798f6877c/8fa24/img224.webp 630w,
+/static/29171876f662d49bb0a4fca798f6877c/437f1/img224.webp 945w,
+/static/29171876f662d49bb0a4fca798f6877c/6f2ae/img224.webp 1260w,
+/static/29171876f662d49bb0a4fca798f6877c/1208a/img224.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/29171876f662d49bb0a4fca798f6877c/da84f/img224.jpg 158w,
+/static/29171876f662d49bb0a4fca798f6877c/f31d6/img224.jpg 315w,
+/static/29171876f662d49bb0a4fca798f6877c/ddfb8/img224.jpg 630w,
+/static/29171876f662d49bb0a4fca798f6877c/d198f/img224.jpg 945w,
+/static/29171876f662d49bb0a4fca798f6877c/63ef2/img224.jpg 1260w,
+/static/29171876f662d49bb0a4fca798f6877c/7edc3/img224.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/29171876f662d49bb0a4fca798f6877c/ddfb8/img224.jpg&quot;
+          alt=&quot;Favicon sin comprimir en Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/29171876f662d49bb0a4fca798f6877c/ddfb8/img224.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;h3&gt;Performance in-page&lt;/h3&gt;
+&lt;p&gt;Al analizar la performance una vez cargada la página encontraos un timer que se está disparando constantemente.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAgABBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAeu3oJx//8QAFxABAAMAAAAAAAAAAAAAAAAAAQIRIP/aAAgBAQABBQIjTn//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAXEAADAQAAAAAAAAAAAAAAAAAAIDFB/9oACAEBAAY/AtIv/8QAHBAAAgEFAQAAAAAAAAAAAAAAAAEhEBFRYaHw/9oACAEBAAE/IZS76bPIIxwVf//aAAwDAQACAAMAAAAQRA//xAAVEQEBAAAAAAAAAAAAAAAAAAAREP/aAAgBAwEBPxBZ/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGxABAAIDAQEAAAAAAAAAAAAAAQARIUGBMZH/2gAIAQEAAT8QLN9bR8gas8wKeeiZhcqBP//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/142646734a4794bc060ce34b127ece06/eff50/img244.webp 158w,
+/static/142646734a4794bc060ce34b127ece06/46f96/img244.webp 315w,
+/static/142646734a4794bc060ce34b127ece06/8fa24/img244.webp 630w,
+/static/142646734a4794bc060ce34b127ece06/437f1/img244.webp 945w,
+/static/142646734a4794bc060ce34b127ece06/6f2ae/img244.webp 1260w,
+/static/142646734a4794bc060ce34b127ece06/1208a/img244.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/142646734a4794bc060ce34b127ece06/da84f/img244.jpg 158w,
+/static/142646734a4794bc060ce34b127ece06/f31d6/img244.jpg 315w,
+/static/142646734a4794bc060ce34b127ece06/ddfb8/img244.jpg 630w,
+/static/142646734a4794bc060ce34b127ece06/d198f/img244.jpg 945w,
+/static/142646734a4794bc060ce34b127ece06/63ef2/img244.jpg 1260w,
+/static/142646734a4794bc060ce34b127ece06/7edc3/img244.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/142646734a4794bc060ce34b127ece06/ddfb8/img244.jpg&quot;
+          alt=&quot;Función que se ejecuta periodicamente en Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/142646734a4794bc060ce34b127ece06/ddfb8/img244.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;Es un tracker de Adobe que ejecuta una función cada 50 milisegundos un máximo de 18.000 veces, provocando cambios en 2 elementos del DOM principales.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB67PqSKh//8QAFhABAQEAAAAAAAAAAAAAAAAAEgAg/9oACAEBAAEFAhCOP//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/AYf/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwGn/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAEyIDH/2gAIAQEABj8CpnSnj//EABsQAAIBBQAAAAAAAAAAAAAAAAABERAhQVHh/9oACAEBAAE/IVcEtxT4Ga//2gAMAwEAAgADAAAAEH//AP/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAgBAwEBPxCEx//EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAgBAgEBPxCl1//EABsQAQACAgMAAAAAAAAAAAAAAAEAESHRceHw/9oACAEBAAE/EGFlTGU1BOvUUWeHEItlE//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/85e75a6d89d5f160dc4640365d1d66ea/eff50/img271.webp 158w,
+/static/85e75a6d89d5f160dc4640365d1d66ea/46f96/img271.webp 315w,
+/static/85e75a6d89d5f160dc4640365d1d66ea/8fa24/img271.webp 630w,
+/static/85e75a6d89d5f160dc4640365d1d66ea/437f1/img271.webp 945w,
+/static/85e75a6d89d5f160dc4640365d1d66ea/6f2ae/img271.webp 1260w,
+/static/85e75a6d89d5f160dc4640365d1d66ea/1208a/img271.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/85e75a6d89d5f160dc4640365d1d66ea/da84f/img271.jpg 158w,
+/static/85e75a6d89d5f160dc4640365d1d66ea/f31d6/img271.jpg 315w,
+/static/85e75a6d89d5f160dc4640365d1d66ea/ddfb8/img271.jpg 630w,
+/static/85e75a6d89d5f160dc4640365d1d66ea/d198f/img271.jpg 945w,
+/static/85e75a6d89d5f160dc4640365d1d66ea/63ef2/img271.jpg 1260w,
+/static/85e75a6d89d5f160dc4640365d1d66ea/7edc3/img271.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/85e75a6d89d5f160dc4640365d1d66ea/ddfb8/img271.jpg&quot;
+          alt=&quot;Cambios en 2 elementos DOM continuamente en Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/85e75a6d89d5f160dc4640365d1d66ea/ddfb8/img271.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;Una manera de comprobar que realmente es el tracker es bloquear la carga de recursos del dominio de ese archivo, en cuyo caso deja de aparecer el problema.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAdZ6MSKB/8QAGRAAAgMBAAAAAAAAAAAAAAAAABEBAhAS/9oACAEBAAEFAoohHIhZ/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEgMaEy/9oACAEBAAY/Aumy8LyH/8QAGhAAAgMBAQAAAAAAAAAAAAAAABEBUYFh8f/aAAgBAQABPyFh6pH4wN5EQoShH//aAAwDAQACAAMAAAAQ4O//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPxBH/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8Qqv/EAB0QAAICAgMBAAAAAAAAAAAAAAERACExQWGR4fD/2gAIAQEAAT8QOvQWYdKPDJtrwitvjiW6QA0hB4n/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/7479d5e03e401b84978a4680014a7381/eff50/img285.webp 158w,
+/static/7479d5e03e401b84978a4680014a7381/46f96/img285.webp 315w,
+/static/7479d5e03e401b84978a4680014a7381/8fa24/img285.webp 630w,
+/static/7479d5e03e401b84978a4680014a7381/437f1/img285.webp 945w,
+/static/7479d5e03e401b84978a4680014a7381/6f2ae/img285.webp 1260w,
+/static/7479d5e03e401b84978a4680014a7381/1208a/img285.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/7479d5e03e401b84978a4680014a7381/da84f/img285.jpg 158w,
+/static/7479d5e03e401b84978a4680014a7381/f31d6/img285.jpg 315w,
+/static/7479d5e03e401b84978a4680014a7381/ddfb8/img285.jpg 630w,
+/static/7479d5e03e401b84978a4680014a7381/d198f/img285.jpg 945w,
+/static/7479d5e03e401b84978a4680014a7381/63ef2/img285.jpg 1260w,
+/static/7479d5e03e401b84978a4680014a7381/7edc3/img285.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/7479d5e03e401b84978a4680014a7381/ddfb8/img285.jpg&quot;
+          alt=&quot;Bloqueando el dominio desde el que se sirve el tracker de Adobe en Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/7479d5e03e401b84978a4680014a7381/ddfb8/img285.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;Además de analizar la página principal queríamos revisar la web de venta, la que se muestra al seleccionar un billete. Los recursos que se sirven son muy diferentes a los de la página principal. Se sirven desde diferentes ubicaciones, están versionados utilizando un query parameter…&lt;/p&gt;
+&lt;p&gt;Algunos ficheros tienen un contenido casi idéntico, pero en algún momento se hizo un cambio en uno de ellos y no se actualizó el otro. Esto es una fuente de problemas de inconsistencia y también previene reutilizar el archivo ya descargado cuando el usuario va desde la home hasta la página de venta.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAABBv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAXtGg5+yP//EABwQAAEEAwEAAAAAAAAAAAAAAAEABRMzAgMEEf/aAAgBAQABBQLnxEScb9BMHqcL/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAbEAABBAMAAAAAAAAAAAAAAAABAAIQcgMhMv/aAAgBAQAGPwLGd8wKplYFV//EABsQAAMAAwEBAAAAAAAAAAAAAAABETFBsVGh/9oACAEBAAE/IUczG3MCj0fG6yLugmGbr46z/9oADAMBAAIAAwAAABAnD//EABURAQEAAAAAAAAAAAAAAAAAABAh/9oACAEDAQE/EKf/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPxCn/8QAHBABAAICAwEAAAAAAAAAAAAAAQAhETFhcYGh/9oACAEBAAE/EDKNrbeGoAq3UOKgkE1mPXBA6fkdllkf/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/1fe96d7a5abb827ebd89f3c8cadf2c13/eff50/img326.webp 158w,
+/static/1fe96d7a5abb827ebd89f3c8cadf2c13/46f96/img326.webp 315w,
+/static/1fe96d7a5abb827ebd89f3c8cadf2c13/8fa24/img326.webp 630w,
+/static/1fe96d7a5abb827ebd89f3c8cadf2c13/437f1/img326.webp 945w,
+/static/1fe96d7a5abb827ebd89f3c8cadf2c13/6f2ae/img326.webp 1260w,
+/static/1fe96d7a5abb827ebd89f3c8cadf2c13/1208a/img326.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/1fe96d7a5abb827ebd89f3c8cadf2c13/da84f/img326.jpg 158w,
+/static/1fe96d7a5abb827ebd89f3c8cadf2c13/f31d6/img326.jpg 315w,
+/static/1fe96d7a5abb827ebd89f3c8cadf2c13/ddfb8/img326.jpg 630w,
+/static/1fe96d7a5abb827ebd89f3c8cadf2c13/d198f/img326.jpg 945w,
+/static/1fe96d7a5abb827ebd89f3c8cadf2c13/63ef2/img326.jpg 1260w,
+/static/1fe96d7a5abb827ebd89f3c8cadf2c13/7edc3/img326.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/1fe96d7a5abb827ebd89f3c8cadf2c13/ddfb8/img326.jpg&quot;
+          alt=&quot;Fichero de funciones JS de la sección Venta de Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/1fe96d7a5abb827ebd89f3c8cadf2c13/ddfb8/img326.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;p&gt;El fichero de i18n tiene una extensa introducción listando todos los cambios desde 2009 hasta 2017. El archivo contiene todas las cadenas de texto en un código sin minificar. Aparte de minificar se podría hacer un split del fichero, dado que la mayoría de cadenas no se utilizan en la página actual.&lt;/p&gt;
+&lt;p&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABfdTujBIK/8QAHRAAAQMFAQAAAAAAAAAAAAAAAQAFMwIDBBETFP/aAAgBAQABBQLHpHJOM9knz7ThP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAECAQE/Aaf/xAAbEAABBAMAAAAAAAAAAAAAAAABAAIQcgMhMv/aAAgBAQAGPwLGd8wKplYFV//EABsQAAMAAwEBAAAAAAAAAAAAAAABETFBsVGh/9oACAEBAAE/IUc3G3MCh8brJm6cE1Gbr46z/9oADAMBAAIAAwAAABCPD//EABURAQEAAAAAAAAAAAAAAAAAABAh/9oACAEDAQE/EKf/xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxBj/8QAHBAAAgICAwAAAAAAAAAAAAAAAREAIVGBMUFh/9oACAEBAAE/EFkNmzaOI0AIPUFVASBAKY/Evn1iHYmZH//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/34ca2aa0d8eaf9f41d164d19d674ff62/eff50/img328.webp 158w,
+/static/34ca2aa0d8eaf9f41d164d19d674ff62/46f96/img328.webp 315w,
+/static/34ca2aa0d8eaf9f41d164d19d674ff62/8fa24/img328.webp 630w,
+/static/34ca2aa0d8eaf9f41d164d19d674ff62/437f1/img328.webp 945w,
+/static/34ca2aa0d8eaf9f41d164d19d674ff62/6f2ae/img328.webp 1260w,
+/static/34ca2aa0d8eaf9f41d164d19d674ff62/1208a/img328.webp 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/34ca2aa0d8eaf9f41d164d19d674ff62/da84f/img328.jpg 158w,
+/static/34ca2aa0d8eaf9f41d164d19d674ff62/f31d6/img328.jpg 315w,
+/static/34ca2aa0d8eaf9f41d164d19d674ff62/ddfb8/img328.jpg 630w,
+/static/34ca2aa0d8eaf9f41d164d19d674ff62/d198f/img328.jpg 945w,
+/static/34ca2aa0d8eaf9f41d164d19d674ff62/63ef2/img328.jpg 1260w,
+/static/34ca2aa0d8eaf9f41d164d19d674ff62/7edc3/img328.jpg 1280w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/34ca2aa0d8eaf9f41d164d19d674ff62/ddfb8/img328.jpg&quot;
+          alt=&quot;Lista de cambios del fichero i18n de la sección Venta de Renfe.com&quot;
+          title=&quot;&quot;
+          src=&quot;/static/34ca2aa0d8eaf9f41d164d19d674ff62/ddfb8/img328.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;h3&gt;Conclusión&lt;/h3&gt;
+&lt;p&gt;Desde un punto de vista de la web performance hay muchos puntos de mejora. Se puede ver perfectamente que es un proyecto que se ha ido modificando durante el tiempo por diferentes equipos, y nunca se ha hecho un seguimiento desde un punto de vista global y de consistencia.&lt;/p&gt;
+&lt;p&gt;Esto ha sido todo esperamos que os haya gustado esta review. Como veis queríamos dar un punto de vista diferente a la hora de analizar la web de Renfe.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2&gt;Referencias&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.xataka.com/empresas-y-economia/que-700-000-euros-presupuesto-ridiculo-para-arreglar-web-renfe&quot;&gt;Por qué 700.000 euros es un presupuesto ridículo para “arreglar” la web de Renfe&lt;/a&gt;&lt;/li&gt;

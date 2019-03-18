@@ -8,5 +8,6 @@
 <url> <loc>https://perf.reviews/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://perf.reviews/en/services/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://perf.reviews/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://perf.reviews/nosotros/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://perf.reviews/servicios/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
