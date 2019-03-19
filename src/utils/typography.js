@@ -4,11 +4,14 @@ import './global.css'
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
-    "a.gatsby-resp-image-link": {
+    'a.gatsby-resp-image-link': {
       boxShadow: `none`,
     },
     a: {
-      color: 'var(--textLink)',
+      color: 'var(--textColorLink)',
+    },
+    '.date': {
+      color: 'var(--textColorDate)'
     }
   }
 }
