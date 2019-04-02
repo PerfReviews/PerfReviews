@@ -1,6 +1,6 @@
 ---
 title: Lighthouse Report
-date: "2019-01-14"
+date: "2019-04-2"
 description: Vamos a crear un script en node.js para obtener informes de Web Performance utilizando Lighthouse, todo ello desde la terminal. Esto nos permitirá poder automatizar el proceso en diversos workflows.
 featuredImage: ../../assets/logo.svg
 ---
