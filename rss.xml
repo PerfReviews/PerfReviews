@@ -1,4 +1,224 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PerfReviews]]></title><description><![CDATA[Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web.]]></description><link>https://perf.reviews</link><generator>RSS for Node</generator><lastBuildDate>Tue, 19 Mar 2019 05:48:36 GMT</lastBuildDate><item><title><![CDATA[Renfe]]></title><description><![CDATA[Analizamos  la web de Renfe . Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de…]]></description><link>https://perf.reviews/reviews/1.5-renfe.com/</link><guid isPermaLink="false">https://perf.reviews/reviews/1.5-renfe.com/</guid><pubDate>Tue, 26 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Analizamos &lt;a href=&quot;https://www.renfe.com&quot;&gt;la web de Renfe&lt;/a&gt;. Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PerfReviews]]></title><description><![CDATA[Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web.]]></description><link>https://perf.reviews</link><generator>RSS for Node</generator><lastBuildDate>Wed, 03 Apr 2019 05:43:21 GMT</lastBuildDate><item><title><![CDATA[Lighthouse Report]]></title><description><![CDATA[Una de las herramientas que utilizamos para hacer las PerfReview es  Lighthouse , vamos a ver cómo utilizarlo para crear unos informes de…]]></description><link>https://perf.reviews/tools/1.1-Lighthouse-Report/</link><guid isPermaLink="false">https://perf.reviews/tools/1.1-Lighthouse-Report/</guid><pubDate>Tue, 02 Apr 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Una de las herramientas que utilizamos para hacer las PerfReview es &lt;a href=&quot;https://developers.google.com/web/tools/lighthouse/&quot;&gt;Lighthouse&lt;/a&gt;, vamos a ver cómo utilizarlo para crear unos informes de Performance de diferentes sites.&lt;/p&gt;
+&lt;p&gt;Podréis encontrar todo el código en el repositorio &lt;a href=&quot;https://github.com/PerfReviews/PerfTools&quot;&gt;PerfTools&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Optimizando el script&lt;/h2&gt;
+&lt;p&gt;En el vídeo del canal generamos un script con la previsión de extender algunas de las funcionalidades, en esta ocasión vamos a generar un script más óptimo.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Encontraréis el vídeo al final del artículo.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Informes de Performance&lt;/h2&gt;
+&lt;p&gt;El objetivo es generar un html con el listado de los informes de performances de los sites que definamos en un archivo json.&lt;/p&gt;
+&lt;p&gt;Este será el resultado:&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/653536941da0b3246e5aa77d20489c7d/81fe3/LighthouseReport.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 630px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 25.531914893617024%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAFABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAIDBf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAAB3qwoA3//xAAXEAADAQAAAAAAAAAAAAAAAAAAAREC/9oACAEBAAEFAhOi3T//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwFH/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFhAAAwAAAAAAAAAAAAAAAAAAABAx/9oACAEBAAY/AlD/xAAYEAEBAQEBAAAAAAAAAAAAAAARAQAhMf/aAAgBAQABPyGyGVeeRwEb/9oADAMBAAIAAwAAABAMH//EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oACAEDAQE/ECQN/8QAFREBAQAAAAAAAAAAAAAAAAAAAQD/2gAIAQIBAT8QYW//xAAZEAEAAwEBAAAAAAAAAAAAAAABABEhgZH/2gAIAQEAAT8QJajNhFSeyKaDs//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/653536941da0b3246e5aa77d20489c7d/eff50/LighthouseReport.webp 158w,
+/static/653536941da0b3246e5aa77d20489c7d/46f96/LighthouseReport.webp 315w,
+/static/653536941da0b3246e5aa77d20489c7d/8fa24/LighthouseReport.webp 630w,
+/static/653536941da0b3246e5aa77d20489c7d/437f1/LighthouseReport.webp 945w,
+/static/653536941da0b3246e5aa77d20489c7d/6f2ae/LighthouseReport.webp 1260w,
+/static/653536941da0b3246e5aa77d20489c7d/c1151/LighthouseReport.webp 1890w,
+/static/653536941da0b3246e5aa77d20489c7d/aa8b5/LighthouseReport.webp 3760w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/653536941da0b3246e5aa77d20489c7d/da84f/LighthouseReport.jpg 158w,
+/static/653536941da0b3246e5aa77d20489c7d/f31d6/LighthouseReport.jpg 315w,
+/static/653536941da0b3246e5aa77d20489c7d/ddfb8/LighthouseReport.jpg 630w,
+/static/653536941da0b3246e5aa77d20489c7d/d198f/LighthouseReport.jpg 945w,
+/static/653536941da0b3246e5aa77d20489c7d/63ef2/LighthouseReport.jpg 1260w,
+/static/653536941da0b3246e5aa77d20489c7d/5202d/LighthouseReport.jpg 1890w,
+/static/653536941da0b3246e5aa77d20489c7d/81fe3/LighthouseReport.jpg 3760w&quot;
+          sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/653536941da0b3246e5aa77d20489c7d/ddfb8/LighthouseReport.jpg&quot;
+          alt=&quot;Lighthouse Report&quot;
+          title=&quot;&quot;
+          src=&quot;/static/653536941da0b3246e5aa77d20489c7d/ddfb8/LighthouseReport.jpg&quot;
+        /&gt;
+      &lt;/picture&gt;
+      &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;Requisitos&lt;/h2&gt;
+&lt;p&gt;Vamos a necesitar tener instalado Node.js, si no lo tenemos instalado en el sistema, podemos seguis las instrucciones de la &lt;a href=&quot;https://nodejs.org&quot;&gt;documentación oficial&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Instalando las dependencias&lt;/h2&gt;
+&lt;p&gt;Lo primero que haremos es inicializar &lt;strong&gt;npm&lt;/strong&gt; en nuestra carpeta PerfTools-Lighthouse-Report con &lt;code class=&quot;language-text&quot;&gt;npm init -y&lt;/code&gt; para generar el archivo &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; y poder instalar los paquetes npm que utilizaremos como dependencias.&lt;/p&gt;
+&lt;p&gt;Desde la terminal ejecutamos el siguiente comando para instalar las dependencias.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;npm install --save chrome-launcher lighthouse&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En el vídeo también incluimos &lt;code class=&quot;language-text&quot;&gt;puppeteer request util&lt;/code&gt;, ya que la idea era trabajar más a fondo con Puppeteer, pero en esta ocasión lo vamos a obviar para tener un código más limpio y legible.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Package&lt;/th&gt;
+&lt;th&gt;Descripción&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;chrome-launcher&lt;/td&gt;
+&lt;td&gt;Nos permite lanzar Google Chrome desde Node.js.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;lighthouse&lt;/td&gt;
+&lt;td&gt;La herramienta que nos generará el informe.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Ahora que hemos instalado las dependencias, vamo a crear el archivo &lt;code class=&quot;language-text&quot;&gt;data.js&lt;/code&gt; que nos servirá para definir las urls de las que queremos conseguis los informes de Web Performance.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  mediamarkt&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;https://www.mediamarkt.es/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  elcorteingles&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;https://www.elcorteingles.es/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  zara&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;https://www.zara.com/es/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  smashingmagazine&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;https://www.smashingmagazine.com/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  renfe&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;http://www.renfe.com/&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Creando el script&lt;/h2&gt;
+&lt;p&gt;Creamos un archivo &lt;code class=&quot;language-text&quot;&gt;report.js&lt;/code&gt; donde lo primero que hacemos es importar todos los módulos que necesitamos.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; chromeLauncher &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;chrome-launcher&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; lighthouse &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;lighthouse&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; ReportGenerator &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;lighthouse/lighthouse-core/report/report-generator&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; fs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;fs&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Seguidos de las variables que utilizaremos en la aplicación.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; sites &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;./data&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;./package.json&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; dir &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./reports&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; links &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En la constante &lt;code class=&quot;language-text&quot;&gt;sites&lt;/code&gt; tendremos los sites de los que queremos generar los informes, en &lt;code class=&quot;language-text&quot;&gt;package&lt;/code&gt; el contenido del fichero &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; para tener acceso a su contenido, en &lt;code class=&quot;language-text&quot;&gt;dir&lt;/code&gt; definimos la carpeta de salida para los informes y por último, definimos &lt;code class=&quot;language-text&quot;&gt;links&lt;/code&gt; como un array donde añadiremos los enlaces a los informes de cada site.&lt;/p&gt;
+&lt;p&gt;Con la siguiente condicional, simplemente nos aseguramos que el directorio &lt;code class=&quot;language-text&quot;&gt;reports&lt;/code&gt; existe, sino, lo creamo.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;fs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;existsSync&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dir&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  fs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;mkdirSync&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dir&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Hemos llegado a la parte core del script, la comentaremos por bloques.&lt;/p&gt;
+&lt;p&gt;En primer lugar podemos ver que todo el código lo tenemos en una función anónima auto ejecutada.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; id &lt;span class=&quot;token keyword&quot;&gt;of&lt;/span&gt; Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sites&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; sites&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`Testing &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;id&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; on &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;//...&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;El primer bloque es un &lt;code class=&quot;language-text&quot;&gt;for&lt;/code&gt; para ejecutar nuestro código a cada uno de los sites que hemos definido en &lt;code class=&quot;language-text&quot;&gt;data.js&lt;/code&gt;. En su interior lo primero que tenemos es una constante con la url del site, seguido de un &lt;code class=&quot;language-text&quot;&gt;console.log&lt;/code&gt; para informarnos del proceso.&lt;/p&gt;
+&lt;p&gt;Seguimos con otra función anónima autoejecutada, esta función es asíncrona, y con &lt;code class=&quot;language-text&quot;&gt;await&lt;/code&gt; indicamos que queremos que el proceso espere hasta que tenga una respuesta, ya que no tenemos ningún control sobre los tiempos de carga de los sites.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; opts &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    chromeFlags&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;--headless&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    logLevel&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;info&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    onlyCategories&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;performance&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// Launch chrome using chrome-launcher.&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; chrome &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; chromeLauncher&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;launch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;opts&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  opts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;port &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;port&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Lo primero que haremos es utilizar &lt;code class=&quot;language-text&quot;&gt;chromeLauncher&lt;/code&gt; para abrir cada uno de los sites en el navegador. Hemos creado la constante &lt;code class=&quot;language-text&quot;&gt;opts&lt;/code&gt; para definir las opciones de configuración&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Opción&lt;/th&gt;
+&lt;th&gt;Descripción&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;chromeFlags: [&amp;#39;--headless&amp;#39;]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Con este flag, Chrome no abrirá una ventana del navegador.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;logLevel: &amp;#39;info&amp;#39;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Por defecto no se muestra el proceso en la terminal, con &lt;code class=&quot;language-text&quot;&gt;info&lt;/code&gt; veremos información del proceso.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;onlyCategories: [&amp;#39;performance&amp;#39;]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Esta valor lo utilizaremos en Lighthouse, para indicar que sólo queremos el informe de Performance.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Llegó la hora de ejecutar Lighthouse.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Run Lighthouse.&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; lhr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;lighthouse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; opts&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; html &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; ReportGenerator&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;generateReport&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;lhr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lhr&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;html&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+fs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;writeFile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;dir&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;id&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;.html`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; html&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`The html file for &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;id&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; was saved!`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  links&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&amp;lt;li&gt;&amp;lt;a href=&quot;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;id&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;.html&quot; target=&quot;_blank&quot;&gt;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;id&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;kill&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En la primera línea ejecutamos lighthouse, donde le pasamos 3 argumentos: la url del site a analizar, las opciones, en este caso &lt;code class=&quot;language-text&quot;&gt;onlyCategories: [&amp;#39;performance&amp;#39;]&lt;/code&gt; y por último con el parámetro &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt; le indicamos que no pasamos una configuración, así que utilizaremos la &lt;a href=&quot;https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/config/default-config.js&quot;&gt;configuración por defecto&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;En este punto ya tenemos el resultado de lighthouse en la variable &lt;code class=&quot;language-text&quot;&gt;lhr&lt;/code&gt;, así que en la siguiente línea utilizamos &lt;code class=&quot;language-text&quot;&gt;ReportGenerator.generateReport(lhr.lhr, &amp;#39;html&amp;#39;)&lt;/code&gt; para generar el html que nos permita interpretar mejor todos los datos.&lt;/p&gt;
+&lt;p&gt;En el siguiente código utilizamos la API de Node.js &lt;code class=&quot;language-text&quot;&gt;fs&lt;/code&gt; para guardar en un archivo html el resultado. Le pasamos como primer argumento la ruta, como segundo argumento el informe y por último una función callback donde mostramos un mensaje de que se ha guardado el informe y añadimos al array &lt;code class=&quot;language-text&quot;&gt;sites&lt;/code&gt; un elemento &lt;code class=&quot;language-text&quot;&gt;&amp;lt;li&amp;gt;&lt;/code&gt; con un enlace al archivo que acabamos de guardar. En el caso de que lo hubiera, se mostraría un error en la terminal.&lt;/p&gt;
+&lt;p&gt;Por último, con &lt;code class=&quot;language-text&quot;&gt;await chrome.kill();&lt;/code&gt; cerramos el proceso de chrome, ya que lo inicializaremos en la siguiente iteración.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; ToC &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&amp;lt;html&gt;
+      &amp;lt;head&gt;
+        &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css&quot;&gt;
+      &amp;lt;/head&gt;
+      &amp;lt;body style=&quot;padding: 2em&quot;&gt;
+        &amp;lt;h1 class=&quot;title&quot;&gt;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&amp;lt;/h1&gt;
+        &amp;lt;h2 class=&quot;subtitle&quot;&gt;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;description&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&amp;lt;/h2&gt;
+        &amp;lt;aside class=&quot;menu&quot;&gt;
+          &amp;lt;p class=&quot;menu-label&quot;&gt;PerfReviews&amp;lt;/p&gt;
+          &amp;lt;ul class=&quot;menu-list&quot;&gt;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;links&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&amp;lt;/ul&gt;
+        &amp;lt;/aside&gt;
+      &amp;lt;/body&gt;
+&amp;lt;/html&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+fs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;writeFile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;dir&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/index.html`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ToC&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;-----------------------------&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos; ToC for sites was saved! 😊 &apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;-----------------------------&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Cómo último paso, generamos un ToC (Table of Content) o índice, con los enlaces a los informes. Por la simplicidad del html, no hemos utilizado una librería de plantillas, pero sí hemos importado &lt;a href=&quot;https://bulma.io/&quot;&gt;Bulma&lt;/a&gt; para añadir estilos 😊.&lt;/p&gt;
+&lt;p&gt;Y como en el paso anterior, utilizamos &lt;code class=&quot;language-text&quot;&gt;fs&lt;/code&gt; para guardar el archivo &lt;code class=&quot;language-text&quot;&gt;index.html&lt;/code&gt; con los enlaces a todos los informes.&lt;/p&gt;
+&lt;h2&gt;Código&lt;/h2&gt;
+&lt;p&gt;En el &lt;a href=&quot;https://github.com/PerfReviews/PerfTools/tree/master/Lighthouse-Report&quot;&gt;repositorio&lt;/a&gt; encontrarás todo el código, tanto la versión de este artículo en &lt;code class=&quot;language-text&quot;&gt;report.js&lt;/code&gt; como la versión que comentamos en el vídeo &lt;code class=&quot;language-text&quot;&gt;index.js&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Vídeo&lt;/h2&gt;
+&lt;div&gt;
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;iframe src=&quot;https://www.youtube.com/embed/1x2A2wZKJPU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot;&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Renfe]]></title><description><![CDATA[Analizamos  la web de Renfe . Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de…]]></description><link>https://perf.reviews/reviews/1.5-renfe.com/</link><guid isPermaLink="false">https://perf.reviews/reviews/1.5-renfe.com/</guid><pubDate>Tue, 26 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Analizamos &lt;a href=&quot;https://www.renfe.com&quot;&gt;la web de Renfe&lt;/a&gt;. Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.&lt;/p&gt;
 &lt;p&gt;Aquí tienes nuestro análisis:&lt;/p&gt;
 &lt;div&gt;
           &lt;div
