@@ -1,8 +1,8 @@
 ---
 title: Lighthouse Report
-date: "2019-04-2"
+date: "2019-04-02"
 description: Vamos a crear un script en node.js para obtener informes de Web Performance utilizando Lighthouse, todo ello desde la terminal. Esto nos permitirá poder automatizar el proceso en diversos workflows.
-featuredImage: ../../assets/logo.svg
+featuredImage: ../../assets/perfreviews-icon.png
 ---
 
 Una de las herramientas que utilizamos para hacer las PerfReview es [Lighthouse](https://developers.google.com/web/tools/lighthouse/), vamos a ver cómo utilizarlo para crear unos informes de Performance de diferentes sites.
@@ -13,17 +13,17 @@ Podréis encontrar todo el código en el repositorio [PerfTools](https://github.
 
 ## Optimizando el script
 
-En el vídeo del canal generamos un script con la previsión de extender algunas de las funcionalidades, en esta ocasión vamos a generar un scriot más óptimo.
+En el vídeo del canal generamos un script con la previsión de extender algunas de las funcionalidades, en esta ocasión vamos a generar un script más óptimo.
 
 > Encontraréis el vídeo al final del artículo.
 
 ## Informes de Performance
 
-El objetivo es generar un html con el listado de los informes de performances de los sites que definamos en el archivo `data.js`.
+El objetivo es generar un html con el listado de los informes de performances de los sites que definamos en un archivo json.
 
-#### Este será el resultado
+Este será el resultado:
 
-![Lighthouse Report](./LighthouseReort.jpg)
+![Lighthouse Report](./LighthouseReport.jpg)
 
 ## Requisitos
 
@@ -39,7 +39,7 @@ Desde la terminal ejecutamos el siguiente comando para instalar las dependencias
 npm install --save chrome-launcher lighthouse
 ```
 
-> En el vídeo también incluimos `puppeteer request util`, ya que la idea era trabajar más a fondo con Puppeteer, pero en esta ocasión lo vamos a obviar para tener un código más limpio y legible.
+En el vídeo también incluimos `puppeteer request util`, ya que la idea era trabajar más a fondo con Puppeteer, pero en esta ocasión lo vamos a obviar para tener un código más limpio y legible.
 
 Package | Descripción
 ------- | -----------
@@ -104,7 +104,7 @@ En primer lugar podemos ver que todo el código lo tenemos en una función anón
 })();
 ```
 
-El primer bloque es un `for` para ejecutar nuestro códifo a cada uno de los sites que hemos definido en `data.js`. En su interior lo primero que tenemos es una constante con la url del site, seguido de in `console.log` para informarnos del proceso.
+El primer bloque es un `for` para ejecutar nuestro código a cada uno de los sites que hemos definido en `data.js`. En su interior lo primero que tenemos es una constante con la url del site, seguido de un `console.log` para informarnos del proceso.
 
 Seguimos con otra función anónima autoejecutada, esta función es asíncrona, y con `await` indicamos que queremos que el proceso espere hasta que tenga una respuesta, ya que no tenemos ningún control sobre los tiempos de carga de los sites.
 
@@ -153,9 +153,9 @@ En la primera línea ejecutamos lighthouse, donde le pasamos 3 argumentos: la ur
 
 En este punto ya tenemos el resultado de lighthouse en la variable `lhr`, así que en la siguiente línea utilizamos `ReportGenerator.generateReport(lhr.lhr, 'html')` para generar el html que nos permita interpretar mejor todos los datos.
 
-En el siguiente código utilizamos la API de Node.je `fs` para guardar en un archivo html el resultado. Le pasamos como primer argumento la ruta, como segundo argumento el informe y por último una función callback donde mostramos un mensaje de que se ha guardado el informe y añadimos al array `sites` un elemento `<li>` con un enlace al archivo que acavamos de guardar. En el caso de que lo hubier, se mostraría un error en la terminal.
+En el siguiente código utilizamos la API de Node.js `fs` para guardar en un archivo html el resultado. Le pasamos como primer argumento la ruta, como segundo argumento el informe y por último una función callback donde mostramos un mensaje de que se ha guardado el informe y añadimos al array `sites` un elemento `<li>` con un enlace al archivo que acabamos de guardar. En el caso de que lo hubiera, se mostraría un error en la terminal.
 
-Por último, con `await chrome.kill();` cerramos el proceso de chrome, ya que lo inicializaremos en la seguiente iteración.
+Por último, con `await chrome.kill();` cerramos el proceso de chrome, ya que lo inicializaremos en la siguiente iteración.
 
 ```js
 let ToC = `<html>
@@ -192,4 +192,4 @@ En el [repositorio](https://github.com/PerfReviews/PerfTools/tree/master/Lightho
 
 ## Vídeo
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=1x2A2wZKJPU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1x2A2wZKJPU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

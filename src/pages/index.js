@@ -11,7 +11,8 @@ class Reviews extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const reviews = data.allMarkdownRemark.edges
+    const reviews = data.reviews.edges
+    const tools = data.tools.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -49,8 +50,33 @@ class Reviews extends React.Component {
         <h3><a style={{ boxShadow: `none` }} href={'https://www.youtube.com/watch?v=50DiJphbXiU'}>3rd party badges en Google Chrome</a></h3>
         <p>Un vídeo corto sobre cómo identificar peticiones de 3rd party scripts y medir su performance.</p>
         <h2>Tools</h2>
-        <h3><a style={{ boxShadow: `none` }} href={'https://github.com/PerfReviews/PerfTools/tree/master/Lighthouse-Report'}>Lighthouse report</a></h3>
-        <p>Cómo escribir un script para generar informes de lighthouse para un conjunto de webs automáticamente.</p>
+        {tools.map(({ node }) => {
+          const title = node.frontmatter.title || node.headings[0].value || node.fields.slug
+          return (
+            <div key={node.fields.slug} style={{
+              marginTop: rhythm(2),
+            }}>
+              <div>
+                <h3
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                    marginTop: 0,
+                  }}
+                >
+                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <small className="date">{node.frontmatter.date}</small>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+              </div>
+            </div>
+          )
+        })}
         <h2>Colaboraciones</h2>
         <h3><a style={{ boxShadow: `none` }} href={'https://www.youtube.com/watch?v=bhSEp44mrKQ'}>Análisis del performance de sitios web con Escuela IT</a></h3>
         <p>En esta colaboración con la plataforma de aprendizaje online Escuela IT analizamos el rendimiento de 3 sitios web sugeridos por los asistentes a la sesión.</p>
@@ -75,7 +101,32 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(filter: {fields: {collection: {eq: "reviews"}}}, sort: { fields: [frontmatter___date], order: DESC }) {
+    reviews: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/reviews/" } }, sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt(pruneLength: 280)
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            featuredImage {
+                childImageSharp{
+                    sizes(maxWidth: 100) {
+                        ...GatsbyImageSharpSizes
+                    }
+                }
+            }
+          }
+          headings {
+            value
+          }
+        }
+      }
+    }
+    tools: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/tools/" } }, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt(pruneLength: 280)
