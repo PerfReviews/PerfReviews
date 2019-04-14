@@ -1,5 +1,5 @@
 ---
-title: El Corte Inglés
+title: Análisis de web performance de la web de El Corte Inglés
 date: "2018-12-31"
 description: Revisamos la web de El Corte Inglés y encontramos muchas peticiones a imágenes que no se llegan a mostrar, JS y CSS grandes de los que se usan una mínima parte y otros problemas.
 featuredImage: ../../assets/review-eci.png

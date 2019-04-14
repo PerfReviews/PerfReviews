@@ -1,5 +1,5 @@
 ---
-title: Mediamarkt España
+title: Análisis de web performance de la web de Mediamarkt España
 date: "2018-12-28"
 description: En nuestro primer análisis revisamos la nueva web de Mediamarkt España. Encontramos problemas con el cacheo, falta de compresión, múltiples versiones de jQuery y más.
 featuredImage: ../../assets/review-mediamarkt.png

@@ -1,11 +1,11 @@
 ---
-title: Renfe
+title: Análisis de web performance de la web de Renfe
 date: "2019-02-26"
 description: Analizamos la web de Renfe. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.
 featuredImage: ../../assets/review-renfe.png
 ---
 
-Analizamos [la web de Renfe](https://www.renfe.com). Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.
+Analizamos [la web de Renfe](http://www.renfe.com/). Una web con poco contenido pero con potenciales mejoras. Veremos estáticos sin minificar, duplicación de assets, combinación de recursos “a mano” y problemas de repintado producidos por librerías de tracking.
 
 Aquí tienes nuestro análisis:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pi02YqNHjJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -18,7 +18,7 @@ Aquí tienes nuestro análisis:
 
 ## Resumen del vídeo
 
-En esta review hemos elegido [la web de renfe](https://www.renfe.com). Es una web que históricamente ha recibido críticas por [sus problemas de accesibilidad](http://accesibilidadweb.dlsi.ua.es/?menu=accesibilidad-web-renfe), [usabilidad](https://www.mastermarketingdigital.com/everriculum/2017/06/10/hands-on-informe-de-usabilidad-renfe-app/) y [disponibilidad](https://www.elplural.com/politica/twitter-se-ceba-con-los-errores-en-la-web-de-renfe_103904102). Hasta ahora no habíamos visto un análisis de performance de su web, y como esto es lo que nos gusta hacer en Perf Reviews, decidimos ponernos manos a la obra.
+En esta review hemos elegido [la web de renfe](http://www.renfe.com/). Es una web que históricamente ha recibido críticas por [sus problemas de accesibilidad](http://accesibilidadweb.dlsi.ua.es/?menu=accesibilidad-web-renfe), [usabilidad](https://www.mastermarketingdigital.com/everriculum/2017/06/10/hands-on-informe-de-usabilidad-renfe-app/) y [disponibilidad](https://www.elplural.com/politica/twitter-se-ceba-con-los-errores-en-la-web-de-renfe_103904102). Hasta ahora no habíamos visto un análisis de performance de su web, y como esto es lo que nos gusta hacer en Perf Reviews, decidimos ponernos manos a la obra.
 
 ![La web de Renfe.com](assets/img010.jpg)
 
