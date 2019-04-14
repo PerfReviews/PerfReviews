@@ -1,5 +1,5 @@
 ---
-title: Zara
+title: Análisis de web performance de la web de Zara
 date: "2019-01-07"
 description: Analizamos la web de Zara y encontramos buenas técnicas para tener un buen rendimiento pero también margen de mejora. Imágenes enormes que se escalan a un tamaño pequeño, SVG optimizables, optimizely bloqueante...
 featuredImage: ../../assets/review-zara.png

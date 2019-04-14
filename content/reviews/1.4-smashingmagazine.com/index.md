@@ -1,5 +1,5 @@
 ---
-title: Smashing Magazine
+title: Análisis de web performance de la web de Smashing Magazine
 date: "2019-01-28"
 description: Analizamos la web de Smashing Magazine buscando técnicas para servir las páginas con un buen rendimiento y las encontramos. Service worker, preload/preconnect para acelerar la carga de recursos, critical CSS con lazy loading del resto del CSS, una carga no bloqueante de fuentes... Vamos, la mejor web que hemos revisado hasta el momento.
 featuredImage: ../../assets/review-smashingmagazine.png
