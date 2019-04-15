@@ -5,11 +5,13 @@ description: Analizamos el rendimiento de las webs de partidos políticos ante l
 featuredImage: ../../assets/review-escuelait.png
 ---
 
+![Elecciones España 2019](undraw_candidate_ubwv.svg)
+
+El próximo 28 de abril se celebrarán elecciones generales en España y en PerfReviews hemos pensado que es una buena ocasión para auditar el rendimiento de las webs de los principales partidos candidatos.
+
 <div style="font-size: 0.9em; color: #0c5460;background-color: #ebf5f7;border: 1px solid #bee5eb;padding: .75rem 1.25rem;margin-bottom:calc(1.75rem - 1px);">
 Este post no representa las opiniones políticas de los miembros de PerfReviews y no debería tomarse como apoyo a ningún partido.
 </div>
-
-El próximo 28 de abril se celebrarán elecciones generales en España y en PerfReviews hemos pensado que es una buena ocasión para auditar el rendimiento de las webs de los principales partidos candidatos.
 
 ¿Por qué es importante el rendimiento de una web? Piensa cuántas veces has navegado a una página y la has cerrado porque tardaba mucho en cargar. A veces es tu conexión, a veces es un problema en el servidor. Muy a menudo, es debido a que el navegador tiene que descargar muchos recursos innecesarios para poder mostrar el contenido.
 
@@ -30,38 +32,6 @@ La idea de analizar webs de partidos políticos antes de unas elecciones no es n
 Otros análisis previos de rendimiento de webs incluyen [las webs de los candidatos a la presidencia de EE.UU. en 2016](https://blog.newrelic.com/technology/president-candidate-website-performance-synthetics/) y [las de los partidos candidatos a las elecciones de Reino Unido en 2015](http://www.netimperative.com/2015/04/uk-election-which-party-website-has-the-best-performance/).
 
 En España, lo más cercano es [un estudio sobre las webs de los partidos españoles entre 2008 y 2011](www.tripodos.com/index.php/Facultat_Comunicacio_Blanquerna/article/viewFile/169/74), centrado principalmente en el contenido y UX.
-
-## Metodología
-
-En este artículo presentamos los resultados tras analizar las webs de los principales partidos políticos que se presentan a las elecciones generales.
-
-Hemos utilizado la herramienta Lighthouse de Google, una de las más establecidas y mejor valoradas en la comunidad web, para obtener una puntuación del rendimiento de la web. La puntuación se basa en [la combinación de varias métricas que miden la carga de la página](https://developers.google.com/web/tools/lighthouse/v3/scoring): Time to Interactive, Speed Index, First Contentful Paint (FCP), First CPU Idle, First Meaningful Paint (FMP) y Estimated Input Latency.
-
-Además de la puntuación de performance incluimos otros datos como número de peticiones y peso en kB de la página. Aunque se considera que estos últimos no tienen una correlación directa con el rendimiento percibido por el usuario, pensamos que es interesante porque son medidas ampliamente usadas.
-
-Por defecto, Lighthouse simula la carga de una web utilizando 4G lento en un Nexus 5X simulado, que es la configuración que hemos decidido usar.
-
-
-Esta es la lista de las webs de los partidos que hemos analizado:
-
-| Partido           | Web
-|-------------------|----------------------|
-| Ciudadanos        | https://www.ciudadanos-cs.org/
-| Coalición Canaria | http://coalicioncanaria.org/
-| Compromís         | https://compromis.net/
-| EAJ PNV           | https://www.eaj-pnv.eus/
-| En Marea          | https://enmarea.gal/
-| EH Bildu          | https://www.ehbildu.eus/
-| ERC               | https://www.esquerra.cat/
-| Junts per Catalunya (JxC)               | https://juntspercatalunya.cat/
-| PACMA             | https://pacma.es/
-| Partido Popular   | http://www.pp.es/
-| Partit Demòcrata (PDeCat)            | https://www.partitdemocrata.cat/
-| PSOE              | https://www.psoe.es/
-| Unidas Podemos    | https://lasonrisadeunpais.es/
-| VOX               | https://www.voxespana.es/
-
-Los informes fueron generados analizando las webs el día XXXX y se pueden consultar en XXXXX.
 
 ## Resultados
 
@@ -209,4 +179,35 @@ Como referencia, [la mediana del tamaño de página según HTTP Archive](https:/
 | X / 100    | XX                   | X                   |
 
 
-## Informes
+
+## Metodología
+
+En este artículo presentamos los resultados tras analizar las webs de los principales partidos políticos que se presentan a las elecciones generales.
+
+Hemos utilizado la herramienta [Lighthouse de Google](https://developers.google.com/web/tools/lighthouse/), una de las más establecidas y mejor valoradas en la comunidad web, para obtener una puntuación del rendimiento de la web. La puntuación se basa en [la combinación de varias métricas que miden la carga de la página](https://developers.google.com/web/tools/lighthouse/v3/scoring): Time to Interactive, Speed Index, First Contentful Paint (FCP), First CPU Idle, First Meaningful Paint (FMP) y Estimated Input Latency.
+
+Además de la puntuación de performance incluimos otros datos como número de peticiones y peso en kB de la página. Aunque se considera que estos últimos no tienen una correlación directa con el rendimiento percibido por el usuario, pensamos que es interesante porque son medidas ampliamente usadas.
+
+Por defecto, Lighthouse simula la carga de una web utilizando 4G lento en un Nexus 5X simulado, que es la configuración que hemos decidido usar.
+
+
+Esta es la lista de las webs de los partidos que hemos analizado:
+
+| Partido           | Web
+|-------------------|----------------------|
+| Ciudadanos        | https://www.ciudadanos-cs.org/
+| Coalición Canaria | http://coalicioncanaria.org/
+| Compromís         | https://compromis.net/
+| EAJ PNV           | https://www.eaj-pnv.eus/
+| En Marea          | https://enmarea.gal/
+| EH Bildu          | https://www.ehbildu.eus/
+| ERC               | https://www.esquerra.cat/
+| Junts per Catalunya (JxC)               | https://juntspercatalunya.cat/
+| PACMA             | https://pacma.es/
+| Partido Popular   | http://www.pp.es/
+| Partit Demòcrata (PDeCat)            | https://www.partitdemocrata.cat/
+| PSOE              | https://www.psoe.es/
+| Unidas Podemos    | https://lasonrisadeunpais.es/
+| VOX               | https://www.voxespana.es/
+
+Los informes fueron generados analizando las webs el día XXXX y se pueden consultar en XXXXX.
