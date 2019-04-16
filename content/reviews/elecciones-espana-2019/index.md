@@ -209,6 +209,15 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 |------------|----------------------|---------------------|
 | X / 100    | XX                   | X                   |
 
+Con la web del PSEO nos encontramo frente a la web más pesada del análisis. Una cantidad de peticiones superior a 550 sobrepasa cualquier previsión de ["performance budget"](https://addyosmani.com/blog/performance-budgets/). En cuanto al peso, los casi 50Mb de datos en la carga inicial nos deja un margen de mejora para trabajar con técnicas de web performance digno de un caso de estudio. También podemos mejorar el peso de la imágenes de una forma muy sencilla.
+
+- ✅ Carga asíncrona de librerías Javascript y widgets
+- ✅ Versionado de los estáticos
+- ✅ HTML, CSS y JS comprimidos
+- ❌ Las peticiones de red aumentan a causa de un script que de Facebook para actualizar los contenidos del widget
+- ❌ HTML, CSS y JS y sin minificar
+- ❌ No está bajo protocolo seguro `https`, el cual nos permite utilizar técnicas de performance más avanzadas
+
 ### Unidas Podemos
 
 [Web](https://lasonrisadeunpais.es/) | [Informe de Lighthouse](reports/unidos_podemos.html)
