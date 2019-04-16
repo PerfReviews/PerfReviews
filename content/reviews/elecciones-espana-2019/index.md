@@ -92,7 +92,7 @@ Como referencia, [la mediana del tamaño de página según HTTP Archive](https:/
 
 ### Ciudadanos
 
-[Web](https://www.ciudadanos-cs.org/) | [Informe de Lighthouse]()
+[Web](https://www.ciudadanos-cs.org/) | [Informe de Lighthouse](reports/ciudadanos.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
@@ -109,7 +109,7 @@ Las imágenes que se muestran como banners tienen también un tamaño excesivo, 
 
 ### Coalición Canaria
 
-[Web](http://coalicioncanaria.org/) | [Informe de Lighthouse]()
+[Web](http://coalicioncanaria.org/) | [Informe de Lighthouse](reports/coalicion_canaria.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
@@ -123,7 +123,7 @@ Coalición Canaria tiene una de las webs más lentas de este estudio. Destaca la
 
 ### Compromís
 
-[Web](https://compromis.net/) | [Informe de Lighthouse]()
+[Web](https://compromis.net/) | [Informe de Lighthouse](reports/compromis.html)
 
 Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS, code splitting, se sirven los recursos con http/2 y las imágenes tienen un tamaño adecuado. Pese a que el hero sea un vídeo, se sirve de forma eficiente definiendo fuentes en formatos webm y mp4.
 
@@ -132,10 +132,11 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 | 65 / 100   | 45                   | 7.52MB              |
 
 - ✅ Se sirven de forma óptima los recursos CSS, JS, imágenes y vídeo
+- ❌ Se usan fuentes en formato OTF y Woff que podrían servirse en Woff2
 
 ### EAJ PNV
 
-[Web](https://www.eaj-pnv.eus/) | [Informe de Lighthouse]()
+[Web](https://www.eaj-pnv.eus/) | [Informe de Lighthouse](reports/pnv.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
@@ -143,7 +144,7 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 
 ### En Marea
 
-[Web](https://enmarea.gal/) | [Informe de Lighthouse]()
+[Web](https://enmarea.gal/) | [Informe de Lighthouse](reports/en_marea.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
@@ -151,7 +152,7 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 
 ### EH Bildu
 
-[Web](https://www.ehbildu.eus/) | [Informe de Lighthouse]()
+[Web](https://www.ehbildu.eus/) | [Informe de Lighthouse](reports/ehbildu.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
@@ -162,7 +163,7 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 
 ### ERC
 
-[Web](https://www.esquerra.cat/) | [Informe de Lighthouse]()
+[Web](https://www.esquerra.cat/) | [Informe de Lighthouse](reports/erc.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
@@ -170,7 +171,7 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 
 ### Junts per Catalunya (JxC)
 
-[Web](https://juntspercatalunya.cat/) | [Informe de Lighthouse]()
+[Web](https://juntspercatalunya.cat/) | [Informe de Lighthouse](reports/jxc.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
@@ -178,7 +179,7 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 
 ### PACMA
 
-[Web](https://pacma.es/) | [Informe de Lighthouse]()
+[Web](https://pacma.es/) | [Informe de Lighthouse](reports/pacma.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
@@ -186,7 +187,7 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 
 ### Partido Popular
 
-[Web](http://www.pp.es/) | [Informe de Lighthouse]()
+[Web](http://www.pp.es/) | [Informe de Lighthouse](reports/pp.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
@@ -194,7 +195,7 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 
 ### Partit Demòcrata (PDeCat)
 
-[Web](https://www.partitdemocrata.cat/) | [Informe de Lighthouse]()
+[Web](https://www.partitdemocrata.cat/) | [Informe de Lighthouse](reports/pdecat.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
@@ -202,7 +203,7 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 
 ### PSOE
 
-[Web](https://www.psoe.es/) | [Informe de Lighthouse]()
+[Web](https://www.psoe.es/) | [Informe de Lighthouse](reports/psoe.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
@@ -210,7 +211,7 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 
 ### Unidas Podemos
 
-[Web](https://lasonrisadeunpais.es/) | [Informe de Lighthouse]()
+[Web](https://lasonrisadeunpais.es/) | [Informe de Lighthouse](reports/unidos_podemos.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
@@ -218,7 +219,7 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 
 ### VOX
 
-[Web](https://www.voxespana.es/) | [Informe de Lighthouse]()
+[Web](https://www.voxespana.es/) | [Informe de Lighthouse](reports/vox.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página |
 |------------|----------------------|---------------------|
