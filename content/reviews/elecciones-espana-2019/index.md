@@ -217,6 +217,13 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 |------------|----------------------|---------------------|
 | X / 100    | XX                   | X                   |
 
+En la web de Unidas Podemos vemos unas buenas puntuaciones de performance y las recomendaciones para mejorar son un poco más avanzadas, como la implementación de técnicas como Critical CSS y lazy-loading. Los estáticos Javascript parecen estar divididos por funcionalidades y bien "bandelizados", y el CSS está todo en un sólo archivo. En las imágenes tienen margen de mejora, Cloudinary nos sugiere un ahorro de más del 80%, pero lo podemos mejorar, varias de las imágenes en PNG se podrían cambiar a SVG para mejorar en la carga y presentación a diferentes tamaños.
+
+- ✅ Los estáticos están bajo http/2
+- ✅ HTML, CSS y JS comprimidos y minificados
+- ❌ Tiempos de caché muy bajos
+- ❌ Están cargando dos versiones de Font Awesome (4.4.0 y 4.5.0)
+
 ### VOX
 
 [Web](https://www.voxespana.es/) | [Informe de Lighthouse](reports/vox.html)
