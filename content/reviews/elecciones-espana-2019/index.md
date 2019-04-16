@@ -201,6 +201,14 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 |------------|----------------------|---------------------|
 | X / 100    | XX                   | X                   |
 
+Después de abrir la web de PDeCat, las más de 270 peticiones en la primera carga nos a lanzado a indagar un poco y una de las primeras cosas que podemos ver que hay un gran número de recursos JS y CSS, al analizarlo vemos que varios de esos recursos se están cargando pero no son utilizados en la home como `Fotorama` o `Google Maps`, a eso se le suma que no están cargados de forma asíncrona. Todos esos recursos que además no son necesarios para el contenido que se le quiere mostrar al usuario hacen que aumente el tiempo en el que se puede empezar a interactuar con la página
+
+- ✅ HTML, CSS y JS comprimidos
+- ❌ Imágenes representadas a un tamaño diferente al original
+- ❌ Hay varias imágenes que podrían ser en formato SVG
+- ❌ Alguna de las imágenes podría ser texto y CSS
+- ❌ Los estáticos no tienen caché
+
 ### PSOE
 
 [Web](https://www.psoe.es/) | [Informe de Lighthouse](reports/psoe.html)
