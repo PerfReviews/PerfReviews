@@ -221,6 +221,7 @@ En la web de Unidas Podemos vemos unas buenas puntuaciones de performance y las 
 
 - ✅ Los estáticos están bajo http/2
 - ✅ HTML, CSS y JS comprimidos y minificados
+- ✅ Carga asíncrona de librerías Javascript y widgets
 - ❌ Tiempos de caché muy bajos
 - ❌ Están cargando dos versiones de Font Awesome (4.4.0 y 4.5.0)
 
