@@ -270,6 +270,8 @@ Un par de las imágenes son de más de 1 MiB, una de ellas es el banner de campa
 
 ### Partit Demòcrata (PDeCat)
 
+![Captura de pantalla de la web del Partit Demòcrata](thumbnails/pdecat.jpg)
+
 [Web](https://www.partitdemocrata.cat/) | [Informe de Lighthouse](reports/pdecat.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
