@@ -37,7 +37,7 @@ En España, lo más cercano es [un estudio sobre las webs de los partidos españ
 
 ## Metodología
 
-Hemos utilizado la herramienta [Lighthouse de Google](https://developers.google.com/web/tools/lighthouse/), una de las más establecidas y mejor valoradas en la comunidad web, para obtener una puntuación del rendimiento de la web.
+Hemos utilizado la herramienta [Lighthouse de Google](https://developers.google.com/web/tools/lighthouse/), una de las más establecidas y mejor valoradas en la comunidad web, para obtener una puntuación del rendimiento de la web. Para generar informes de varios webs hemos usado [Lighthouse Report](https://github.com/PerfReviews/PerfTools/tree/master/Lighthouse-Report).
 
 Además de la puntuación de performance incluimos otros datos como número de peticiones y peso en kB de la página. Aunque se considera que estos últimos no tienen una correlación directa con el rendimiento percibido por el usuario, pensamos que es interesante porque son medidas ampliamente usadas.
 
@@ -62,7 +62,7 @@ Esta es la lista de las webs de los partidos que hemos analizado:
 | Unidas Podemos    | https://lasonrisadeunpais.es/
 | VOX               | https://www.voxespana.es/
 
-Los informes fueron generados analizando las webs el 16 de abril de 2019 y se pueden consultar en [esta página](reports/).
+Los informes fueron generados analizando las webs el 16 de abril de 2019.
 
 ## Resultados
 
@@ -100,7 +100,9 @@ El tamaño o peso de la página indica la suma del tamaño de todos los recursos
 
 Como referencia, [la mediana del tamaño de página según HTTP Archive](https://httparchive.org/reports/page-weight), que analiza unos 4 millones de páginas, es 1,785 MiB en escritorio y 1,63 MiB en móvil.
 
-## Detalles por web
+## Descripción web por web
+
+A continuación recogemos un resumen tanto de las buenas prácticas como de los principales problemas de cada web. Nos hemos basado en el informe de Lighthouse, además de una inspección general de cada web.
 
 ### Ciudadanos
 
