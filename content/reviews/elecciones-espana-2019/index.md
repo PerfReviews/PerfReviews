@@ -37,7 +37,7 @@ En España, lo más cercano es [un estudio sobre las webs de los partidos españ
 
 ## Metodología
 
-Hemos utilizado la herramienta [Lighthouse de Google](https://developers.google.com/web/tools/lighthouse/), una de las más establecidas y mejor valoradas en la comunidad web, para obtener una puntuación del rendimiento de la web. La puntuación se basa en [la combinación de varias métricas que miden la carga de la página](https://developers.google.com/web/tools/lighthouse/v3/scoring).
+Hemos utilizado la herramienta [Lighthouse de Google](https://developers.google.com/web/tools/lighthouse/), una de las más establecidas y mejor valoradas en la comunidad web, para obtener una puntuación del rendimiento de la web.
 
 Además de la puntuación de performance incluimos otros datos como número de peticiones y peso en kB de la página. Aunque se considera que estos últimos no tienen una correlación directa con el rendimiento percibido por el usuario, pensamos que es interesante porque son medidas ampliamente usadas.
 
@@ -71,6 +71,18 @@ Los informes fueron generados analizando las webs el 16 de abril de 2019 y se pu
 La siguiente gráfica recoge la puntuación en el apartado de Performance en el informe generado por Lighthouse. La puntuación va de 0 a 100, siendo 100 la mejor.
 
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGoePExjI_AuoYlJ0cHeE9U0RrYXk4q2j6DL-cJ993kgrQgKBzZs7wL5Ix_zVGY80Xc0tJVIm1dhpp/pubchart?oid=853181035&amp;format=interactive"></iframe>
+
+¿Cuál es una buena puntuación de performance de Lighthouse? Los sitios web se consideran lentos, medios o rápidos siguiendo esta clasificación:
+
+* Lento: 0 a 49
+* Medio: 50 a 89
+* Rápido: 90 a 100
+
+La puntuación se basa en [la combinación de varias métricas que miden la carga de la página](https://developers.google.com/web/tools/lighthouse/v3/scoring) y en el cálculo se tiene en cuenta la distribución de esas métricas en los sitios rastreados por HTTP Archive.
+
+Una puntuación de 50 indica que la página está en el percentil 75, es decir, es más rápida que el 75% de las páginas analizadas. Una puntuación de 100 corresponde al percentil 98.
+
+De los 13 sitios analizados, sólo el de Esquerra (ERC) se consideraría rápido, 4 sitios medios y 8 sitios lentos.
 
 ### Número de peticiones
 
@@ -125,7 +137,7 @@ Coalición Canaria tiene una de las webs más lentas de este estudio. Destaca la
 
 [Web](https://compromis.net/) | [Informe de Lighthouse](reports/compromis.html)
 
-Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS, code splitting, se sirven los recursos con http/2 y las imágenes tienen un tamaño adecuado. Pese a que el hero sea un vídeo, se sirve de forma eficiente definiendo fuentes en formatos webm y mp4.
+Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS, code splitting, se sirven los recursos con http/2 y las imágenes tienen un tamaño adecuado. Pese a que el hero es un vídeo, se sirve de forma eficiente definiendo fuentes en formatos webm y mp4.
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
@@ -142,7 +154,11 @@ Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS
 |------------|----------------------|---------------------|
 | 23 / 100   | 96                   | 5.54                |
 
-TBD
+La web de EAJ PNV sirve muchos recursos de la forma más ineficiente: sin minificar, sin comprimir, en un orden inadecuado y sin utilizar http/2. Además sirven algunas imágenes de tamaño excesivo (~1 MiB) que podrían mejorarse sustancialmente.
+
+- ❌ HTML, CSS y JS sin minificar
+- ❌ HTML, CSS y JS sin comprimir
+- ❌ Muchos recursos JS bloqueantes antes del body e incluso antes de algunos CSS
 
 ### En Marea
 
@@ -152,7 +168,11 @@ TBD
 |------------|----------------------|---------------------|
 | 11 / 100   | 205                  | 4.92                |
 
-TBD
+La carga de la web de En Marea es lenta debido a una combinación de varios problemas: Javascript bloqueante que se carga antes de los estilos CSS, el contenido _above the fold_ es un carrusel que necesita de Javascript para ser renderizado, y hay un excesivo número de peticiones a recursos CSS y JS. Sólo los que se sirven desde el propio sitio (no _third party_) sumán más de 20 archivos CSS y más de 40 Javascript, muchos de ellos sin minificar.
+
+- ❌ Mucho CSS y JS sin minificar
+- ❌ Muchas peticiones a recursos CSS y JS innecesarios para el contenido de la página
+- ❌ Peticiones a JS bloqueante antes del CSS
 
 ### EH Bildu
 
@@ -160,7 +180,7 @@ TBD
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 61 / 100   | 63                   | 1.64              |
+| 61 / 100   | 63                   | 1.64                |
 
 - ❌ Elevado número de recursos en el critical path (10 CSS externos en el critical path). Además podrían utilizar http/2 para mejorar su carga.
 - ❌ Banner hero muy grande (767kB)
@@ -221,7 +241,7 @@ La web del Partido Popular es la que más peticiones realiza, superando las 550,
 
 Pese a que los estáticos están versionados, se define un TTL máximo de 8 horas para los recursos servidos desde www.pp.es, con lo que el navegador no puede aprovechar los recursos descargados de sesiones previas.
 
-Un par de las imágenes son de más de 1MB, una de ellas es el banner de campaña con un peso de 1MB y una resolución de`6667px x 1575px` y la otra el logo con un peso de 1,2Mb y una resolución de `9933px x 7016px`, el cual se está cargando 2 veces, ya en una de las peticiones se está solicitando con un parámetro `timesptamp` lo que hace que la descarge cada vez que visitamos la página.
+Un par de las imágenes son de más de 1 MiB, una de ellas es el banner de campaña con un peso de 1 MiB y una resolución de`6667px x 1575px` y la otra el logo con un peso de 1,2 MiB y una resolución de `9933px x 7016px`, el cual se está cargando 2 veces, ya en una de las peticiones se está solicitando con un parámetro `timesptamp` lo que hace que la descarge cada vez que visitamos la página.
 
 - ❌ HTML, CSS y JS y sin comprimir
 - ❌ Elevada cantidad de peticiones para recursos innecesarios
@@ -252,7 +272,7 @@ Después de abrir la web de PDeCat, las más de 270 peticiones en la primera car
 |------------|----------------------|---------------------|
 | 13 / 100   | 457                  | 17             |
 
-Con la web del PSOE nos encontramos frente a la web más pesada del análisis, con 17MB, y una de las que más peticionse realiza. Esta página un candidato ideal para aplicar técnicas de mejora del rendimiento. También podemos mejorar el peso de la imágenes de una forma muy sencilla.
+Con la web del PSOE nos encontramos frente a la web más pesada del análisis, con 17 MiB, y una de las que más peticionse realiza. Esta página un candidato ideal para aplicar técnicas de mejora del rendimiento. También podemos mejorar el peso de la imágenes de una forma muy sencilla.
 
 - ✅ Carga asíncrona de librerías Javascript y widgets
 - ✅ Versionado de los estáticos
@@ -285,7 +305,9 @@ En la web de Unidas Podemos vemos unas buenas puntuaciones de performance y las 
 |------------|----------------------|---------------------|
 | 27 / 100   | 287                  | 9.05          |
 
-Lo primero que nos llama la atención de la web de Vox es el gran número de recursos bloqueantes definidos en el `<head>` del documento HTML, 12 peticiones de CSS y 11 de Javascript, entre las que podemos ver los widgets de Facebook y Twitter. Todo esto hace que el TTI (Time To Interactive), es decir el tiempo de espera del usuario para poder interactuar con el sitio web, sea elevado. En cuanto a las imágenes, tienen un gran margen de mejora en la optimización y la mayoría se están representando a un tamaño inferior al de la imagen original. A primera vista, por el nombre la url, parece que los estáticos están versionados, pero no tienen caché, . Definir un tiempo de caché adecuado mejoraría el tiempo de carga en visitas sucesivas, evitando descargar recursos que no han cambiado.
+Lo primero que nos llama la atención de la web de Vox es el gran número de recursos bloqueantes definidos en el `<head>` del documento HTML, 12 peticiones de CSS y 11 de Javascript, entre las que podemos ver los widgets de Facebook y Twitter.
+
+Todo esto hace que el TTI (Time To Interactive), es decir el tiempo de espera del usuario para poder interactuar con el sitio web, sea elevado. En cuanto a las imágenes, tienen un gran margen de mejora en la optimización y la mayoría se están representando a un tamaño inferior al de la imagen original. A primera vista, por el nombre la url, parece que los estáticos están versionados, pero no tienen caché. Definir un tiempo de caché adecuado mejoraría el tiempo de carga en visitas sucesivas, evitando descargar recursos que no han cambiado.
 
 - ✅ Los estáticos están bajo http/2
 - ❌ HTML, CSS y JS y sin comprimir
@@ -293,4 +315,28 @@ Lo primero que nos llama la atención de la web de Vox es el gran número de rec
 - ❌ Los estáticos no tienen caché
 - ❌ Muchas tipografías, alguna de ellas no se está utilizando en los estilos cargados.
 
+## Una nota sobre HTTPS
+Aunque no estrictamente relacionado con el rendimiento de una web, es importante el uso de HTTPS para servir el contenido. Esto se refleja en la dirección de la web, que empieza por `https`.
+
+Usar HTTPS es necesario para implementar algunas técnicas que, usadas de forma adecuada, mejoran el rendimiento de las webs. Algunos ejemplos son http/2 y service workers. En el caso de las webs de partidos políticos, usar HTTPS es todavía más crítico.
+
+HTTPS ayuda a evitar que haya intrusos que alteren las comunicaciones entre la web y los navegadores de sus usuarios. Los intrusos incluyen atacantes intencionadamente maliciosos y empresas legítimas pero intrusivas, como ISPs (proveedores de internet) u hoteles que inyectan anuncios en las páginas.
+
+En un mundo cada vez más pendiente del impacto de las fake news, las webs de los partidos políticos deberían usar HTTPS para asegurar la integridad del contenido.
+
+De los sitios analizados, el de Coalición Canaria y el del Partido Popular son los únicos que no se sirven usando HTTPS.
+
+Integrar HTTPS es relativamente sencillo y existen autoridades certificadoras (CA) como [Let’s Encrypt](https://letsencrypt.org/) que expiden certificados gratuitos.
+
+
 ## Conclusiones
+
+La mayoría de los sitios web analizados tienen un rendimiento realmente bajo. Llama la atención la cantidad de sitios que no aplican las técnicas más básicas como minimizar el contenido de los estaticos (por ejemplo CSS, JS y SVG) y habilitar la compresión en el servidor. Sólo esto supondría una gran mejora.
+
+Muchas webs son ricas en contenido gráfico (imágenes, vídeos) y en contenido de terceros, mayormente widgets sociales (Twitter, Facebook).
+
+Nunca es necesario cargar todos esos estáticos nada más entrar en la página, y por ello se recomienda hacer lazy-loading del contenido cuando sea necesario. Aunque existen muchas librerías para aplicar lazy-loading, [la propuesta de un atributo nativo](https://github.com/scott-little/lazyload#ways-the-loading-attribute-can-be-used) nos hace ser optimistas y pensar que muchos sitios lo aplicarán.
+
+La carga selectiva de recursos es especialmente importante en móvil, donde el dispositivo y la red suelen ser más limitados. La mayoría de páginas sirven exactamente el mismo contenido en la versión móvil, incluidas las enormes imágenes que se visualizan en la versión de escritorio. Esto añade trabajo extra a los móviles, que tienen que procesar y escalar las imágenes. Desafortunamente, no hemos visto muestras de responsive images que mejoren este problema, ni el uso de servicios de terceros para generar imágenes adaptadas al tamaño de la pantalla del usuario.
+
+Pensamos que los partidos políticos deberían esforzarse más en ofrecer una buena experiencia web. Queda mucho trabajo por hacer.
