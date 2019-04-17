@@ -62,7 +62,7 @@ Esta es la lista de las webs de los partidos que hemos analizado:
 | Unidas Podemos    | https://lasonrisadeunpais.es/
 | VOX               | https://www.voxespana.es/
 
-Los informes fueron generados analizando las webs el día XXXX y se pueden consultar en XXXXX.
+Los informes fueron generados analizando las webs el 16 de abril de 2019 y se pueden consultar en [esta página](reports/).
 
 ## Resultados
 
