@@ -2,10 +2,10 @@
 title: Análisis de webs de partidos políticos - Elecciones Generales España 2019
 date: "2019-04-15"
 description: Analizamos el rendimiento de las webs de partidos políticos ante las elecciones generales de España 2019.
-featuredImage: ../../assets/review-escuelait.png
+featuredImage: ../../assets/review-partidos.png
 ---
 
-![Elecciones España 2019](undraw_candidate_ubwv.svg)
+![Elecciones España 2019](perfreviews-partidos-politicos.svg)
 
 El próximo 28 de abril se celebrarán Elecciones Generales en España y en PerfReviews hemos pensado que es una buena ocasión para auditar el rendimiento de las webs de los principales partidos candidatos. Veremos cuáles son los sitios web más rápidos y los más lentos. Puedes ir directamente a [los resultados](#resultados) o continuar leyendo para saber y por qué es importante medir el rendimiento.
 
@@ -104,11 +104,13 @@ Como referencia, [la mediana del tamaño de página según HTTP Archive](https:/
 
 ### Ciudadanos
 
+![Captura de pantalla de la web de Ciudadanos](thumbnails/ciudadanos.jpg)
+
 [Web](https://www.ciudadanos-cs.org/) | [Informe de Lighthouse](reports/ciudadanos.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 6 / 100    | 137                  | 4.23                |
+| 6 / 100    | 137                  | 4,23                |
 
 La web de Ciudadanos es una de las que reciben una peor puntuación de rendimiento. Se sirven demasiados recursos CSS y JS en el critical path que no son necesarios para la carga inicial. Además, tanto el HTML como CSS y JS están sin minificar ni comprimir. Aunque existe versionado en la ruta de la mayoría de los recursos, el tiempo de cacheo podría aumentarse para mejorar el rendimiento en las siguientes cargas de la página.
 
@@ -121,11 +123,13 @@ Las imágenes que se muestran como banners tienen también un tamaño excesivo, 
 
 ### Coalición Canaria
 
+![Captura de pantalla de la web de Coalición Canaria](thumbnails/coalicion_canaria.jpg)
+
 [Web](http://coalicioncanaria.org/) | [Informe de Lighthouse](reports/coalicion_canaria.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 2 / 100    | 173                  | 4.9               |
+| 2 / 100    | 173                  | 4,9               |
 
 Coalición Canaria tiene una de las webs más lentas de este estudio. Destaca la falta de compresión de los estáticos, que podría hacer que el tiempo de transferencia fuera menor. Los estáticos no definen tiempo de cacheo, lo que hace que en las siguientes visitas se deban volver a descargar los recursos.
 
@@ -135,24 +139,28 @@ Coalición Canaria tiene una de las webs más lentas de este estudio. Destaca la
 
 ### Compromís
 
+![Captura de pantalla de la web de Compromís](thumbnails/compromis.jpg)
+
 [Web](https://compromis.net/) | [Informe de Lighthouse](reports/compromis.html)
 
 Una de las webs con mejor puntuación es la de Compromís. Se utiliza inline CSS, code splitting, se sirven los recursos con http/2 y las imágenes tienen un tamaño adecuado. Pese a que el hero es un vídeo, se sirve de forma eficiente definiendo fuentes en formatos webm y mp4.
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 36 / 100   | 65                   | 7.89              |
+| 36 / 100   | 65                   | 7,89              |
 
 - ✅ Se sirven de forma óptima los recursos CSS, JS, imágenes y vídeo
 - ❌ Se usan fuentes en formato OTF y Woff que podrían servirse en Woff2
 
 ### EAJ PNV
 
+![Captura de pantalla de la web de EAJ PNV](thumbnails/eaj_pnv.jpg)
+
 [Web](https://www.eaj-pnv.eus/) | [Informe de Lighthouse](reports/pnv.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 23 / 100   | 96                   | 5.54                |
+| 23 / 100   | 96                   | 5,54                |
 
 La web de EAJ PNV sirve muchos recursos de la forma más ineficiente: sin minificar, sin comprimir, en un orden inadecuado y sin utilizar http/2. Además sirven algunas imágenes de tamaño excesivo (~1 MiB) que podrían mejorarse sustancialmente.
 
@@ -162,11 +170,13 @@ La web de EAJ PNV sirve muchos recursos de la forma más ineficiente: sin minifi
 
 ### En Marea
 
+![Captura de pantalla de la web de En Marea](thumbnails/en_marea.jpg)
+
 [Web](https://enmarea.gal/) | [Informe de Lighthouse](reports/en_marea.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 11 / 100   | 205                  | 4.92                |
+| 11 / 100   | 205                  | 4,92                |
 
 La carga de la web de En Marea es lenta debido a una combinación de varios problemas: Javascript bloqueante que se carga antes de los estilos CSS, el contenido _above the fold_ es un carrusel que necesita de Javascript para ser renderizado, y hay un excesivo número de peticiones a recursos CSS y JS. Sólo los que se sirven desde el propio sitio (no _third party_) sumán más de 20 archivos CSS y más de 40 Javascript, muchos de ellos sin minificar.
 
@@ -176,35 +186,41 @@ La carga de la web de En Marea es lenta debido a una combinación de varios prob
 
 ### EH Bildu
 
+![Captura de pantalla de la web de EH Bildu](thumbnails/eh_bildu.jpg)
+
 [Web](https://www.ehbildu.eus/) | [Informe de Lighthouse](reports/ehbildu.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 61 / 100   | 63                   | 1.64                |
+| 61 / 100   | 63                   | 1,64                |
 
 - ❌ Elevado número de recursos en el critical path (10 CSS externos en el critical path). Además podrían utilizar http/2 para mejorar su carga.
 - ❌ Banner hero muy grande (767kB)
 
 ### ERC
 
+![Captura de pantalla de la web de ERC](thumbnails/erc.jpg)
+
 [Web](https://www.esquerra.cat/) | [Informe de Lighthouse](reports/erc.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 92 / 100   | 49                   | 3.09              |
+| 92 / 100   | 49                   | 3,09              |
 
 Esquerra tiene la web que recibe la mejor puntuación de rendimiento del análisis. Sirven los estáticos usando http/2 y comprimiendo con brotli, y obti
 
 - ❌ Fuentes woff y ttf que podrían convertirse a woff2
-- ❌ Potencial optimización dee imágenes. ALgunos PNG se podrían optimizar y otros PNG de gran tamaño en píxeles convertir a JPG
+- ❌ Potencial optimización de imágenes. ALgunos PNG se podrían optimizar y otros PNG de gran tamaño en píxeles convertir a JPG
 
 ### Junts per Catalunya (JxC)
+
+![Captura de pantalla de la web de JxC](thumbnails/jxc.jpg)
 
 [Web](https://juntspercatalunya.cat/) | [Informe de Lighthouse](reports/jxc.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 50 / 100   | 197                  | 12.87               |
+| 50 / 100   | 197                  | 12,87               |
 
 La web de Junts per Catalynya tiene un TTI elevado. Aunque los recursos se sirven de forma óptima, se podrían obtener mejoras al aplicar lazy-loading para cargar imágenes y los widgets de redes sociales que están situados en el _footer_ y que no son necesarios hasta que el usuario haga scroll.
 
@@ -215,11 +231,13 @@ La web de Junts per Catalynya tiene un TTI elevado. Aunque los recursos se sirve
 
 ### PACMA
 
+![Captura de pantalla de la web de Pacma](thumbnails/pacma.jpg)
+
 [Web](https://pacma.es/) | [Informe de Lighthouse](reports/pacma.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 66 / 100   | 53                   | 1.76                |
+| 66 / 100   | 53                   | 1,76                |
 
 La web de PACMA es relativamente ligera y recibe una aceptable puntuación de performance. Se podría beneficiar de pequeñas optimizaciones en imágenes, añadir compresión a un recurso JS, establecer un tiempo de caché más elevado y aplicar lazy-loading para imágenes y el _embed_ de Youtube que quedan por debajo del _fold_.
 
@@ -231,11 +249,13 @@ La web de PACMA es relativamente ligera y recibe una aceptable puntuación de pe
 
 ### Partido Popular
 
+![Captura de pantalla de la web del Partido Popular](thumbnails/pp.jpg)
+
 [Web](http://www.pp.es/) | [Informe de Lighthouse](reports/pp.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 22 / 100   | 552                  | 8.43                |
+| 22 / 100   | 552                  | 8,43                |
 
 La web del Partido Popular es la que más peticiones realiza, superando las 550, con casi 300 de ellas siendo imágenes. Obviamente la mayoría no se muestran, así que aplicar lazy-loading ayudaría a descargar sólo el contenido necesario. Además de hacer muchas peticiones, no se usa http/2 que mejoraría la carga de los recursos.
 
@@ -254,7 +274,7 @@ Un par de las imágenes son de más de 1 MiB, una de ellas es el banner de campa
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 18 / 100   | 274                  | 7.28                |
+| 18 / 100   | 274                  | 7,28                |
 
 Después de abrir la web de PDeCat, las más de 270 peticiones en la primera carga nos ha lanzado a indagar un poco y una de las primeras cosas que podemos ver es que hay un gran número de recursos JS y CSS. Al analizarlo vemos que varios de esos recursos se están cargando pero no son utilizados en la home como `Fotorama` o `Google Maps`. A eso se le suma que no están cargados de forma asíncrona. Todos esos recursos hacen que aumente el tiempo en el que se puede empezar a interactuar con la página.
 
@@ -265,6 +285,8 @@ Después de abrir la web de PDeCat, las más de 270 peticiones en la primera car
 - ❌ Los estáticos no tienen caché
 
 ### PSOE
+
+![Captura de pantalla de la web del PSOE](thumbnails/psoe.jpg)
 
 [Web](https://www.psoe.es/) | [Informe de Lighthouse](reports/psoe.html)
 
@@ -283,11 +305,13 @@ Con la web del PSOE nos encontramos frente a la web más pesada del análisis, c
 
 ### Unidas Podemos
 
+![Captura de pantalla de la web de Unidas Podemos](thumbnails/unidos_podemos.jpg)
+
 [Web](https://lasonrisadeunpais.es/) | [Informe de Lighthouse](reports/unidos_podemos.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 85 / 100   | 35                   | 1.06           |
+| 85 / 100   | 35                   | 1,06           |
 
 En la web de Unidas Podemos vemos unas buenas puntuaciones de performance y las recomendaciones para mejorar son un poco más avanzadas, como la implementación de técnicas como Critical CSS y lazy-loading. Los estáticos Javascript parecen estar divididos por funcionalidades y bien _bundleziados_, y el CSS está todo en un sólo archivo. En las imágenes hay un gran margen de mejora si se optimizan los recursos JPG y PNG, además de usar SVG para algunas imágenes, lo que mejoraría la carga y presentación a diferentes tamaños.
 
@@ -299,11 +323,13 @@ En la web de Unidas Podemos vemos unas buenas puntuaciones de performance y las 
 
 ### VOX
 
+![Captura de pantalla de la web de VOX](thumbnails/vox.jpg)
+
 [Web](https://www.voxespana.es/) | [Informe de Lighthouse](reports/vox.html)
 
 | Puntuación | Número de peticiones | Tamaño de la página (MiB) |
 |------------|----------------------|---------------------|
-| 27 / 100   | 287                  | 9.05          |
+| 27 / 100   | 287                  | 9,05          |
 
 Lo primero que nos llama la atención de la web de Vox es el gran número de recursos bloqueantes definidos en el `<head>` del documento HTML, 12 peticiones de CSS y 11 de Javascript, entre las que podemos ver los widgets de Facebook y Twitter.
 
