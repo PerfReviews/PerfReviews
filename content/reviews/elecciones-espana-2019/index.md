@@ -221,9 +221,11 @@ La web del Partido Popular es la que más peticiones realiza, superando las 550,
 
 Pese a que los estáticos están versionados, se define un TTL máximo de 8 horas para los recursos servidos desde www.pp.es, con lo que el navegador no puede aprovechar los recursos descargados de sesiones previas.
 
+Un par de las imágenes son de más de 1MB, una de ellas es el banner de campaña con un peso de 1MB y una resolución de`6667px x 1575px` y la otra el logo con un peso de 1,2Mb y una resolución de `9933px x 7016px`, el cual se está cargando 2 veces, ya en una de las peticiones se está solicitando con un parámetro `timesptamp` lo que hace que la descarge cada vez que visitamos la página.
+
+- ❌ HTML, CSS y JS y sin comprimir
 - ❌ Elevada cantidad de peticiones para recursos innecesarios
-- ❌ Imágenes optimizables si se mejora su compresión y se sirven al tamaño en píxeles adecuado. Tres de ellas tienen o superan 1MiB de peso.
-- ❌ TTL de caché muy corto para los estáticos
+- ❌ Imágenes optimizables si se mejora su compresión y se sirven al tamaño en píxeles adecuado.
 - ❌ TTL de caché muy corto para los estáticos
 
 ### Partit Demòcrata (PDeCat)
