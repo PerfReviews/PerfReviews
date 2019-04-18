@@ -1,6 +1,6 @@
 ---
 title: Análisis de webs de partidos políticos - Elecciones Generales España 2019
-date: "2019-04-15"
+date: "2019-04-18"
 description: Analizamos el rendimiento de las webs de partidos políticos ante las elecciones generales de España 2019.
 featuredImage: ../../assets/review-partidos.png
 ---
@@ -70,13 +70,13 @@ Los informes fueron generados analizando las webs el 16 de abril de 2019.
 
 La siguiente gráfica recoge la puntuación en el apartado de Performance en el informe generado por Lighthouse. La puntuación va de 0 a 100, siendo 100 la mejor.
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGoePExjI_AuoYlJ0cHeE9U0RrYXk4q2j6DL-cJ993kgrQgKBzZs7wL5Ix_zVGY80Xc0tJVIm1dhpp/pubchart?oid=853181035&amp;format=interactive"></iframe>
+![Gráfica mostrando la comparativa de puntuación de performance por web](charts/performance.png)
 
-¿Cuál es una buena puntuación de performance de Lighthouse? Los sitios web se consideran lentos, medios o rápidos siguiendo esta clasificación:
+¿Cuál es una buena puntuación de performance de Lighthouse? Los sitios web se consideran rápidos, medios o lentos siguiendo esta clasificación:
 
-* Lento: 0 a 49
-* Medio: 50 a 89
-* Rápido: 90 a 100
+* <span style="width:20px;height:9px;display:inline-block;background:#18b663"></span> Rápido: 90 a 100
+* <span style="width:20px;height:9px;display:inline-block;background:#e67700"></span> Medio: 50 a 89
+* <span style="width:20px;height:9px;display:inline-block;background:#c7221f"></span> Lento: 0 a 49
 
 La puntuación se basa en [la combinación de varias métricas que miden la carga de la página](https://developers.google.com/web/tools/lighthouse/v3/scoring) y en el cálculo se tiene en cuenta la distribución de esas métricas en los sitios rastreados por HTTP Archive.
 
@@ -88,7 +88,7 @@ De los 13 sitios analizados, sólo el de Esquerra (ERC) se consideraría rápido
 
 La siguiente gráfica muestra el número de peticiones a recursos externos y el desglose por tipo.
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGoePExjI_AuoYlJ0cHeE9U0RrYXk4q2j6DL-cJ993kgrQgKBzZs7wL5Ix_zVGY80Xc0tJVIm1dhpp/pubchart?oid=495361311&amp;format=interactive"></iframe>
+![Gráfica mostrando la comparativa de número de peticiones por web](charts/requests.png)
 
 Como referencia, [la mediana del número de peticiones por página según HTTP Archive](https://httparchive.org/reports/page-weight#reqTotal), que analiza unos 4 millones de páginas,  es 75 en escritorio y 69 en móvil.
 
@@ -96,7 +96,7 @@ Como referencia, [la mediana del número de peticiones por página según HTTP A
 
 El tamaño o peso de la página indica la suma del tamaño de todos los recursos que se solicitan al cargar la página, como estilos CSS, JS, imágenes, vídeos o scripts de terceros.
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGoePExjI_AuoYlJ0cHeE9U0RrYXk4q2j6DL-cJ993kgrQgKBzZs7wL5Ix_zVGY80Xc0tJVIm1dhpp/pubchart?oid=288435421&amp;format=interactive"></iframe>
+![Gráfica mostrando la comparativa de peso de página por web](charts/weight.png)
 
 Como referencia, [la mediana del tamaño de página según HTTP Archive](https://httparchive.org/reports/page-weight), que analiza unos 4 millones de páginas, es 1,785 MiB en escritorio y 1,63 MiB en móvil.
 
