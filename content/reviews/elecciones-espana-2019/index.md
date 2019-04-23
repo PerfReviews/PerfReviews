@@ -209,7 +209,7 @@ La carga de la web de En Marea es lenta debido a una combinación de varios prob
 |------------|----------------------|---------------------|
 | 92 / 100   | 49                   | 3,09              |
 
-Esquerra tiene la web que recibe la mejor puntuación de rendimiento del análisis. Sirven los estáticos usando http/2 y comprimiendo con brotli, y obti
+Esquerra tiene la web que recibe la mejor puntuación de rendimiento del análisis. Sirven los estáticos usando http/2 y comprimen usando brotli.
 
 - ❌ Fuentes woff y ttf que podrían convertirse a woff2
 - ❌ Potencial optimización de imágenes. ALgunos PNG se podrían optimizar y otros PNG de gran tamaño en píxeles convertir a JPG
@@ -224,7 +224,7 @@ Esquerra tiene la web que recibe la mejor puntuación de rendimiento del anális
 |------------|----------------------|---------------------|
 | 50 / 100   | 197                  | 12,87               |
 
-La web de Junts per Catalynya tiene un TTI elevado. Aunque los recursos se sirven de forma óptima, se podrían obtener mejoras al aplicar lazy-loading para cargar imágenes y los widgets de redes sociales que están situados en el _footer_ y que no son necesarios hasta que el usuario haga scroll.
+La web de Junts per Catalunya tiene un TTI elevado. Aunque los recursos se sirven de forma óptima, se podrían obtener mejoras al aplicar lazy-loading para cargar imágenes y los widgets de redes sociales que están situados en el _footer_ y que no son necesarios hasta que el usuario haga scroll.
 
 - ✅ HTML, CSS y JS comprimidos
 - ✅ Uso de http/2
@@ -263,7 +263,7 @@ La web del Partido Popular es la que más peticiones realiza, superando las 550,
 
 Pese a que los estáticos están versionados, se define un TTL máximo de 8 horas para los recursos servidos desde www.pp.es, con lo que el navegador no puede aprovechar los recursos descargados de sesiones previas.
 
-Un par de las imágenes son de más de 1 MiB, una de ellas es el banner de campaña con un peso de 1 MiB y una resolución de`6667px x 1575px` y la otra el logo con un peso de 1,2 MiB y una resolución de `9933px x 7016px`, el cual se está cargando 2 veces, ya en una de las peticiones se está solicitando con un parámetro `timesptamp` lo que hace que la descarge cada vez que visitamos la página.
+Un par de las imágenes son de más de 1 MiB, una de ellas es el banner de campaña con un peso de 1 MiB y una resolución de `6667px x 1575px` y la otra el logo con un peso de 1,2 MiB y una resolución de `9933px x 7016px`, el cual se está cargando 2 veces, ya en una de las peticiones se está solicitando con un parámetro `timestamp` lo que hace que la descargue cada vez que visitamos la página.
 
 - ❌ HTML, CSS y JS y sin comprimir
 - ❌ Elevada cantidad de peticiones para recursos innecesarios
