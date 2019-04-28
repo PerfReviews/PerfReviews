@@ -2,3 +2,7 @@ body {
   --textColorLink: #00AA58;
   --textColorDate: #888888;
 }
+
+.gatsby-highlight {
+  margin-bottom: 1.75rem;
+}
