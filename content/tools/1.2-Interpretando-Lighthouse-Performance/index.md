@@ -7,13 +7,13 @@ featuredImage: ../../assets/perfreviews-icon.png
 
 Lighthouse es una herramienta que sirve para evaluar diferentes aspectos de un sitio web, como performance o accesibilidad, y proporciona una puntuación y feedback para cada una de esas dimensiones.
 
-Está disponible como un [módulo npm](https://github.com/GoogleChrome/lighthouse), una [extensión de Chrome](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) y una utilidad dentro de las developer tools (panel "Audits" > "Performance").
+Está disponible como un [módulo npm](https://github.com/GoogleChrome/lighthouse), una [extensión de Chrome](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) y una utilidad dentro de las developer tools de Google Chrome (panel "Audits" > "Performance").
 
 ![Detalle del panel Audit en las herramientas de desarrollador de Google Chrome](assets/chrome-devtools-audit.png)
 
-Cuando se usa Lighthouse para establecer performance budgets, lo que nos importa es la puntuación de performance.
+Cuando se usa Lighthouse para establecer un performance budgets, lo que nos importa es la puntuación de performance.
 
-Cuál es una buena puntuación de performance? Un sitio web se define como rápido, medio o lento siguiendo este criterio:
+¿Cuál es una buena puntuación de performance? Un sitio web se define como rápido, medio o lento siguiendo este criterio:
 
 * <span style="width:20px;height:9px;display:inline-block;background:#18b663"></span> Rápido: 90 a 100
 * <span style="width:20px;height:9px;display:inline-block;background:#e67700"></span> Medio: 50 a 89
@@ -29,9 +29,8 @@ PageSpeeed Insights (abreviado PSI) es una forma de obtener tanto _Lab Data_ com
 
 Chrome User Experience Report proporciona métricas de usuario real (RUM) de una amplia variedad de sitios web. PageSpeed Insights se puede consumir por medio de su API. Esta API no requiere de autenticación ni de una _api key_ para usarla. Basta con hacer una petición. Sólo es necesario obtener una _api key_ si se van a realizar una gran cantidad de peticiones, del orden de múltiples por segundo.
 
-```
-$ curl https://www.googleapis.com/pagespeedonline/
-v5/runPagespeed?url=https://example.com
+```sh
+$ curl https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://example.com
 ```
 
 Por ejemplo, [este enlace](https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://perf.reviews) devuelve el resultado de Lighthouse para el sitio [perf.reviews](https://perf.reviews).
@@ -42,12 +41,12 @@ Como alternativa existe una forma de ejecutar PageSpeed Insights desde el navega
 
 Basta con navegar a [https://developers.google.com/speed/pagespeed/insights/](https://developers.google.com/speed/pagespeed/insights/), indicar qué web se quiere analizar, y dejar que el navegador ejecute PageSpeed Insights y genere el informe.
 
-La versión API de PageSpeed Insights devuelve la información en formato JSON, mientras quee la versión de navegador devuelve una página con los resultados organizados de una forma más visual, y se asemeja a esta imagen:
+La versión API de PageSpeed Insights devuelve la información en formato JSON, mientras que la versión de navegador devuelve una página con los resultados organizados de una forma más visual, y se asemeja a esta imagen:
 
 ![Vista general de un informe de Lighthouse](assets/lighthouse-report-overview.png)
 
 <div style="font-size: 0.9em; color: #0c5460;background-color: #ebf5f7;border: 1px solid #bee5eb;padding: .75rem 1.25rem;margin-bottom:calc(1.75rem - 1px);">
-Nota: También es posible generar informes de Lighthouse en <a href="https://web.dev/measure">web.dev</a> pero no incluyen información de <i>Field Data</i> y <i>Origin Summary</i>.
+Nota: También es posible generar informes de Lighthouse en <a href="https://web.dev/measure">web.dev</a> pero no incluyen información de <i>Field Data</i> y <i>Origin Summary</i>, y genera sólo la versión de navegación desde un dispositivo móvil.
 </div>
 
 El informe de PageSpeed Insights tiene 3 partes principales: _Field Data_, _Origin Summary_ y _Lab Data_.
@@ -59,7 +58,7 @@ Field Data proporciona información sobre la performance observada de un site du
 
 ![Gráfica de FCP de Lighthouse anotada](assets/lighthouse-fcp-explicacion.png)
 
-- **First Input Delay (FID)**: Mide el tiempo desde que el usuario interactúa con el sitio web por primera vez hasta el momento en el que el navegador es capaz de responder a esa interacción. La gráfica es similar a la de FCP, siendo la principal diferencia es que el valor mostrado del FID es el percentil 95.
+- **First Input Delay (FID)**: Mide el tiempo desde que el usuario interactúa con el sitio web por primera vez, hasta el momento en el que el navegador es capaz de responder a esa interacción. La gráfica es similar a la de FCP, siendo la principal diferencia es que el valor mostrado del FID es el percentil 95.
 
 ![Gráfica de FID de Lighthouse anotada](assets/lighthouse-fid-explicacion.png)
 
