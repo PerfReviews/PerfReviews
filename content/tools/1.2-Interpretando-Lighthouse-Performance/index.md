@@ -11,7 +11,7 @@ Está disponible como un [módulo npm](https://github.com/GoogleChrome/lighthous
 
 ![Detalle del panel Audit en las herramientas de desarrollador de Google Chrome](assets/chrome-devtools-audit.png)
 
-Cuando se usa Lighthouse para establecer un performance budgets, lo que nos importa es la puntuación de performance.
+Cuando se usa Lighthouse para establecer performance budgets, lo que nos importa es la puntuación de performance.
 
 ¿Cuál es una buena puntuación de performance? Un sitio web se define como rápido, medio o lento siguiendo este criterio:
 
@@ -30,7 +30,8 @@ PageSpeeed Insights (abreviado PSI) es una forma de obtener tanto _Lab Data_ com
 Chrome User Experience Report proporciona métricas de usuario real (RUM) de una amplia variedad de sitios web. PageSpeed Insights se puede consumir por medio de su API. Esta API no requiere de autenticación ni de una _api key_ para usarla. Basta con hacer una petición. Sólo es necesario obtener una _api key_ si se van a realizar una gran cantidad de peticiones, del orden de múltiples por segundo.
 
 ```sh
-$ curl https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://example.com
+$ curl https://www.googleapis.com/pagespeedonline/
+v5/runPagespeed?url=https://example.com
 ```
 
 Por ejemplo, [este enlace](https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://perf.reviews) devuelve el resultado de Lighthouse para el sitio [perf.reviews](https://perf.reviews).
