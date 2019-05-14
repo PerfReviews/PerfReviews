@@ -25,7 +25,7 @@ function BioEn() {
           >
             <img
               src={logo}
-              alt={'PerfReviews'}
+              alt="PerfReviews"
               style={{
                 height: 56,
                 marginRight: rhythm(1 / 2),

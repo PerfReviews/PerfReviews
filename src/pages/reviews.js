@@ -15,10 +15,13 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="Todos nuestros posts"
+          title="Nuestros análisis de web performance"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Bio />
+        <p>En PerfReviews analizamos el rendimiento de sitios web. Es una forma ideal de enseñar cómo utilizar herramientas para detectar, corregir y prevenir problemas de performance.</p>
+
+        <p>Somos reconocidos Google Developer Experts en tecnologías web y tenemos una larga experiencia desarrollando sitios web con un especial foco en usabilidad, accessibilidad y rendimiento.</p>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -55,7 +58,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/reviews/" } }, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt

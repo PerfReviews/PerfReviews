@@ -14,7 +14,8 @@ class Services extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Web performance audits"
-        description="We are experts in web performance. We carry out websites audits and workshops. We identify performance issues and teach about tools and techniques to fix and prevent them."/>
+        description="We are experts in web performance. We carry out websites audits and workshops. We identify performance issues and teach about tools and techniques to fix and prevent them."
+        lang="en"/>
         <h1>Our Services</h1>
         <h2>Web Performance Audits</h2>
         <p>We do web performance audits identifying improvements to decrease load time and data traffic, improving user's engagemente and main business metrics.</p>

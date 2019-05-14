@@ -69,14 +69,14 @@ class Layout extends React.Component {
           }}>
           <Link
           to="/servicios/"
-        >servicios
+        >Servicios
       </Link>{' '}
         &bull;{' '}
           <a
           href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww"
           target="_blank"
           rel="noopener noreferrer"
-        >youtube
+        >Youtube
         </a>{' '}
         &bull;{' '}
           <a
@@ -84,15 +84,7 @@ class Layout extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          twitter
-        </a>{' '}
-        &bull;{' '}
-        <a
-          href="https://mailchi.mp/b309deb154c1/perfreviews"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          newsletter
+          Twitter
         </a>{' '}
         &bull;{' '}
         <a
@@ -100,7 +92,7 @@ class Layout extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          facebook
+          Facebook
         </a>{' '}
         &bull;{' '}
         <a
@@ -108,7 +100,7 @@ class Layout extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          github
+          Github
         </a>{' '}
         &bull;{' '}
         <a
@@ -116,9 +108,9 @@ class Layout extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          mail
+          Email
         </a>{' '}
-        </footer>
+      </footer>
       </div>
     )
   }
