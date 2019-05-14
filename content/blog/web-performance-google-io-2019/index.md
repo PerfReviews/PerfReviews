@@ -5,7 +5,10 @@ description: Novedades en web performance presentadas en Google I/O 2019
 featuredImage: ../../assets/perfreviews-icon.png
 ---
 
-Ya hemos dejado atrás Google I/O 2019. Un evento repleto de novedades relacionadas con web performance que listamos a continuación.
+Ya hemos dejado atrás Google I/O 2019. Un evento repleto de novedades relacionadas con web performance que harán más fácil encontrar y solucionar problemas de rendimiento.
+
+
+- [Lighthouse](#lighthouse)
 
 ## Lighthouse
 
@@ -27,11 +30,13 @@ Esto lo hace ideal para CI. Para configurarlo basta con añadir un archivo `budg
 
 _Presentado en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=330)._
 
-Lighthouse puede detectar qué plataforma usa una web y ofrecer consejos específicos para mejorar el rendimiento.
+Lighthouse proporciona a los desarrolladores consejos para mejorar las webs al hacer análisis de rendimiento, accesibilidad y buenas prácticas.
+
+Muchos desarrolladores hoy en día utilizan diferentes tecnologías (backend / CMS / frameworks JavaScript) para construir sus sitios web. En lugar de mostrar recomendaciones generales, ¿qué pasaría si Lighthouse también pudiera proporcionar consejos más relevantes y útiles en función de las herramientas utilizadas? Un ejemplo es utilizar un determinado plugin para mejorar el rendimiento de un sitio que usa Wordpress.
+
+Lighthouse ahora puede detectar qué plataforma usa una web y ofrecer consejos específicos para mejorar el rendimiento a través de [Stack Packs](https://github.com/GoogleChrome/lighthouse-stack-packs).
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_073.jpg)
-
-Un ejemplo es utilizar un determinado plugin para mejorar el rendimiento de un sitio que usa Wordpress.
 
 ### Lighthouse Plugins
 
@@ -41,9 +46,9 @@ Los plugins de Lighthouse permiten extender la funcionalidad de Lighthouse para 
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_405.jpg)
 
-Los plugins son módulos NPM que implementan una serie de chequeos que son ejecutados por Lighthouse y añadidos como una sección adicional. Un ejemplo es el plugin AdSpeed que Google ha desarrollado para mejorar la integración de su plataforma de anuncios.
+Los plugins son módulos NPM que implementan una serie de chequeos que son ejecutados por Lighthouse y añadidos como una sección adicional. Un ejemplo es el plugin [Publisher Ads](https://github.com/googleads/pub-ads-lighthouse-plugin) (antes llamado AdSpeed) que Google ha desarrollado para mejorar la integración de su plataforma de anuncios.
 
-Pronto será posible escoger qué plugins ejecutar desde las DevTools.
+Además, pronto será posible escoger qué plugins ejecutar desde las DevTools.
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_411.jpg)
 
@@ -63,7 +68,7 @@ _Presentado en [Google Search and JavaScript Sites](https://www.youtube.com/watc
 
 El bot que Google usa para indexar sitios seguía corriendo Chrome 41, una versión que se había lanzado en marzo de 2015. A partir de ahora, se actualizará para ejecutar la última versión de Chrome. Esto significa que Googlebot ahora soporta funciones como [IntersectionObserver or ES6](https://webmasters.googleblog.com/2019/05/the-new-evergreen-googlebot.html), que no estaban disponibles en Chrome 41.
 
-Un aspecto positivo de Googlebot al ejecutar Chrome 41 era que los desarrolladores tenían que añadir soporte para navegadores más antiguos. La actualización de Googlebotno significa que ya no tengamos que preocuparnos por estos navegadores, ya que siempre debemos esforzarnos por dar al usuario una buena experiencia con independencia del navegador.
+Un aspecto positivo de Googlebot al ejecutar Chrome 41 era que los desarrolladores tenían que añadir soporte para navegadores más antiguos. La actualización de Googlebot no significa que ya no tengamos que preocuparnos por estos navegadores, ya que siempre debemos esforzarnos por dar al usuario una buena experiencia con independencia del navegador.
 
 Dos cosas a tener en cuenta es que las herramientas de test como [Google Search Console](https://search.google.com/search-console) aún ejecutan Chrome 41 y se actualizarán en el futuro. Además, aunque Googlebot no ejecutará Chrome 41, seguirá anunciando esa versión en su user agenttemporalmente. Esto dará tiempo a los desarrolladores web para hacer cambios en su código en caso de que estuvieran haciendo _user agent sniffing_ asumiendo que el bot se anunciaba como Chrome 41.
 
