@@ -182,9 +182,29 @@ devuelve
 }
 ```
 
-## Otros
+## WebAssembly
 
-- Portals (perception)
-- [web assembly by Surma](https://www.youtube.com/watch?v=njt-Qzw0mVY)
-- https://twitter.com/zeithq/status/1126196251102519297?s=21
-- https://twitter.com/igrigorik/status/1126362259553316864?s=21 and rest of tweets in thread
+_Mencionado en [WebAssembly for Web Developers](https://www.youtube.com/watch?v=njt-Qzw0mVY)_
+
+Esta presentación consta de dos parte, una, donde Surma nos habla del uso de WebAssembly en [Squoosh](https://squoosh.app/), un optimizador de imágenes desde la web, que gracias a WebAssembly puede utilizar los codecs escritos en C y C++ para mejorar la velocidad de compresión de las imágenes. En la segunda, parte Deepti nos habla de las propuestas para poder utilizar varios hilos de ejecución en nuestras aplicaciones.
+
+Surma hace especial incapié en que como Web Developers no debemos preocuparnos en tener que desarrollar en C, C++ o Rust para trabajar con WebAssebly, y nos presenta [AssemblyScript](https://github.com/AssemblyScript/assemblyscript) que nos permite desarrollar con [TypeScript](https://www.typescriptlang.org/).
+
+![](./thumbs/webassembly_for_web_developers_google_io_19.jpg)
+
+Con WebAssembly conseguiremos mejorar la velocidad de ejecución de las aplicaciones Javascript, mejorando así la experiencia de usuario.
+
+## Portals
+
+_Mencionado en [From Low Friction to Zero Friction with Web Packaging and Portals](https://www.youtube.com/watch?v=Ai4aZ9Jbsys)_
+
+La nueva API Portals es una [propuesta](https://github.com/WICG/portals), que aun que no está relacionada directament con mejorar la velocidad de carga de nuestras páginas, sí que lo está en la percepción que tendrá el usuario en las transiciones entre páginas. Lo que nos permitirá hacer esta nueva API es cargar la página destino, en un elemento similar a un iframe, y poder controlar una transición entre lapágina actual y la página destino.
+
+<video controls autoplay loop muted style="max-width: 100%; height: auto">
+  <source src="./thumbs/portals_vp9.webm" type="video/webm; codecs=vp8">
+  <source src="./thumbs/portals_h264.mp4" type="video/mp4; codecs=h264">
+</video>
+
+_Seamless embeds and navigation with Portals. Created by [Adam Argyle](https://twitter.com/argyleink)._
+
+En el blog de Web.dev encontrarás el artículo [Hands-on with Portals: seamless navigations on the Web](https://web.dev/hands-on-portals/), con más información y ejemplo de implementación.
