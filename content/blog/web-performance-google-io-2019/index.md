@@ -7,6 +7,8 @@ featuredImage: ../../assets/perfreviews-icon.png
 
 Ya hemos dejado atrás Google I/O 2019. Un evento repleto de novedades relacionadas con web performance que harán más fácil encontrar y solucionar problemas de rendimiento.
 
+Ésta es una lista no exhaustiva de las nuevas herramientas y funcionalidades presentadas.
+
 
 - [Lighthouse](#lighthouse)
 
@@ -16,13 +18,15 @@ Lighthouse sigue recibiendo muchas mejoras de funcionalidad para hacerlo aún m�
 
 ### LightWallet
 
-_Presentado en [Speed at Scale: Web Performance Tips and Tricks from the Trenches](https://youtu.be/YJGCZCaIZkQ?t=262). Mencionado también en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=73)._
+_Presentado en [Speed at Scale: Web Performance Tips and Tricks from the Trenches](https://youtu.be/YJGCZCaIZkQ?t=101). Mencionado también en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=73)._
 
-LightWallet añade soporte para _performance budgets_ en Lighthouse y está disponible en la versión de línea de comando de Lighthouse.
+[LightWallet](https;//bit.ly/lightwallet-docs) añade soporte para _performance budgets_ en Lighthouse y está disponible en la versión de línea de comando de Lighthouse.
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_252.jpg)
 
-Esto lo hace ideal para CI. Para configurarlo basta con añadir un archivo `budget.json` que define los budgets de performance.
+LightWallet añade una sección de "Budgets" en el informe de Lighthouse. Esta sección agrupa los recursos de la página y muestra en rojo el exceso de peticiones y/o de kBs.
+
+Esto lo hace ideal para entornos de Continuous Integration. Para configurarlo basta con añadir un archivo `budget.json` que define los budgets de performance.
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_259.jpg)
 
@@ -74,7 +78,47 @@ Dos cosas a tener en cuenta es que las herramientas de test como [Google Search 
 
 Servir ES6 y usar IntersectionObserver ayudará a reducir el tráfico de datos, y probablemente acortará los tiempos de carga. Esto es excelente para la experiencia del usuario, pero también para SEO, ya que Google usa el tiempo de carga como una de las métricas para hacer ranking de los sitios.
 
-## Google Search Console
+## Google Chrome
+
+## Nuevas métricas de rendimiento
+
+_Presentado en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=575)._
+
+A las ya conocidas métricas FP, FCP, FID y TTI se le añaden 2 más:
+
+- **[Layout stability](https://bit.ly/layout-stability)**, que mide los cambios en el layout al cargar contenido que _empuja_ otros elementos y fuerza al navegador a recalcular la posición de los elementos.
+![](thumbs/demystifying_speed_tooling_google_io_19_121.jpg)
+
+- **Largest Contentful Paint**, que mide cuándo se renderiza el elemento más grande, que sirve como aproximación al contenido principal de la página. Es una generalización de métricas usadas en el pasado para medir la carga de la Hero Image.
+![](thumbs/demystifying_speed_tooling_google_io_19_132.jpg)
+
+## Element Timing for Images
+
+_Presentado en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=1877)._
+
+![](thumbs/demystifying_speed_tooling_google_io_19_388.jpg)
+
+Ahora podemos obtener exponer el tiempo de carga de imágenes utilizando el atributo `elementtiming`, que expone métricas que se pueden acceder a través de `PerformanceObserver`. Esto se puede utilizar para hacer seguimiento de una métrica _custom_ que nos sirva para medir el rendimiento de nuestra página. Un ejemplo es Wikimedia, que [querían medir el "time-to-logo"](https://phabricator.wikimedia.org/phame/post/view/19/improving_time-to-logo_performance_with_preload_links/).
+
+## Lazy Loading nativo
+
+_Presentado en [Speed at Scale: Web Performance Tips and Tricks from the Trenches](https://youtu.be/YJGCZCaIZkQ?t=543)._
+
+Google Chrome va a soportar próximamente lazy loading nativo para imágenes.
+
+![](thumbs/speed_at_scale_web_performance_tips_and_tricks_from_the_trenches_google_io_19_110.jpg)
+
+Y también para iframes.
+
+![](thumbs/speed_at_scale_web_performance_tips_and_tricks_from_the_trenches_google_io_19_115.jpg)
+
+El nuevo atributo `loading` permitirá elegir si queremos aplicar la carga lazy (eg `<img loading=lazy>`) o no (eg `<img loading=eager>`). Un tercer valor será `auto`, que dejará al navegador elegir el modo.
+
+De esta forma no es necesario implementar lazy loading utilizando Javascipt y podemos conseguir unos ahorros en tráfico y mejoras en performance sustanciales.
+
+En la carga lazy el navegador hará la petición de iframes e imágenes que estén en el viewport y hará también peticiones parciales a las siguientes imágenes que estén fuera del viewport. Estas peticiones parciales tienen un tamaño aproximado de 2kB y permiten saber el tamaño de la imagen en píxeles para establecer placeholders y evitar reflows.
+
+## Otros
 
 ### Nuevo informe de velocidad en Google Search Console
 
@@ -90,37 +134,19 @@ Además el informe ayuda a priorizar qué mejoras llevar a cabo. Para ello agrup
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_215.jpg)
 
-## Chrome
+### Performance Budget Calculator
 
-_Presentado en Demystifying Speed Tooling._
+_Presentado en [Speed at Scale: Web Performance Tips and Tricks from the Trenches](https://youtu.be/YJGCZCaIZkQ?t=226)._
 
-![](thumbs/demystifying_speed_tooling_google_io_19_277.jpg)
+La [Performance Budget Calculator](https://bit.ly/perf-budget-calculator) permite prever el Time To Interactive (TTI) de una página basándose en 2 medidas: tamaño de recursos JS y tamaño de recursos no JS.
 
-Correlacionando peticiones de red con "paints" y determinando la actividad en el hilo principal
+![](thumbs/speed_at_scale_web_performance_tips_and_tricks_from_the_trenches_google_io_19_046.jpg)
 
-Novedad?
+Los cálculos se basan en las correlaciones que Google ha encontrado analizando datos de 3,9 millones de páginas usando HTTP Archive.
 
-## Más
+Además, la calculadora puede crear un fichero `budget.json` automáticamente para advertirnos cuando nuestros cambios en el código superan los límites establecidos.
 
-## Element Timing for Images
-
-_Presentado en Demystifying Speed Tooling._
-
-![](thumbs/demystifying_speed_tooling_google_io_19_388.jpg)
-
-## Nuevas métricas de rendimiento
-
-_Presentado en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=575)._
-
-A las ya conocidas métricas FP, FCP, FID y TTI se le añaden 2 más:
-
-- “[Layout stability](https://bit.ly/layout-stability)", que mide los cambios en el layout al cargar contenido que _empuja_ otros elementos y fuerza al navegador a recalcular la posición de los elementos.
-![](thumbs/demystifying_speed_tooling_google_io_19_121.jpg)
-
-- “[Largest Contentful Paint]()" mide cuándo se renderiza el elemento más grande, que sirve como aproximación al contenido principal de la página. Es una generalización de métricas usadas en el pasado para medir la carga de la Hero Image.
-![](thumbs/demystifying_speed_tooling_google_io_19_132.jpg)
-
-### Firebase web performance monitoring
+## Firebase web performance monitoring
 
 _Mencionado en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=1630)._
 
@@ -132,18 +158,34 @@ Las métricas incluyen First Paint, First Contentful Paint y First Input Delay. 
 
 Para integrar el proyecto, echa un vistazo a [esta guía de iniciación](https://firebase.google.com/docs/perf-mon/get-started-web).
 
-## Fundamentos de Performance
+## Font-display on Google Fonts
 
-_Presentado en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo)._
+[font-display](https://developer.mozilla.org/docs/Web/CSS/@font-face/font-display) es una funcionalidad de CSS que permite controlar cómo cargar las fuentes.
 
-En esta presentación se listan 15 puntos de acción para ayudarnos a entender cuál es el rendimiento de una web y cómo mejorarlo. Esta repleto de consejos para llevas a cabo mejoras de rendimiento desde el punto de vista técnico pero también financiero.
+Google Fonts se usa en muchos sitios y, hasta ahora, no había posibilidad de establecer la estrategia de carga de la fuente. Ahora, gracias al parámetro query `display` podemos pasar uno de los posibles valores y Google lo aplicará en la regla CSS que devuelve.
+
+```bash
+https://fonts.googleapis.com/css?family=Calligraffitti&display=fallback
+```
+
+devuelve
+
+```css
+/* latin */
+@font-face {
+  font-family: 'Calligraffitti';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local('Calligraffitti Regular'), local('Calligraffitti-Regular'), url(https://fonts.gstatic.com/s/calligraffitti/v10/46k2lbT3XjDVqJw3DCmCFjE0vkFeOZdjppN_.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+```
 
 ## Otros
 
-- [Images & iframes Lazy Load](https://www.youtube.com/watch?v=WJAda7f1CeY)
 - Portals (perception)
-- [speed at scale examples](https://www.youtube.com/watch?v=WJAda7f1CeY)
-- font-display on Google Fonts
+- Font-display on Google Fonts
 - [web assembly by Surma](https://www.youtube.com/watch?v=njt-Qzw0mVY)
 - https://twitter.com/zeithq/status/1126196251102519297?s=21
 - https://twitter.com/igrigorik/status/1126362259553316864?s=21 and rest of tweets in thread
