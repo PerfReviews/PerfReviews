@@ -70,11 +70,11 @@ El diseño del informe de Lighthouse ha cambiado ligeramente y también incluye 
 
 _Presentado en [Google Search and JavaScript Sites](https://www.youtube.com/watch?v=Ey0N1Ry0BPM)._
 
-El bot que Google usa para indexar sitios seguía corriendo Chrome 41, una versión que se había lanzado en marzo de 2015. A partir de ahora, se actualizará para ejecutar la última versión de Chrome. Esto significa que Googlebot ahora soporta funciones como [IntersectionObserver or ES6](https://webmasters.googleblog.com/2019/05/the-new-evergreen-googlebot.html), que no estaban disponibles en Chrome 41.
+El bot que Google usa para indexar sitios seguía corriendo Chrome 41, una versión que se había lanzado en marzo de 2015. A partir de ahora, se actualizará para ejecutar la última versión de Chrome. Esto significa que Googlebot ahora soporta funciones como [IntersectionObserver o ES6](https://webmasters.googleblog.com/2019/05/the-new-evergreen-googlebot.html), que no estaban disponibles en Chrome 41.
 
 Un aspecto positivo de Googlebot al ejecutar Chrome 41 era que los desarrolladores tenían que añadir soporte para navegadores más antiguos. La actualización de Googlebot no significa que ya no tengamos que preocuparnos por estos navegadores, ya que siempre debemos esforzarnos por dar al usuario una buena experiencia con independencia del navegador.
 
-Dos cosas a tener en cuenta es que las herramientas de test como [Google Search Console](https://search.google.com/search-console) aún ejecutan Chrome 41 y se actualizarán en el futuro. Además, aunque Googlebot no ejecutará Chrome 41, seguirá anunciando esa versión en su user agenttemporalmente. Esto dará tiempo a los desarrolladores web para hacer cambios en su código en caso de que estuvieran haciendo _user agent sniffing_ asumiendo que el bot se anunciaba como Chrome 41.
+Dos cosas a tener en cuenta es que las herramientas de test como [Google Search Console](https://search.google.com/search-console) aún ejecutan Chrome 41 y se actualizarán en el futuro. Además, aunque Googlebot no ejecutará Chrome 41, seguirá anunciando esa versión en su user agent temporalmente. Esto dará tiempo a los desarrolladores web para hacer cambios en su código en caso de que estuvieran haciendo _user agent sniffing_ asumiendo que el bot se anunciaba como Chrome 41.
 
 Servir ES6 y usar IntersectionObserver ayudará a reducir el tráfico de datos, y probablemente acortará los tiempos de carga. Esto es excelente para la experiencia del usuario, pero también para SEO, ya que Google usa el tiempo de carga como una de las métricas para hacer ranking de los sitios.
 
@@ -98,7 +98,7 @@ _Presentado en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjx
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_388.jpg)
 
-Ahora podemos obtener exponer el tiempo de carga de imágenes utilizando el atributo `elementtiming`, que expone métricas que se pueden acceder a través de `PerformanceObserver`. Esto se puede utilizar para hacer seguimiento de una métrica _custom_ que nos sirva para medir el rendimiento de nuestra página. Un ejemplo es Wikimedia, que [querían medir el "time-to-logo"](https://phabricator.wikimedia.org/phame/post/view/19/improving_time-to-logo_performance_with_preload_links/).
+Ahora podemos obtener el tiempo de carga de imágenes utilizando el atributo `elementtiming`, que expone métricas que se pueden acceder a través de `PerformanceObserver`. Esto se puede utilizar para hacer seguimiento de una métrica _custom_ que nos sirva para medir el rendimiento de nuestra página. Un ejemplo es Wikimedia, que [querían medir el "time-to-logo"](https://phabricator.wikimedia.org/phame/post/view/19/improving_time-to-logo_performance_with_preload_links/).
 
 ## Lazy Loading nativo
 
@@ -114,7 +114,7 @@ Y también para iframes.
 
 El nuevo atributo `loading` permitirá elegir si queremos aplicar la carga lazy (eg `<img loading=lazy>`) o no (eg `<img loading=eager>`). Un tercer valor será `auto`, que dejará al navegador elegir el modo.
 
-De esta forma no es necesario implementar lazy loading utilizando Javascipt y podemos conseguir unos ahorros en tráfico y mejoras en performance sustanciales.
+De esta forma no es necesario implementar lazy loading utilizando Javascript y podemos conseguir unos ahorros en tráfico y mejoras en performance sustanciales.
 
 En la carga lazy el navegador hará la petición de iframes e imágenes que estén en el viewport y hará también peticiones parciales a las siguientes imágenes que estén fuera del viewport. Estas peticiones parciales tienen un tamaño aproximado de 2kB y permiten saber el tamaño de la imagen en píxeles para establecer placeholders y evitar reflows.
 
@@ -124,13 +124,13 @@ En la carga lazy el navegador hará la petición de iframes e imágenes que est�
 
 _Presentado en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=943)._
 
-Google Search Console (antiguo Webmaster Tools) incluye un nuevo informe llamado Speed Report. Está basado en FCP y FID de _field metrics_.
+Google Search Console (antiguo Webmaster Tools) incluye un nuevo informe llamado Speed Report. Está basado en [FCP](https://developers.google.com/web/tools/lighthouse/audits/first-contentful-paint) y [FID](https://developers.google.com/web/updates/2018/05/first-input-delay) de _field metrics_.
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_204.jpg)
 
 El informe sirve para monitorizar el progreso de estas métricas y su distribución (rápido, medio, lento) con el paso del tiempo. Recuerda al dashboard de CrUX pero con un reporte de métricas diario en lugar de mensual.
 
-Además el informe ayuda a priorizar qué mejoras llevar a cabo. Para ello agrupan todas las URLs afectadas por el mismo problema, indicando el potencial ahorro en tiempo.
+Además, el informe ayuda a priorizar qué mejoras llevar a cabo. Para ello agrupan todas las URLs afectadas por el mismo problema, indicando el potencial ahorro en tiempo.
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_215.jpg)
 
@@ -142,7 +142,7 @@ La [Performance Budget Calculator](https://bit.ly/perf-budget-calculator) permit
 
 ![](thumbs/speed_at_scale_web_performance_tips_and_tricks_from_the_trenches_google_io_19_046.jpg)
 
-Los cálculos se basan en las correlaciones que Google ha encontrado analizando datos de 3,9 millones de páginas usando HTTP Archive.
+Los cálculos se basan en las correlaciones que Google ha encontrado analizando datos de 3,9 millones de páginas usando [HTTP Archive](https://httparchive.org/).
 
 Además, la calculadora puede crear un fichero `budget.json` automáticamente para advertirnos cuando nuestros cambios en el código superan los límites establecidos.
 
@@ -185,8 +185,6 @@ devuelve
 ## Otros
 
 - Portals (perception)
-- Font-display on Google Fonts
 - [web assembly by Surma](https://www.youtube.com/watch?v=njt-Qzw0mVY)
 - https://twitter.com/zeithq/status/1126196251102519297?s=21
 - https://twitter.com/igrigorik/status/1126362259553316864?s=21 and rest of tweets in thread
--
