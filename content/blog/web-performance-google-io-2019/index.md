@@ -1,7 +1,7 @@
 ---
-title: Web Performance en Google I/O 2019
+title: Las principales novedades sobre Web Performance presentadas en Google I/O 2019
 date: "2019-05-13"
-description: Las novedades en web performance presentadas en Google I/O 2019. LightWallet, Lighthouse Stack Packs, Portals, Lazy Loading y más.
+description: Recopilamos todo lo nuevo sobre rendimiento web presentado en Google I/O 2019. LightWallet, Lighthouse Stack Packs, Portals, Lazy Loading y más.
 featuredImage: ../../assets/perfreviews-icon.png
 ---
 
@@ -145,7 +145,7 @@ Las métricas incluyen First Paint, First Contentful Paint y First Input Delay. 
 
 Para integrar el proyecto, echa un vistazo a [esta guía de iniciación](https://firebase.google.com/docs/perf-mon/get-started-web).
 
-## Font-display on Google Fonts
+## Font-display en Google Fonts
 
 [font-display](https://developer.mozilla.org/docs/Web/CSS/@font-face/font-display) es una funcionalidad de CSS que permite controlar cómo cargar las fuentes.
 
