@@ -1,7 +1,7 @@
 ---
 title: Las principales novedades sobre Web Performance presentadas en Google I/O 2019
 date: "2019-05-13"
-description: Recopilamos todo lo nuevo sobre rendimiento web presentado en Google I/O 2019. LightWallet, Lighthouse Stack Packs, Portals, Lazy Loading y más.
+description: Recopilamos todo lo nuevo sobre rendimiento web presentado en Google I/O 2019. LightWallet, Lighthouse Stack Packs, Portals, Lazy Loading nativo y mucho más.
 featuredImage: ../../assets/perfreviews-icon.png
 ---
 
