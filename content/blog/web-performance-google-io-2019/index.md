@@ -1,7 +1,7 @@
 ---
 title: Web Performance en Google I/O 2019
 date: "2019-05-13"
-description: Novedades en web performance presentadas en Google I/O 2019
+description: Las novedades en web performance presentadas en Google I/O 2019. LightWallet, Lighthouse Stack Packs, Portals, Lazy Loading y más.
 featuredImage: ../../assets/perfreviews-icon.png
 ---
 
@@ -9,14 +9,7 @@ Ya hemos dejado atrás Google I/O 2019. Un evento repleto de novedades relaciona
 
 Ésta es una lista no exhaustiva de las nuevas herramientas y funcionalidades presentadas.
 
-
-- [Lighthouse](#lighthouse)
-
-## Lighthouse
-
-Lighthouse sigue recibiendo muchas mejoras de funcionalidad para hacerlo aún más útil. Nuevo diseño, consejos específicos para plataformas e integración de performance budgets son algunas de ellas.
-
-### LightWallet
+## LightWallet
 
 _Presentado en [Speed at Scale: Web Performance Tips and Tricks from the Trenches](https://youtu.be/YJGCZCaIZkQ?t=101). Mencionado también en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=73)._
 
@@ -30,7 +23,7 @@ Esto lo hace ideal para entornos de Continuous Integration. Para configurarlo ba
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_259.jpg)
 
-### Lighthouse Stack Packs
+## Lighthouse Stack Packs
 
 _Presentado en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=330)._
 
@@ -42,7 +35,7 @@ Lighthouse ahora puede detectar qué plataforma usa una web y ofrecer consejos e
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_073.jpg)
 
-### Lighthouse Plugins
+## Lighthouse Plugins
 
 _Presentado en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=2000)._
 
@@ -56,7 +49,7 @@ Además, pronto será posible escoger qué plugins ejecutar desde las DevTools.
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_411.jpg)
 
-### Nuevo diseño de Lighthouse
+## Nuevo diseño de Lighthouse
 
 _Presentado en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=391)._
 
@@ -64,9 +57,7 @@ El diseño del informe de Lighthouse ha cambiado ligeramente y también incluye 
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_081.jpg)
 
-## Googlebot
-
-### Evergreen Googlebot
+## Evergreen Googlebot
 
 _Presentado en [Google Search and JavaScript Sites](https://www.youtube.com/watch?v=Ey0N1Ry0BPM)._
 
@@ -77,8 +68,6 @@ Un aspecto positivo de Googlebot al ejecutar Chrome 41 era que los desarrollador
 Dos cosas a tener en cuenta es que las herramientas de test como [Google Search Console](https://search.google.com/search-console) aún ejecutan Chrome 41 y se actualizarán en el futuro. Además, aunque Googlebot no ejecutará Chrome 41, seguirá anunciando esa versión en su user agent temporalmente. Esto dará tiempo a los desarrolladores web para hacer cambios en su código en caso de que estuvieran haciendo _user agent sniffing_ asumiendo que el bot se anunciaba como Chrome 41.
 
 Servir ES6 y usar IntersectionObserver ayudará a reducir el tráfico de datos, y probablemente acortará los tiempos de carga. Esto es excelente para la experiencia del usuario, pero también para SEO, ya que Google usa el tiempo de carga como una de las métricas para hacer ranking de los sitios.
-
-## Google Chrome
 
 ## Nuevas métricas de rendimiento
 
@@ -118,9 +107,7 @@ De esta forma no es necesario implementar lazy loading utilizando Javascript y p
 
 En la carga lazy el navegador hará la petición de iframes e imágenes que estén en el viewport y hará también peticiones parciales a las siguientes imágenes que estén fuera del viewport. Estas peticiones parciales tienen un tamaño aproximado de 2kB y permiten saber el tamaño de la imagen en píxeles para establecer placeholders y evitar reflows.
 
-## Otros
-
-### Nuevo informe de velocidad en Google Search Console
+## Nuevo informe de velocidad en Google Search Console
 
 _Presentado en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=943)._
 
@@ -134,7 +121,7 @@ Además, el informe ayuda a priorizar qué mejoras llevar a cabo. Para ello agru
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_215.jpg)
 
-### Performance Budget Calculator
+## Performance Budget Calculator
 
 _Presentado en [Speed at Scale: Web Performance Tips and Tricks from the Trenches](https://youtu.be/YJGCZCaIZkQ?t=226)._
 
@@ -164,8 +151,10 @@ Para integrar el proyecto, echa un vistazo a [esta guía de iniciación](https:/
 
 Google Fonts se usa en muchos sitios y, hasta ahora, no había posibilidad de establecer la estrategia de carga de la fuente. Ahora, gracias al parámetro query `display` podemos pasar uno de los posibles valores y Google lo aplicará en la regla CSS que devuelve.
 
+La petición
+
 ```bash
-https://fonts.googleapis.com/css?family=Calligraffitti&display=fallback
+https://fonts.googleapis.com/css?family=Calligraffitti&display=swap
 ```
 
 devuelve
@@ -176,35 +165,46 @@ devuelve
   font-family: 'Calligraffitti';
   font-style: normal;
   font-weight: 400;
-  font-display: fallback;
+  font-display: swap;
   src: local('Calligraffitti Regular'), local('Calligraffitti-Regular'), url(https://fonts.gstatic.com/s/calligraffitti/v10/46k2lbT3XjDVqJw3DCmCFjE0vkFeOZdjppN_.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 ```
 
+Aunque `font-display: swap` suele ser la opción más recomendada, otras opciones interesantes son `font-display: fallback` y `font-display: optional`, como explica Chris Coyier en [If you really dislike FOUT, 'font-display: optional' might be your jam
+](https://css-tricks.com/really-dislike-fout-font-display-optional-might-jam/). También en CSS Tricks encontrarás la fantástica guía ['font-display' for the Masses](https://css-tricks.com/font-display-masses/).
+
 ## WebAssembly
 
-_Mencionado en [WebAssembly for Web Developers](https://www.youtube.com/watch?v=njt-Qzw0mVY)_
+_Presentado en [WebAssembly for Web Developers](https://www.youtube.com/watch?v=njt-Qzw0mVY)._
 
-Esta presentación consta de dos parte, una, donde Surma nos habla del uso de WebAssembly en [Squoosh](https://squoosh.app/), un optimizador de imágenes desde la web, que gracias a WebAssembly puede utilizar los codecs escritos en C y C++ para mejorar la velocidad de compresión de las imágenes. En la segunda, parte Deepti nos habla de las propuestas para poder utilizar varios hilos de ejecución en nuestras aplicaciones.
+Esta presentación consta de dos partes. La primera donde Surma nos habla del uso de WebAssembly en [Squoosh](https://squoosh.app/), un optimizador de imágenes desde la web, que gracias a WebAssembly puede utilizar los codecs escritos en C y C++ para mejorar la velocidad de compresión de las imágenes. En la segunda, parte Deepti nos habla de las propuestas para poder utilizar varios hilos de ejecución en nuestras aplicaciones.
 
-Surma hace especial incapié en que como Web Developers no debemos preocuparnos en tener que desarrollar en C, C++ o Rust para trabajar con WebAssebly, y nos presenta [AssemblyScript](https://github.com/AssemblyScript/assemblyscript) que nos permite desarrollar con [TypeScript](https://www.typescriptlang.org/).
+Surma hace especial hincapié en que como desarrolladores web no debemos preocuparnos por tener que desarrollar en C, C++ o Rust para trabajar con WebAssebly, y nos presenta [AssemblyScript](https://github.com/AssemblyScript/assemblyscript) que nos permite desarrollar con [TypeScript](https://www.typescriptlang.org/).
 
-![](./thumbs/webassembly_for_web_developers_google_io_19.jpg)
+![](thumbs/webassembly_for_web_developers_google_io_19.jpg)
 
 Con WebAssembly conseguiremos mejorar la velocidad de ejecución de las aplicaciones Javascript, mejorando así la experiencia de usuario.
 
 ## Portals
 
-_Mencionado en [From Low Friction to Zero Friction with Web Packaging and Portals](https://www.youtube.com/watch?v=Ai4aZ9Jbsys)_
+_Presentado en [From Low Friction to Zero Friction with Web Packaging and Portals](https://www.youtube.com/watch?v=Ai4aZ9Jbsys)._
 
-La nueva API Portals es una [propuesta](https://github.com/WICG/portals), que aun que no está relacionada directament con mejorar la velocidad de carga de nuestras páginas, sí que lo está en la percepción que tendrá el usuario en las transiciones entre páginas. Lo que nos permitirá hacer esta nueva API es cargar la página destino, en un elemento similar a un iframe, y poder controlar una transición entre lapágina actual y la página destino.
+La nueva [API Portals es una propuesta](https://github.com/WICG/portals), que aunque no está relacionada directamente con mejorar la velocidad de carga de nuestras páginas, sí que lo está en la percepción que tendrá el usuario en las transiciones entre páginas.
+
+Lo que nos permitirá hacer esta nueva API es cargar la página destino en un elemento similar a un iframe, y poder controlar una transición entre la página actual y la página destino.
 
 <video controls autoplay loop muted style="max-width: 100%; height: auto">
   <source src="./thumbs/portals_vp9.webm" type="video/webm; codecs=vp8">
   <source src="./thumbs/portals_h264.mp4" type="video/mp4; codecs=h264">
 </video>
 
-_Seamless embeds and navigation with Portals. Created by [Adam Argyle](https://twitter.com/argyleink)._
+_Embeds y navegación sin interrupciones con Portals. Creado por [Adam Argyle](https://twitter.com/argyleink)._
 
-En el blog de Web.dev encontrarás el artículo [Hands-on with Portals: seamless navigations on the Web](https://web.dev/hands-on-portals/), con más información y ejemplo de implementación.
+En el blog de web.dev encontrarás el artículo [Hands-on with Portals: seamless navigations on the Web](https://web.dev/hands-on-portals/) con más información y ejemplo de implementación.
+
+## Conclusión
+
+Como hemos visto, esta edición de Google I/O vino cargada de nuevas herramientas.
+
+¿Nos hemos dejado alguna en el tintero? [Dínoslo en nuestra cuenta de Twitter @PerfReviews_.](https://twitter.com/PerfReviews_)
