@@ -13,10 +13,11 @@ class Reviews extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const reviews = data.reviews.edges
     const tools = data.tools.edges
+    const blog = data.blog.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Promoviendo web performance" />
+        <SEO title="El mejor contenido sobre web performance en español" />
         <Bio />
         <h2>Análisis de web performance</h2>
         {reviews.map(({ node }) => {
@@ -51,6 +52,34 @@ class Reviews extends React.Component {
         <p>Un vídeo corto sobre cómo identificar peticiones de 3rd party scripts y medir su performance.</p>
         <h2>Tools</h2>
         {tools.map(({ node }) => {
+          const title = node.frontmatter.title || node.headings[0].value || node.fields.slug
+          return (
+            <div key={node.fields.slug} style={{
+              marginTop: rhythm(2),
+            }}>
+              <div>
+                <h3
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                    marginTop: 0,
+                  }}
+                >
+                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <small className="date">{node.frontmatter.date}</small>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+              </div>
+            </div>
+          )
+        })}
+        <h2>Blog</h2>
+        {blog.map(({ node }) => {
           const title = node.frontmatter.title || node.headings[0].value || node.fields.slug
           return (
             <div key={node.fields.slug} style={{
@@ -127,6 +156,31 @@ export const pageQuery = graphql`
       }
     }
     tools: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/tools/" } }, sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt(pruneLength: 280)
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            featuredImage {
+                childImageSharp{
+                    sizes(maxWidth: 100) {
+                        ...GatsbyImageSharpSizes
+                    }
+                }
+            }
+          }
+          headings {
+            value
+          }
+        }
+      }
+    }
+    blog: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/blog/" } }, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt(pruneLength: 280)
