@@ -180,7 +180,7 @@ _Presentado en [WebAssembly for Web Developers](https://www.youtube.com/watch?v=
 
 Esta presentación consta de dos partes. La primera donde Surma nos habla del uso de WebAssembly en [Squoosh](https://squoosh.app/), un optimizador de imágenes desde la web, que gracias a WebAssembly puede utilizar los codecs escritos en C y C++ para mejorar la velocidad de compresión de las imágenes. En la segunda, parte Deepti nos habla de las propuestas para poder utilizar varios hilos de ejecución en nuestras aplicaciones.
 
-Surma hace especial hincapié en que como desarrolladores web no debemos preocuparnos por tener que desarrollar en C, C++ o Rust para trabajar con WebAssebly, y nos presenta [AssemblyScript](https://github.com/AssemblyScript/assemblyscript) que nos permite desarrollar con [TypeScript](https://www.typescriptlang.org/).
+Surma hace especial hincapié en que como desarrolladores web no debemos preocuparnos por tener que desarrollar en C, C++ o Rust para trabajar con WebAssembly, y nos presenta [AssemblyScript](https://github.com/AssemblyScript/assemblyscript) que nos permite desarrollar con [TypeScript](https://www.typescriptlang.org/).
 
 ![](thumbs/webassembly_for_web_developers_google_io_19.jpg)
 
@@ -190,7 +190,7 @@ Con WebAssembly conseguiremos mejorar la velocidad de ejecución de las aplicaci
 
 _Presentado en [From Low Friction to Zero Friction with Web Packaging and Portals](https://www.youtube.com/watch?v=Ai4aZ9Jbsys)._
 
-La nueva [API Portals es una propuesta](https://github.com/WICG/portals), que aunque no está relacionada directamente con mejorar la velocidad de carga de nuestras páginas, sí que lo está en la percepción que tendrá el usuario en las transiciones entre páginas.
+[La nueva API Portals](https://github.com/WICG/portals) es una propuesta que, aunque no está relacionada directamente con mejorar la velocidad de carga de nuestras páginas, sí que lo está en la percepción que tendrá el usuario en las transiciones entre páginas.
 
 Lo que nos permitirá hacer esta nueva API es cargar la página destino en un elemento similar a un iframe, y poder controlar una transición entre la página actual y la página destino.
 
