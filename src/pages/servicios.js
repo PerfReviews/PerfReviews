@@ -19,7 +19,7 @@ class Servicios extends React.Component {
 
         <h1>Mejoramos el rendimiento de tu web.</h1>
         <p>Tenemos una larga experiencia llevando a cambio mejoras en el rendimiento de webs y estudiando el impacto en las métricas de negocio que te preocupan. Sabemos cuál es el balance entre esfuerzo técnico y retorno de la inversión.</p>
-        <p>Hemoso desarrollado proyectos web a escala en empresas como Facebook, Spotify, Infojobs, Coches, Tuenti y Mil Anuncios. Con un especial énfasis en usabilidad y rendimiento. Tenemos el reconocmiento de Google como Google Developer Experts en tecnologías web.</p>
+        <p>Hemoso desarrollado proyectos web a escala en empresas como Facebook, Spotify, Infojobs, Coches, Tuenti y Mil Anuncios. Con un especial énfasis en usabilidad y rendimiento. Tenemos el reconocimiento de Google como Google Developer Experts en tecnologías web.</p>
         <p>¿Has visto <a href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww">nuestros vídeos</a> y te gustaría una auditoría de tu web?</p>
 
         <h2>Nuestros servicios</h2>
