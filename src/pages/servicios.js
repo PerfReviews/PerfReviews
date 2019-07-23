@@ -20,7 +20,7 @@ class Servicios extends React.Component {
         <h1>Mejoramos el rendimiento de tu web.</h1>
         <p>Tenemos una larga experiencia llevando a cambio mejoras en el rendimiento de webs y estudiando el impacto en las métricas de negocio que te preocupan. Sabemos cuál es el balance entre esfuerzo técnico y retorno de la inversión.</p>
         <p>Hemoso desarrollado proyectos web a escala en empresas como Facebook, Spotify, Infojobs, Coches, Tuenti y Mil Anuncios. Con un especial énfasis en usabilidad y rendimiento. Tenemos el reconocimiento de Google como Google Developer Experts en tecnologías web.</p>
-        <p>¿Has visto <a href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww">nuestros vídeos</a> y te gustaría una auditoría de tu web?</p>
+        <p>¿Has visto <a href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww">nuestros vídeos</a> y necesitas una auditoría de tu web?</p>
 
         <h2>Nuestros servicios</h2>
 
@@ -30,11 +30,11 @@ class Servicios extends React.Component {
         <p>Una vez realizado el estudio proporcionaremos un documento detallado con consejos para ayudar al equipo de desarrollo a mejorar tanto el rendimiento como la experiencia de usuario de tu web.</p>
 
         <h4>Nuestro proceso</h4>
-        <ul style={{marginLeft: '2em'}}>
+        <ol style={{marginLeft: '2em'}}>
           <li>Todo empieza con una llamada. Juntos estableceremos <strong>las mejoras y objetivos deseados</strong>.</li>
           <li>Proporcionaremos un informe detallado del rendimiento, incluyendo <strong>soluciones concretas</strong>, listo para pasárselo a tu equipo de desarrollo.</li>
-          <li><strong>Dos reuniones de seguimiento</strong> de una hora de duración para asegurarnos de que estamos haciendo progresos.</li>
-        </ul>
+          <li>Planificaremos <strong>2 reuniones de seguimiento</strong> de una hora de duración para asegurarnos de que estamos haciendo progresos.</li>
+        </ol>
 
         <h4>Reserva tu análisis de rendimiento</h4>
         <p>
