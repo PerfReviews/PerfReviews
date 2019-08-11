@@ -68,7 +68,7 @@ Os puede extrañar que añadamos una sección de libros en un post donde estamos
 Los libros, aun en formato digital, son muy complicados de actualizar. Lo que les deja fuera de juego en la gran carrera en la que estamos inmersos.
 
 ![Libros de Web Performance](thumbs/books.jpg)
-<small>Estos son algunos de los libros más populares de web performance, publicados entre 2008 y 2019.</small>
+<small>_Estos son algunos de los libros más populares de web performance, publicados entre 2008 y 2019._</small>
 
 Aún y así, queremos haceros unas recomendaciones de algunos libros que os pueden ayudar a aprender unas buenas bases en web performance, protocolos y optimizaciones de recursos:
 
