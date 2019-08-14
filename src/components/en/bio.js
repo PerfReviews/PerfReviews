@@ -38,7 +38,7 @@ function BioEn() {
               PerfReviews is a project by <Link
               to="/nosotros/"
             ><strong>{author}</strong></Link>.<br/>
-              We speak about web performance on <a href={`https://twitter.com/${social.twitter}`}>Twitter</a> and{' '}
+              We talk about web performance on <a href={`https://twitter.com/${social.twitter}`}>Twitter</a> and{' '}
               <a href={'https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww'}>Youtube</a>.
             </p>
           </div>

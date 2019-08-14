@@ -44,7 +44,7 @@ class Servicios extends React.Component {
 
         <p><strong><a style={{padding:'0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff'}} href="mailto:perfreviews.mail@gmail.com">Contrata nuestro servicio de análisis</a></strong></p>
 
-        <h2>Formación: Workshops y talleres</h2>
+        <h3>Formación: Workshops y talleres</h3>
         <p>Aprende cuáles son los principales problemas de rendimiento en sitios web, cómo corregirlos y monitorizarlos.</p>
         <p><strong><a href="mailto:perfreviews.mail@gmail.com">Contáctanos para condiciones</a>.</strong></p>
 
