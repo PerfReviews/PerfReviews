@@ -86,6 +86,16 @@ A la hora de implementar estos formatos, y para dar soporte a todos los navegado
 
 Esto permite servir el archivo **video.webm** para los navegadores que soporten WebM y **video.mp4** para el resto.
 
+## Resultado
+
+![](./thumbs/terminal-files.png)
+
+Os dejamos enlace a los ficheros para que podáis evaluar los resultados de calidad, así como sus tamaños.
+
+- [video.gif (65Mb)](./assets/video.gif)
+- [video.mp4 (8,5Mb)](./assets/video.mp4)
+- [video.webm (2,4Mb)](./assets/video.webm)
+
 ## Conclusión
 
 Hemos visto cómo podemos mejorar el rendimiento de esta página con unos simples pasos. Pero lo que realmente deberíamos valorar es el impacto en la experiencia de usuario, dado que este vídeo se muestra en la página de login, una funcionalidad crítica.
