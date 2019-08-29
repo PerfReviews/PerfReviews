@@ -15,7 +15,7 @@ Después de este tweet de [Yoav Weiss](https://twitter.com/yoavweiss) en el que 
 
 Rick muestra la consulta SQL que ha hecho a la tabla de la base de datos con los datos de HTTP Archive del mes de julio.
 
-La “mejor” imagen de la web actualmente es un archivo en formato GIF, video.gif. Como su nombre indica, se trata de un vídeo de 11 segundos y con un tamaño de más de **65MB**.
+La “mejor” imagen de la web actualmente es un archivo en formato GIF, video.gif. Como su nombre indica, se trata de un vídeo de 11 segundos y con un tamaño de más de **65Mb**.
 
 Sí, nos pudo la curiosidad 😊
 
@@ -29,7 +29,7 @@ Al entrar en la dirección [moodle.e-formalia.es](https://moodle.e-formalia.es) 
 
 ![Home e-Formalia](./thumbs/home.png)
 
-El servidor nos está sirviendo dos imágenes: logos.png y video.gif. El tiempo de carga de ese vídeo de fondo en la pantalla de acceso, desde una conexión de fibra óptica de **600MB** es de tan sólo **2,67 segundos**.
+El servidor nos está sirviendo dos imágenes: logos.png y video.gif. El tiempo de carga de ese vídeo de fondo en la pantalla de acceso, desde una conexión de fibra óptica de **600Mb** es de tan sólo **2.67 segundos**.
 
 ![Developer Tools: Network Panel](./thumbs/network-1.png)
 
@@ -37,7 +37,7 @@ Pero veamos qué pasa si utilizamos la funcionalidad del panel de red de las Dev
 
 ![Developer Tools: Network Panel](./thumbs/network-2.png)
 
-Hemos tenido que esperar **6,1 minutos** para que se descargara el 100% del vídeo.
+Hemos tenido que esperar **6.1 minutos** para que se descargara el 100% del vídeo.
 
 ## Solución
 
@@ -51,7 +51,7 @@ En el artículo nos sugieren una herramienta de compresión de vídeo, [FFmpeg](
 
 ### MPEG-4
 
-Después de la instalación, en nuestro caso algo tan simple como `brew install ffmpeg` en Mac, ejecutamos `ffmpeg -i video.gif video.mp4` y después de unos pocos segundos podemos ver que el archivo **video.gif** de **65MB** se ha convertido en **video.mp4** de tan sólo 6.6MB. En el artículo nos muestran algunos parámetros de FFmpeg que nos dan opción de optimizar la conversión desde el punto de vista de peso y de calidad.
+Después de la instalación, en nuestro caso algo tan simple como `brew install ffmpeg` en Mac, ejecutamos `ffmpeg -i video.gif video.mp4` y después de unos pocos segundos podemos ver que el archivo **video.gif** de **65Mb** se ha convertido en **video.mp4** de tan sólo 6.6MB. En el artículo nos muestran algunos parámetros de FFmpeg que nos dan opción de optimizar la conversión desde el punto de vista de peso y de calidad.
 
 Podemos ajustar el parámetro [CRF](https://trac.ffmpeg.org/wiki/Encode/H.264) que nos permite definir el nivel de pérdida de calidad. Tras algunas pruebas, optamos por definir el CRT a 22, un punto por debajo del valor por defecto, con la intención de ser lo más fieles posibles a la calidad que nos hemos encontrado con el fichero original.
 
@@ -59,7 +59,7 @@ Podemos ajustar el parámetro [CRF](https://trac.ffmpeg.org/wiki/Encode/H.264) q
 ffmpeg -i video.gif -b:v 0 -crf 22 video.mp4
 ```
 
-Esto nos deja un archivo de **8,5MB**, reduciendo su peso a un 13% del original.
+Esto nos deja un archivo de **8.5Mb**, reduciendo su peso a un 13% del original.
 
 ### WebM
 
@@ -71,7 +71,7 @@ Después de hacer algunas pruebas ajustando  el valor de CRF, lo establecemos al
 ffmpeg -i video.gif -c vp9 -b:v 0 -crf 41 video.webm
 ```
 
-Sorprendentemente obtenemos un vídeo de una calidad muy aceptable con un tamaño de sólo **2,4MB**.
+Sorprendentemente obtenemos un vídeo de una calidad muy aceptable con un tamaño de sólo **2.4Mb**.
 
 ### &lt;video&gt;
 
@@ -85,6 +85,16 @@ A la hora de implementar estos formatos, y para dar soporte a todos los navegado
 ```
 
 Esto permite servir el archivo **video.webm** para los navegadores que soporten WebM y **video.mp4** para el resto.
+
+## Resultado
+
+![](./thumbs/terminal-files.png)
+
+Os dejamos enlace a los ficheros para que podáis evaluar los resultados de calidad, así como sus tamaños.
+
+- [video.gif (65Mb)](./assets/video.gif)
+- [video.mp4 (8,5Mb)](./assets/video.mp4)
+- [video.webm (2,4Mb)](./assets/video.webm)
 
 ## Conclusión
 
