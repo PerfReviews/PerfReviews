@@ -28,14 +28,11 @@ Una de las mejores formas de estar al día es seguir los blogs y cuentas de Twit
 
 Hemos recopilado [una lista en Twitter con las principales cuentas](https://twitter.com/jmperezperez/lists/web-perf), y siempre es una buena idea suscribirse a los blogs de [Addy Osmani](https://addyosmani.com/blog/), [Doug Sillars](https://dougsillars.com/blog/), [Filament Group](https://www.filamentgroup.com/lab/), [Harry Roberts](https://csswizardry.com/) o [Tim Kadlec](https://timkadlec.com/remembers/).
 
-![Captura de pantalla del blog de Filament Group](thumbs/filament-group.png)
-<small>_El blog de Filamnet Group es una buene fuente de información sobre técnicas de carga de CSS y fuentes._</small>
+![El blog de Filamnet Group es una buena fuente de información sobre técnicas de carga de CSS y fuentes](thumbs/filament-group.png)
 
 Una de las mejores fuentes para aprender sobre web performance es [Web.dev](https://web.dev/learn).
 
-![Sección de tutoriales y guías en web.dev](thumbs/google-web-dev-learn.png)
-<small>_Colecciones de tutoriales y guías sobre web performance, accessibilidad, seguridad o PWAs entre otros en [Web.dev](https://web.dev/learn)._</small>
-
+![Colecciones de tutoriales y guías sobre web performance, accessibilidad, seguridad o PWAs entre otros en web.dev](thumbs/google-web-dev-learn.png)
 
 Este sitio de Google recoge información que antes estaba dispersa en distintos sitios y que ahora está consolidada a través de prácticas guías.
 
@@ -43,13 +40,11 @@ Este sitio de Google recoge información que antes estaba dispersa en distintos 
 
 Para detectar problemas de rendimiento lo mejor es hacer una auditoría web. Desde el mismo navegador [se puede realizar un análisis rápido](https://perf.reviews/tools/1.2-Interpretando-Lighthouse-Performance/), y también hay webs como [web.dev/measure](https://web.dev/measure) que generan un informe detallado del rendimiento de una URL en particular.
 
-![Google Lighthouse en web.dev/measure](thumbs/google-web-lighthouse-perf-reviews.png)
-<small>_Informe de performance de perf.reviews utilizando la versión online de Lighthouse en [web.dev/measure](https://web.dev/measure). Vista general y vista de informe._</small>
+![Informe de performance de perf.reviews utilizando la versión online de Lighthouse en https://web.dev/measure. Vista general y vista de informe](thumbs/google-web-lighthouse-perf-reviews.png)
 
 Una herramienta recomendable es [WebPageTest](https://webpagetest.org), que también sirve para encontrar problemas de rendimiento. Es especialmente útil para comparar diferentes sitios, y también para personalizar qué navegador se va a usar, velocidad de red, dispositivo y ubicación de los servidores que medirán el rendimiento.
 
-![Comparando dos sitios web con webpagetest](thumbs/webpagetest-filmstrip.png)
-<small><i>Comparando dos sitios web con WebPagetest (ver <a href="https://webpagetest.org/video/compare.php?tests=190806_6C_4dfe18792032f032582a9a9c5f4229b8%2C190806_TN_6f590d67ba343e393013c847faa7c732&thumbSize=200&ival=1000&end=visual">informe</a>). Vista del filmstrip.</i></small>
+![Comparando dos sitios web con WebPagetest, vista del filmstrip](thumbs/webpagetest-filmstrip.png)
 
 A través de sus opciones avanzadas también se puede [comprobar el impacto de 3rd party scripts](https://andydavies.me/blog/2018/02/19/using-webpagetest-to-measure-the-impact-of-3rd-party-tags/), simular [single point of failures (SPOF)](http://blog.patrickmeenan.com/2011/10/testing-for-frontend-spof.html) y [mucho más](https://deanhume.com/ten-things-you-didnt-know-about-webpagetest-org/). Incluso [tiene una API](https://css-tricks.com/use-webpagetest-api/) para poder hacer todo esto desde scripts.
 
@@ -60,15 +55,13 @@ Además de hacer auditorías es importante medir frecuentemente cuál es la expe
 Otras herramientas analizan periódicamente las webs que indiquemos y nos alertarán cuando alguna de las métricas empeora sustancialmente. Recomendamos [Calibre](https://calibreapp.com), [DebugBear](https://www.debugbear.com), [SiteSpeed](https://www.sitespeed.io/) y [SpeedCurve](https://speedcurve.com/).
 
 ![SpeedCurve mostrando performance budgets para desktoop y mobile para la web de Guardian](thumbs/speedcurve-guardian.jpg)
-<small>_SpeedCurve mostrando performance budgets para desktop y móvil de la web de Guardian._</small>
 
 ## Libros
 
 Os puede extrañar que añadamos una sección de libros en un post donde estamos hablando de "mantenerse al día".
 Los libros, aun en formato digital, son muy complicados de actualizar. Lo que les deja fuera de juego en la gran carrera en la que estamos inmersos.
 
-![Libros de Web Performance](thumbs/books.jpg)
-<small>_Estos son algunos de los libros más populares de web performance, publicados entre 2008 y 2019._</small>
+![Estos son algunos de los libros más populares de web performance, publicados entre 2008 y 2019](thumbs/books.jpg)
 
 Aún y así, queremos haceros unas recomendaciones de algunos libros que os pueden ayudar a aprender unas buenas bases en web performance, protocolos y optimizaciones de recursos:
 

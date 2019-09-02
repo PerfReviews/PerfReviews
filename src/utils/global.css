@@ -6,3 +6,7 @@ body {
 .gatsby-highlight {
   margin-bottom: 1.75rem;
 }
+
+.gatsby-resp-image-figcaption {
+  font-size: 80%;
+}
