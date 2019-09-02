@@ -28,7 +28,7 @@ Una de las mejores formas de estar al día es seguir los blogs y cuentas de Twit
 
 Hemos recopilado [una lista en Twitter con las principales cuentas](https://twitter.com/jmperezperez/lists/web-perf), y siempre es una buena idea suscribirse a los blogs de [Addy Osmani](https://addyosmani.com/blog/), [Doug Sillars](https://dougsillars.com/blog/), [Filament Group](https://www.filamentgroup.com/lab/), [Harry Roberts](https://csswizardry.com/) o [Tim Kadlec](https://timkadlec.com/remembers/).
 
-![El blog de Filamnet Group es una buena fuente de información sobre técnicas de carga de CSS y fuentes](thumbs/filament-group.png)
+![El blog de Filament Group es una buena fuente de información sobre técnicas de carga de CSS y fuentes](thumbs/filament-group.png)
 
 Una de las mejores fuentes para aprender sobre web performance es [Web.dev](https://web.dev/learn).
 
@@ -54,7 +54,7 @@ Además de hacer auditorías es importante medir frecuentemente cuál es la expe
 
 Otras herramientas analizan periódicamente las webs que indiquemos y nos alertarán cuando alguna de las métricas empeora sustancialmente. Recomendamos [Calibre](https://calibreapp.com), [DebugBear](https://www.debugbear.com), [SiteSpeed](https://www.sitespeed.io/) y [SpeedCurve](https://speedcurve.com/).
 
-![SpeedCurve mostrando performance budgets para desktoop y mobile para la web de Guardian](thumbs/speedcurve-guardian.jpg)
+![SpeedCurve mostrando performance budgets para desktop y mobile para la web de Guardian](thumbs/speedcurve-guardian.jpg)
 
 ## Libros
 
@@ -67,7 +67,7 @@ Aún y así, queremos haceros unas recomendaciones de algunos libros que os pued
 
 1. **[Web Performance in Action](https://www.manning.com/books/web-performance-in-action)**, escrito por [Jeremy L. Wagner](https://twitter.com/malchata) es el libro más completo de nuestras recomendaciones. Está enfocado en la web performance en general, cubriendo temas como la utilización de herramientas, optimización de CSS, JS e imágenes, la carga de fuentes de una forma efectiva, mejorar la performance utilizando Service Workers o una vista al protocolo HTTP/2. Una serie de puntos que nos harán conectar entre sí, mucha información que hemos ido adquiriendo desde diferentes fuentes durante mucho tiempo.
 
-2. **[High Performance Mobile Web](https://www.amazon.com/High-Performance-Mobile-Web-Optimizing/dp/1491912553)**, este libro está escrito por [Maximiliano Firtman](https://twitter.com/firt), y como su título indica, está enfocado a la web performance en los dispositivos móviles. Empieza introduciéndonos en el mundo web móvil, pasando por cómo y qué herramientas de medición tenemos disponibles para dispositivos móviles, la optimización de primera visita, así como de las posteriores, donde aparecen de nuevo los Service Workers. Como es de esperar, dedica un capítulo a "Responsive Web Design" y uno muy interesante con título "Extreme Mobile Web Perfromance", donde aporta una serie de consejos más específicos para mejorar el rendimento de nuestras webs para esos dispositivos.
+2. **[High Performance Mobile Web](https://www.amazon.com/High-Performance-Mobile-Web-Optimizing/dp/1491912553)**, este libro está escrito por [Maximiliano Firtman](https://twitter.com/firt), y como su título indica, está enfocado a la web performance en los dispositivos móviles. Empieza introduciéndonos en el mundo web móvil, pasando por cómo y qué herramientas de medición tenemos disponibles para dispositivos móviles, la optimización de primera visita, así como de las posteriores, donde aparecen de nuevo los Service Workers. Como es de esperar, dedica un capítulo a "Responsive Web Design" y uno muy interesante con título "Extreme Mobile Web Performance", donde aporta una serie de consejos más específicos para mejorar el rendimento de nuestras webs para esos dispositivos.
 
 Es un libro a tener muy en cuenta, ya que estamos en un momento donde la mayoría de productos son **Mobile First**, incluso ya hay algunos que son **Mobile Only**.
 
@@ -75,7 +75,7 @@ Es un libro a tener muy en cuenta, ya que estamos en un momento donde la mayorí
 
 Un título de obligada lectura para todas aquellas personas que quieran mejorar los conocimientos en todo lo relacionado con redes y su rendimiento. Ah! otra de las cosas interesantes de este libro es que lo podemos leer de forma gratuita online en [hpbn.co](https://hpbn.co), gracias **Ilya**.
 
-4. **[Using WebPageTest](https://www.amazon.com/Using-WebPageTest-Performance-Testing-Novices/dp/1491902590)**, en esta ocasión os recomendamos un libro sobre una herramienta, **la herramienta** para mucha gente. [Rick Viscomi](https://twitter.com/rick_viscomi), [Andy Davies](https://twitter.com/andydavies) y [Marcel Duran](https://twitter.com/marcelduran) nos presenta este libro en 3 partes: Básica, Intermedia y Avanzada, donde nos explica desde cómo utilizar WebPageTest para detectar qué hace lenta nuestra web, pasando por configuraciones para dispositivos móviles y scripting, hasta la parte más avanzada, donde aprenderemos a trabajar con la API y poder integrarlo con nuestra herramienta de integración continua. En el último capítulo nos muestran cómo implementar WebPageTest en nuestra propia instancia privada.
+4. **[Using WebPageTest: Web Performance Testing for Novices and Power Users](https://www.amazon.com/Using-WebPageTest-Performance-Testing-Novices/dp/1491902590)**, en esta ocasión os recomendamos un libro sobre una herramienta, **la herramienta** para mucha gente. [Rick Viscomi](https://twitter.com/rick_viscomi), [Andy Davies](https://twitter.com/andydavies) y [Marcel Duran](https://twitter.com/marcelduran) nos presenta este libro en 3 partes: Básica, Intermedia y Avanzada, donde nos explica desde cómo utilizar WebPageTest para detectar qué hace lenta nuestra web, pasando por configuraciones para dispositivos móviles y scripting, hasta la parte más avanzada, donde aprenderemos a trabajar con la API y poder integrarlo con nuestra herramienta de integración continua. En el último capítulo nos muestran cómo implementar WebPageTest en nuestra propia instancia privada.
 
 5. **[High Performance Images](https://www.amazon.com/High-Performance-Images-Shrink-Deliver-ebook/dp/B01MG9CFXG)**, este es el preferido de Joan 😉. Escrito por varios autores, [Colin Bendell](https://twitter.com/colinbendell), [Tim Kadlec](https://twitter.com/tkadlec), [Yoav Weiss](https://twitter.com/yoavweiss), [Guy Podjarny](https://twitter.com/guypod), [Nick Doyle](https://twitter.com/njdoyle) y Mike McCall nos ofrecen un conocimiento profundo de las imágenes. Empezando por la teoría de las imágenes digitales, los diferentes formatos de compresión tanto con pérdida, como sin pérdida, optimización de SVG, lazy loading, procesamiento de imágenes a nivel de GPU, una eficiente manera de preparar nuestras imágenes responsive, una eficiente manera de entregar nuestras imágenes al navegador y cómo implementar nuestro propio flujo para optimizar las imágenes de forma automática.
 
