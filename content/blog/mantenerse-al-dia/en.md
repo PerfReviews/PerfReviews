@@ -3,7 +3,6 @@ title: How to keep up to date on web performance
 date: "2019-08-09"
 description: Tips and resources to learn about web performance. Tools, websites and developers who write about new techniques and APIs to create sites that load fast and are data conscious.
 featuredImage: ./featured-image.png
-slug: keep-up-to-date
 ---
 
 How to keep up on web performance? The world of web development changes rapidly and **measuring and optimizing performance is no exception**. We are often presented with new tools, APIs and techniques for building websites that load fast.
