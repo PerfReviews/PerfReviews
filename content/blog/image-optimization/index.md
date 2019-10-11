@@ -53,7 +53,7 @@ Es el editor de imágenes más utilizado por los equipos de diseño. Curiosament
 
 ![Photoshop: Export](./thumbs/Photoshop-Export.png)
 
-Podemos exportar a los formatos PNG, JPG, GIF y SVG _(sí, SVG, genera un archivo SVG con la imagen incrustada en base64)_, más allá del porcentaje<sup>(2)</sup> de calidad no tenemos muchos parámetros de configuración para exportar las imágenes. Lo que llama mucho la atención es que no podemos contar con el formato WebP para la exportación
+Podemos exportar a los formatos PNG, JPG, GIF y SVG _(sí, SVG, genera un archivo SVG con la imagen incrustada en base64)_, más allá del porcentaje<sup>(2)</sup> de calidad no tenemos muchos parámetros de configuración para exportar las imágenes. Lo que llama mucho la atención es que no podemos contar con el formato WebP para la exportación.
 
 En versiones anteriores de Photoshop, y en esta como bajo el nombre de "Save the Web... (legacy)", nos ofrece algunas configuraciones predefinidas, siempre según el criterio del equipo de Adobe. Uno de los parámetros que echo de menos en Photoshop es el del [Submuestreo de crominancia](https://es.wikipedia.org/wiki/Submuestreo_de_crominancia)<sup>(3)</sup> donde podríamos optimizar mejor la optimización según nuestro criterio. En su lugar mantienen un submuestreo de 4:4:4 (1x1) entre los valores 51% a 100% del porcentaje de calidad y por debajo del 51% aplican un submuestreo de 4:2:0 (2x2). Es por eso que podréis apreciar un notable cambio entre una imagen exportada a 51% y la misma imagen a un 50%.
 
@@ -101,7 +101,7 @@ La configuración por defecto ofrece una compresión de las imágenes **sin pér
 
 ![ImageOptim: Quality](./thumbs/ImageOptim-Quality.png)
 
-Una de las cosas que más me gusta de ImageOptim es que tras esa simplicidad esconde una lista de compresores<sup>(8)</sup> para conseguir los mejores resultados en cada caso. Pasar cada uno de los compresores que tengamos marcados en la lista en cada una de las imágenes y selecciona la imagen con mejor resultado. Ese proceso hace que se tome un tiempo, pero os puedo asegurar que vale la pena.
+Una de las cosas que más me gusta de ImageOptim es que tras esa simplicidad esconde una lista de compresores<sup>(8)</sup> para conseguir los mejores resultados en cada caso. Pasa cada uno de los compresores que tengamos marcados en la lista en cada una de las imágenes y selecciona la imagen con mejor resultado. Ese proceso hace que se tome un tiempo, pero os puedo asegurar que vale la pena.
 
 ![ImageOptim: Compressors](./thumbs/ImageOptim-Compressors.png)
 
@@ -123,7 +123,6 @@ Para la gente con más inquietudes técnicas, con ganas de controlar la configur
 ![WebP CLI](./thumbs/cwebp.png)
 > Ejemplo de comando CLI para convertir una imagen JPEG a **WebP**
 
-
 También tenemos paquetes **npm** que nos ofrecen un wrapper con una API mucho más simple y que podemos integrar en nuestro flujo de trabajo de aplicaciones Javascript.
 
 Hay varios, uno muy interesante es [next-optimized-images](https://github.com/cyrilwanner/next-optimized-images) con opciones que van mucho más allá de comprimir las imágenes, ya que contiene como dependencia otros paquetes que nos ofrecen la posibilidad de generar imágenes LQIP<sup>(11)</sup> con [lqip-loader](https://github.com/zouhir/lqip-loader) o [responsive-loader](https://github.com/herrstucki/responsive-loader) que nos genera los diferentes tamaños de las imágenes responsive que necesitemos en nuestro site. Para la optimización de las imágenes utiliza varios paquetes de [imagemin](https://github.com/imagemin/), así que vamos a echarle un vistazo.
@@ -139,19 +138,19 @@ Veremos que hay un par de patrones en los nombres de los repositorios de esta or
 - **image-[compresor]**, como [image-webp](https://github.com/imagemin/imagemin-webp) que tiene el módulo o plugin para trabajar con imágenes WebP
 - **[compresor]-bin**, como [cwebp-bin](https://github.com/imagemin/cwebp-bin) que [contiene](https://github.com/imagemin/cwebp-bin/tree/master/vendor) una versión compilada para cada uno de los sistemas operativos soportados.
 
-Este enfoque lo convierte en una solución muy versátil, ya que se pueden mantener, actualizar y actualizar los módulos por separado.
+Este enfoque lo convierte en una solución muy versátil, ya que se pueden mantener, actualizar y publicar los módulos por separado.
 
-Se puede utilizar tanto como CLI _(Command Line Interface)_ con [imagemin-cli](https://github.com/imagemin/imagemin-cli) como desde Javascript. [Aquí](https://github.com/EscuelaIt/Optimizacion-Imagenes) encontraréis ejemplos de implementación en **mpm**, **Gulp** y **Webpack** de unos ejercicios de un curso que impartí en Escuela IT. Es esos ejemplos podréis ver que siempre mantengo la imagen original, para poder comprimir siembre desde la imagen original y no **re-comprimir** una imagen que ya ha sido comprimida, y en ocasiones por otro compresor.
+Se puede utilizar tanto como CLI _(Command Line Interface)_ con [imagemin-cli](https://github.com/imagemin/imagemin-cli) como desde Javascript. [Aquí](https://github.com/EscuelaIt/Optimizacion-Imagenes) encontraréis ejemplos de implementación en **mpm**, **Gulp** y **Webpack** de unos ejercicios de un curso que impartí en Escuela IT. Es esos ejemplos podréis ver que siempre mantengo la imagen original, para poder comprimir siempre desde la imagen original y no **re-comprimir** una imagen que ya ha sido comprimida, y en ocasiones por otro compresor.
 
 No es buena idea hacer eso, en este vídeo podréis ver un ejemplo de lo que pasa al re-comprimir la misma imágen:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w7vXJbLhTyI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-> El formato con mejores resultados es **FLIF**<sup>(12)</sup>, pero es un formato que no está soportado por los navegadores actuales, así que **MozJPEG** sí que podría ser una opción viable. Pero como he comentado, a mí me gusta más conservar la imagen original, en PNG a ser posible, para conservar toda la información y generar a partir de esta, la imagen comprimida y/o cambio de formato.
+El formato con mejores resultados es **FLIF**<sup>(12)</sup>, pero es un formato que no está soportado por los navegadores actuales, así que **MozJPEG** sí que podría ser una opción viable. Pero como he comentado, a mí me gusta más conservar la imagen original, en PNG a ser posible, para conservar toda la información y generar a partir de esta, la imagen comprimida y/o cambio de formato.
 
 **Imagemin** es la opción más cómoda si lo que queremos es automatizar la compresión de las imágenes en el proceso de pase a producción. Tanto por la cantidad de plugins, como por la facilidad de integrarlos en nuestro stack.
 
-> Una cosa a tener en cuenta es el tiempo que nos puede llevar encontrar los parámetros correctos para conseguir el mejor resultado, ya que cada plugin de imagemin tiene su propia escala de valores para la optimización _(os suena de algo, pasa lo mismo en los editores de imágenes)_.
+Una cosa a tener en cuenta es el tiempo que nos puede llevar encontrar los parámetros correctos para conseguir el mejor resultado, ya que cada plugin de imagemin tiene su propia escala de valores para la optimización _(os suena de algo, pasa lo mismo en los editores de imágenes)_.
 
 ## Optimización de imágenes con servicios online de terceros
 
@@ -167,19 +166,19 @@ Empecemos por decir que en los [planes](https://cloudinary.com/pricing) que ofre
 
 Podemos optimizar tanto las imágenes que subamos a **Media Library** de nuestra cuenta con el método `/upload/`, como hacerlo con imágenes remotas, con el método `/fetch/`, documentación<sup>(13)</sup>
 
-![Cloudinary methots](./thumbs/Cloudinary-methods.png)
+![Cloudinary: Métodos](./thumbs/Cloudinary-methods.png)
 
 Para el ejemplo vamos a utilizar la API mediante la url:
 
-![Cloudinary f_auto](./thumbs/Cloudinary_f_auto.png)
+![Cloudinary: f_auto](./thumbs/Cloudinary_f_auto.png)
 
-Entre el tipo `/upload/` y la versión de la imagen `/v1570203279/`, tenemos los métodos de transformación, en este caso he puesto `f_auto`, que hace referencia a **formato automático**<sup>(14)</sup>. Este parámetro entregará la imagen con el mejor formato posible según la petición del cliente. Si nuestro cliente soporta **WebP** entregará WebP, si nuestro cliente soporta **JPEG 2000** como es el caso de Safari, independientemente del formato original de la imagen.
+Entre el tipo `/upload/` y la versión de la imagen `/v1570203279/`, tenemos los métodos de transformación, en este caso he puesto `f_auto`, que hace referencia a **formato automático**<sup>(14)</sup>. Este parámetro entregará la imagen con el mejor formato posible según la petición del cliente. Si nuestro cliente soporta **WebP** entregará WebP, si nuestro cliente soporta **JPEG 2000** como es el caso de Safari, lo considerará, independientemente del formato original de la imagen.
 
 Veamos un ejemplo de esto.
 
 ![Cloudinary: Chrome vs Firefox vs Safari](./thumbs/Chrome-Firefox-Safari.png)
 
-> En la imagen vemos un ejemplo de una de las imágenes de la web de Cloudinary, en este caso `homepage-XX.png`, hay peticiones de los diferentes tamaños Media Query porque yo lo he forzado. La imagen original es en formato **PNG** y podemos ver que aunque la petición que hace el HTML es `.png`, Cloudinary entrega una imagen **WebP** para Chrome y Firefox, y en el caso de Safari entrega un formato **JPEG 2000**. El formato JPEG 2000 tiene mayor tamaño que WebP, pero actualmente Safari no soporta ese formato de imágenes, en su lugar recibe una imagen JPEG 2000 que por un lado puede renderizar y que está más comprimida que en JPEG y que la original PNG.
+En la imagen vemos un ejemplo de una de las imágenes de la web de Cloudinary, en este caso `homepage-XX.png`, hay peticiones de los diferentes tamaños Media Query porque yo lo he forzado. La imagen original es en formato **PNG** y podemos ver que aunque la petición que hace el HTML es `.png`, Cloudinary entrega una imagen **WebP** para Chrome y Firefox, y en el caso de Safari entrega un formato **JPEG 2000**. El formato JPEG 2000 tiene mayor tamaño que WebP, pero actualmente Safari no soporta ese formato de imágenes, en su lugar recibe una imagen JPEG 2000 que por un lado puede renderizar y que está más comprimida que en JPEG y que la original PNG.
 
 ### Imágenes responsive
 
@@ -195,13 +194,11 @@ Hago referencia a la escalabilidad por la filosofía de [Add-ons](https://cloudi
 
 En cuanto a la integración, es muy interesante ver que podemos integrar con [CMS-eCommerce integrations](https://cloudinary.com/documentation/framework_integration#cms_ecommerce_integrations) Salesforce Commerce Cloud, Magento, Wordpress o Zapier.
 
-
 ### Esto no acaba aquí
 
 Hay muchas funcionalidades, Add-ons, plugins, herramientas, así que para que podáis tener una guía simple y visual de lo más destacado de Cloudinary, aquí os dejo una web donde podréis jugar con la API y algunas de las fotos que me hicieron en la **JS Camp 2019**, [CloudiCam.dev](https://cloudycam.dev/nucliweb)
 
-
-## One more think
+## One more thing
 
 ### Otros servicios online
 
@@ -268,7 +265,7 @@ Por último, os quiero compartir que estoy trabajando en un curso online de **Op
 - **(4)** En Photoshop si en lugar de exportar, seleccionamos "Save as...", nos ofrece una gran cantidad de formatos de imágenes ["Graphic file formats"](https://helpx.adobe.com/photoshop/using/file-formats.html), la mayoría no compatibles con los navegadores.
 - **(5)** WebP es un formato de imagen con pérdida que sacrifica mucho la calidad, así que recomiendo validar la calidad de la imagen en porcentajes de calidad bajos
 - **(6)** GIMP dispone de una documentación muy buena, en la sección de [Guardar / exportar imágenes](https://docs.gimp.org/2.10/es/gimp-images-out.html) tendremos todos los detalles de los parámetros que podemos configurar en esta ventana.
-- **(7)** Si buscáis ImageOptim en la App Store, encontraréis una aplicación llamada **Image optimizer Compression**, que [no es la aplicación(https://twitter.com/nucliweb/status/1175353637117353984) **ImageOptim** de la que estamos hablando.
+- **(7)** Si buscáis ImageOptim en la App Store, encontraréis una aplicación llamada **Image optimizer Compression**, que [no es la aplicación](https://twitter.com/nucliweb/status/1175353637117353984) **ImageOptim** de la que estamos hablando.
 - **(8)** En la lista de compresores que utiliza ImageOptim se encuentra [Guetzli](https://github.com/google/guetzli) de Google. Se trata de un compresor muy efectivo calidad/peso de las imágenes, pero es extremadamente lento en el proceso. Si seleccionamos ese compresor en la configuración, ImageOptim nos avisará con un mensaje muy disuasorio "Puede tomar hasta 30 minutos por imagen. Su sistema puede no responder mientras Guetzli se está ejecutando.". 
 - **(9)** Estoy [trabajando](https://twitter.com/nucliweb/status/1174964957990928384) en una comparativa de esas aplicaciones, estad atentas/os a [twitter](https://twitter.com/nucliweb).
 - **(10)** Os dejo enlace al repositorio [images-optimization-env](https://github.com/nucliweb/images-optimization-env) donde podréis hacer pruebas de compresión con los compresores nativos en Mac _(compilé los códigos fuente en mi máquina)_. Utilicé **npm** sólo para gestionar los [scripts](https://github.com/nucliweb/images-optimization-env/blob/master/package.json#L6-L25), así que no requiere hacer instalación.
