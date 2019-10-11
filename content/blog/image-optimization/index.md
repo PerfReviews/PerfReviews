@@ -27,7 +27,7 @@ En el desarrollo de una web hay varios perfiles, ya sea en equipos, personas o a
 
 Sigamos con el ejemplo de la página de horarios de cine que Miguel Ángel no ha podido ver. Ante esa situación, estas son las preguntas que yo me hago y que se podrían haber utilizado con una checklist en el proceso de ideación, diseño, desarrollo y despliegue de esa página:
 
-- ¿Realmente es necesaria una imágen para ofrecer esa información?
+- ¿Realmente es necesaria una imagen para ofrecer esa información?
 - Si se ha tenido en cuenta un texto blanco, para mantener un alto contraste con la imagen de fondo, ¿por qué no se ha definido un color de fondo en caso de que la imagen no se visualice?
 - ¿Esa imagen está optimizada para dispositivos móviles?
 - Si es una imagen en formato JPEG, ¿por qué no es un JPEG progresivo? eso hubiera mejorado la IX.
@@ -45,7 +45,7 @@ En el escenario que nos encontramos ya hemos hecho el análisis previo de la nec
 
 ## Optimización desde editores gráficos
 
-En la primera línea de acción en la optimización de imágenes tenemos los editores de imágenes, como [Photoshop](www.adobe.com/Photoshop‎), [Affinity Photo](https://affinity.serif.com/en-gb/photo/), [Pixelmator](https://www.pixelmator.com/pro/), [PaintShopPro](https://www.paintshoppro.com/), [Paint.net](https://www.getpaint.net/) o [GIMP](https://www.gimp.org/) entre otros. No olvidemos a [Sketch](https://www.sketch.com/) que aún no siendo un programa para la edición de imágenes, se utiliza mucho en la edición de interfaces<sup>(1)</sup>.
+En la primera línea de acción en la optimización de imágenes tenemos los editores de imágenes, como [Photoshop](https://fwww.adobe.com/Photoshop‎), [Affinity Photo](https://affinity.serif.com/en-gb/photo/), [Pixelmator](https://www.pixelmator.com/pro/), [PaintShopPro](https://www.paintshoppro.com/), [Paint.net](https://www.getpaint.net/) o [GIMP](https://www.gimp.org/) entre otros. No olvidemos a [Sketch](https://www.sketch.com/) que aún no siendo un programa para la edición de imágenes, se utiliza mucho en la edición de interfaces<sup>(1)</sup>.
 
 ### Photoshop
 
@@ -141,7 +141,7 @@ Veremos que hay un par de patrones en los nombres de los repositorios de esta or
 
 Este enfoque lo convierte en una solución muy versátil, ya que se pueden mantener, actualizar y actualizar los módulos por separado.
 
-Se puede utilizar tanto como CLI _(Command Line Interface)_ con [imagemin-cli](https://github.com/imagemin/imagemin-cli) como desde Javascript. [Aquí](https://github.com/EscuelaIt/Optimizacion-Imagenes) encontraréis ejemplos de implementación en **mpm**, **Gulp** y **Webpack** de unos ejercicios de un curso que impartí en Escuela IT. Es esos ejemplos podréis ver que siempre mantengo la imágen original, para poder comprimir siembre desde la imagen original y no **re-comprimir** una imagen que ya ha sido comprimida, y en ocasiones por otro compresor.
+Se puede utilizar tanto como CLI _(Command Line Interface)_ con [imagemin-cli](https://github.com/imagemin/imagemin-cli) como desde Javascript. [Aquí](https://github.com/EscuelaIt/Optimizacion-Imagenes) encontraréis ejemplos de implementación en **mpm**, **Gulp** y **Webpack** de unos ejercicios de un curso que impartí en Escuela IT. Es esos ejemplos podréis ver que siempre mantengo la imagen original, para poder comprimir siembre desde la imagen original y no **re-comprimir** una imagen que ya ha sido comprimida, y en ocasiones por otro compresor.
 
 No es buena idea hacer eso, en este vídeo podréis ver un ejemplo de lo que pasa al re-comprimir la misma imágen:
 
