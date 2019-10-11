@@ -1,0 +1,368 @@
+<!DOCTYPE html><html lang="es"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:var(--textColorLink);text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}.date{color:var(--textColorDate);}</style><title data-react-helmet="true">El formato vídeo en la web | PerfReviews</title><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><style type="text/css">.gatsby-resp-image-image{width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;color:transparent;}</style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><meta name="generator" content="Gatsby 2.14.2"/><meta data-react-helmet="true" name="description" content="Después de encontrarnos con la imagen más pesada de la web (según HTTP Archive), no hemos resistido la tentación de analizar el caso y encontrar una solución para mejorar el rendimiento."/><meta data-react-helmet="true" property="og:title" content="El formato vídeo en la web"/><meta data-react-helmet="true" property="og:description" content="Después de encontrarnos con la imagen más pesada de la web (según HTTP Archive), no hemos resistido la tentación de analizar el caso y encontrar una solución para mejorar el rendimiento."/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:image" content="https://perf.reviews/static/785076bd1a8e6bcc85b2f2fffef9ac88/e9c7b/featured-image.png"/><meta data-react-helmet="true" name="twitter:creator" content="Joan León y José M. Pérez"/><meta data-react-helmet="true" name="twitter:title" content="El formato vídeo en la web"/><meta data-react-helmet="true" name="twitter:description" content="Después de encontrarnos con la imagen más pesada de la web (según HTTP Archive), no hemos resistido la tentación de analizar el caso y encontrar una solución para mejorar el rendimiento."/><style data-href="/styles.2555d509e7fccebc5289.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}body{--textColorLink:#00aa58;--textColorDate:#888}.gatsby-highlight{margin-bottom:1.75rem}.gatsby-resp-image-figcaption{font-size:80%}</style><link as="script" rel="preload" href="/app-82a431b3f41feb7028b6.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-24c470ad1102dfc2b577.js"/><link as="script" rel="preload" href="/styles-23050e051cdbfe9c9cfa.js"/><link as="script" rel="preload" href="/commons-424ae224b8acbc7bd10a.js"/><link as="script" rel="preload" href="/webpack-runtime-1eafb3ebf4e3e6253abc.js"/><link as="fetch" rel="preload" href="/page-data/blog/video-en-la-web/page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">PerfReviews</a></h3></header><main><h1>El formato vídeo en la web</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">August 26, 2019</p><div><p>Después de este tweet de <a href="https://twitter.com/yoavweiss">Yoav Weiss</a> en el que <a href="https://twitter.com/addyosmani">Addy Osmani</a> le pregunta por la “mejor” imagen de la web.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/28cbb92632f50d041418b0179574a14a/7bfa5/Yoav.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 114.51612903225808%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'458\'%3e%3cpath%20d=\'M26%2016c-13%206-13%2023-1%2029%2016%207%2030-11%2019-24-4-6-12-7-18-5m-8%2064c-3%204%200%209%204%207%202-2%203-2%204%200%201%201%202%201%204-1s2-3%200-5-2-2-4-1c-2%202-2%202-3%200h-5m85%2061c0%201%200%202-1%201l-2-1-2%201h-1c-1-1-1-1-2%201h-1c0-2-2-3-2-1h-4c-1%201-2%201-2-1l-3-1c-3%200-3%200-3%204%200%203%202%204%205%202h2c2%202%204%201%204-1l1-2%201%202c1%202%203%203%203%200h2c2%202%204%202%204%200h1c0%204%202%202%202-2s-2-6-2-2M28%20394l-2%205c-1%204-1%2012%201%2014%203%201%202%202%200%202l-7%203%204%203c4%203%2011%203%2016%201%204-3%205-4%201-7-4-4-5-6-2-8l1-6c0-4%200-5-3-6-4-2-9-2-9-1\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/28cbb92632f50d041418b0179574a14a/277cf/Yoav.webp 310w,
+/static/28cbb92632f50d041418b0179574a14a/5077d/Yoav.webp 620w,
+/static/28cbb92632f50d041418b0179574a14a/e1adb/Yoav.webp 1240w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/28cbb92632f50d041418b0179574a14a/fa223/Yoav.png 310w,
+/static/28cbb92632f50d041418b0179574a14a/a5ed1/Yoav.png 620w,
+/static/28cbb92632f50d041418b0179574a14a/7bfa5/Yoav.png 1240w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/28cbb92632f50d041418b0179574a14a/7bfa5/Yoav.png"
+          alt="Tweet Yoav &amp; Addy"
+          title="Tweet Yoav &amp; Addy"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Tweet Yoav &amp; Addy</figcaption>
+  </figure></p>
+<p><a href="https://twitter.com/rick_viscomi">Rick Viscomi</a> es un ingeniero de Google que actualmente está trabajando en un interesante proyecto llamado “The State of the Web”. Para esta iniciativa, Rick está ejecutando cientos de consultas con <a href="https://cloud.google.com/bigquery/">BigQuery</a> contra el dataset de <a href="https://httparchive.org">HTTP Archive</a>, y responde a Addy con el siguiente tweet:</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/161f746459bb8584f488b60edda996c1/7bfa5/Rick.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 106.4516129032258%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'426\'%3e%3cpath%20d=\'M24%2016c-10%206-10%2020%200%2027%205%203%208%203%2013-2l5-3V17c-1-3-14-4-18-1m7%203c-2%202-3%205-1%205l1%204c-1%204%201%205%203%203%201-2%201-2%203%201%202%202%202%202%203%200%204-7-3-17-9-13M21%20218v8l1%207h25c33%200%2030%201%2030-8v-7l-28-1-28%201m74%2068c0%201-1%202-3%202l-2%201c0%202%2012%202%2012%200l1%201%201%202v-4l1%202h2l12%201h11l1%201%208-1c1%202%206%200%206-2h1c0%202%209%202%2010%200%200-2-5-3-11-2a376%20376%200%2001-31%200l-17-1h-2m166%200l-1%203v2h15c11%200%2014-1%2015-2s1-1%201%201c1%201%201%201%201-1l-1-3h-3c-1-1-1-1-2%201l-1%201c0-2-2-3-2-1h-1c-1-2-2-2-2-1h-2c-2-1-13-1-14%201h-1c0-1-1-2-2-1m-215%203c0%202%200%202%201%201l1-1c0%201%202%202%206%202h5l5-1h5l1-1c0%203%2017%203%2017%200%200-2-4-3-7-2H67c-4-1-4-1-5%201l-1%202-1-2c1-1%200-1-2-1h-7c-5-1-5-1-5%202m152-1c0%202%201%202%204%203l3-1h1c3%201%2011%201%2012-1h1c0%201%201%202%204%202h5c1%202%206%200%206-2h1c0%202%204%203%204%201h1c1%201%201%201%201-1h1c0%204%2013%203%2014%200%201-2%201-2%202%200l1%203v-3c0-2%200-3-2-3l-2%201h-6a332%20332%200%2000-45%200h-4c-2-1-2-1-2%201m42%20113c-2%202%201%208%204%209%203%200%207-4%207-8%200-2-1-3-5-3l-6%202\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/161f746459bb8584f488b60edda996c1/277cf/Rick.webp 310w,
+/static/161f746459bb8584f488b60edda996c1/5077d/Rick.webp 620w,
+/static/161f746459bb8584f488b60edda996c1/e1adb/Rick.webp 1240w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/161f746459bb8584f488b60edda996c1/fa223/Rick.png 310w,
+/static/161f746459bb8584f488b60edda996c1/a5ed1/Rick.png 620w,
+/static/161f746459bb8584f488b60edda996c1/7bfa5/Rick.png 1240w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/161f746459bb8584f488b60edda996c1/7bfa5/Rick.png"
+          alt="Tweet Rick"
+          title="Tweet Rick"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Tweet Rick</figcaption>
+  </figure></p>
+<p>Rick muestra la consulta SQL que ha hecho a la tabla de la base de datos con los datos de HTTP Archive del mes de julio.</p>
+<p>La “mejor” imagen de la web actualmente es un archivo en formato GIF, video.gif. Como su nombre indica, se trata de un vídeo de 11 segundos y con un tamaño de más de <strong>65Mb</strong>.</p>
+<p>Sí, nos pudo la curiosidad 😊</p>
+<p>Así que empezamos a hacer eso que tanto nos gusta hacer, investigar para conseguir encontrar el problema y su posible solución.</p>
+<h2 id="problema">Problema</h2>
+<p>Al ver la url de la imagen, lo primero que podemos ver es que se trata de un <a href="https://moodle.org">Moodle</a>, una plataforma de aprendizaje en línea utilizada por muchas escuelas de todo el mundo.</p>
+<p>Al entrar en la dirección <a href="https://moodle.e-formalia.es">moodle.e-formalia.es</a> nos encontramos con una página de acceso a la plataforma, y ahí es donde encontramos el tan pesado GIF.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7a0242c50970cf62c34468bd6dea54a4/140d6/home.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 59.2814371257485%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'237\'%3e%3cpath%20d=\'M143%201c-2%203-2%204%200%207l2%2011%201%209%2037%207c7%201%208%202%203%207-6%206-7%2011-3%2018l3%209c3%2013%205%2017%2011%2020l6%204-4%206c-2-1-2-1%200-4%200-2-1-2-2%201-4%203-4%204%200%204%204%201%204%203-2%207l-4%205h4l11-1%2014-1h15c1-2%2011-5%2013-5l-2%202c-2%203-4%2012-3%2013l1-2%201-4c2-3%202-3%203-1l2%201-1-2c-1-2%200-2%202-2%203-1%204%200%204%201l1%203%201-2c0-3%200-3%207-2l9%201c4%201%2011%202%2015%201%202-1%203%200%203%201l2%202c2%200%203-3%201-3-1-1%200-1%201-1l2%201h1c0-1%202%200%205%204l5%204-4-5c-4-4-4-5-3-6l1-1%202-2c3-2%203-2%201-2l-3-1c0-1%209-1%2012%201h-2l-4%201%203%201%202%201h3c1-1%203-2%204-1%204%201%204-1-1-3h2l5-1%203-1c3%200%203%200%202%201v2c1%200%204-3%202-3l5-2%202%202c1%201%200%201-2%201h-3c0%201%205%202%207%201l1-2h1l1-1h2l3%202%2041-5h9V63a1660%201660%200%20010-47c0%206-1%208-2%208-1-1-3%200-4%201s-2%202-3%201l-2%201-2%201-2%202-1%201c-1-1-7%201-7%202l-2%202-3%201-3%201-6%203-1%201h-3c-1%202-8%203-8%202h-1c0%203-3%204-10%205-5%200-7-1-8-2h-13l-3-1-4-1-8-1c0-2-1-2-4-2a86%2086%200%2001-9-1l-2-2h-1l-2%201-9-3c0-2-4-1-8%201-3%202-4%202-6%201h-2v3h-2c1%202-7%205-11%206l-5%201c-2%202-14%202-19-1l-7-2-2-2c0-2%204-4%2016-10%204-2%206-4%207-6l7-13c7-14%208-17%200-5-6%2010-8%209-2-2l4-7h-7c-9%201-9%201-13%204l-7%202-5%203-5%203-4%202h-4l-11-2h-4l-5%201c-3%201-3-1-1-3l11-5%2010-5-59%201m121%201l-3%201c-2%200-7%204-9%208l-6%209c-10%2010-7%2011%207%203l10-5c8-2%2018-8%2014-8l-2%201c-2%202-4%201-4-1%201-2%201-2-2-2h-4c-1%201-1%201-1-1%203-5%203-7%202-7l-2%202M146%20130H0v107h401V130H146M0%20184\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/7a0242c50970cf62c34468bd6dea54a4/277cf/home.webp 310w,
+/static/7a0242c50970cf62c34468bd6dea54a4/5077d/home.webp 620w,
+/static/7a0242c50970cf62c34468bd6dea54a4/e1adb/home.webp 1240w,
+/static/7a0242c50970cf62c34468bd6dea54a4/92eb6/home.webp 1860w,
+/static/7a0242c50970cf62c34468bd6dea54a4/d232f/home.webp 2480w,
+/static/7a0242c50970cf62c34468bd6dea54a4/8d80f/home.webp 3340w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/7a0242c50970cf62c34468bd6dea54a4/fa223/home.png 310w,
+/static/7a0242c50970cf62c34468bd6dea54a4/a5ed1/home.png 620w,
+/static/7a0242c50970cf62c34468bd6dea54a4/7bfa5/home.png 1240w,
+/static/7a0242c50970cf62c34468bd6dea54a4/b429f/home.png 1860w,
+/static/7a0242c50970cf62c34468bd6dea54a4/d03be/home.png 2480w,
+/static/7a0242c50970cf62c34468bd6dea54a4/140d6/home.png 3340w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/7a0242c50970cf62c34468bd6dea54a4/7bfa5/home.png"
+          alt="Home e-Formalia"
+          title="Home e-Formalia"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Home e-Formalia</figcaption>
+  </figure></p>
+<p>El servidor nos está sirviendo dos imágenes: logos.png y video.gif. El tiempo de carga de ese vídeo de fondo en la pantalla de acceso, desde una conexión de fibra óptica de <strong>600Mb</strong> es de tan sólo <strong>2.67 segundos</strong>.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/3386e8063e1887c0285f0edef7b5ec66/a987b/network-1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 48.958333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'196\'%3e%3cpath%20d=\'M96%2043a256%20256%200%20001%2016l1-9%2014%201c10%201%2013%200%2015-1s0-1-13-1l-17-1a6329%206329%200%2001109-1%201314%201314%200%2001-96-4H96m-75%201h20v5h23c22%200%2022-1%2022-2l-1-3a936%20936%200%2000-64%200m376%2088v54l1-53a872%20872%200%2000-1-1M1%20106v10h316V95H1v11m1%200v8h314V97H2v9m230%2084a494%20494%200%200147%200h-16l-8-1h-8l-2-1-3%201h-3l-2%201c1-1%200-2-2-2-3%200-3%200-3%202\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/3386e8063e1887c0285f0edef7b5ec66/277cf/network-1.webp 310w,
+/static/3386e8063e1887c0285f0edef7b5ec66/5077d/network-1.webp 620w,
+/static/3386e8063e1887c0285f0edef7b5ec66/e1adb/network-1.webp 1240w,
+/static/3386e8063e1887c0285f0edef7b5ec66/92eb6/network-1.webp 1860w,
+/static/3386e8063e1887c0285f0edef7b5ec66/34ef4/network-1.webp 1920w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/3386e8063e1887c0285f0edef7b5ec66/fa223/network-1.png 310w,
+/static/3386e8063e1887c0285f0edef7b5ec66/a5ed1/network-1.png 620w,
+/static/3386e8063e1887c0285f0edef7b5ec66/7bfa5/network-1.png 1240w,
+/static/3386e8063e1887c0285f0edef7b5ec66/b429f/network-1.png 1860w,
+/static/3386e8063e1887c0285f0edef7b5ec66/a987b/network-1.png 1920w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/3386e8063e1887c0285f0edef7b5ec66/7bfa5/network-1.png"
+          alt="Developer Tools: Network Panel"
+          title="Developer Tools: Network Panel"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Developer Tools: Network Panel</figcaption>
+  </figure></p>
+<p>Pero veamos qué pasa si utilizamos la funcionalidad del panel de red de las Developer Tools para simular una conexión más lenta. Seleccionamos la configuración de 3G rápida, que se acerca más a la experiencia de carga en móvil.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ae44d5483768a8b0262bf4e9680b1069/a987b/network-2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 48.958333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'196\'%3e%3cpath%20d=\'M4%2054c0%2011%200%2012%201%206%200-6%201-7%202-7%203%200%202-2%200-3-1-1%2076-1%20173-1h175v19l1-7V47c0-5-1-6-1-3v4H181A6270%206270%200%20016%2045v-1l-1-2c-1-1-1%205-1%2012m-3%2051v9h314l1-9v-9H1v9m2-1v5h5l4-1-4-1c-4%200-4%200-4-3%200-2%200-2%204-2h4c1-1%201%201%201%204v5H8l-5%201%20156%201h156V98H3v6m232%2086a504%20504%200%200147%200h-16l-7-1-8%201-2%201c-2%200-2%200-1-1%201-2%201-2-1-2l-2%201h-4l-1%202v-1c2-3%200-2-3%200h-1v-2l-1%202\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/ae44d5483768a8b0262bf4e9680b1069/277cf/network-2.webp 310w,
+/static/ae44d5483768a8b0262bf4e9680b1069/5077d/network-2.webp 620w,
+/static/ae44d5483768a8b0262bf4e9680b1069/e1adb/network-2.webp 1240w,
+/static/ae44d5483768a8b0262bf4e9680b1069/92eb6/network-2.webp 1860w,
+/static/ae44d5483768a8b0262bf4e9680b1069/34ef4/network-2.webp 1920w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/ae44d5483768a8b0262bf4e9680b1069/fa223/network-2.png 310w,
+/static/ae44d5483768a8b0262bf4e9680b1069/a5ed1/network-2.png 620w,
+/static/ae44d5483768a8b0262bf4e9680b1069/7bfa5/network-2.png 1240w,
+/static/ae44d5483768a8b0262bf4e9680b1069/b429f/network-2.png 1860w,
+/static/ae44d5483768a8b0262bf4e9680b1069/a987b/network-2.png 1920w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/ae44d5483768a8b0262bf4e9680b1069/7bfa5/network-2.png"
+          alt="Developer Tools: Network Panel"
+          title="Developer Tools: Network Panel"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Developer Tools: Network Panel</figcaption>
+  </figure></p>
+<p>Hemos tenido que esperar <strong>6.1 minutos</strong> para que se descargara el 100% del vídeo.</p>
+<h2 id="solucion">Solución</h2>
+<p>No es una novedad que el mejor formato para cargar un vídeo en la web es un fichero de vídeo como <strong>MP4</strong>, en lugar de una imagen con soporte de animación como el formato GIF.</p>
+<p>Hay otros formatos de imagen con soporte de animación, como <strong>WebM</strong>. También existe el formato <strong>APNG</strong>. Este formato, que no es nuevo pero es muy desconocido, es una versión de PNG con soporte para animaciones. Recientemente lo compartía Joan en <a href="https://twitter.com/nucliweb/status/1163537269007032320">este tweet</a>.</p>
+<p>Para aprender sobre el uso de utilizar Vídeo en lugar de GIF, podemos hacer uso de una de las base de documentación de buenas prácticas, optimización y rendimiento web que tenemos disponible, <strong>Web Fundamentals</strong>. En este sitio web encontraremos un artículo específico sobre este tema <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video/">Replace Animated GIFs with Video</a>.</p>
+<p>En el artículo nos sugieren una herramienta de compresión de vídeo, <a href="https://ffmpeg.org">FFmpeg</a>. Se trata de una herramienta muy potente y versátil, con muchísimas funcionalidades, plugins y configuraciones posibles. Pero vamos a hacerlo fácil, centrándonos en las sugerencias que nos hace Google en artículo mencionado.</p>
+<h3 id="mpeg-4">MPEG-4</h3>
+<p>Después de la instalación, en nuestro caso algo tan simple como <code class="language-text">brew install ffmpeg</code> en Mac, ejecutamos <code class="language-text">ffmpeg -i video.gif video.mp4</code> y después de unos pocos segundos podemos ver que el archivo <strong>video.gif</strong> de <strong>65Mb</strong> se ha convertido en <strong>video.mp4</strong> de tan sólo 6.6MB. En el artículo nos muestran algunos parámetros de FFmpeg que nos dan opción de optimizar la conversión desde el punto de vista de peso y de calidad.</p>
+<p>Podemos ajustar el parámetro <a href="https://trac.ffmpeg.org/wiki/Encode/H.264">CRF</a> que nos permite definir el nivel de pérdida de calidad. Tras algunas pruebas, optamos por definir el CRT a 22, un punto por debajo del valor por defecto, con la intención de ser lo más fieles posibles a la calidad que nos hemos encontrado con el fichero original.</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">ffmpeg -i video.gif -b:v 0 -crf 22 video.mp4</code></pre></div>
+<p>Esto nos deja un archivo de <strong>8.5Mb</strong>, reduciendo su peso a un 13% del original.</p>
+<h3 id="webm">WebM</h3>
+<p>Otro formato de vídeo es <strong>WebM</strong>, la versión para vídeos de <strong>WebP</strong>, el formato de imagen con pérdida sugerido por Google. El formato WebM tiene un gran soporte por los navegadores, como podemos ver en <a href="https://caniuse.com/#search=webm">Can I Use</a>.</p>
+<p>Después de hacer algunas pruebas ajustando  el valor de CRF, lo establecemos al valor sugerido por Google, 41:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">ffmpeg -i video.gif -c vp9 -b:v 0 -crf 41 video.webm</code></pre></div>
+<p>Sorprendentemente obtenemos un vídeo de una calidad muy aceptable con un tamaño de sólo <strong>2.4Mb</strong>.</p>
+<h3 id="video">&#x3C;video></h3>
+<p>A la hora de implementar estos formatos, y para dar soporte a todos los navegadores, añadiremos múltiples sources a una etiqueta vídeo:</p>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">autoplay</span> <span class="token attr-name">loop</span> <span class="token attr-name">muted</span> <span class="token attr-name">playsinline</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>video.webm<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>video/webm<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>video.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>video/mp4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span></code></pre></div>
+<p>Esto permite servir el archivo <strong>video.webm</strong> para los navegadores que soporten WebM y <strong>video.mp4</strong> para el resto.</p>
+<h2 id="resultado">Resultado</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6b529192a33f442b3dfecfa84c22f3d0/fb323/terminal-files.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 35.168539325842694%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'141\'%3e%3cpath%20d=\'M0%201v71l1%2069h198l201-1%201-71a880%20880%200%2000-2-68C399-1%201-1%200%201m133%2096v4l-1%201-1%201%207%201%207-1h12c0%202%203%201%203-1h1l1%202v-3l1-1%201%202c0%202%200%202%201%201%200-1%201-2%203-1l2-1-2-1-4-1h-24v-2c0-1-4%202-4%204%200%203-2%201-2-2s-1-3-1-2m39%202v4h8l3-1%203%201h5l6%201c4%200%205%200%206-4l1-3-2%203c-2%203-2%203-2%201s-4-6-5-4c0%201-1%202-3%201l-3%201h-9c-2-2-4-1-4%201-1%203-3%202-3-1l-1-3v3m54-1h-3l-3%201-1%202v-1l-1-2-3%202-1%201v-1c0-1-1-2-4-2s-4%201-4%202v2c0%201%201%202%204%202l4-1h7c1%201%204%201%204-1v-1l1%201c1%203%203%202%203-1-1-3-2-5-3-3\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/6b529192a33f442b3dfecfa84c22f3d0/277cf/terminal-files.webp 310w,
+/static/6b529192a33f442b3dfecfa84c22f3d0/5077d/terminal-files.webp 620w,
+/static/6b529192a33f442b3dfecfa84c22f3d0/e1adb/terminal-files.webp 1240w,
+/static/6b529192a33f442b3dfecfa84c22f3d0/b9128/terminal-files.webp 1780w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/6b529192a33f442b3dfecfa84c22f3d0/fa223/terminal-files.png 310w,
+/static/6b529192a33f442b3dfecfa84c22f3d0/a5ed1/terminal-files.png 620w,
+/static/6b529192a33f442b3dfecfa84c22f3d0/7bfa5/terminal-files.png 1240w,
+/static/6b529192a33f442b3dfecfa84c22f3d0/fb323/terminal-files.png 1780w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/6b529192a33f442b3dfecfa84c22f3d0/7bfa5/terminal-files.png"
+          alt="terminal files"
+          title="terminal files"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span></p>
+<p>Os dejamos enlace a los ficheros para que podáis evaluar los resultados de calidad, así como sus tamaños.</p>
+<ul>
+<li><a href="/a3c782d22c253fe59a1b92aa63fe0726/video.gif">video.gif (65Mb)</a></li>
+<li><a href="/6b45cc354d7ae59ecd006f8708b802ba/video.mp4">video.mp4 (8,5Mb)</a></li>
+<li><a href="/f6a8d6e3a8f2d1964382adfb966a1826/video.webm">video.webm (2,4Mb)</a></li>
+</ul>
+<h2 id="conclusion">Conclusión</h2>
+<p>Hemos visto cómo podemos mejorar el rendimiento de esta página con unos simples pasos. Pero lo que realmente deberíamos valorar es el impacto en la experiencia de usuario, dado que este vídeo se muestra en la página de login, una funcionalidad crítica.</p>
+<p>En el caso de que un usuario acceda desde móvil, podríamos presentar una imagen en lugar de un vídeo, ya que en la mayoría de casos estará navegado en una red de datos.</p>
+<p>Somos conscientes de que más del 90% de usuarios accederán a la siguiente pantalla antes de que haya descargado el 100% del GIF, pero hemos de ser responsables con el consumo de datos de los usuarios cuando acceden a nuestras webs o aplicaciones.</p></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA3IiBoZWlnaHQ9IjEwNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNzAuMyA0Ny40SDU0LjdjLTEuMiAwLTIuMS0xLTItMi4yTDU0LjYgMjRjMC0xLjMtLjgtMi4zLTIuMS0yLjYtMS4yLS4zLTIuNC4zLTMgMS41TDMzLjIgNThjLS40LjgtLjMgMS44LjIgMi41LjUuOCAxLjMgMS4yIDIuMiAxLjJoMTUuNmMxLjIgMCAyLjEgMSAyIDIuMkw1MS4zIDg1YzAgMS4zLjggMi4zIDIuMSAyLjYuMiAwIC40LjEuNi4xIDEgMCAxLjktLjYgMi40LTEuNWwxNi40LTM1LjFjLjQtLjguMy0xLjgtLjItMi41LS41LS44LTEuNC0xLjItMi4zLTEuMnoiIGZpbGw9IiMyNDI0MjQiLz48cGF0aCBkPSJNMjguOSAxNC45YzIuMyAwIDQuMi0xLjkgNC4yLTQuMiAwLTIuMy0xLjktNC4yLTQuMi00LjItMi4zIDAtNC4yIDEuOS00LjIgNC4yLS4xIDIuMyAxLjggNC4yIDQuMiA0LjJ6TTEwLjYgMjQuNmMtMi4zIDAtNC4yIDEuOS00LjIgNC4yIDAgMi4zIDEuOSA0LjIgNC4yIDQuMiAyLjMgMCA0LjItMS45IDQuMi00LjIuMS0yLjMtMS44LTQuMi00LjItNC4yek00LjIgNTcuN2E0LjIgNC4yIDAgMSAwIDAtOC40IDQuMiA0LjIgMCAwIDAgMCA4LjR6TTEwLjYgNzMuOWMtMi4zIDAtNC4yIDEuOS00LjIgNC4yIDAgMi4zIDEuOSA0LjIgNC4yIDQuMiAyLjMgMCA0LjItMS45IDQuMi00LjIuMS0yLjMtMS44LTQuMi00LjItNC4yek0yOC45IDkyLjFjLTIuMyAwLTQuMiAxLjktNC4yIDQuMiAwIDIuMyAxLjkgNC4yIDQuMiA0LjIgMi4zIDAgNC4yLTEuOSA0LjItNC4yIDAtMi4zLTEuOS00LjItNC4yLTQuMnpNNTMuNSA5OC42Yy0yLjMgMC00LjIgMS45LTQuMiA0LjIgMCAyLjMgMS45IDQuMiA0LjIgNC4yIDIuMyAwIDQuMi0xLjkgNC4yLTQuMiAwLTIuMy0xLjktNC4yLTQuMi00LjJ6TTc4LjEgOTIuMWMtMi4zIDAtNC4yIDEuOS00LjIgNC4yIDAgMi4zIDEuOSA0LjIgNC4yIDQuMiAyLjMgMCA0LjItMS45IDQuMi00LjIuMS0yLjMtMS44LTQuMi00LjItNC4yek05Ni40IDczLjljLTIuMyAwLTQuMiAxLjktNC4yIDQuMiAwIDIuMyAxLjkgNC4yIDQuMiA0LjIgMi4zIDAgNC4yLTEuOSA0LjItNC4yIDAtMi4zLTEuOS00LjItNC4yLTQuMnpNMTAyLjggNTcuN2E0LjIgNC4yIDAgMSAwIDAtOC40IDQuMiA0LjIgMCAwIDAgMCA4LjR6TTk2IDMyLjhjLjcgMCAxLjUtLjIgMi4xLS42IDEtLjYgMS43LTEuNSAxLjktMi42LjMtMS4xLjEtMi4yLS40LTMuMkM5MC4xIDEwLjEgNzIuNCAwIDUzLjUgMGMtMi4zIDAtNC4yIDEuOS00LjIgNC4yIDAgMi4zIDEuOSA0LjIgNC4yIDQuMiAxNS45IDAgMzAuOCA4LjUgMzguOSAyMi4zLjggMS4zIDIuMiAyLjEgMy42IDIuMXoiIGZpbGw9IiMwMEFBNTgiLz48L3N2Zz4=" alt="PerfReviews" style="height:56px;margin-right:0.875rem;margin-bottom:0;width:56px;border-radius:50%"/><p>PerfReviews es un proyecto de <a href="/nosotros/"><strong>Joan León y José M. Pérez</strong></a>.<br/>Hablamos sobre web performance en <a href="https://twitter.com/PerfReviews_">Twitter</a> y<!-- --> <a href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww">Youtube</a>.</p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blog/mantenerse-al-dia/en/">← <!-- -->How to keep up to date on web performance</a></li><li><a rel="next" href="/blog/video-en-la-web/en/">The video format on the web<!-- --> →</a></li></ul></main><footer style="margin-top:4.375rem;padding-top:1.75rem"><a href="/servicios/">Servicios</a> <!-- -->•<!-- --> <a href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww" target="_blank" rel="noopener noreferrer">Youtube</a> <!-- -->•<!-- --> <a href="https://mobile.twitter.com/PerfReviews_" target="_blank" rel="noopener noreferrer">Twitter</a> <!-- -->•<!-- --> <a href="https://www.facebook.com/PerfReviews-221286588787407/" target="_blank" rel="noopener noreferrer">Facebook</a> <!-- -->•<!-- --> <a href="https://github.com/PerfReviews/PerfReviews" target="_blank" rel="noopener noreferrer">Github</a> <!-- -->•<!-- --> <a href="mailto:perfreviews.mail@gmail.com" target="_blank" rel="noopener noreferrer">Email</a> </footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-136400909-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/video-en-la-web/";window.webpackCompilationHash="4ee8b307865fbeeb9263";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-82a431b3f41feb7028b6.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-b1f290e234b608390d59.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-24c470ad1102dfc2b577.js"],"component---src-pages-404-js":["/component---src-pages-404-js-67be99acaae5f2f0e561.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-f2ba940b28525afd11cb.js"],"component---src-pages-en-services-js":["/component---src-pages-en-services-js-d81faac155329c48991d.js"],"component---src-pages-index-js":["/component---src-pages-index-js-4a63885caf1be85104b0.js"],"component---src-pages-nosotros-js":["/component---src-pages-nosotros-js-a3ba2fa029cc3117813d.js"],"component---src-pages-reviews-js":["/component---src-pages-reviews-js-55c6989475e0dde8ac3b.js"],"component---src-pages-servicios-js":["/component---src-pages-servicios-js-84c657c8cc4b0e367e76.js"]};/*]]>*/</script><script src="/webpack-runtime-1eafb3ebf4e3e6253abc.js" async=""></script><script src="/commons-424ae224b8acbc7bd10a.js" async=""></script><script src="/styles-23050e051cdbfe9c9cfa.js" async=""></script><script src="/component---src-templates-blog-post-js-24c470ad1102dfc2b577.js" async=""></script><script src="/app-82a431b3f41feb7028b6.js" async=""></script><script>
+    (function() {
+      if (location.host === 'perf.reviews') {
+        function loadFacebook() {
+          (function(f,b,e,v,n,t,s) {
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)})(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1251206408378715');
+          fbq('track', 'PageView');
+        }
+
+        if (window.requestIdleCallback) {
+            window.requestIdleCallback(loadFacebook, {timeout: 5000});
+        } else {
+            setTimeout(loadFacebook, 5000);
+        }
+      }
+    })();</script></body></html>

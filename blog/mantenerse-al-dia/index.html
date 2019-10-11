@@ -1,0 +1,424 @@
+<!DOCTYPE html><html lang="es"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:var(--textColorLink);text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}.date{color:var(--textColorDate);}</style><title data-react-helmet="true">Cómo mantenerse al día sobre rendimiento web | PerfReviews</title><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><style type="text/css">.gatsby-resp-image-image{width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;color:transparent;}</style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><meta name="generator" content="Gatsby 2.14.2"/><meta data-react-helmet="true" name="description" content="Consejos y recursos para aprender sobre web performance. Herramientas, sitios web y desarrolladores que escriben sobre técnicas y nuevas APIs para crear sitios que cargan rápido y consumen pocos datos."/><meta data-react-helmet="true" property="og:title" content="Cómo mantenerse al día sobre rendimiento web"/><meta data-react-helmet="true" property="og:description" content="Consejos y recursos para aprender sobre web performance. Herramientas, sitios web y desarrolladores que escriben sobre técnicas y nuevas APIs para crear sitios que cargan rápido y consumen pocos datos."/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:image" content="https://perf.reviews/static/785076bd1a8e6bcc85b2f2fffef9ac88/e9c7b/featured-image.png"/><meta data-react-helmet="true" name="twitter:creator" content="Joan León y José M. Pérez"/><meta data-react-helmet="true" name="twitter:title" content="Cómo mantenerse al día sobre rendimiento web"/><meta data-react-helmet="true" name="twitter:description" content="Consejos y recursos para aprender sobre web performance. Herramientas, sitios web y desarrolladores que escriben sobre técnicas y nuevas APIs para crear sitios que cargan rápido y consumen pocos datos."/><style data-href="/styles.2555d509e7fccebc5289.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}body{--textColorLink:#00aa58;--textColorDate:#888}.gatsby-highlight{margin-bottom:1.75rem}.gatsby-resp-image-figcaption{font-size:80%}</style><link as="script" rel="preload" href="/app-82a431b3f41feb7028b6.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-24c470ad1102dfc2b577.js"/><link as="script" rel="preload" href="/styles-23050e051cdbfe9c9cfa.js"/><link as="script" rel="preload" href="/commons-424ae224b8acbc7bd10a.js"/><link as="script" rel="preload" href="/webpack-runtime-1eafb3ebf4e3e6253abc.js"/><link as="fetch" rel="preload" href="/page-data/blog/mantenerse-al-dia/page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">PerfReviews</a></h3></header><main><h1>Cómo mantenerse al día sobre rendimiento web</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">August 09, 2019</p><div><p>¿Cómo mantenerse al día sobre rendimiento web? El mundo del desarrollo web cambia rápidamente y <strong>la medición y optimización de la performance no es una excepción</strong>. Con frecuencia nos encontramos ante nuevas herramientas, nuevas API y nuevas técnicas para construir webs que cargan rápido.</p>
+<p>Y a menudo vemos que los equipos de desarrollo dedican poco tiempo a un campo que pensamos es muy importante. Desconocimiento y baja prioridad es un combo perfecto para que el rendimiento de una web quede de lado.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6efacf0f03140b0eaeba1d4dff290446/45e7e/portada.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.22516556291392%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'265\'%3e%3cpath%20d=\'M185%205c0%204-2%2011-4%2012v1l38-10c2%200%202%202%201%207a1057%201057%200%2000-14%2048l-14%2052c1%201%201%202%2017%205%207%201%208%202%206%203l-1%201a4724%204724%200%2000182%2036l4-1v-17l-14-3a9481%209481%200%2000-177-35l3-14a87309%2087309%200%200125-89l-7-1-6%201-2%204-1%204%201-5V0h-37v5m148-1c0%203%200%204%202%204l1-1%204-1%204%201%202%201c2%200%203%201%203%202l6%201c4%200%205%200%205%202l4%201%204%201%204%201%204%201%204%201%204%201c0%203%208%207%2012%207h4V0h-67v4m51%2096v4h-8v8h11v4c0%203%200%204%202%204s2%207-1%209c-1%201-1%201%201%201l3%201%207%206%201-18v-19h-4c-3%200-4%200-4-2s-1-2-4-2h-4v4m-223%2023h-7l2%201v1h-3l-3-1c-1%201-1%201%201%202s2%201%200%201l-5%201a671%20671%200%2001-51%2021%20964%20964%200%2001-67%2024h-3c-2%201-4%201-23-5-2%200-2%201-2%205%200%205%200%206%202%206l4%201c5%202%2013%204%2014%203h1c1%203%209%203%2015%201a198%20198%200%200112-5c4-2%204-2%205%200l2%203%202%201%202%201%203%201-3%202c-5%203-6%207-1%209l17%206a742%20742%200%200141%2011%20150%20150%200%200026%207l12%203%2010%202%203%201%205%201%209%203%209%202%2012%203%203%201%209%203%202%201%205%201%207%201c4%202%2012%204%2014%203s2-1%203%201c0%202%209%203%209%201s2-1%202%201c1%202%204%204%2012%204%205%201%206%202%206%203-1%201%200%201%203%201l5%201c1%201%209%202%2010%201h2v1c-4%202-4%202%200%202%202-1%204%200%205%201h5l1%202c1%201%207-1%207-2h3l7-1a760%20760%200%200113-5c1%200%202%200%201-1%200-2%204-6%209-7l4-1c4-4%204-4%208-3%203%200%203%200%203-2s8-4%2013-2c5%201%208%208%204%208-1%200-2%201-1%203%200%203-2%204-4%202l-3-2c-2%200-1%203%202%205l3%201h-3c-2-1-3%200-3%201l-2%202-4%201c-2%201-2%201-2-1s0-2-2-1l-4%204-1%202h47v-32l-4-1h-4l4-2%204-1v-43l-4%202a517%20517%200%2001-43%2024l-1%201-6%202a471%20471%200%2001-28%2017h3l-1%201-2%201c-3%203-2%204%201%202%202-2%202-2%202%200l-2%202-2%202c-2%202-3%201-2-1v-4c2-3%201-3-7-2h-11l-7-2a2352%202352%200%2001-137-34l7%204%204%201h4c7%201%2020%205%2020%207%200%201-1%201-14-1-21-5-25-7-24-9a20293%2020293%200%2000-93-24c-4-1-5-2-5-3%201-3-6-1%2093-41l21-9c0-1-1-1-5%201m-70%202c-14%204-16%205-16%206v4l1%202v2a80%2080%200%200023-11c1%200%202-3%201-5-1-1-1-1-9%202m100%203l4%201-4%202c-3%201-5%202-8%201l-5-1c-4%200%201%202%207%203l5%201c0%202-7%204-11%203h-3l3%201%204%202-3%201-7%202h-2l2%201h4l1%201c2%202-6%204-11%203-4%200-5%200-4%201s0%201-4%203-5%202-10%201l-5-2-3-1h-10l11%203%203%201%206%201%2010%203%207%201%205%201%208%202%2010%202a510%20510%200%200073%2016l16%204%203%201c1%201%2013%203%2014%202l2%201%208%202%2010%203%208%201%208%202c4%202%2014%202%2016%201%202-3%200-4-6-5l-5-1c-1-2%202-2%2011%200%208%201%208%201%2012-1l4-2%201-1%206-2a146%20146%200%200114-8l4-2%205-2c0-1%201-2%203-2l2-3c-1-3-10-6-13-4h-2c-1-2-8-3-13-4h-4c-4-2-9-3-12-2l-4-1-7-2-9-2-10-2-6-1c0-1-11-3-13-2l-2-1-12-3-9-1-7-1-2-1-13-3h-3c-2-1-11-3-12-2l-2-1-13-3-3-1-8-1-5-1-4-1c-2%200-2%200%200%201h-3l-6-1-8-2c-7%200-7%200-4%201M47%20142l-11%204-8%203-3%201c-3%201-4%204-2%205%203%202%2017%200%2017-2%200-1%203-3%208-4l5-5c0-3-2-4-6-2m137%200l-1%201c-5%200-4%202%201%203h9l4-1-2%201-2%202%205%201c4%201%206%201%209-1l4-1-3-1-6-1-2-1-2-1-8-1c-5-2-6-2-6%200m-8%2014l-4%203%207%201c7%202%207%202%2012%200l5-2-4-2c-8-2-11-2-16%200m19%204c-6%203-5%203%2011%206%2044%2010%2045%2010%2040%207l-2-1%201-1c-1-1%200-1%201-1a1716%201716%200%2001-45-11c-1-1-4%200-6%201\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/6efacf0f03140b0eaeba1d4dff290446/277cf/portada.webp 310w,
+/static/6efacf0f03140b0eaeba1d4dff290446/5077d/portada.webp 620w,
+/static/6efacf0f03140b0eaeba1d4dff290446/e1adb/portada.webp 1240w,
+/static/6efacf0f03140b0eaeba1d4dff290446/92eb6/portada.webp 1860w,
+/static/6efacf0f03140b0eaeba1d4dff290446/e2cdc/portada.webp 2265w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/6efacf0f03140b0eaeba1d4dff290446/b0751/portada.jpg 310w,
+/static/6efacf0f03140b0eaeba1d4dff290446/e1d7b/portada.jpg 620w,
+/static/6efacf0f03140b0eaeba1d4dff290446/d1f04/portada.jpg 1240w,
+/static/6efacf0f03140b0eaeba1d4dff290446/5759f/portada.jpg 1860w,
+/static/6efacf0f03140b0eaeba1d4dff290446/45e7e/portada.jpg 2265w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/jpeg"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/6efacf0f03140b0eaeba1d4dff290446/d1f04/portada.jpg"
+          alt="portada"
+          title="portada"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span></p>
+<p>En Perf.Reviews tuvimos claro que nuestro objetivo era hacer presente la importancia de la performance web. ¿Por qué?</p>
+<ol>
+<li><strong>Desconocimiento de las herramientas de desarrollador incluidas en el navegador</strong>. Éstas son muy potentes y suelen ser suficientes para encontrar y corregir la mayoría de problemas.</li>
+<li><strong>Ponerse al día sobre las mejores prácticas en web performance es costoso, en tiempo y dinero</strong>. Requiere leer mucho, seguir las novedades y ponerlas en práctica.
+Lo que hoy es una mejor práctica mañana puede que ya no lo sea. Algunos ejemplos son <a href="https://www.youtube.com/watch?v=yURLTwZ3ehk">la combinación de estáticos, domain sharding, inlining</a>, o <a href="https://csswizardry.com/2019/05/self-host-your-static-assets/">CDNs para estáticos propios</a>. Y además siempre tener en cuenta el balance entre el soporte de una funcionalidad, el market share de los navegadores y el coste de polyfills.</li>
+<li><strong>Encontrar problemas de rendimiento es difícil</strong> si no se conocen los detalles de cómo funcionan los protocolos de red, cómo el navegador prioriza peticiones y parsea su resultado o cómo afecta el tiempo de ejecución de un JS o el tiempo de procesamiento de una imagen.</li>
+</ol>
+<p><a href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww">Nuestros vídeos</a> y <a href="/">artículos</a> tratan de dar respuesta a estos problemas con ejemplos prácticos. Mostramos el potencial de las herramientas de desarrollo de los navegadores y herramientas de terceros y los usamos para encontrar problemas en sitios reales.</p>
+<h2 id="blogs-y-twitter">Blogs y Twitter</h2>
+<p>Una de las mejores formas de estar al día es seguir los blogs y cuentas de Twitter de los navegadores y de desarrolladores que abogan por crear sitios rápidos.</p>
+<p>Hemos recopilado <a href="https://twitter.com/jmperezperez/lists/web-perf">una lista en Twitter con las principales cuentas</a>, y siempre es una buena idea suscribirse a los blogs de <a href="https://addyosmani.com/blog/">Addy Osmani</a>, <a href="https://dougsillars.com/blog/">Doug Sillars</a>, <a href="https://www.filamentgroup.com/lab/">Filament Group</a>, <a href="https://csswizardry.com/">Harry Roberts</a> o <a href="https://timkadlec.com/remembers/">Tim Kadlec</a>.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/80036ed330842f4ecc27ac606c99a1f6/1b29a/filament-group.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 74.8189863234111%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'299\'%3e%3cpath%20d=\'M0%2026l1%2026%2015%203a1411%201411%200%2000290%2011l94-6%201-31V0H0v26\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/80036ed330842f4ecc27ac606c99a1f6/277cf/filament-group.webp 310w,
+/static/80036ed330842f4ecc27ac606c99a1f6/5077d/filament-group.webp 620w,
+/static/80036ed330842f4ecc27ac606c99a1f6/e1adb/filament-group.webp 1240w,
+/static/80036ed330842f4ecc27ac606c99a1f6/92eb6/filament-group.webp 1860w,
+/static/80036ed330842f4ecc27ac606c99a1f6/d232f/filament-group.webp 2480w,
+/static/80036ed330842f4ecc27ac606c99a1f6/e669c/filament-group.webp 2486w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/80036ed330842f4ecc27ac606c99a1f6/fa223/filament-group.png 310w,
+/static/80036ed330842f4ecc27ac606c99a1f6/a5ed1/filament-group.png 620w,
+/static/80036ed330842f4ecc27ac606c99a1f6/7bfa5/filament-group.png 1240w,
+/static/80036ed330842f4ecc27ac606c99a1f6/b429f/filament-group.png 1860w,
+/static/80036ed330842f4ecc27ac606c99a1f6/d03be/filament-group.png 2480w,
+/static/80036ed330842f4ecc27ac606c99a1f6/1b29a/filament-group.png 2486w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/80036ed330842f4ecc27ac606c99a1f6/7bfa5/filament-group.png"
+          alt="El blog de Filament Group es una buena fuente de información sobre técnicas de carga de CSS y fuentes"
+          title="El blog de Filament Group es una buena fuente de información sobre técnicas de carga de CSS y fuentes"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">El blog de Filament Group es una buena fuente de información sobre técnicas de carga de CSS y fuentes</figcaption>
+  </figure></p>
+<p>Una de las mejores fuentes para aprender sobre web performance es <a href="https://web.dev/learn">Web.dev</a>.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e1b8e99452896df67ee273429c5bde64/04a3c/google-web-dev-learn.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 83.34841628959275%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'333\'%3e%3cpath%20d=\'M55%20111v9l1-9v-8h14v16l-2-3-3-3-1%202c-2%202-2%202-3%201h-2l-2%203c-4%204-2%205%206%205h8v-22H55v9m267-6l-4%202-2%201-1%2013c0%2017%200%2017%209%2017%205%200%206%200%207-2l3-2c3%200%204-2%204-15%200-17%200-16-9-16-6%200-7%200-7%202m-139%207c-1%202-1%203%202%203%204%201%204%203%200%203-2%200-3-1-3-2h-1l-1%202-1%203-1%203c-2%200-2%202-2%205v5h49v-10h-4l-5-1h-9l-4%201c-4%200-4%200-4-3%200-2%200-3-2-3s-3%200-2-4l-1-4v2l-2%201-3%201h-3c-3%200-3%200-2-2%200-2%200-3-1%200m133%2011v10h15v-21h-15v11m-243-7l1%201%209%201-10%201-1%203%201%203H51v26l1-11v-11h41v11l1%2011v-13l-1-13c-1%200-2-1-2-5v-4l-9-1-9%201m104%2013v4h41v-8h-41v4m-30%2031v3h8c2%201%2023%200%2024-1%202-1%200-3-2-3h-1l-3-1-3%201-1%201h-1l-8-1-9%201h-1c-2-2-2-2-3%200m161-1h-3c-3%200-3%200-3%202%200%201%200%202%201%201h2c2%202%2020%202%2021%200%201-1%201-1%201%201v3l2-3c1-3%201-4-1-4l-5-1-4%201h-5l-2%201h-1l-1-2-2%201m27%2077l-1%204c0%203%200%204%202%204s2%201%202%203v4h-14l-14%201h18l15-1c-4%200-4%200-3-2v-1c-2%200-1-3%201-4%202%200%202-1%202-4%200-4-1-5-3-5l-5%201m-281%203l-1%2013v13h-7l-1%201%2026%201h25v-29H75l-21%201m4%201c4%201%204%201%200%201h-3c-1-1-1%204-1%2011l1%2013h40v-4l-1-5v-1l1-2c0-2-1-2-3-2l-4%201h2l1%201c0%202-1%202-2%201-2%200-2%200-1%201%201%202%200%204-1%203h-4c-4-1-4%200-8-9l-2-5%201-1h1l-1-1c-1%201-2%200-3-1-1-2-2-2-9-2-6%200-7%200-4%201m131%202c0%202%200%202%201%200%200-2%205-3%205-1l-2%203c0-3-4%202-5%205-1%205-2%205-5%205s-3%200-3-3l2-5c0-2%200-2-1-1l-2%207c0%203%200%205%201%204l4-1c3%200%203%200%203%202%200%203%200%203-3%203-3-1-4%200-1%202l2%201%202-2c2-1%202-1%202%202-1%203-1%203%204%203%204%200%204%200%203-3%200-3%200-3%202-2%203%200%203%201%202%202l2-1c2-2%203-3%201-3l-1-1h-1c0%203-3%202-3%200s1-3%203-3l4%201c1%201%201-1%201-3l-1-6v7h-3c-4%200-5-2-5-11v-4h-5c-4%200-4%200-3%203M39%20292l-2%203h21c1%201%205%201%205-1l1-1%201%201c0%201%201%202%206%202%206%200%206%200%206-2l-1-3h-8l-5%201H48c-1%201-5%200-5-1s-1-1-4%201m235%201c0%203%201%204%203%201h1c0%202%201%202%2013%202%2013%200%2016-1%2012-4h-1l-1-1h-26c-1-1-1%200-1%202\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/e1b8e99452896df67ee273429c5bde64/277cf/google-web-dev-learn.webp 310w,
+/static/e1b8e99452896df67ee273429c5bde64/5077d/google-web-dev-learn.webp 620w,
+/static/e1b8e99452896df67ee273429c5bde64/e1adb/google-web-dev-learn.webp 1240w,
+/static/e1b8e99452896df67ee273429c5bde64/92eb6/google-web-dev-learn.webp 1860w,
+/static/e1b8e99452896df67ee273429c5bde64/f0676/google-web-dev-learn.webp 2210w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/e1b8e99452896df67ee273429c5bde64/fa223/google-web-dev-learn.png 310w,
+/static/e1b8e99452896df67ee273429c5bde64/a5ed1/google-web-dev-learn.png 620w,
+/static/e1b8e99452896df67ee273429c5bde64/7bfa5/google-web-dev-learn.png 1240w,
+/static/e1b8e99452896df67ee273429c5bde64/b429f/google-web-dev-learn.png 1860w,
+/static/e1b8e99452896df67ee273429c5bde64/04a3c/google-web-dev-learn.png 2210w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/e1b8e99452896df67ee273429c5bde64/7bfa5/google-web-dev-learn.png"
+          alt="Colecciones de tutoriales y guías sobre web performance, accessibilidad, seguridad o PWAs entre otros en web.dev"
+          title="Colecciones de tutoriales y guías sobre web performance, accessibilidad, seguridad o PWAs entre otros en web.dev"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Colecciones de tutoriales y guías sobre web performance, accessibilidad, seguridad o PWAs entre otros en web.dev</figcaption>
+  </figure></p>
+<p>Este sitio de Google recoge información que antes estaba dispersa en distintos sitios y que ahora está consolidada a través de prácticas guías.</p>
+<h2 id="herramientas">Herramientas</h2>
+<p>Para detectar problemas de rendimiento lo mejor es hacer una auditoría web. Desde el mismo navegador <a href="https://perf.reviews/tools/1.2-Interpretando-Lighthouse-Performance/">se puede realizar un análisis rápido</a>, y también hay webs como <a href="https://web.dev/measure">web.dev/measure</a> que generan un informe detallado del rendimiento de una URL en particular.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6181be45a2233a4d686ff4a42c7cd09e/fc364/google-web-lighthouse-perf-reviews.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.07866507747319%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'224\'%3e%3cpath%20d=\'M199%207c0%206%200%207-2%207l-2%201h4v105l1%20105V112a6334%206334%200%2000-1-105M87%2037c-2%200-1%206%201%206%202%201%203%201%204-1l1-1c0%204%206%204%207%200%201-2%201-2%201%201%201%202%204%202%205%200%200-1%200-2-2-3-1-1-1-1%201-1v-1H95c-1%201-1%201%201%201h3l-3%201-4-1c-1-2-2-2-5-1m209%2021c-3%201-6%206-6%2010%200%2011%2015%2014%2020%204%204-8-5-18-14-14m-3%204c-4%206-1%2013%206%2015%209%201%2015-11%207-16-4-3-9-2-13%201m-129%2046l-1%207v6h30v-13l-15-1-14%201\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/6181be45a2233a4d686ff4a42c7cd09e/277cf/google-web-lighthouse-perf-reviews.webp 310w,
+/static/6181be45a2233a4d686ff4a42c7cd09e/5077d/google-web-lighthouse-perf-reviews.webp 620w,
+/static/6181be45a2233a4d686ff4a42c7cd09e/e1adb/google-web-lighthouse-perf-reviews.webp 1240w,
+/static/6181be45a2233a4d686ff4a42c7cd09e/92eb6/google-web-lighthouse-perf-reviews.webp 1860w,
+/static/6181be45a2233a4d686ff4a42c7cd09e/d232f/google-web-lighthouse-perf-reviews.webp 2480w,
+/static/6181be45a2233a4d686ff4a42c7cd09e/d75f7/google-web-lighthouse-perf-reviews.webp 3356w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/6181be45a2233a4d686ff4a42c7cd09e/fa223/google-web-lighthouse-perf-reviews.png 310w,
+/static/6181be45a2233a4d686ff4a42c7cd09e/a5ed1/google-web-lighthouse-perf-reviews.png 620w,
+/static/6181be45a2233a4d686ff4a42c7cd09e/7bfa5/google-web-lighthouse-perf-reviews.png 1240w,
+/static/6181be45a2233a4d686ff4a42c7cd09e/b429f/google-web-lighthouse-perf-reviews.png 1860w,
+/static/6181be45a2233a4d686ff4a42c7cd09e/d03be/google-web-lighthouse-perf-reviews.png 2480w,
+/static/6181be45a2233a4d686ff4a42c7cd09e/fc364/google-web-lighthouse-perf-reviews.png 3356w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/6181be45a2233a4d686ff4a42c7cd09e/7bfa5/google-web-lighthouse-perf-reviews.png"
+          alt="Informe de performance de perf.reviews utilizando la versión online de Lighthouse en https://web.dev/measure. Vista general y vista de informe"
+          title="Informe de performance de perf.reviews utilizando la versión online de Lighthouse en https://web.dev/measure. Vista general y vista de informe"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Informe de performance de perf.reviews utilizando la versión online de Lighthouse en https://web.dev/measure. Vista general y vista de informe</figcaption>
+  </figure></p>
+<p>Una herramienta recomendable es <a href="https://webpagetest.org">WebPageTest</a>, que también sirve para encontrar problemas de rendimiento. Es especialmente útil para comparar diferentes sitios, y también para personalizar qué navegador se va a usar, velocidad de red, dispositivo y ubicación de los servidores que medirán el rendimiento.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/148a50502cd2cec2509851427357171c/60120/webpagetest-filmstrip.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.24854530340815%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'269\'%3e%3cpath%20d=\'M0%20135v134h401V0H0v135m240-40v35l1-34V62h24l24-1h-49v34M41%2095v33h46V62H41v33m48%200v33h47V62H89v33m50%200v33h47V62h-47v33m51%200v33h47V62h-47v33m107-25l-4%207%202%204c2%204%204%205%207%203v-5c-4-7%200-15%206-13%201%201%201%201-1%202-2%202-2%204%202%204l2%201-2%201-1%201%202%201%201%203c-1%205%200%206%205%206%204%200%204%200%207-4l2-4-4-7-3-7h-17l-4%207m51%200l-4%206%202%205c2%203%202%204%204%203%204-1%205-2%203-5-3-5-3-11%201-12%204-2%208%200%204%201-2%202-2%204%201%204l2%202h-1l-1%201%202%201v5c-1%202%201%204%206%204%204%200%204%200%207-4l2-4-4-7-4-6-8-1h-9l-3%207M138%20172v34h49v-34l-1-29v4h-47v-8h24l24-1h-49v34m51%200v34h49l-1-29v-30h-47v-8h24l24-1h-49v34m51%200v34h48v-59h-47v-8h24l24-1h-49v34m-199%200v33h46v-66H41v33m48%200v33h47v-66H89v33m68-19c-4%204-4%2011%202%2013%202%201%203%201%204-1s2-2%203-1c2%202%205-2%205-6%200-3-4-7-8-8-2%200-3%200-6%203m51%200c-4%204-4%208%200%2012%203%203%205%203%206%200%201-2%201-2%203-1%204%203%206-7%202-11-3-4-7-4-11%200m53-2c-4%202-5%204-5%208%200%205%207%2011%208%206l4-1c6%201%206-11-1-13h-6M41%20239l1%203h26v-5l-14-1H41v3\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/148a50502cd2cec2509851427357171c/277cf/webpagetest-filmstrip.webp 310w,
+/static/148a50502cd2cec2509851427357171c/5077d/webpagetest-filmstrip.webp 620w,
+/static/148a50502cd2cec2509851427357171c/e1adb/webpagetest-filmstrip.webp 1240w,
+/static/148a50502cd2cec2509851427357171c/92eb6/webpagetest-filmstrip.webp 1860w,
+/static/148a50502cd2cec2509851427357171c/4f50c/webpagetest-filmstrip.webp 2406w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/148a50502cd2cec2509851427357171c/fa223/webpagetest-filmstrip.png 310w,
+/static/148a50502cd2cec2509851427357171c/a5ed1/webpagetest-filmstrip.png 620w,
+/static/148a50502cd2cec2509851427357171c/7bfa5/webpagetest-filmstrip.png 1240w,
+/static/148a50502cd2cec2509851427357171c/b429f/webpagetest-filmstrip.png 1860w,
+/static/148a50502cd2cec2509851427357171c/60120/webpagetest-filmstrip.png 2406w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/148a50502cd2cec2509851427357171c/7bfa5/webpagetest-filmstrip.png"
+          alt="Comparando dos sitios web con WebPagetest, vista del filmstrip"
+          title="Comparando dos sitios web con WebPagetest, vista del filmstrip"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Comparando dos sitios web con WebPagetest, vista del filmstrip</figcaption>
+  </figure></p>
+<p>A través de sus opciones avanzadas también se puede <a href="https://andydavies.me/blog/2018/02/19/using-webpagetest-to-measure-the-impact-of-3rd-party-tags/">comprobar el impacto de 3rd party scripts</a>, simular <a href="http://blog.patrickmeenan.com/2011/10/testing-for-frontend-spof.html">single point of failures (SPOF)</a> y <a href="https://deanhume.com/ten-things-you-didnt-know-about-webpagetest-org/">mucho más</a>. Incluso <a href="https://css-tricks.com/use-webpagetest-api/">tiene una API</a> para poder hacer todo esto desde scripts.</p>
+<p>Otras herramientas dan informes específicos sobre optimización de imágenes, como <a href="https://webspeedtest.cloudinary.com/">Website Speed Test de Cloudinary</a>, o CSS con <a href="https://cssstats.com/">CSS Stats</a>.</p>
+<p>Además de hacer auditorías es importante medir frecuentemente cuál es la experiencia de usuario con herramientas RUM. Algunas de las que hemos utilizado son <a href="https://speedcurve.com/">SpeedCurve</a>, <a href="https://www.pingdom.com/product/performance-monitoring/">Pingdom</a>, <a href="https://www.akamai.com/uk/en/products/performance/mpulse-real-user-monitoring.jsp">mPulse de Akamai</a> o desde hace poco <a href="https://firebase.google.com/docs/perf-mon">Firebase</a>, del que <a href="https://www.youtube.com/watch?v=y2EeeWSfnRw">Carlos Villuendas hizo un práctico tutorial</a>.</p>
+<p>Otras herramientas analizan periódicamente las webs que indiquemos y nos alertarán cuando alguna de las métricas empeora sustancialmente. Recomendamos <a href="https://calibreapp.com">Calibre</a>, <a href="https://www.debugbear.com">DebugBear</a>, <a href="https://www.sitespeed.io/">SiteSpeed</a> y <a href="https://speedcurve.com/">SpeedCurve</a>.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/200b774a1d4efe55b294d08e369fb2da/f7947/speedcurve-guardian.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.517774343122106%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'182\'%3e%3cpath%20d=\'M0%2091v91h401V0H0v91m10-53c-2%201-1%202%201%202s2%200%201%202c-2%203-2%205-1%205l4-3c2-4%203-4%202-1%200%203%203%205%206%203%202%200%202-1%202-3v-2l1%204c0%202%204%203%206%201%203-3%201-9-3-9l-3%202h-2c-2-2-13-2-14-1m25%200c-2%201-1%209%201%209l1-2h2c3%203%205%202%203-2-1-1-2-2-1-3%202-2%203-1%203%203s0%204%203%204c4%200%205-1%205-5%200-3-1-4-2-5-4%200-10%200-11%202h-2c0-2-1-3-2-1m176%200l-1%202%202%203%203%201h-3c-3%200-2%202%202%203l3-1c0-2%203-2%206%200%202%202%205-1%203-3l-1-3c0-3-1-3-4%200l-4%202-2-1c-2-1-2-1%200-1%203%200%203-3-1-3l-3%201M64%20120c0%204%201%205%204%204%203-2%203-2%204%202%202%205%206%204%207-2%201-3%201-4%202-2%201%207%200%207%2011%207l9-1c2-4%202-10%201-10l-1%204c0%205-1%206-9%206h-8l-1-5c-2-7-4-7-5%201-1%205-3%205-5%200-1-3-6-5-6-2%200%202-2%200-2-2-1-2-1-2-1%200\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/200b774a1d4efe55b294d08e369fb2da/277cf/speedcurve-guardian.webp 310w,
+/static/200b774a1d4efe55b294d08e369fb2da/5077d/speedcurve-guardian.webp 620w,
+/static/200b774a1d4efe55b294d08e369fb2da/e1adb/speedcurve-guardian.webp 1240w,
+/static/200b774a1d4efe55b294d08e369fb2da/92eb6/speedcurve-guardian.webp 1860w,
+/static/200b774a1d4efe55b294d08e369fb2da/d232f/speedcurve-guardian.webp 2480w,
+/static/200b774a1d4efe55b294d08e369fb2da/45796/speedcurve-guardian.webp 2588w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/200b774a1d4efe55b294d08e369fb2da/b0751/speedcurve-guardian.jpg 310w,
+/static/200b774a1d4efe55b294d08e369fb2da/e1d7b/speedcurve-guardian.jpg 620w,
+/static/200b774a1d4efe55b294d08e369fb2da/d1f04/speedcurve-guardian.jpg 1240w,
+/static/200b774a1d4efe55b294d08e369fb2da/5759f/speedcurve-guardian.jpg 1860w,
+/static/200b774a1d4efe55b294d08e369fb2da/00966/speedcurve-guardian.jpg 2480w,
+/static/200b774a1d4efe55b294d08e369fb2da/f7947/speedcurve-guardian.jpg 2588w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/jpeg"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/200b774a1d4efe55b294d08e369fb2da/d1f04/speedcurve-guardian.jpg"
+          alt="SpeedCurve mostrando performance budgets para desktop y mobile para la web de Guardian"
+          title="SpeedCurve mostrando performance budgets para desktop y mobile para la web de Guardian"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">SpeedCurve mostrando performance budgets para desktop y mobile para la web de Guardian</figcaption>
+  </figure></p>
+<h2 id="libros">Libros</h2>
+<p>Os puede extrañar que añadamos una sección de libros en un post donde estamos hablando de “mantenerse al día”.
+Los libros, aun en formato digital, son muy complicados de actualizar. Lo que les deja fuera de juego en la gran carrera en la que estamos inmersos.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e3b60bb9f8d62e8631b665c658fbf638/da229/books.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.07866507747319%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'224\'%3e%3cpath%20d=\'M0%2048c0%2045%200%2047%202%2047a1042%201042%200%20012%2084c-1%203%200%2045%202%2045%201%200%201-95-1-184V0H0v48m121%200a1903%201903%200%20010%2083c-2%200-1%2021%201%2023%201%201%201%2015-1%2034l1%207c1-1%201%203%201%2014%200%2013%200%2015%202%2015V114c-1-93-2-114-3-114l-1%2048m27-24a10163%2010163%200%20014%20200c2%200%202%208%201-97-1-108-2-127-4-127l-1%2024m40-21v16c2-5%202%208%202%20102v103h7v-52l-1-112V0h-4c-2%200-3%200-4%203m30%20109v112h12v-28l1-28v56h31a156%20156%200%200032-2c1%201%202%200%202-1%201-2%200-3-1-1h-3c0-1%200-2%202-3v-1l-2-2%201-1c2%201%205-1%205-2l-1-1c-4%200-5%200-5-2h2c2%200%202%200%200-2-4-4-4-4%200-7l2-3c-3%200-4-3-2-3v-2c-2-2-2-2%200-3l1-2h1l2-1c1-1%200-1-1-2h-3c-1%202-2%200-2-1l4-2c3%200%203%200%202-2l-2-3v-1l-2%203c-1%202-1%202-1%200-1-3-1-4%201-5l3-2h-3c-3%200-3-1%201-3%202-2%202-4-1-4s-2-2%200-2c2-1%203-2%202-3l1-1v-2c0-1-1-2-3-2l-2-2c0-1%201-2%202-1%202%200%203%200%203-3%200-2-1-3-2-3l-1%202-1%202c-2-1-1-5%201-6v-3c4-5%204-5%201-7-3-1-3-1-2-3%202-1%202-1%201-2-3%200-2-1%201-3l2-1-2-1c-4-2-4-4%200-3%202%200%203%200%203-2l-3-1c-4%201-4-1%200-2l2-3h-2l-3-1c0-1%201-2%203-2h3l-3-1c-2%200-3-1-3-5l1-4c3%200%204%200%204-5%200-4%200-5-2-5l-1%202-1%202c-2%200-1-5%202-6%202-1%203-3%201-3v-1h2c0-3-3-2-4%201l-1%201c-2%200-1-4%201-5v-2l-2-1%202-2%203-1-2-1c-3%200-3%200-3-5l1-5%204-1%205-1h-5c-6%200-6-2-1-3l1-1-3-1-1-3%201-4%202-1v-1l2-1h-3c-3%200-3%200-3-2l3-1h3l-3-1c-3-2-3-6%200-8l3-2h-3c-2%201-3%201-3-1s1-2%204-2%203%200%201-1c-2%200-2%200%200-1%201-1%201-1-2-1-2%200-3%200-3-2l2-1%202-1c1-5%200-7-1-3-1%202-1%202-2%201-1-2%200-6%202-6%201%200%202-1%201-2%200-2%200-2-2-2-3%200-2-3%202-4l1-1-1-2c0-1-2-2-39-2h-39v112m138-70l-1%20112v70h8v-62l1-112V0h-8v42m9%2070v112h3l2-1%202-2c2%200%201-1-1-3-3-3-2-3%208-2%2011%203%2012%205%205%207-4%201-3%201%206%201l11-1-1-112V0h-35v112m16-95c-9%201-11%202-11%204s1%202%205%203c7%200%207%201%200%202-4%200-5%201-5%203s0%202%204%203l11%202c11%201%2012%201%2012-1s-1-2-6-3c-7%200-7-2%201-2%204%200%205-1%205-3s0-2-4-3l-6-1c-3-1-3-1%201-1%207%200%209-1%209-3s-3-2-16%200M26%2031c-3%206-2%2033%201%2038%201%201%201-7%201-19%200-18-1-23-2-19m351%205c-4%200-7%203-7%206s1%203%203%200c2-2%202-2%205%201%204%205%2010%203%2010-2%200-4-4-6-11-5m-7%2015l1%205c4%203%2014%202%2016-3%202-2%203-2%206-2s4%200%204-2%200-2-13-2h-14v4m1%2014l-1%202c0%202%201%202%204%202s4%201%205%202c4%208%2018%206%2018-3v-3h-10a234%20234%200%2001-16%200m-127%206c-4%200-4%200-4%203s0%203%204%203l4%201-4%201c-4%200-5%202-4%205l13%201h13v-3c0-2-1-3-7-3-9%200-9-2%200-2h7v-3c0-3%200-3-6-3h-16m133%206l-5%202c-2%202-2%206%200%206l1-1c0-3%202-3%205%200%202%203%205%204%208%202%202-1%203-6%201-8-2-1-7-2-10-1M261%2088c0%202-1%202-11%202s-10%201-10%203c0%201%200%202%2010%202s11%200%2011%202c0%201%201%202%203%202s2%200%202-6c0-7%200-7-2-7s-3%201-3%202m109%202c0%202%201%202%206%202%206%200%207%200%208%202%201%203%200%203-8%203-6-1-6%200-6%202s0%202%207%202c5%200%207%200%207%202l2%201%202-1%202-2%203%202c2%202%204%201%204-1%200-3-2-4-6-5-3-1-3-1-3-5v-4h-9c-8%200-9%200-9%202M80%20101v7a3949%203949%200%20010-7m181%201c0%201-1%202-11%202h-10v2c0%202%200%203%2010%203s11%200%2011%202c0%201%201%202%203%202s2%200%202-6c0-7%200-7-2-7s-3%201-3%202m111%203c-2%201-3%206%200%208l7%201c8%200%2012-5%207-8-3-2-12-3-14-1m-133%2012l2%202h4l4%204c7%208%2017%204%2017-7v-2h-27v3m131%201c0%202%201%203%207%203%205%200%207%200%207%202%201%201%200%202-7%201-7%200-7%200-7%203%200%202%200%202%207%202%209%200%209%202%200%202-6%200-7%201-7%202s1%202%207%202c9%200%209%202%200%202-6%200-7%200-7%202s1%202%208%202l9-1%201-12v-11l-9-1c-9%200-9%200-9%202m-133%2011c0%202%201%203%2014%205%2016%204%2016%204%2016%201a750%20750%200%2000-30-6m2%2014c0%205%200%205%203%205l2-2%202-2%205%202c9%205%2018%200%2014-7-1-2-4%200-4%202%200%203-3%203-8%200l-9-3h-5v5m134%200c-3%202-4%202-4%206%201%202%201%203%208%203%209%200%2011-1%2011-5-1-3-3-4-4-1v2l-2-2c-3-3-7-4-9-3m-3%2013c-1%202%201%203%208%203%208%200%207%201-2%201-6%200-6%201-6%203%200%201%200%202%208%202%209%200%2010-1%2010-7v-3l-9-1c-8%200-9%200-9%202m-130%204c-2%201-1%202%203%202l5%201-5%201c-6%203-5%204%205%204%2010-1%2012-2%205-3h-3l4-2%203-3h-17m-1%2013l2%202v2c-4%203-1%203%207%202%2013-2%2013-3%202-6h-11m133%204c-2%201-4%205-2%206h2c2-3%203-2%206%201%204%204%2011%202%2010-3-1-4-10-6-16-4m-131%206c-2%202-3%205-1%205l2-2c3-3%2012-3%2013%201%202%203%200%204-8%204-6%200-8%200-8%202l8%201c6%200%208%200%208%202l2%201c1%200%201-12-1-14s-13-2-15%200m128%2017c-1%202%201%203%205%203h5l-5%202c-7%203-6%204%203%204h10l1-1c0-2-1-2-4-2h-4l4-2c5-3%205-3%203-4h-18m-128%203c-5%204-1%208%208%208%208%200%2012-3%208-7-3-2-13-2-16-1m-2%2012l5%201h5l-5%202-4%203c0%201%2017%201%2018-1l-5-1h-5l5-2c7-3%206-4-5-4-7%200-9%200-9%202\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/e3b60bb9f8d62e8631b665c658fbf638/277cf/books.webp 310w,
+/static/e3b60bb9f8d62e8631b665c658fbf638/5077d/books.webp 620w,
+/static/e3b60bb9f8d62e8631b665c658fbf638/e1adb/books.webp 1240w,
+/static/e3b60bb9f8d62e8631b665c658fbf638/d90da/books.webp 1678w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/e3b60bb9f8d62e8631b665c658fbf638/b0751/books.jpg 310w,
+/static/e3b60bb9f8d62e8631b665c658fbf638/e1d7b/books.jpg 620w,
+/static/e3b60bb9f8d62e8631b665c658fbf638/d1f04/books.jpg 1240w,
+/static/e3b60bb9f8d62e8631b665c658fbf638/da229/books.jpg 1678w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/jpeg"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/e3b60bb9f8d62e8631b665c658fbf638/d1f04/books.jpg"
+          alt="Estos son algunos de los libros más populares de web performance, publicados entre 2008 y 2019"
+          title="Estos son algunos de los libros más populares de web performance, publicados entre 2008 y 2019"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Estos son algunos de los libros más populares de web performance, publicados entre 2008 y 2019</figcaption>
+  </figure></p>
+<p>Aún y así, queremos haceros unas recomendaciones de algunos libros que os pueden ayudar a aprender unas buenas bases en web performance, protocolos y optimizaciones de recursos:</p>
+<ol>
+<li><strong><a href="https://www.manning.com/books/web-performance-in-action">Web Performance in Action</a></strong>, escrito por <a href="https://twitter.com/malchata">Jeremy L. Wagner</a> es el libro más completo de nuestras recomendaciones. Está enfocado en la web performance en general, cubriendo temas como la utilización de herramientas, optimización de CSS, JS e imágenes, la carga de fuentes de una forma efectiva, mejorar la performance utilizando Service Workers o una vista al protocolo HTTP/2. Una serie de puntos que nos harán conectar entre sí, mucha información que hemos ido adquiriendo desde diferentes fuentes durante mucho tiempo.</li>
+<li><strong><a href="https://www.amazon.com/High-Performance-Mobile-Web-Optimizing/dp/1491912553">High Performance Mobile Web</a></strong>, este libro está escrito por <a href="https://twitter.com/firt">Maximiliano Firtman</a>, y como su título indica, está enfocado a la web performance en los dispositivos móviles. Empieza introduciéndonos en el mundo web móvil, pasando por cómo y qué herramientas de medición tenemos disponibles para dispositivos móviles, la optimización de primera visita, así como de las posteriores, donde aparecen de nuevo los Service Workers. Como es de esperar, dedica un capítulo a “Responsive Web Design” y uno muy interesante con título “Extreme Mobile Web Performance”, donde aporta una serie de consejos más específicos para mejorar el rendimento de nuestras webs para esos dispositivos.</li>
+</ol>
+<p>Es un libro a tener muy en cuenta, ya que estamos en un momento donde la mayoría de productos son <strong>Mobile First</strong>, incluso ya hay algunos que son <strong>Mobile Only</strong>.</p>
+<ol start="3">
+<li><strong><a href="https://www.amazon.com/High-Performance-Browser-Networking-performance/dp/1449344763/ref=sr_1_1">High Performance Browser Networking</a></strong>, el subtítulo que añade <a href="https://twitter.com/igrigorik">Ilya Grigorik</a> a este libro es “Lo que todo desarrollador web debe saber sobre las redes y el rendimiento web”, y su contenido no nos defraudará. Con un contenido super interesante podremos aprender desde el ancho de banda, latencia, bloques TCP y UDP, TSL, el funcionamiento de las redes WiFi y de redes de datos móviles, también nos habla sobre los protocolos HTTP/1.X y HTTP/2 y de cómo optimizar la entrega en estos protocolos. En la última parte del libro aprenderemos sobre XMLHttpRequest, CORS, Server-Send Events, WebSockets y WebRTC.</li>
+</ol>
+<p>Un título de obligada lectura para todas aquellas personas que quieran mejorar los conocimientos en todo lo relacionado con redes y su rendimiento. Ah! otra de las cosas interesantes de este libro es que lo podemos leer de forma gratuita online en <a href="https://hpbn.co">hpbn.co</a>, gracias <strong>Ilya</strong>.</p>
+<ol start="4">
+<li><strong><a href="https://www.amazon.com/Using-WebPageTest-Performance-Testing-Novices/dp/1491902590">Using WebPageTest: Web Performance Testing for Novices and Power Users</a></strong>, en esta ocasión os recomendamos un libro sobre una herramienta, <strong>la herramienta</strong> para mucha gente. <a href="https://twitter.com/rick_viscomi">Rick Viscomi</a>, <a href="https://twitter.com/andydavies">Andy Davies</a> y <a href="https://twitter.com/marcelduran">Marcel Duran</a> nos presenta este libro en 3 partes: Básica, Intermedia y Avanzada, donde nos explica desde cómo utilizar WebPageTest para detectar qué hace lenta nuestra web, pasando por configuraciones para dispositivos móviles y scripting, hasta la parte más avanzada, donde aprenderemos a trabajar con la API y poder integrarlo con nuestra herramienta de integración continua. En el último capítulo nos muestran cómo implementar WebPageTest en nuestra propia instancia privada.</li>
+<li><strong><a href="https://www.amazon.com/High-Performance-Images-Shrink-Deliver-ebook/dp/B01MG9CFXG">High Performance Images</a></strong>, este es el preferido de Joan 😉. Escrito por varios autores, <a href="https://twitter.com/colinbendell">Colin Bendell</a>, <a href="https://twitter.com/tkadlec">Tim Kadlec</a>, <a href="https://twitter.com/yoavweiss">Yoav Weiss</a>, <a href="https://twitter.com/guypod">Guy Podjarny</a>, <a href="https://twitter.com/njdoyle">Nick Doyle</a> y Mike McCall nos ofrecen un conocimiento profundo de las imágenes. Empezando por la teoría de las imágenes digitales, los diferentes formatos de compresión tanto con pérdida, como sin pérdida, optimización de SVG, lazy loading, procesamiento de imágenes a nivel de GPU, una eficiente manera de preparar nuestras imágenes responsive, una eficiente manera de entregar nuestras imágenes al navegador y cómo implementar nuestro propio flujo para optimizar las imágenes de forma automática.</li>
+</ol>
+<p>En esta ocasión, y gracias a <a href="https://www.akamai.com/es/es/">Akamai</a> también tenemos una versión gratuita en formato <a href="https://content.akamai.com/pg6293-high-performance-images-ebook.html">PDF</a>.</p>
+<h2 id="auditoria-personalizada-y-formacion">Auditoría personalizada y formación</h2>
+<p>Somos conscientes de que es difícil formar equipos en web performance y adoptar una cultura de equipo adecuada. A través de nuestro <a href="https://perf.reviews/servicios/">servicios de workshops y auditorías personalizadas</a> ayudamos a empresas a entender los problemas de rendimiento de sus webs y dar los pasos para corregirlos y evitarlos en el futuro.</p></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA3IiBoZWlnaHQ9IjEwNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNzAuMyA0Ny40SDU0LjdjLTEuMiAwLTIuMS0xLTItMi4yTDU0LjYgMjRjMC0xLjMtLjgtMi4zLTIuMS0yLjYtMS4yLS4zLTIuNC4zLTMgMS41TDMzLjIgNThjLS40LjgtLjMgMS44LjIgMi41LjUuOCAxLjMgMS4yIDIuMiAxLjJoMTUuNmMxLjIgMCAyLjEgMSAyIDIuMkw1MS4zIDg1YzAgMS4zLjggMi4zIDIuMSAyLjYuMiAwIC40LjEuNi4xIDEgMCAxLjktLjYgMi40LTEuNWwxNi40LTM1LjFjLjQtLjguMy0xLjgtLjItMi41LS41LS44LTEuNC0xLjItMi4zLTEuMnoiIGZpbGw9IiMyNDI0MjQiLz48cGF0aCBkPSJNMjguOSAxNC45YzIuMyAwIDQuMi0xLjkgNC4yLTQuMiAwLTIuMy0xLjktNC4yLTQuMi00LjItMi4zIDAtNC4yIDEuOS00LjIgNC4yLS4xIDIuMyAxLjggNC4yIDQuMiA0LjJ6TTEwLjYgMjQuNmMtMi4zIDAtNC4yIDEuOS00LjIgNC4yIDAgMi4zIDEuOSA0LjIgNC4yIDQuMiAyLjMgMCA0LjItMS45IDQuMi00LjIuMS0yLjMtMS44LTQuMi00LjItNC4yek00LjIgNTcuN2E0LjIgNC4yIDAgMSAwIDAtOC40IDQuMiA0LjIgMCAwIDAgMCA4LjR6TTEwLjYgNzMuOWMtMi4zIDAtNC4yIDEuOS00LjIgNC4yIDAgMi4zIDEuOSA0LjIgNC4yIDQuMiAyLjMgMCA0LjItMS45IDQuMi00LjIuMS0yLjMtMS44LTQuMi00LjItNC4yek0yOC45IDkyLjFjLTIuMyAwLTQuMiAxLjktNC4yIDQuMiAwIDIuMyAxLjkgNC4yIDQuMiA0LjIgMi4zIDAgNC4yLTEuOSA0LjItNC4yIDAtMi4zLTEuOS00LjItNC4yLTQuMnpNNTMuNSA5OC42Yy0yLjMgMC00LjIgMS45LTQuMiA0LjIgMCAyLjMgMS45IDQuMiA0LjIgNC4yIDIuMyAwIDQuMi0xLjkgNC4yLTQuMiAwLTIuMy0xLjktNC4yLTQuMi00LjJ6TTc4LjEgOTIuMWMtMi4zIDAtNC4yIDEuOS00LjIgNC4yIDAgMi4zIDEuOSA0LjIgNC4yIDQuMiAyLjMgMCA0LjItMS45IDQuMi00LjIuMS0yLjMtMS44LTQuMi00LjItNC4yek05Ni40IDczLjljLTIuMyAwLTQuMiAxLjktNC4yIDQuMiAwIDIuMyAxLjkgNC4yIDQuMiA0LjIgMi4zIDAgNC4yLTEuOSA0LjItNC4yIDAtMi4zLTEuOS00LjItNC4yLTQuMnpNMTAyLjggNTcuN2E0LjIgNC4yIDAgMSAwIDAtOC40IDQuMiA0LjIgMCAwIDAgMCA4LjR6TTk2IDMyLjhjLjcgMCAxLjUtLjIgMi4xLS42IDEtLjYgMS43LTEuNSAxLjktMi42LjMtMS4xLjEtMi4yLS40LTMuMkM5MC4xIDEwLjEgNzIuNCAwIDUzLjUgMGMtMi4zIDAtNC4yIDEuOS00LjIgNC4yIDAgMi4zIDEuOSA0LjIgNC4yIDQuMiAxNS45IDAgMzAuOCA4LjUgMzguOSAyMi4zLjggMS4zIDIuMiAyLjEgMy42IDIuMXoiIGZpbGw9IiMwMEFBNTgiLz48L3N2Zz4=" alt="PerfReviews" style="height:56px;margin-right:0.875rem;margin-bottom:0;width:56px;border-radius:50%"/><p>PerfReviews es un proyecto de <a href="/nosotros/"><strong>Joan León y José M. Pérez</strong></a>.<br/>Hablamos sobre web performance en <a href="https://twitter.com/PerfReviews_">Twitter</a> y<!-- --> <a href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww">Youtube</a>.</p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blog/web-performance-google-io-2019/en/">← <!-- -->The main news about Web Performance presented in Google I/O 2019</a></li><li><a rel="next" href="/blog/mantenerse-al-dia/en/">How to keep up to date on web performance<!-- --> →</a></li></ul></main><footer style="margin-top:4.375rem;padding-top:1.75rem"><a href="/servicios/">Servicios</a> <!-- -->•<!-- --> <a href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww" target="_blank" rel="noopener noreferrer">Youtube</a> <!-- -->•<!-- --> <a href="https://mobile.twitter.com/PerfReviews_" target="_blank" rel="noopener noreferrer">Twitter</a> <!-- -->•<!-- --> <a href="https://www.facebook.com/PerfReviews-221286588787407/" target="_blank" rel="noopener noreferrer">Facebook</a> <!-- -->•<!-- --> <a href="https://github.com/PerfReviews/PerfReviews" target="_blank" rel="noopener noreferrer">Github</a> <!-- -->•<!-- --> <a href="mailto:perfreviews.mail@gmail.com" target="_blank" rel="noopener noreferrer">Email</a> </footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-136400909-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/mantenerse-al-dia/";window.webpackCompilationHash="4ee8b307865fbeeb9263";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-82a431b3f41feb7028b6.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-b1f290e234b608390d59.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-24c470ad1102dfc2b577.js"],"component---src-pages-404-js":["/component---src-pages-404-js-67be99acaae5f2f0e561.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-f2ba940b28525afd11cb.js"],"component---src-pages-en-services-js":["/component---src-pages-en-services-js-d81faac155329c48991d.js"],"component---src-pages-index-js":["/component---src-pages-index-js-4a63885caf1be85104b0.js"],"component---src-pages-nosotros-js":["/component---src-pages-nosotros-js-a3ba2fa029cc3117813d.js"],"component---src-pages-reviews-js":["/component---src-pages-reviews-js-55c6989475e0dde8ac3b.js"],"component---src-pages-servicios-js":["/component---src-pages-servicios-js-84c657c8cc4b0e367e76.js"]};/*]]>*/</script><script src="/webpack-runtime-1eafb3ebf4e3e6253abc.js" async=""></script><script src="/commons-424ae224b8acbc7bd10a.js" async=""></script><script src="/styles-23050e051cdbfe9c9cfa.js" async=""></script><script src="/component---src-templates-blog-post-js-24c470ad1102dfc2b577.js" async=""></script><script src="/app-82a431b3f41feb7028b6.js" async=""></script><script>
+    (function() {
+      if (location.host === 'perf.reviews') {
+        function loadFacebook() {
+          (function(f,b,e,v,n,t,s) {
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)})(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1251206408378715');
+          fbq('track', 'PageView');
+        }
+
+        if (window.requestIdleCallback) {
+            window.requestIdleCallback(loadFacebook, {timeout: 5000});
+        } else {
+            setTimeout(loadFacebook, 5000);
+        }
+      }
+    })();</script></body></html>

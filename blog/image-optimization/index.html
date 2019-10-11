@@ -1,0 +1,1079 @@
+<!DOCTYPE html><html lang="es"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:var(--textColorLink);text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}.date{color:var(--textColorDate);}</style><title data-react-helmet="true">¿Por dónde empiezo para optimizar mis imágenes? | PerfReviews</title><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><style type="text/css">.gatsby-resp-image-image{width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;color:transparent;}</style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a091ab3b2a2f1b48eab26b4a2f19f39d"/><meta name="generator" content="Gatsby 2.14.2"/><meta data-react-helmet="true" name="description" content="Como profesionales del desarrollo web, nos preocupamos de escoger el mejor framework, la librería más actual, aplicar buenas prácticas en Javascript y CSS, ser cuidadosos de la semántica en el HTML para mejorar el SEO, estamos mejorando la accesibilidad de nuestro contenido, empaquetamos y dividimos los archivos para optimizar la carga, pero ¿qué pasa con las imágenes?"/><meta data-react-helmet="true" property="og:title" content="¿Por dónde empiezo para optimizar mis imágenes?"/><meta data-react-helmet="true" property="og:description" content="Como profesionales del desarrollo web, nos preocupamos de escoger el mejor framework, la librería más actual, aplicar buenas prácticas en Javascript y CSS, ser cuidadosos de la semántica en el HTML para mejorar el SEO, estamos mejorando la accesibilidad de nuestro contenido, empaquetamos y dividimos los archivos para optimizar la carga, pero ¿qué pasa con las imágenes?"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:image" content="https://perf.reviews/static/785076bd1a8e6bcc85b2f2fffef9ac88/e9c7b/featured-image.png"/><meta data-react-helmet="true" name="twitter:creator" content="Joan León y José M. Pérez"/><meta data-react-helmet="true" name="twitter:title" content="¿Por dónde empiezo para optimizar mis imágenes?"/><meta data-react-helmet="true" name="twitter:description" content="Como profesionales del desarrollo web, nos preocupamos de escoger el mejor framework, la librería más actual, aplicar buenas prácticas en Javascript y CSS, ser cuidadosos de la semántica en el HTML para mejorar el SEO, estamos mejorando la accesibilidad de nuestro contenido, empaquetamos y dividimos los archivos para optimizar la carga, pero ¿qué pasa con las imágenes?"/><style data-href="/styles.2555d509e7fccebc5289.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}body{--textColorLink:#00aa58;--textColorDate:#888}.gatsby-highlight{margin-bottom:1.75rem}.gatsby-resp-image-figcaption{font-size:80%}</style><link as="script" rel="preload" href="/app-82a431b3f41feb7028b6.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-24c470ad1102dfc2b577.js"/><link as="script" rel="preload" href="/styles-23050e051cdbfe9c9cfa.js"/><link as="script" rel="preload" href="/commons-424ae224b8acbc7bd10a.js"/><link as="script" rel="preload" href="/webpack-runtime-1eafb3ebf4e3e6253abc.js"/><link as="fetch" rel="preload" href="/page-data/blog/image-optimization/page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">PerfReviews</a></h3></header><main><h1>¿Por dónde empiezo para optimizar mis imágenes?</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">October 11, 2019</p><div><blockquote>
+<p>Como profesionales del desarrollo web, nos preocupamos de escoger el mejor framework, la librería más actual, aplicar buenas prácticas en Javascript y CSS, ser cuidadosos de la semántica en el HTML para mejorar el SEO, estamos mejorando la accesibilidad de nuestro contenido, empaquetamos y dividimos los archivos para optimizar la carga, pero ¿qué pasa con las imágenes?</p>
+</blockquote>
+<h2 id="las-imagenes-en-la-web">Las imágenes en la web</h2>
+<p>Las imágenes són una parte muy importante de la web. Seguro que con el constante avance de la tecnología, donde vemos una mejora contínua en la conectividad, posiblemente en un futuro los contenidos tendrán más vídeos que imágenes. Pero la base seguirá siendo la misma, mejorar la experiencia de usuarias y usuarios, que es de lo que va realmente nuestro trabajo.</p>
+<p>De acuerdo con el <a href="http://httparchive.org/">HTTP Archive</a>, el 50% de los datos transferidos para buscar una página web son imágenes (JPEG, PNG y GIF). En agosto de 2019, en móvil las imágenes representaban 911KB del contenido cargado para el sitio promedio de 1.8MB, y en desktop son 1MB imágenes en un promedio de 2MB.</p>
+<p><a href="https://twitter.com/dougsillars/status/1178955502212063232"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 537px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 17.877094972067038%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'72\'%3e%3cpath%20d=\'M244%2011c0%204%200%204-1%202-1-5-5-5-5-1%200%203%202%204%202%201%200-2%200-2%201-1%200%203%203%206%204%204h3l2-1%201-1%201-1%201%202c-1%203%203%202%204%200%202-5%200-7-4-5h-6l-2-1V8c-1-1-1%201-1%203M113%2047c-2%201-1%204%201%204v1c-1%200-2%200-1%201%201%202%202%201%203-1l1-1c0%202%202%203%204%202h13l3%201c1-1%201-7-1-8-1%200-3%202-2%203l-1%201-3-1v-1h1l1-1c0-2-3%200-4%202l-1%203v-3l-2-3v3l-1-1c-1-1-1%200-1%201v3l-1-3c-1-3-3-4-5-1h-1c-1-2-2-2-3-1\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/170a0566f93806dc7286f142c1e65c87/277cf/table.webp 310w,
+/static/170a0566f93806dc7286f142c1e65c87/81fec/table.webp 537w"
+          sizes="(max-width: 537px) 100vw, 537px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/170a0566f93806dc7286f142c1e65c87/fa223/table.png 310w,
+/static/170a0566f93806dc7286f142c1e65c87/140c6/table.png 537w"
+          sizes="(max-width: 537px) 100vw, 537px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/170a0566f93806dc7286f142c1e65c87/140c6/table.png"
+          alt="HTTP Archive: Table"
+          title="HTTP Archive: Table"
+          loading="lazy"
+        />
+      </picture>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">HTTP Archive: Table</figcaption>
+  </figure></a></p>
+<h2 id="la-optimizacion-de-imagenes-image-experience-es-cosa-de-todos">La <del>optimización de imágenes</del> Image eXperience es cosa de todos</h2>
+<p>Hace unos días, en el artículo <a href="https://octuweb.com/performance-web-en-tiempos-modernos/">Performance Web en tiempos modernos</a>, Miguel Ángel nos hablaba de una situación donde tenía problemas para planificar una actividad para el fin de semana: <em>“Donde tendría que ver los horarios, aparece blanco sobre blanco. Creo que está cargando, tampoco estoy seguro… el tren ha llegado y mi móvil se va al bolsillo. “Luego pruebo con la web del otro cine”…”</em>.</p>
+<p>Es muy probable que el texto de color blanco de los horarios esté sobre una fantástica e increíble imagen de una escena clave del último estreno cinematográfico, perfectamente contrastada, perfectamente encuadrada para llamar la atención del espectador e informar de los horarios para poder ver esa gran película… <strong>pero</strong>, no se ha cargado la imagen.</p>
+<p>Es ahí donde me permito utilizar el término IX (Image eXperience), hay varios puntos a tener en cuenta para una buena IX, y no sólo pasar las imágenes por el compresor que promete optimizar nuestras imágenes de la forma más efectiva.</p>
+<p>En el desarrollo de una web hay varios perfiles, ya sea en equipos, personas o alguien que ejerce más de uno de esos roles: producto, UX, diseño, desarrollo, QA, hasta <a href="https://es.wikipedia.org/wiki/DevOps">DevOps</a> (o lo que se conoce ahora como <a href="https://landing.google.com/sre/">SRE</a>) en el proceso del pase a producción. Cada uno de esos roles tiene la responsabilidad de ofrecer lo mejor para el <strong>usuario</strong> o la <strong>usuaria</strong>, aportar el máximo valor al producto, fijarse en los detalles.</p>
+<p>Sigamos con el ejemplo de la página de horarios de cine que Miguel Ángel no ha podido ver. Ante esa situación, estas son las preguntas que yo me hago y que se podrían haber utilizado con una checklist en el proceso de ideación, diseño, desarrollo y despliegue de esa página:</p>
+<ul>
+<li>¿Realmente es necesaria una imágen para ofrecer esa información?</li>
+<li>Si se ha tenido en cuenta un texto blanco, para mantener un alto contraste con la imagen de fondo, ¿por qué no se ha definido un color de fondo en caso de que la imagen no se visualice?</li>
+<li>¿Esa imagen está optimizada para dispositivos móviles?</li>
+<li>Si es una imagen en formato JPEG, ¿por qué no es un JPEG progresivo? eso hubiera mejorado la IX.</li>
+<li>Si es una imagen crítica para resaltar el producto <em>(en este caso tiene todo el sentido)</em>, ¿por qué no se ha tenido en cuenta la precarga de esa imagen?</li>
+<li>¿No se ha definido un <a href="https://addyosmani.com/blog/performance-budgets/">budget</a> para las imágenes?</li>
+<li>¿No se han hecho tests en diferentes velocidades de conexión?</li>
+</ul>
+<p>Como podéis ver, la optimización de imágenes para la web no es sólo elegir a qué porcentaje de compresión se guarda la imagen. Hay muchas cosas a tener en cuenta y muchos perfiles que pueden intervenir y detectar un posible fallo en una parte del producto tan crítica como la del ejemplo.</p>
+<blockquote>
+<p>Tratar en profundidad todos estos puntos dan para un libro… eps!, que al igual ya estoy en ello 🤪</p>
+</blockquote>
+<h2 id="optimize-adventure-time"><del>Optimize</del> Adventure Time</h2>
+<p>En el escenario que nos encontramos ya hemos hecho el análisis previo de la necesidad de las imágenes, como el título del artículo indica, la pregunta más habitual es <strong>¿Por dónde empiezo para optimizar mis imágenes?</strong>.</p>
+<h2 id="optimizacion-desde-editores-graficos"> Optimización desde editores gráficos</h2>
+<p>En la primera línea de acción en la optimización de imágenes tenemos los editores de imágenes, como <a href="www.adobe.com/Photoshop%E2%80%8E">Photoshop</a>, <a href="https://affinity.serif.com/en-gb/photo/">Affinity Photo</a>, <a href="https://www.pixelmator.com/pro/">Pixelmator</a>, <a href="https://www.paintshoppro.com/">PaintShopPro</a>, <a href="https://www.getpaint.net/">Paint.net</a> o <a href="https://www.gimp.org/">GIMP</a> entre otros. No olvidemos a <a href="https://www.sketch.com/">Sketch</a> que aún no siendo un programa para la edición de imágenes, se utiliza mucho en la edición de interfaces<sup>(1)</sup>.</p>
+<h3 id="photoshop">Photoshop</h3>
+<p>Es el editor de imágenes más utilizado por los equipos de diseño. Curiosamente <strong>no</strong> es el que nos ofrece más opciones de optimización. En su última versión CC 2019 ofrece una ventana de diálogo de exportación con algunas mejoras para generar imágenes de varias densidades, como se puede ver en la columna de la izquierda, pero no nos deja mucha elección en cuanto al formato de imagen y parámetros de configuración.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ece47b57a65897dce9f1324443a7af46/e79f6/Photoshop-Export.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.10411198600175%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'268\'%3e%3cpath%20d=\'M0%20138v130h401V8H0v130m6-86l3%201c3%200%203%200%201%201-2%200-2%201-1%201h2l2%201-1%202H9c-3%201-4%202-2%203v2l-1%202%209%201h8v-5c0-5%200-6-2-6l-2%201-1%201v3c0%205-2%205-3%200%200-3%201-4%202-5v-1c-2-1-1-1%202-1%208%200%204-2-4-2l-9%201m177%2013v5l-1-4c-2-4-4-4-4%200%200%203%200%203-8%203-13%201-15%201-15-1-1-4-4-4-4-1s-1%203-16%204c-8%201-9%201-9%204%200%202-1%202-3%202s-3%201-4%203l-3%202-2%202c-1%202-1%202-2%201l-3-2v7c1%201%202%203%201%205%200%204%201%204%204%200l2-3c1%200%203%203%203%207l2%203%202-15c-1-4%201-5%2025-4l24-1c1-1%202-1%202%205l1%205h7c-2%200-2%200-1%203%201%202%201%203-1%203l-1%201h8v3c0%205-2%208-4%208s-2%200-2%203v7c0%203-2%203-2%200-1-2-1-2-2-1l-1%204c1%201-3%205-6%205l-3%201h-1c0-1%201-3%203-3%202-1%202-2%201-2l-2-1h-7l-1%205v4h4l7-2c4%200%204%203%201%204-4%201-4%204%200%204%204-1%205%201%201%203-4%201-3%203%201%202%204%200%204%200%204%202-1%202-8%204-9%202s-4%201-6%208l-2%206%201-7v-6l-6%202-36%2014c-17%206-18%208-5%207l1%201%205%201h4l-2%201-2%201h8l2%201c1-1%206%200%206%201%200%202-12%205-21%206l-10%202v10h32c30%200%2034%200%2034-2%202-3-5-4-20-2l-5-1%2013-2h15l-1-3-1-6-1-9-2-11v-4h5l9-2c3%200%203%200%202%201-1%202-1%202%201%202v1c-2%200-3%203-3%209-1%204%200%204%202%205s2%202%202%206l1%206%201%202c-1%203%204%204%2022%202h7v-11l-1-14c0-8-1-15-2-14v-2l-1-3-1%204c0%205-1%207-3%205v-5c1-5%201-5-6-5-5%200-6%200-5-1l7-1c4%200%205%200%205-2l-1-2-2-8v-10c2%200%205-1%205-3l3-4c4-4%204-5%201-4l-1%201-1%201-2%201c0%202-5%204-6%202l-3-15%201%201%201%202%201%205%201%205v-10h6c4%200%205%200%205-2%200-5%209-9%2010-4v6l-1%202-1%201v3c0%202%200%204-2%205v3c1%202%205%201%205%200-1-2%205-4%206-2%201%201%201%201%201-1%200-1-1-2-3-2-4%200-3-1%202-1%202%200%204%200%203%201v15c-1%201-1%202%201%205l2%206%202%206c2%205%203%208%201%208-2%201-2%200-2-1%200-3-6-16-6-15v12l-2%2015-2%2015v5l-1%203v3c1%202%2025%201%2029-2h7c0-2%202-1%202%202%201%204%202%204%202-1%201-6%202-6%202%200%200%205-1%206-3%208-3%201-7%201-9-1h-34a993%20993%200%2000-39-1c0-2-1-2-1-1l-2%203c-1%201-1%201%201%202l1%201-17%202-5%201c-2%201%2018%201%2056%201a720%20720%200%200068%200h7v-59l-1-59c-2%200-3%200-3-2%200-3-2-4-5-3l-2%201h2c3%200%203%200%203%202-1%201%200%202%201%203l1%203%201%202c1%202-1%204-4%204h-2l2%202%205%201v1l-1%201c0%201-1%202-4%202s-5-2-4-5v-6l-1-4-3-1c-2%200-2%200-2%204v3c-2%200-2-1-2-8s0-7-2-6l-2%205c0%204-4%206-5%203l-2-2v5l1%201v6l-3%201h-3l1-3v-2c0-1-1-1-2%201l-1%201-1-10%201-5c0-3%204-6%207-4%202%201%203%201%204-1%201-1%202-1%203%201%202%201%202%201%202-1s-1-3-4-4c-4-1-4-2-4-4%200-3%200-4-3-4h-3l1%204-1%204-1-4-1-3v3l-1%204-1-1-1-5c-1%202-1%208%201%208%202%201%202%201%201%202l-2%205v4l-1-3c-1-4-1-3-1%203l-1%206c-1%203-1%203%201%203l2-1c1-1%201%200%201%201l-2%204-1%203-5-4-5-3%204%204c5%204%205%204%204%2010v6l2-3%203-3%202-1h1l1%202c1%200%201%201-1%202l-3%207c0%204-1%205-4%205s-3%200-2-1c2-1%202-2%201-2l-1-4-1-2v2c0%202%200%203-2%204-5%202-5%201-5-4l1-6-4-1h-6c-2%201-3%201-2-1l7-1h7l-7-1h-6l3-5%202-9v-3c8%201%2011-1%206-3l-2-2v-2l-1%202v2l-1-1h-2c-2%200-2%200-2-2%200-1-1-2-5-2l-11-3-13-2c-8%200-8%200-8-3l-2-3c-3%200-4-2-2-4l3-1h-5l-6-1h-6v5m36%200v4h-4l-5-1h-1l-2%201-2%201%209%201%209-1-1-1-1-2%201-2%201%202%201%202%201-3c0-2%201-2%207-2%208%200%2010-1%207-3h-5c0%201-1%202-2%201l-2-1-2%201h-2c0-2-2-3-2%200l-1%201-2-1-1-2-1%205m23%200c0%203%200%204-1%203s-1-1-2%201h-13c-1%201%202%202%206%201h3l4%201%203-1%203-1c2%201%203%201%202-1h1c2%203%204%202%204%200%200-3-1-4-2-2h-1l2-2%201-1-2-1-1-1-4-1c-3%200-3%200-3%205M128%2086c0%206%201%2011%203%2011l2%201c-1%201%204%202%205%201l1-4c0-2%200-3%201-2l3-1c3-1%207-1%207%202%201%201%200%201-1%201-3%200-5%202-5%204s6%203%207%202h1l3%201c5%200%205-2%204-11v-6h-16l-15%201m-1%2031c-1%201-1%202%201%205l2%205-2-2-2-2%201%209c2%202%201%203-6%201l-12-2h-4v5c0%206%200%206%209%207l5%202c2%201%202%201-3%202l-8%202-2%202c-1%202%200%207%201%207a402%20402%200%200041-11c-3%201-4%205-2%205%204%200%2015-6%2016-7%201-3%201-3-5-2-7%203-8%202-1-1%209-2%2011-4%209-7-2-1-3-1-9%201-8%202-9%202-15%200l-6-1-1-6v-7l-1-1-1-1%201-2%201-1h-7m-16%2081l-5%201%2028%201%2028-1-15-1a605%20605%200%2001-36%200\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/ece47b57a65897dce9f1324443a7af46/277cf/Photoshop-Export.webp 310w,
+/static/ece47b57a65897dce9f1324443a7af46/5077d/Photoshop-Export.webp 620w,
+/static/ece47b57a65897dce9f1324443a7af46/e1adb/Photoshop-Export.webp 1240w,
+/static/ece47b57a65897dce9f1324443a7af46/92eb6/Photoshop-Export.webp 1860w,
+/static/ece47b57a65897dce9f1324443a7af46/354be/Photoshop-Export.webp 2286w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/ece47b57a65897dce9f1324443a7af46/fa223/Photoshop-Export.png 310w,
+/static/ece47b57a65897dce9f1324443a7af46/a5ed1/Photoshop-Export.png 620w,
+/static/ece47b57a65897dce9f1324443a7af46/7bfa5/Photoshop-Export.png 1240w,
+/static/ece47b57a65897dce9f1324443a7af46/b429f/Photoshop-Export.png 1860w,
+/static/ece47b57a65897dce9f1324443a7af46/e79f6/Photoshop-Export.png 2286w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/ece47b57a65897dce9f1324443a7af46/7bfa5/Photoshop-Export.png"
+          alt="Photoshop: Export"
+          title="Photoshop: Export"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Photoshop: Export</figcaption>
+  </figure></p>
+<p>Podemos exportar a los formatos PNG, JPG, GIF y SVG <em>(sí, SVG, genera un archivo SVG con la imagen incrustada en base64)</em>, más allá del porcentaje<sup>(2)</sup> de calidad no tenemos muchos parámetros de configuración para exportar las imágenes. Lo que llama mucho la atención es que no podemos contar con el formato WebP para la exportación</p>
+<p>En versiones anteriores de Photoshop, y en esta como bajo el nombre de “Save the Web… (legacy)”, nos ofrece algunas configuraciones predefinidas, siempre según el criterio del equipo de Adobe. Uno de los parámetros que echo de menos en Photoshop es el del <a href="https://es.wikipedia.org/wiki/Submuestreo_de_crominancia">Submuestreo de crominancia</a><sup>(3)</sup> donde podríamos optimizar mejor la optimización según nuestro criterio. En su lugar mantienen un submuestreo de 4:4:4 (1x1) entre los valores 51% a 100% del porcentaje de calidad y por debajo del 51% aplican un submuestreo de 4:2:0 (2x2). Es por eso que podréis apreciar un notable cambio entre una imagen exportada a 51% y la misma imagen a un 50%.</p>
+<h3 id="affinity-photo"> Affinity Photo</h3>
+<p>Es otro editor de imágenes que está ganando tracción entre la comunidad de diseño. Así que veamos qué nos ofrece para la exportación de imágenes.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d65bb35afd1cf79d93c0ff0902d4c749/2f950/Affinity-Export.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'230\'%3e%3cpath%20d=\'M0%2051v52l16-1%2015%201%202%201c2%200%202%2041-1%2044-2%202-15%203-15%201l-8-1H0v21l1%2015%201-7v-7c0-6%201-8%207-8l1-2%203-1c3%201%203%200%204-2s2-2%207-2h7c1%201-2%2030-3%2033%200%202-2%203-5%204-2%200-3%201-1%201h2l-2%203-6%207a559%20559%200%2000-10%207l-2-2c-1-1-2-1-1-2l-1-4c-2-1-2%200-2%2013v15h89v-3l1-6v-3h63v4c2%207%202%208%205%208s3%200%203-6c0-5%200-6%202-6s2%201%202%206v6h32l33-1v-2c-3-3-1-6%202-5%203%200%204%200%205-2%202-2%203-2%209-2l8%201-3%205-2%206h2c10-3%2032-4%2038-1l18%201h15v-6l-1-6h3c4%200%209%202%2010%204l4-2c5-3%207-3%207%201%200%202-4%204-10%204-1%200-3%201-3%203l-2%202h12c13%200%2013%200%2012-2l-3-2h-2l-1-3c-1-1-1-1%201-1l2-1h-3v-1c3-3%206-3%205%200l1%201h2l2%201h2c1%201%201%201%208-3%202-2%203%200%204%206%200%205%200%205%204%205h4c0-2-2-6-3-5l-2-2-2-4-1-2c2-2%208-3%209-2l4-1c1-1%204%201%206%205l9%2011%201-15c0-9-1-11-1-6%200%207%200%2010-1%209l-2%201h-2v-1c2%200%200-4-2-6h-4a169%20169%200%2001-26%202l-1-2c-2-1-2-7%200-9s2-2%201-5l-2-7v-3l2%202%202%202%205-2c8-4%208-4%208-13%200-8-1-10-6-8-2%200-2%200-1-4%201-3%200-10-3-13-2-3-1-4%202-5%204-3%205-2%205%201l1%203c2%200%203%203%202%207l1%203%201-4c1-5%203-6%203-3%200%209%2010%202%2011-8v-10l-1%202h-2c0-1%200-2-1-1l-1-1%202-1%203-2c1-2%202-4%204-4%202-1%202-2%202-7l-1-5-4-3c-1-2-3-3-4-2v-5l-3%203c-2%203-3%204-5%203-3%200-4%202-1%202%202%201%202%204%200%206-2%201-6-1-5-2s0-2-1-2c-2-1-2-1-1-2%203-1-5-2-11-2h-3l-1-18V75c1-2%203-3%203%200%201%201%201%200%201-1-1-4%200-4%208-3h8l9-1c8%200%209%200%2010%203v27c-2%201-6-1-6-3l1-20-5-1c-4-1-4-1-4%201l3%201%203%201a1414%201414%200%2000-14%202h-4l1%204%201%207c0%203%200%204%202%204l4%201c2%201%202%200%202-6l1-8%201%201%203%202c2%201%203%204%200%204-5%200-3%208%202%208%201%200%202%200%201%201-3%201%200%203%205%203h5V0H0v51m0%201c0%2028%201%2038%201%2022a184%20184%200%20011-33L1%2021%200%2052m44%207v8h12v-6c0-8-2-10-8-10h-4v8m29%200l1%208h11v-6c0-7-2-10-8-10h-4v8m30-3l1%204c1%200%202%201%202%203l-2%202-1%201%206%201c7%200%208-2%202-2-3%200-4%200-2-1l3-2%202-2c2%200%201-4-1-7l-6-2h-4v5m29%200l1%204%201%202c0%202%200%202%201%201h1l2%201%201-1h3v-2l1-1c2%200%201-5-1-7l-6-2h-4v5m119-2l-1%207v5h12v-4c0-6-2-11-3-9h-1c0-2-1-2-3-2-4%200-4%200-4%203m59%200l-1%207v5h12v-3c0-3-1-4-5-4l-3-1c3%200%207-4%206-5%200-1-1-1-1%201-1%201-1%201-1-1s-1-2-3-2c-4%200-4%200-4%203m29%205v8h6c6%200%206%200%205-2-1-4-2-5-3-3h-1c0-1%201-2%203-2l2-2c0-4-4-7-8-7h-4v8\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/d65bb35afd1cf79d93c0ff0902d4c749/277cf/Affinity-Export.webp 310w,
+/static/d65bb35afd1cf79d93c0ff0902d4c749/5077d/Affinity-Export.webp 620w,
+/static/d65bb35afd1cf79d93c0ff0902d4c749/e1adb/Affinity-Export.webp 1240w,
+/static/d65bb35afd1cf79d93c0ff0902d4c749/ded3f/Affinity-Export.webp 1600w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/d65bb35afd1cf79d93c0ff0902d4c749/fa223/Affinity-Export.png 310w,
+/static/d65bb35afd1cf79d93c0ff0902d4c749/a5ed1/Affinity-Export.png 620w,
+/static/d65bb35afd1cf79d93c0ff0902d4c749/7bfa5/Affinity-Export.png 1240w,
+/static/d65bb35afd1cf79d93c0ff0902d4c749/2f950/Affinity-Export.png 1600w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/d65bb35afd1cf79d93c0ff0902d4c749/7bfa5/Affinity-Export.png"
+          alt="Affinity Photo: Export"
+          title="Affinity Photo: Export"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Affinity Photo: Export</figcaption>
+  </figure></p>
+<p>Podemos ver que en la exportación nos ofrecen más formatos para seleccionar<sup>(4)</sup>, pero no nos engañemos, compatibles para la web seguimos teniendo disponible PNG, JPEG, GIF y SVG. Pero igual que Photoshop, mantiene la simplicidad en los parámetros de compresión con una barra deslizable para seleccionar valores entre el 1% y el 100%.</p>
+<h3 id="pixelmator">Pixelmator</h3>
+<p>Una alternativa muy interesante y económica para la edición de imágenes. No mejora la opción de seleccionar la calidad de compresión de los editores anteriores, pero sí que podemos ver que han añadido el formato WebP como opción para mejorar la optimización de nuestras imágenes. Incluso con WebP, podemos seleccionar el porcentaje de calidad<sup>(5)</sup>.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1200px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/579687901bc861cd3c033e7dffd33cc6/6ff5e/Pixelmator-Export.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'200\'%3e%3cpath%20d=\'M0%2026c0%2025%200%2025%202%2024l2-5%201-3c2-1%207%200%207%201l2-1c3-3%2014-4%2015%200%200%203-2%204-9%204l-7%201%201%203c0%206%200%206%208%205h7v2c0%203%200%203-12%204-4%200-5-1-6-2%200-3-2-1-1%202%200%203%202%203%206%202l8-1c4%200%205%201%205%203s-1%203-5%203h-9c-3%200-5%202-3%203%202%200%202%205%201%209-1%202-1%202-1%200%200-4-1-3-1%200%200%202-1%203-3%203-3%200-4-2-3-16%200-9-1-13-4-13L0%2070v15h15l27-2h13v4l1%2046v42h52a300%20300%200%200154%201c1-1%209-2%2048-2%2048%200%2059%200%2056%202-5%203-4%2010%201%2012l2%202-3%201c-2%200-4%202-5%203l-4%203c-1%201%200%201%202%201l4-1%2023-3%205-1c4-3-4-5-8-3-3%202-4%202-4-1%201-2%200-2-3-1-3%200-4%200-2-4%201-3-3-8-5-8v-1h7c5%200%206%200%206%202%200%203%202%203%205%200%203-2%204-2%2030-2h28v-3c0-3%200-3%201-2h1l4-1c3-1%204%200%207%203%204%204%207%204%207%200%200-2-11-13-15-15s-5-3-5-5v-29h8v-15c0-14%200-15-2-15l-6-1%204-1c3%200%204%200%204-2s-3-3-6-1c-2%201-2%201-2-3v-5h4l4%201%204-1%2013-1c12%201%2013%202%2013%207v3l1-4%201-2%201%203%201%202h10l-3-4c-4-5-2-7%202-2%202%202%202%202%202%200-1-3%202-4%202%200%201%201%201-5%201-13l-1-12v4l-3-2c-4-4-12-1-12%205%200%203-6%203-7%200s-3-6-5-6l-2-2c-1-2-3-3-3%200l-2%204-2%204c0%201-2%202-5%202l-2-3c-2-4-5-6-9-5-3%201-3%200-3-3-1-6%200-7%207-7l7-1%204%201%205%202c2%200%203%200%203-6v-6h-7c-10%200-13%201-12%204%200%203-2%205-5%205-2%200-2%200-2-5v-5h50l-1%205%201%207c2%201%204%201%204-2%200-1%201-1%201%201l1-23V0H0v26m80-2l-1%209v9h16v-6c0-6%200-7-3-10s-10-4-12-2m231%200h-5v18h15v-7c0-9-3-12-10-11m-186%209v9h15v-7c0-9-2-11-10-11h-5v9M44%2070l-1%204c0%203%200%203-3%203-4%200-4%200-4%203%200%202%200%202%206%202l9-1c3%200%203%200%203-2s-1-2-3-2c-3%200-5-2-3-6%200-2-3-3-4-1m313%2024l-1%2016%201%2012h10l12-1c1-1%200-11-1-12l-1-3-1-4c-1-1-1-1%201-1l2%201%203%201h2l-1%208c0%209%200%2011%206%2011h4l-1%208-1%2011-1%204h10v-11c0-9%200-11-2-11v-1c2%200%202-1%202-15V93h-9c-21%202-25%202-29-1s-4-3-5%202m-3%2052l-4%203c-4%202-5%204-2%204l5%203%206%204%205%201c2%201%203%200%204-1%200-2-3-6-6-6-2%200-4-4-4-6%200-3-2-4-4-2m-312%203l-3%203-3%203c-1%203-1%203-12%203-9%201-13%201-13-1h-1l-2%202-1-1c1-1-1-2-5-2-2%200-2%200-2%207v6l4-5%203-4-1%205-1%203-2%203c-1%201-1%201%202%201l4%201%202-2c2-4%204-5%2012-5%2013%200%2012-3%2010%2029l-1%205h12v-8c1-13%203-14%202-2v10h9v-4l-3-20c-2-21-3-26-6-21-1%202-1%201-2-2v-2c1%200%202-1%201-2%200-4-3-4-3%200M4%20183l2%2011%202-1%205-2c8-1%208-6%201-6l-6-1c-1-2-3-2-4-1\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/579687901bc861cd3c033e7dffd33cc6/277cf/Pixelmator-Export.webp 310w,
+/static/579687901bc861cd3c033e7dffd33cc6/5077d/Pixelmator-Export.webp 620w,
+/static/579687901bc861cd3c033e7dffd33cc6/6bc95/Pixelmator-Export.webp 1200w"
+          sizes="(max-width: 1200px) 100vw, 1200px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/579687901bc861cd3c033e7dffd33cc6/fa223/Pixelmator-Export.png 310w,
+/static/579687901bc861cd3c033e7dffd33cc6/a5ed1/Pixelmator-Export.png 620w,
+/static/579687901bc861cd3c033e7dffd33cc6/6ff5e/Pixelmator-Export.png 1200w"
+          sizes="(max-width: 1200px) 100vw, 1200px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/579687901bc861cd3c033e7dffd33cc6/6ff5e/Pixelmator-Export.png"
+          alt="Pixelmator: Export"
+          title="Pixelmator: Export"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Pixelmator: Export</figcaption>
+  </figure></p>
+<h3 id="gimp">GIMP</h3>
+<p>Posiblemente es la herramienta menos utilizada en el mundo del diseño. Es una herramienta Open Source, con una gran comunidad detrás, y eso se puede ver en los numerosos parámetros de configuración que tenemos disponibles en las opciones avanzadas al exportar una imagen.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 970px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e6d691f2322ea320576c19c967049560/9435c/GIMP-subsampling.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 117.31958762886599%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'469\'%3e%3cpath%20d=\'M0%20242l1%20226%20199%201c190%200%20198%200%20199-2%202-2%202-19%202-226V18H0v224m0%201\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/e6d691f2322ea320576c19c967049560/277cf/GIMP-subsampling.webp 310w,
+/static/e6d691f2322ea320576c19c967049560/5077d/GIMP-subsampling.webp 620w,
+/static/e6d691f2322ea320576c19c967049560/34a9f/GIMP-subsampling.webp 970w"
+          sizes="(max-width: 970px) 100vw, 970px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/e6d691f2322ea320576c19c967049560/fa223/GIMP-subsampling.png 310w,
+/static/e6d691f2322ea320576c19c967049560/a5ed1/GIMP-subsampling.png 620w,
+/static/e6d691f2322ea320576c19c967049560/9435c/GIMP-subsampling.png 970w"
+          sizes="(max-width: 970px) 100vw, 970px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/e6d691f2322ea320576c19c967049560/9435c/GIMP-subsampling.png"
+          alt="GIMP: Export"
+          title="GIMP: Export"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">GIMP: Export</figcaption>
+  </figure></p>
+<p>Donde vemos que podemos configurar parámetros más avanzados como el Suavizado, Reiniciar marcadores, Submuestreo o Método DCT<sup>(6)</sup>. Son parámetros de configuración que pueden asustar, e incluso hacernos invertir mucho tiempo haciendo pruebas.</p>
+<h3 id="otros-editores">Otros editores</h3>
+<p>Hay muchos editores, no los podemos analizar todos. La mayoría coinciden con la funcionalidad de definir una escala de valor para la optimización de las imágenes con pérdida de calidad, como JPG y algunos con opción para hacerlo también con WebP.</p>
+<h2 id="optimizacion-desde-aplicaciones">Optimización desde aplicaciones</h2>
+<p>En la sección anterior hemos analizado las herramientas que suelen utilizar desde los equipos de diseño para la edición de imágenes. Dicho equipo puede ampliar la frontera de optimización utilizando herramientas en formato de aplicación de escritorio, específicas para ello.</p>
+<p>Espera, hemos dicho que <strong>la IX es cosa de todos</strong>. Así que aquí tenemos la oportunidad de conocer herramientas que podemos utilizar todos los roles que intervienen en el desarrollo de un producto… conozcamos algunas de estas aplicaciones.</p>
+<p>Si estás en un entorno Mac, la mejor opción (IMHO) es <a href="https://imageoptim.com/">ImageOptim</a><sup>(7)</sup> de <a href="https://twitter.com/kornelski">Kornel Lesiński</a> y además es gratuita.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 514px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/862e5d248acb0ba37f7db23c29e17f24/a5a7c/ImageOptim-app.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 32.295719844357976%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'129\'%3e%3cpath%20d=\'M35%20112l2%203%203%201h-3c-2-1-3%200-1%201s8%200%209-1h3l2-1c0%202%202%203%203%202h2c2%202%204%200%204-3%200-2%200-3-1-2l-5%201-5%201h-1c0-1-4-2-6%200-1%201-2%200-1-2l-2-1-3%201m192%202c-1%202%201%204%203%203h4l1-1h2c1%202%202%202%202%201h3l1-2%201%201c1%202%201%202%203%201h2l2%202%202-2h1c2%201%204%201%204-2%200-2-2-3-3-2h-24c-3-1-3-1-4%201\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/862e5d248acb0ba37f7db23c29e17f24/277cf/ImageOptim-app.webp 310w,
+/static/862e5d248acb0ba37f7db23c29e17f24/b837e/ImageOptim-app.webp 514w"
+          sizes="(max-width: 514px) 100vw, 514px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/862e5d248acb0ba37f7db23c29e17f24/fa223/ImageOptim-app.png 310w,
+/static/862e5d248acb0ba37f7db23c29e17f24/a5a7c/ImageOptim-app.png 514w"
+          sizes="(max-width: 514px) 100vw, 514px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/862e5d248acb0ba37f7db23c29e17f24/a5a7c/ImageOptim-app.png"
+          alt="ImageOptim"
+          title="ImageOptim"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">ImageOptim</figcaption>
+  </figure></p>
+<p>Como la mayoría de aplicaciones de escritorio en entornos Mac una de las características que le hace destacar es una apariencia simple, pero que eso no engañe, se trata de una herramienta muy potente y profesional.</p>
+<p>Con sólo arrastrar una imagen, un grupo de ellas o una carpeta, la aplicación empieza a funcionar, optimizando todas las imágenes. Hay que tener en cuenta que lo que hace es sustituir la imagen original por la optimizada. Eso es un tema que me gustaría comentar, pero lo veremos en la siguiente sección.</p>
+<p>La configuración por defecto ofrece una compresión de las imágenes <strong>sin pérdida</strong>, eso quiere decir que no apreciamos cambios visuales, pero sí reduciremos el tamaño. Tenemos la opción de marcar el checkbox de <strong>Enable lossy minification</strong> para seleccionar porcentajes de calidad para una optimización con pérdida de calidad.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a3cc40802a1d688d1e50db4296c6c0ba/83ac2/ImageOptim-Quality.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 59.276018099547514%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'237\'%3e%3cpath%20d=\'M155%207c0%203%202%204%203%201h1l1%202%201-2h1l3%202c2-1%203%200%203%201%201%202%203%201%204-1l1-1h10c0%202%201%202%203%200h2l1%201%201-2-1-3-1%201h-4l-2-1h-6l-3%201h-6l-1-1-2%202h-1c-1-2-5-2-6%200%200%201-1%201-1-1-1-2-1-2-1%201m59%200c0%203%200%203%201%202l1-1c1%202%204%203%204%201h2c0-2%200-2%201-1%201%202%204%203%204%201h1c1%201%201%201%201-1l1-1%201%201c0%201%202%202%207%202%207%200%207%200%207-2-1-2-1-2-6-3l-6%201h-13l-3-1h-1l-1-1-1%203m-51%2018v6c-1%202%201%202%2019%202h20v-4c0-8%201-8-20-8h-19v4m4%2062l-79%201h79a1213%201213%200%20000-1m72%2031l-3%201c-2-1-3%200-3%201%200%202%200%202-1%201-1-3-5-4-6-2v3l4%201h8c7%200%208%200%207-2%200-2%200-2%201-1v3l1%201%202-3v-2h-2c-1-1-8-3-8-1\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/a3cc40802a1d688d1e50db4296c6c0ba/277cf/ImageOptim-Quality.webp 310w,
+/static/a3cc40802a1d688d1e50db4296c6c0ba/5077d/ImageOptim-Quality.webp 620w,
+/static/a3cc40802a1d688d1e50db4296c6c0ba/e1adb/ImageOptim-Quality.webp 1240w,
+/static/a3cc40802a1d688d1e50db4296c6c0ba/06e54/ImageOptim-Quality.webp 1326w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/a3cc40802a1d688d1e50db4296c6c0ba/fa223/ImageOptim-Quality.png 310w,
+/static/a3cc40802a1d688d1e50db4296c6c0ba/a5ed1/ImageOptim-Quality.png 620w,
+/static/a3cc40802a1d688d1e50db4296c6c0ba/7bfa5/ImageOptim-Quality.png 1240w,
+/static/a3cc40802a1d688d1e50db4296c6c0ba/83ac2/ImageOptim-Quality.png 1326w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/a3cc40802a1d688d1e50db4296c6c0ba/7bfa5/ImageOptim-Quality.png"
+          alt="ImageOptim: Quality"
+          title="ImageOptim: Quality"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">ImageOptim: Quality</figcaption>
+  </figure></p>
+<p>Una de las cosas que más me gusta de ImageOptim es que tras esa simplicidad esconde una lista de compresores<sup>(8)</sup> para conseguir los mejores resultados en cada caso. Pasar cada uno de los compresores que tengamos marcados en la lista en cada una de las imágenes y selecciona la imagen con mejor resultado. Ese proceso hace que se tome un tiempo, pero os puedo asegurar que vale la pena.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/1fd7e4d11e3ed7eb2e3fce7beceffdfb/83ac2/ImageOptim-Compressors.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 59.276018099547514%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'237\'%3e%3cpath%20d=\'M214%207c0%203%200%203%201%202l1-1c1%202%204%203%204%201h2c0-2%200-2%201-1%201%202%204%203%204%201h2l1-2%201%201c0%202%209%202%209%200h2v1l1%201%202-2c-1-3-6-3-8-1l-3%202%201-2%201-2-2%201h-17l-1-1-1-1-1%203m-94%2016l-1%206%201%204h43l-1-6v-6h-21c-19%200-20%200-21%202M16%20119l1%2087h84V33H16v86m2%201v84h82V35H18v85m27-48c0%203%200%203%202%201h2c0%203%202%203%202%200l1%201c2%201%202%201%202-1v-2l1%202c1%202%205%203%205%201h8c2%202%204%200%204-3%200-2%200-2-1%200s-2%203-3%201c0-3%200-3-1-2h-1c0-2-4-1-5%201l-2%201h-1v2l-1-2c0-2%200-2%202-2h1c0-2-7-1-7%201h-1c-1-2-1-2-4-1l-2%201%201-1v-1c-2%200-2%201-2%203m0%2024c-1%203-1%203%204%203l5-1h7c1-2%202-2%202-1%200%203%202%202%202%200h1c1%202%208%202%208%200l-1-1v1l-1%201c-2-1-2-4%200-3l2-1-3-1c-3%200-4%201-4%202l-1-1h-4c-2-1-2-1-4%201h-3c-2-2-5-2-5%200l-1%201-1-1c0-3-2-2-3%201m131%207h-18c-16%200-18%201-18%202l1%202%201-2h1c0%201%201%202%204%202%202%200%203%200%202-1l-1-1h4v1c-1%201-1%201%201%201l2-1h1l3%201%202-1h3c1%202%207%201%207-1h1c0%201%202%202%207%202%206%200%206%200%206-3%200-1%200-2-1-1h-8m64%200l-5%201-5%201%201%202%202-1h5l13%201c13%200%2013%200%2013-3%200-2-1-3-2-1h-10l-2-1c-3%202-6%202-8%201h-2m38%2079c0%202%200%202-1%201s-14-2-16-1h-6c-2%200-2%200-2%202%200%203%200%203%202%202h3l2-1h2c0-2%200-2%201-1h5c0%202%205%202%206%200h1c0%202%209%202%2010%200h3l1%202c1%200%202-1%201-3-1-1-9-2-10-1l-1-1c-1-1-1-1-1%201m-113%2030c0%206%202%207%203%201%200-6%203-5%203%200s2%205%203%200c0-5%203-5%203%200%201%205%202%205%203-1%200-5-2-7-5-5h-10v5\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/1fd7e4d11e3ed7eb2e3fce7beceffdfb/277cf/ImageOptim-Compressors.webp 310w,
+/static/1fd7e4d11e3ed7eb2e3fce7beceffdfb/5077d/ImageOptim-Compressors.webp 620w,
+/static/1fd7e4d11e3ed7eb2e3fce7beceffdfb/e1adb/ImageOptim-Compressors.webp 1240w,
+/static/1fd7e4d11e3ed7eb2e3fce7beceffdfb/06e54/ImageOptim-Compressors.webp 1326w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/1fd7e4d11e3ed7eb2e3fce7beceffdfb/fa223/ImageOptim-Compressors.png 310w,
+/static/1fd7e4d11e3ed7eb2e3fce7beceffdfb/a5ed1/ImageOptim-Compressors.png 620w,
+/static/1fd7e4d11e3ed7eb2e3fce7beceffdfb/7bfa5/ImageOptim-Compressors.png 1240w,
+/static/1fd7e4d11e3ed7eb2e3fce7beceffdfb/83ac2/ImageOptim-Compressors.png 1326w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/1fd7e4d11e3ed7eb2e3fce7beceffdfb/7bfa5/ImageOptim-Compressors.png"
+          alt="ImageOptim: Compressors"
+          title="ImageOptim: Compressors"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">ImageOptim: Compressors</figcaption>
+  </figure></p>
+<p>Existen alternativas de ImageOptim para Windows y Linux como podemos ver en su propia <a href="https://imageoptim.com/versions">web</a>.</p>
+<p>Os dejo referencia de otras aplicaciones (para Mac) que podéis probar, muchas de ellas de pago con versiones de prueba durante unos días.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/41a433b70122fe733543c03d4e9774ae/11ddf/Image-Optimization-Apps.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.04504504504504%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'180\'%3e%3cpath%20d=\'M34%2010c0%202-6%203-7%201h-6c-1%202%203%205%204%203%202-2%209-1%209%201l2%202c2%200%201%203-1%203-1%201-1%201%201%201l3-1c1-2%201-2%203%200l4%201c2%200%202%200%201-1-2%200-3-3%200-3l1-2c0-2%207-3%209-1%201%202%203%200%203-2s-3-3-4-1c-2%202-8%201-8-1%200-4-4-2-4%202-1%203-2%204-4%204l-2-1c1-4%200-7-2-7l-2%202m156-1c-23%209-29%2037-11%2053%2020%2018%2051%204%2051-23%200-21-21-36-40-30m-71%201l2%201-9%202c-2%200-2%200%201-1l3-1h-4c-6-2-7%202-7%2033l1%2024%203%202c3%202%2021%202%2025%200l3-1V43c-1-31-1-32-8-33h-10m167%208c1%201-1%202-5%201l-1%201v3c-1%201-1%201-1-2v-3l-4%201c-15%202-19%2014-7%2019%205%202%209%201%208-1%200-2%200-2-1-1-1%203-3%202-2%200l-1-1c-1%201-1%200-1-1l-2%201h-2l3-3c3-3%203-6%200-6l2-1%203-2h1c1%201%200%204-2%204l1%202c2%202%208%201%207-2-1%200%200-2%202-2%204-2%206-2%204%200-3%201-3%204%201%207%202%202%204%202%204%200l-1-1-1-1c-1-2-1-2%201-1%202%202%202%202%202%200%202-3%201-5-2-7l-1-2c2%200%200-2-3-3-3%200-3%200-2%201m10%207l-2%2010c-2%202-3%205-2%206h-2l-1%204v1c2%200-6%204-9%204l-2%201h-2l-2-1c0%201-2%200-3-2l-3-4-1-1-1-1-2-4c-4-4-5-7-5-10%201-4-1-3-4%203-11%2023%2015%2049%2036%2036%2015-9%2018-30%207-44-2-2-2-2-2%202m-89%200l-19%202-13%202%204%2021%202%206%209-2a220%20220%200%200132-4l-4-21c-2-6-2-7-11-4M16%2035l-1%203c0%203%200%203-1%202-1-3-2%205-2%2018v9h3c4%200%204%200%204-4l2-11%201%206v6h5c7-1%206-1%205-5-1-5-1-5%202-6%203%200%203%200%201%206-2%204%200%205%2013%205h12v-6c0-8%202-7%202%201l1%208h7V54c-1-14-2-20-3-12-1%204-1%204-1-2v-6H41l-25%201m319%205c-6%209-6%2012%202%2020%2011%2012%2028%2013%2040%203%208-8%209-10%206-17l-4-6c-2-2-2-2-2%201-2%207-9%2012-19%2012s-19-6-19-13c0-4-1-4-4%200m-150%201c-5%205-5%205-4%209%201%203%202%203%204%203l28-5c9%200%209-2%202-6-3-3-5-3-6-2h-15c-4-3-6-2-9%201m-73%2059c-19%205-29%2026-21%2044%2015%2030%2059%2021%2061-11%201-23-19-39-40-33m-82%202c-2%200-6%203-9%206-26%2024%203%2065%2034%2049%2021-11%2021-43%200-54-7-3-18-4-25-1m242%200c-10%202-15%206-21%2016-3%206-2%209%204%2014l18%2010%204%201-4%201c-5%200-13-1-19-3-6-3-5%202%204%2011%207%207%2011%206%2019-6%201-2%203-3%206-4l15-6c9-5%2010-5%2010-8%200-7-6-20-8-20l-5-2c-8-6-13-7-23-4m-156%204v7l-1%203-1-5-1-4-1%203c-3%205-3%2015%200%2018%204%204-2%201-7-4-3-3-4-2-1%201%201%202%200%203-2%201h-1c0%202%204%209%207%2011l2%202h-2c-3%200-8%204-6%205l1%203%203%205c3%203%205%204%2014%202h9c4%202%202-1-2-4-4-2-4-3-2-4l6-1c4%200%206%202%205%206-1%205%203-1%205-7%202-9-1-16-10-18l-5-2-2-2c-4-3-6-7-7-14-1-5-1-5-1-2m86%202c-3%201-3%201-1%201l3%202c0%202%201%202%204%202%203-1%204%200%204%204l-2%202c-4%201-5%201-5-1%200-4-1-5-5-4-2%200-3%200-3-2l1-2h-8c-3%200-3%201-2%201%204%202%202%205-1%205-5%200-6-4-2-4%202%200%202%200-1-1s-8%200-8%201v5a516%20516%200%20015%2015l1%201%201%202c2%202%202%203-1%203-2%200-3%203-1%2010l3%204c2%200%202%200%201-1-3%200-3-5-1-5%204-1%204-1%204%202s1%203%204%203c4%200%208-2%206-2s-3-5-1-5l3-1c3%200%203%205%200%205-1%201%200%201%203%201%206%200%207-1%207-5%200-3%200-3%203-3%204%200%204%205%200%205-2%201-1%201%202%201%208%200%209-1%208-8a265%20265%200%2001-4-15l-2%201-1%202-4%201-4%201h-1c0-4-9-8-11-5l-3%201a680%20680%200%2000-2-2v-4c-1-2%200-3%201-3%203-2%205-1%206%202%200%201%201%202%203%202l7%202%205%202v-3c0-1%201-2%203-2l2%201%201%201-1-5c0-5%200-5-4-4-3%200-3%200-3-2%200-3-3-4-9-2m-168%204v24l1%207%202%201c1%200%202-1%202-6%201-10%203-10%203%200%200%206%201%206%203%206l2-1%201-9v-21c-1-3-2-3-7-3s-5%200-7%202m3%204c-3%202-2%205%200%207%203%203%207%202%209-1%203-6-5-11-9-6m134%2015l2%2014c2%2011%202%2010%200%2010-2-1-3%200-3%201l3%201%203%203c1%202%202%202%206%201h42l-7-1c-10-1-10-2-2-4%209-1%209-1%209%201%201%201%201%201%201-1l2-2c2%200%205-2%204-3l-27%204-26%204-3-16c-3-17-4-21-4-12m168-2c0%202-3%205-5%205l-1%201%203%2022%2045-7v-5a260%20260%200%2001-3-11c-2%202-6-1-7-4l-1-3-2%203c-2%206-10%206-12-1l-1-2-2%203c-1%203-4%205-7%204s-5-3-5-5l-1-2-1%202\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/41a433b70122fe733543c03d4e9774ae/277cf/Image-Optimization-Apps.webp 310w,
+/static/41a433b70122fe733543c03d4e9774ae/5077d/Image-Optimization-Apps.webp 620w,
+/static/41a433b70122fe733543c03d4e9774ae/e1adb/Image-Optimization-Apps.webp 1240w,
+/static/41a433b70122fe733543c03d4e9774ae/92eb6/Image-Optimization-Apps.webp 1860w,
+/static/41a433b70122fe733543c03d4e9774ae/767b0/Image-Optimization-Apps.webp 2220w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/41a433b70122fe733543c03d4e9774ae/fa223/Image-Optimization-Apps.png 310w,
+/static/41a433b70122fe733543c03d4e9774ae/a5ed1/Image-Optimization-Apps.png 620w,
+/static/41a433b70122fe733543c03d4e9774ae/7bfa5/Image-Optimization-Apps.png 1240w,
+/static/41a433b70122fe733543c03d4e9774ae/b429f/Image-Optimization-Apps.png 1860w,
+/static/41a433b70122fe733543c03d4e9774ae/11ddf/Image-Optimization-Apps.png 2220w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/41a433b70122fe733543c03d4e9774ae/7bfa5/Image-Optimization-Apps.png"
+          alt="Image Optimization Apps"
+          title="Image Optimization Apps"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Image Optimization Apps</figcaption>
+  </figure></p>
+<p>De estas alternativas, la que me ha gustado es <a href="https://optimage.app/">Optimage</a>, en la web prometen que es más efectivo<sup>(9)</sup> que <strong>ImageOptim</strong>. Se trata de una aplicación más completa, ya que nos permite cambiar el formato de la imagen, cambiar sus dimensiones, podemos configurar carpeta de salida o añadir prefijo/sufijo para no sobrescribir las imágenes originales. <a href="https://www.jpegmini.com/">JPEGmini Pro</a> está muy enfocada al mundo de la fotografía, y realmente consigue resultados muy impresionantes.</p>
+<h2 id="optimizacion-desde-herramientas-cli-en-local">Optimización desde herramientas CLI en local</h2>
+<p>Para la gente con más inquietudes técnicas, con ganas de controlar la configuración a base de parámetros y poder automatizar la optimización de las imágenes, también tenemos interesantes opciones. Podemos instalar y configurar los compresores nativos<sup>(10)</sup>, la gran mayoría en C, como es el caso de <a href="https://github.com/mozilla/mozjpeg/blob/master/BUILDING.md">MozJPEG</a> o <a href="https://developers.google.com/speed/webp/docs/precompiled">WebP</a> <em>(aquí lo tenemos precompilado)</em>.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b94f1b0d2ee5ee95b79c2aff9319dc10/3b0bc/cjpeg.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 14.8859543817527%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'60\'%3e%3cpath%20d=\'M49%2014l-1%2017%201%2016h303V31l-1-17H49\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/b94f1b0d2ee5ee95b79c2aff9319dc10/277cf/cjpeg.webp 310w,
+/static/b94f1b0d2ee5ee95b79c2aff9319dc10/5077d/cjpeg.webp 620w,
+/static/b94f1b0d2ee5ee95b79c2aff9319dc10/e1adb/cjpeg.webp 1240w,
+/static/b94f1b0d2ee5ee95b79c2aff9319dc10/92eb6/cjpeg.webp 1860w,
+/static/b94f1b0d2ee5ee95b79c2aff9319dc10/d232f/cjpeg.webp 2480w,
+/static/b94f1b0d2ee5ee95b79c2aff9319dc10/39921/cjpeg.webp 3332w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/b94f1b0d2ee5ee95b79c2aff9319dc10/fa223/cjpeg.png 310w,
+/static/b94f1b0d2ee5ee95b79c2aff9319dc10/a5ed1/cjpeg.png 620w,
+/static/b94f1b0d2ee5ee95b79c2aff9319dc10/7bfa5/cjpeg.png 1240w,
+/static/b94f1b0d2ee5ee95b79c2aff9319dc10/b429f/cjpeg.png 1860w,
+/static/b94f1b0d2ee5ee95b79c2aff9319dc10/d03be/cjpeg.png 2480w,
+/static/b94f1b0d2ee5ee95b79c2aff9319dc10/3b0bc/cjpeg.png 3332w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/b94f1b0d2ee5ee95b79c2aff9319dc10/7bfa5/cjpeg.png"
+          alt="MozJPEG CLI"
+          title="MozJPEG CLI"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">MozJPEG CLI</figcaption>
+  </figure></p>
+<blockquote>
+<p>Ejemplo de comando CLI para comprimir una imagen con <strong>MozJPEG</strong></p>
+</blockquote>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/fc1adefaade31589cc2f825ae2a3a720/27369/cwebp.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 19.34477379095164%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'77\'%3e%3cpath%20d=\'M64%2018c-2%201-3%2040-1%2042s272%202%20274%200l1-21c0-19%200-20-2-21H64m249%2019c0%202%200%202-2%201h-5c0-3-6%200-6%202%200%203%202%204%205%202h2l3%201v-3c2-1%202%200%202%201%200%203%203%203%205%200%201-1%201-1%201%201v3l3-2c4-3%204-5%200-6l-2%201c0%202-1%201-2%200-3-4-4-4-4-1\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/fc1adefaade31589cc2f825ae2a3a720/277cf/cwebp.webp 310w,
+/static/fc1adefaade31589cc2f825ae2a3a720/5077d/cwebp.webp 620w,
+/static/fc1adefaade31589cc2f825ae2a3a720/e1adb/cwebp.webp 1240w,
+/static/fc1adefaade31589cc2f825ae2a3a720/92eb6/cwebp.webp 1860w,
+/static/fc1adefaade31589cc2f825ae2a3a720/d232f/cwebp.webp 2480w,
+/static/fc1adefaade31589cc2f825ae2a3a720/776ed/cwebp.webp 2564w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/fc1adefaade31589cc2f825ae2a3a720/fa223/cwebp.png 310w,
+/static/fc1adefaade31589cc2f825ae2a3a720/a5ed1/cwebp.png 620w,
+/static/fc1adefaade31589cc2f825ae2a3a720/7bfa5/cwebp.png 1240w,
+/static/fc1adefaade31589cc2f825ae2a3a720/b429f/cwebp.png 1860w,
+/static/fc1adefaade31589cc2f825ae2a3a720/d03be/cwebp.png 2480w,
+/static/fc1adefaade31589cc2f825ae2a3a720/27369/cwebp.png 2564w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/fc1adefaade31589cc2f825ae2a3a720/7bfa5/cwebp.png"
+          alt="WebP CLI"
+          title="WebP CLI"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">WebP CLI</figcaption>
+  </figure></p>
+<blockquote>
+<p>Ejemplo de comando CLI para convertir una imagen JPEG a <strong>WebP</strong></p>
+</blockquote>
+<p>También tenemos paquetes <strong>npm</strong> que nos ofrecen un wrapper con una API mucho más simple y que podemos integrar en nuestro flujo de trabajo de aplicaciones Javascript.</p>
+<p>Hay varios, uno muy interesante es <a href="https://github.com/cyrilwanner/next-optimized-images">next-optimized-images</a> con opciones que van mucho más allá de comprimir las imágenes, ya que contiene como dependencia otros paquetes que nos ofrecen la posibilidad de generar imágenes LQIP<sup>(11)</sup> con <a href="https://github.com/zouhir/lqip-loader">lqip-loader</a> o <a href="https://github.com/herrstucki/responsive-loader">responsive-loader</a> que nos genera los diferentes tamaños de las imágenes responsive que necesitemos en nuestro site. Para la optimización de las imágenes utiliza varios paquetes de <a href="https://github.com/imagemin/">imagemin</a>, así que vamos a echarle un vistazo.</p>
+<h3 id="imagemin">imagemin</h3>
+<p>Al entrar en <a href="https://github.com/imagemin/">imagemin</a> lo que podemos ver es que no se trata de un repositorio de GitHub, sino de una organización con todos los repositorios (37) relacionados con este ecosistema.</p>
+<p>Es un sistema muy modular, el paquete base <strong>imagemin</strong> tiene definidos como dependencias <a href="https://github.com/imagemin/imagemin/blob/master/package.json#L38-L40">3 codificadores</a> (JPEG, SVG y WebP), pero podemos añadir todos los que necesitemos.</p>
+<p>Veremos que hay un par de patrones en los nombres de los repositorios de esta organización:</p>
+<ul>
+<li><strong>image-[compresor]</strong>, como <a href="https://github.com/imagemin/imagemin-webp">image-webp</a> que tiene el módulo o plugin para trabajar con imágenes WebP</li>
+<li><strong>[compresor]-bin</strong>, como <a href="https://github.com/imagemin/cwebp-bin">cwebp-bin</a> que <a href="https://github.com/imagemin/cwebp-bin/tree/master/vendor">contiene</a> una versión compilada para cada uno de los sistemas operativos soportados.</li>
+</ul>
+<p>Este enfoque lo convierte en una solución muy versátil, ya que se pueden mantener, actualizar y actualizar los módulos por separado.</p>
+<p>Se puede utilizar tanto como CLI <em>(Command Line Interface)</em> con <a href="https://github.com/imagemin/imagemin-cli">imagemin-cli</a> como desde Javascript. <a href="https://github.com/EscuelaIt/Optimizacion-Imagenes">Aquí</a> encontraréis ejemplos de implementación en <strong>mpm</strong>, <strong>Gulp</strong> y <strong>Webpack</strong> de unos ejercicios de un curso que impartí en Escuela IT. Es esos ejemplos podréis ver que siempre mantengo la imágen original, para poder comprimir siembre desde la imagen original y no <strong>re-comprimir</strong> una imagen que ya ha sido comprimida, y en ocasiones por otro compresor.</p>
+<p>No es buena idea hacer eso, en este vídeo podréis ver un ejemplo de lo que pasa al re-comprimir la misma imágen:</p>
+
+          <div
+            class="gatsby-resp-iframe-wrapper"
+            style="padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem"
+          >
+            <iframe src="https://www.youtube.com/embed/w7vXJbLhTyI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          "></iframe>
+          </div>
+          
+<blockquote>
+<p>El formato con mejores resultados es <strong>FLIF</strong><sup>(12)</sup>, pero es un formato que no está soportado por los navegadores actuales, así que <strong>MozJPEG</strong> sí que podría ser una opción viable. Pero como he comentado, a mí me gusta más conservar la imagen original, en PNG a ser posible, para conservar toda la información y generar a partir de esta, la imagen comprimida y/o cambio de formato.</p>
+</blockquote>
+<p><strong>Imagemin</strong> es la opción más cómoda si lo que queremos es automatizar la compresión de las imágenes en el proceso de pase a producción. Tanto por la cantidad de plugins, como por la facilidad de integrarlos en nuestro stack.</p>
+<blockquote>
+<p>Una cosa a tener en cuenta es el tiempo que nos puede llevar encontrar los parámetros correctos para conseguir el mejor resultado, ya que cada plugin de imagemin tiene su propia escala de valores para la optimización <em>(os suena de algo, pasa lo mismo en los editores de imágenes)</em>.</p>
+</blockquote>
+<h2 id="optimizacion-de-imagenes-con-servicios-online-de-terceros">Optimización de imágenes con servicios online de terceros</h2>
+<p>Otra de las opciones que tenemos disponible para optimizar nuestras imágenes es utilizar un servicio online como <a href="https://cloudinary.com/">Cloudinary</a>, <a href="https://www.imgix.com/">imgix</a>, <a href="https://www.fastly.com/io">Fastly’s Image Optimizer</a>, <a href="https://imageoptim.com/api">ImageOptim API</a> o <a href="https://kraken.io/">Kraken</a>. Estos servicios nos ofrecen mucho más que optimizar, cambiar el tamaño de las imágenes o su formato, también nos ofrecen servicio de caché y <a href="https://es.wikipedia.org/wiki/Red_de_distribuci%C3%B3n_de_contenidos">CDN</a>, cosa que nos beneficiará si nuestro producto es visitado desde diferentes partes de todo el mundo.</p>
+<p>Cada uno de ellos tiene sus propias funcionalidades, ventajas, configuraciones e integraciones, pero yo como buen <a href="https://cloudinary.com/partners/media-developers">MDE</a> voy a hablaros de <strong>Cloudinary</strong> 😊</p>
+<p>Para conocer las funcionalidades que tiene Cloudinary podéis consultar la web, yo os quiero hablar de las funcionalidades que me gustan, las que creo que aportan valor, tanto para nosotros como exigentes desarrolladores como para la IX.</p>
+<p>Empecemos por decir que en los <a href="https://cloudinary.com/pricing">planes</a> que ofrece tiene uno gratuito con el que podemos probar la herramienta sin muchas limitaciones.</p>
+<h3 id="optimizacion-de-imagenes">Optimización de imágenes</h3>
+<p>Podemos optimizar tanto las imágenes que subamos a <strong>Media Library</strong> de nuestra cuenta con el método <code class="language-text">/upload/</code>, como hacerlo con imágenes remotas, con el método <code class="language-text">/fetch/</code>, documentación<sup>(13)</sup></p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/56c85/Cloudinary-methods.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 24.316406250000004%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'97\'%3e%3cpath%20d=\'M40%2012a542%20542%200%20001%2074h319l1-38V12l-161-1-160%201m197%2020l1%202v2c1%201%201%200%202-1l1-2%201%202v1l1-1h1c1%202%202%202%202%201h3c2%201%202%201%202-1h1c1%202%2010%202%2010%200l2-2v2h1c2-2%202-2%202%200h4c-1%203%201%202%202-1v-2c-1%202-2%202-3%201-1-2-9-2-10%200%200%202%200%202-1%200s-1-2-2-1h-20m-3%2030c-2%202-1%204%202%204l2-1%201-1c2%202%2011%202%2010%201l1-1h2c0%201%201%202%206%202l6-1%201-1%201%201%201-2-1-2-2%202h-1c0-2-2-3-3-1h-6l-2-1-2%201-1%201h-1c0-2-1-2-3-1h-1l-1-1c-1%200-2%201-1%202l-1%201-1-2h-6\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/277cf/Cloudinary-methods.webp 310w,
+/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/5077d/Cloudinary-methods.webp 620w,
+/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/e1adb/Cloudinary-methods.webp 1240w,
+/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/92eb6/Cloudinary-methods.webp 1860w,
+/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/d232f/Cloudinary-methods.webp 2480w,
+/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/b7ad2/Cloudinary-methods.webp 4096w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/fa223/Cloudinary-methods.png 310w,
+/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/a5ed1/Cloudinary-methods.png 620w,
+/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/7bfa5/Cloudinary-methods.png 1240w,
+/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/b429f/Cloudinary-methods.png 1860w,
+/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/d03be/Cloudinary-methods.png 2480w,
+/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/56c85/Cloudinary-methods.png 4096w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/a28cd7fa6fb08de86a3dfe6696e0d1cf/7bfa5/Cloudinary-methods.png"
+          alt="Cloudinary methots"
+          title="Cloudinary methots"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Cloudinary methots</figcaption>
+  </figure></p>
+<p>Para el ejemplo vamos a utilizar la API mediante la url:</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a9d628bbdf1cfa5a5d3e8311c827009a/515df/Cloudinary_f_auto.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 12.563323201621074%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'50\'%3e%3cpath%20d=\'M42%2012l-1%2014v13h318V12l-159-1-158%201\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/a9d628bbdf1cfa5a5d3e8311c827009a/277cf/Cloudinary_f_auto.webp 310w,
+/static/a9d628bbdf1cfa5a5d3e8311c827009a/5077d/Cloudinary_f_auto.webp 620w,
+/static/a9d628bbdf1cfa5a5d3e8311c827009a/e1adb/Cloudinary_f_auto.webp 1240w,
+/static/a9d628bbdf1cfa5a5d3e8311c827009a/92eb6/Cloudinary_f_auto.webp 1860w,
+/static/a9d628bbdf1cfa5a5d3e8311c827009a/d232f/Cloudinary_f_auto.webp 2480w,
+/static/a9d628bbdf1cfa5a5d3e8311c827009a/47993/Cloudinary_f_auto.webp 3948w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/a9d628bbdf1cfa5a5d3e8311c827009a/fa223/Cloudinary_f_auto.png 310w,
+/static/a9d628bbdf1cfa5a5d3e8311c827009a/a5ed1/Cloudinary_f_auto.png 620w,
+/static/a9d628bbdf1cfa5a5d3e8311c827009a/7bfa5/Cloudinary_f_auto.png 1240w,
+/static/a9d628bbdf1cfa5a5d3e8311c827009a/b429f/Cloudinary_f_auto.png 1860w,
+/static/a9d628bbdf1cfa5a5d3e8311c827009a/d03be/Cloudinary_f_auto.png 2480w,
+/static/a9d628bbdf1cfa5a5d3e8311c827009a/515df/Cloudinary_f_auto.png 3948w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/a9d628bbdf1cfa5a5d3e8311c827009a/7bfa5/Cloudinary_f_auto.png"
+          alt="Cloudinary f_auto"
+          title="Cloudinary f_auto"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Cloudinary f_auto</figcaption>
+  </figure></p>
+<p>Entre el tipo <code class="language-text">/upload/</code> y la versión de la imagen <code class="language-text">/v1570203279/</code>, tenemos los métodos de transformación, en este caso he puesto <code class="language-text">f_auto</code>, que hace referencia a <strong>formato automático</strong><sup>(14)</sup>. Este parámetro entregará la imagen con el mejor formato posible según la petición del cliente. Si nuestro cliente soporta <strong>WebP</strong> entregará WebP, si nuestro cliente soporta <strong>JPEG 2000</strong> como es el caso de Safari, independientemente del formato original de la imagen.</p>
+<p>Veamos un ejemplo de esto.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/028652f18e198d5dd4d52cea597c400e/af534/Chrome-Firefox-Safari.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.354166666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'245\'%3e%3cpath%20d=\'M133%208l1%208h133V0H133v8m144%2025l-1%202c1%202%2020%203%2021%201h1l3%201%203-1%201-1%201%202c-1%201%201%202%202%200l-1-2c-1-2-7-2-7-1h-1l-3-1h-1c-1-2-6%200-7%202h-1l-2-2h-8m-134%208c-1%203%201%204%208%204l7-2h1c-1%202%204%202%205%200h1c0%201%201%202%203%202s3-1%203-2h1l1%202c-1%202%201%201%202-1%201-3%202-2-3-3l-5%201h-1c-1-2-10-2-11%201l-1-1-2-1h-3c0-2-5-1-6%200M10%2042c-1%203%201%204%2011%204%207%200%209-1%209-2h2c1%202%205%202%206%200%201-1%201%200%201%201%200%202%200%202%202%201%202-3%201-4-6-4a707%20707%200%2001-25%200m308%2012v6l14%201c14%200%2015-1%2015-5%200-2-1-3-15-3l-14%201m-133%208c-2%201-2%202-1%204s2%202%2015%202h14l1-3c1-4-1-5-15-5-10%200-13%200-14%202M52%2062c-2%201-2%203-2%204l1%203h14c14%200%2015-1%2015-3%200-4-1-5-14-5l-14%201m261%2027v5h9l8-1c0-2%206-8%207-8%203%200%2010%206%2010%208l1%201%201-5v-5h-36v5m-133%208v4h9l8-1c0-2%205-7%207-7s7%203%209%206c3%203%203%203%203-2v-5h-36v5M46%2098v4h8c8%200%2011-2%2013-6s13%201%2013%205l2%201%201-4v-5H46v5m322%207c-5%203-6%204-6%207%200%202%200%203-2%202-3%200-3%201-3%203v4l-1-3c-2-3-5-4-5-1l-1%203-1-3v-4h-36v4l-1%203-1-7c0-8%200-8-5-6s-7%201-7-1c-1-2-4-3-4-1l-1%204%201%202%201-3%201-3v3c0%202%201%203%204%203%204%200%204%200%204%203l1%204c1%202%201%202-2%202l-4-1-1-2c0-3-5-3-6%201v2h-26v10l-1%2010c-2%200-2-1-2-6v-7h-26v-5c0-4%201-6%203-8%203-4%203-6%200-4l-9%205c-2%201-3%202-3%204l-1%203c-3%200-4%200-4%203l-1%202-1-2c0-3-3-3-4%200l-2%203v-8h-36v4l-1%203-2-2v-13l-4%202c-4%202-7%203-7%201h-1c-2%202%200%204%203%204%204-1%204-1%204%202l1%204c1%202%201%202-3%202-3%200-4%200-4-2-1-3-5-4-6-1%200%203%200%203-13%203l-13%201v117h133v-57h133l-66-1h-65v-24h130v17c1%2027%202%2028%202%205l-1-23-67-1h-66v-21h130v-20h-26v-6c1-5%201-7%203-8%202-2%203-4%201-4l-7%203m-261%206l-6%204c-4%202-6%203-6%206l-1%202c0-2-4%201-4%203s0%202-1%201c-1-4-5-5-5-1%200%202-1%201-1-1v-3H47l-1%203c0%206-2%203-2-4l-1-7h-1l-1%201-2%201c-3%202-6%201-7-1-1-3-4-3-4%200l-1%203c0%201%200%202%202%202l1-3v-3l1%203c0%203%200%203%204%203%203-1%203-1%203%202l1%204c1%202%201%202-2%202s-4%200-5-2c0-4-4-3-5%200%200%202-1%202-14%202H0v12h130v-12h-12l-13-1c-1-3%201-11%203-13s3-4%201-4l-2%201m-54%2057h52v38H53l-52%201h105v-40H1l52%201M3%20235v5h128v-11H3v6m134%200v5h128v-11H137v6m134%200v5h128v-11H271v6m-133%200v4h29l28-1-4-1-5-1h-4c-1%201-1%202-2%201h-4c-2%200-2%200-2-2s1-3%202-3v4l1-1c0-1%202-2%206-1l7-1h8c6%200%207%200%206%202l-1%202h-3c-1-1-4%200-4%201l34%201h33v-9H138v5m134-1v4h63l62%201v-8H272v3\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/028652f18e198d5dd4d52cea597c400e/277cf/Chrome-Firefox-Safari.webp 310w,
+/static/028652f18e198d5dd4d52cea597c400e/5077d/Chrome-Firefox-Safari.webp 620w,
+/static/028652f18e198d5dd4d52cea597c400e/e1adb/Chrome-Firefox-Safari.webp 1240w,
+/static/028652f18e198d5dd4d52cea597c400e/92eb6/Chrome-Firefox-Safari.webp 1860w,
+/static/028652f18e198d5dd4d52cea597c400e/d232f/Chrome-Firefox-Safari.webp 2480w,
+/static/028652f18e198d5dd4d52cea597c400e/98288/Chrome-Firefox-Safari.webp 3840w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/028652f18e198d5dd4d52cea597c400e/fa223/Chrome-Firefox-Safari.png 310w,
+/static/028652f18e198d5dd4d52cea597c400e/a5ed1/Chrome-Firefox-Safari.png 620w,
+/static/028652f18e198d5dd4d52cea597c400e/7bfa5/Chrome-Firefox-Safari.png 1240w,
+/static/028652f18e198d5dd4d52cea597c400e/b429f/Chrome-Firefox-Safari.png 1860w,
+/static/028652f18e198d5dd4d52cea597c400e/d03be/Chrome-Firefox-Safari.png 2480w,
+/static/028652f18e198d5dd4d52cea597c400e/af534/Chrome-Firefox-Safari.png 3840w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/028652f18e198d5dd4d52cea597c400e/7bfa5/Chrome-Firefox-Safari.png"
+          alt="Cloudinary: Chrome vs Firefox vs Safari"
+          title="Cloudinary: Chrome vs Firefox vs Safari"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Cloudinary: Chrome vs Firefox vs Safari</figcaption>
+  </figure></p>
+<blockquote>
+<p>En la imagen vemos un ejemplo de una de las imágenes de la web de Cloudinary, en este caso <code class="language-text">homepage-XX.png</code>, hay peticiones de los diferentes tamaños Media Query porque yo lo he forzado. La imagen original es en formato <strong>PNG</strong> y podemos ver que aunque la petición que hace el HTML es <code class="language-text">.png</code>, Cloudinary entrega una imagen <strong>WebP</strong> para Chrome y Firefox, y en el caso de Safari entrega un formato <strong>JPEG 2000</strong>. El formato JPEG 2000 tiene mayor tamaño que WebP, pero actualmente Safari no soporta ese formato de imágenes, en su lugar recibe una imagen JPEG 2000 que por un lado puede renderizar y que está más comprimida que en JPEG y que la original PNG.</p>
+</blockquote>
+<h3 id="imagenes-responsive">Imágenes responsive</h3>
+<p>La optimización de las imágenes no sólo tiene que ver con la compresión y calidad de la imagen, también hemos de tener en cuenta entregarlas a la medida correcta, según el dispositivo, densidad de pixels<sup>(15)</sup> y <strong>media queries</strong>. Aquí Cloudinary nos vuelve a sorprender gratamente con <a href="https://responsivebreakpoints.com/">Responsive Breakpoints Results</a>, una herramienta para generar todas las imágenes y código que necesitemos para cubrir las media queries que necesitemos.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/749b1c0a1b6323c96bbeebbddb536170/0741c/Responsive-Breakpoints-Results.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 73.71428571428572%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'295\'%3e%3cpath%20d=\'M147%203l-1%202c0%202%201%203%205%203l6%201h3c0-1%202-2%204-1l4-1h12c1%202%204%200%204-2l-3-1-5-1h-2a66%2066%200%2001-27%200m55%202c0%202%200%203%202%203l2%201h2c1-1%203-2%206-1l4-1h9c2-2-1-3-6-3l-5-1h-1c0%202-11%202-12%200-1-1-1%200-1%202m28-2l-1%203c0%202%200%202%2013%202%2011%200%2012%200%2012-2%200-3-7-4-9-2l-2%201-4-1-7-1h-2M9%2078v32l12%201%2015%203c2%200%202%200%201-2-3-2-3-6%200-6l3-1c1-3%202-1%202%204v4h1l1%202%206%201c5%201%2010%201%2015-2%203-1%203-1%203%201s-1%203-6%204l-10%204a412%20412%200%2001-42%2011v24c3%202%2031-3%2034-6%201-1%201-3-2-3l-3-2c0-1-3-2-7-2h-5l8-4%2031-12v4c0%204%202%204%203-1l2-5%202-1a1064%201064%200%20014%2029l1%206h-9l-14%201c-8%201-3%202%209%202l12%201c0%202-2%203-16%202a343%20343%200%2000-50%202c0%202%203%202%2025%202a945%20945%200%200169%200h8c1-2%201-2%201%200l2%201%201-1%201-2c1-1%201-1%201%201-1%202%200%202%2039%202h39V47h-37l1%204c0%203%201%203%203%203l2%201v1l-6%202-5%201%202-2c2-1%202-1-1-1l-3-1h4c2%200%202%200%202-4v-3l-7-1-8%201h-1c0-3-2%200-2%203l-1%205v-9H96v4l-1%204%201-2c0-3%202-1%202%202%201%202%201%202%2012%203l13%203%208%202h1c0%201%206%204%209%204l3%201-4%201c-4-1-4%200-3%202%200%204-6%2017-9%2017v-2l1-5%201-3%201-2%202-2c1%201%201%200%201-2%200-5-3-8-5-7h-3c1-1-5-3-6-2l-3-1c-1-1-10-2-11-1s4%205%206%204c2%200%202%200%201%202h1c2-1%206-1%206%201h2c2%200%202%200%200%201s-3%203%200%202h1l2%202c4%201%204%203%200%202-3%200-4%200-5%202s-2%202-8%202l-6%201v5c0%206%202%2011%204%2011l1-1%202-1c3%200%201%203-4%203l-2%203c0%202-5%205-8%205l-1%201-3%201c-3%200-4%202-3%205l-1%203-1-3c0-2-1-3-3-3s-3%202-1%203l2%209%201%201%201%204c0%204%200%204-4%204-4%201-6%200-2-1h2l-2-1c-2-1-2-2-2-4l-1-4v-2c2-2%201-3-1-3-3%200-3-3%200-3%203-1%202-3-1-3h-2l2-2%202-4c0-2%200-2%201-1%202%201%204-5%202-8%200-2%200-2%202-2s3-1%204-3c0-5%200-8-3-7-2%200-4-5-2-6s1-2-2-2c-4%201-4%200-4-3-1-5%200-8%202-7%202%200%202%200%202-2l1-2%201-2%202-3%202-4v-3l-1%203-1%203v-7H9v31m160-16l-1%204c0%202-2%205-4%205l1%208v1h-8l-1%201h-2c0%202%202%204%203%202s16%202%2016%205l3%202%202%202-2%201c-2%200-3%201-3%202l-2%201c-2%200-2%2010%200%2011s3%200%202-2l1-1%201%201h1c2%200%205%203%205%205s-7%208-8%207l-3%203-2%204-1%202c0%202%200%202-1%201h-1c0%203-2-2-2-6%200-5-2-9-5-9s-3%200-2%205l2%207%202%2010c0%209%201%2019%203%2021l2%204c1%202%201%202%201-2%200-3%200-5%202-5l1-3h-1c-2%203-3%201-3-6%200-4%200-7%201-6h1l1%206c1%203%202%203%203-1%200-2%201-3%203-4%203-2%204-4%202-3l-2-1%204-2c6-2%207-3%203-3h-2l2-2%203-1c2-1%203-2%200-3l-1-2c1-1%200-2-3-2l-2%201-2%201v-2c1-2%203-3%209-3l5-1c-3%200-3%200-1-1l2-1h-2c-2%200-2%200%200-1l2-4%203-3v-1l-1-1v-2c-1-1-1-1%201-2%201-2%201-2-1-3-4%200-4-1-1-4s3-3%200-3l-5%202-3-1%202-1%203-2c0-2-1-2-5-1l-4-1%208-1%206%201c1%202%201%202%201%200v-3h-17v-5l-1-5-1%202h-3c-2%200-2%200-2-6s-1-7-2-6m-31%2027l1%201%201%207c0%205-1%206-2%207l-2%201h2v3l1%202%202%201v1c-2%202-2%202%200%207%203%205%203%206%201%207-1%202-3%202-2%200l-2-7-3-5v9l-1%2014-2%2014c-1%201%200%202%201%202l2%202h-1l-2%201%203%201c2%200%203%200%202%201-2%201-1%202%202%202%202%200%203-1%203-2h2c2%202%205%201%203-1l6%201%202-1-1-1h-2c-1-1%200-1%203-1l5%201-4-2-3-1%204%201c3%200%203%200%201-1l-1-2c2-1%202-1%201-2l-1-12-3-17c-2-3-3-7-2-8%200-2-1-2-3-2h-3l2-1c3%200%203-1%204-3l1-5c1-1%200-1-3-1-4%200-4%200-3-1%203-2%201-3-2-2-4%202-4%201-4-4l-1-5-2%201m-33%2021l-3%203-2%202-1-1v-2l-1%202-4%203h-3v7l1%207c2%201%201%203-1%203s-1%2020%202%2023v2l-1%201h17c3%200%203%200%202-1l-1-2%202%201h2l2%201%201%201v-3l1-3v-3l-1-4-1-6v-12l-1-4-1%202c-1%204-3%203-3-2v-4h-7c-9%200-12-1-5-2l9-1c3%200%203%200%203-2l-3-8-3%202m-95%209v12l1-1%206-2%2015-5-9-2-9-2h-4m194%20103v62h87l93-1h5v-21c0-20%200-20-1-7-1%2012-1%2014-1%206-1-19-1-19-2-5a667%20667%200%2001-1%2020l1-4v5l-1%205c-2%200-2-3-2-17a1205%201205%200%2000-1-47v-10l-1%207-2%209-1%202-2%202-4%201h-1l2-2c2-1%204-6%204-9%200-2%200-2-1%201l-1%203v-3l-2-3-1-1-1-2c-1%200-3%202-3%205l-1%202-1-1-1-1-1-7c0-4%201-6%201-3%200%205%201%205%203%201%200-3%201-3%203-3s2-3-1-4l-2-2-3-3c-2-1-2-1-2-3v-2l-1-1h1l1-3c0-3%200-3-2-1l1-5v-4c-1-2-1-2%201-3h2v7c0%205%200%205%202%205h2c1%201%201%200%202-1%201-2%201-2%201%202-1%205%200%206%204%207%205%200%206-1%206-7%200-4-1-6-2-7s-1-1%201-1c3%200%207%203%205%204v2l-1%202c-3%200-1%202%201%203s2%201-1%201h-3l2%201c6%202%206%202%206-16v-17h-13l-14%201h-1l-5-1c-3%200-3%200-3%203%200%204%200%204%205%204a579%20579%200%2001-10%200h2l1-3c-1-5-2-5-2-1l-1%203v-3c0-3%200-3-6-3s-7%201-5%203c2%200%201%202%200%202s-2-1-2-3c0-3%200-2-1%202-1%203-1%203-2%202v-4c0-3-4-3-5%200%200%202%200%202-2%201-1-1-1-1%201-2%201-1-2-1-6-1-5%200-8%200-7%201h2l2%201-1%203h-1c-2-2-3-1-3%201l-1%202v-8h-22l1%202%201%205c0%202%201%202%2013%204l16%204-18-3c-2%200-4%203-2%204%201%201%202%205%201%207s-1%202%201%202l-1%201-3%201h3c2%200%203%200%202%201-2%201-1%202%201%201l5%201a439%20439%200%2000-14%202c-4%200-6-4-4-7v-6l-1-1-2%201h-1l-2-1c-2%200-3%201-3%203-1%203-1%203-1%200v-4h-37l17-1h18v-5c0-3%200-4%202-4v-1l-2-4c0-2%200-2-30-2a154%20154%200%2000-33%201l-2-1c-1%200-2%201-2%203l-1%202-1-2c1-2-1-3-4-3h-3v62m161%2010c-2%202-3%2011-2%2018%200%207%202%208%202%202l1-5%201-3c0-2%200-2%201-1h2c2%200%202%200%200-2l-1-1v-2l-2-3h1l4%201%204%201c1%201%201%201%201-1s-1-2-5-2c-3%200-4%200-4-2s-1-3-3%200\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/749b1c0a1b6323c96bbeebbddb536170/277cf/Responsive-Breakpoints-Results.webp 310w,
+/static/749b1c0a1b6323c96bbeebbddb536170/5077d/Responsive-Breakpoints-Results.webp 620w,
+/static/749b1c0a1b6323c96bbeebbddb536170/e1adb/Responsive-Breakpoints-Results.webp 1240w,
+/static/749b1c0a1b6323c96bbeebbddb536170/5ea2f/Responsive-Breakpoints-Results.webp 1750w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/749b1c0a1b6323c96bbeebbddb536170/b0751/Responsive-Breakpoints-Results.jpg 310w,
+/static/749b1c0a1b6323c96bbeebbddb536170/e1d7b/Responsive-Breakpoints-Results.jpg 620w,
+/static/749b1c0a1b6323c96bbeebbddb536170/d1f04/Responsive-Breakpoints-Results.jpg 1240w,
+/static/749b1c0a1b6323c96bbeebbddb536170/0741c/Responsive-Breakpoints-Results.jpg 1750w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/jpeg"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/749b1c0a1b6323c96bbeebbddb536170/d1f04/Responsive-Breakpoints-Results.jpg"
+          alt="Responsive Breakpoints Results"
+          title="Responsive Breakpoints Results"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Responsive Breakpoints Results</figcaption>
+  </figure></p>
+<h3 id="implementacion-escalabilidad-e-integracion">Implementación, escalabilidad e integración</h3>
+<p>Otra de las cosas que me gusta de Cloudinary es el gran soporte que ofrecen para diferentes <a href="https://cloudinary.com/documentation/framework_integration#sdks">SDKs</a> para la implementación: HTTPS/HTTP, Ruby, PHP, Python, Node.js, Java, JS, jQuery, React, Angular, .Net, Android y iOS. Además las tenemos disponible <a href="https://github.com/cloudinary">Open Source</a>.</p>
+<p>Hago referencia a la escalabilidad por la filosofía de <a href="https://cloudinary.com/documentation/framework_integration#add_ons">Add-ons</a> que tienen. Podemos activar <em>(estos son de pago)</em> servicios para el Auto-Tagging con Machine Learning, eliminar el fondo de las imágenes con <a href="https://cloudinary.com/documentation/cloudinary_ai_background_removal_addon.html">Cloudinary AI Background Removal</a> o aplicar transferencia de estilos con <a href="https://cloudinary.com/documentation/neural_artwork_style_transfer_addon">Neural Artwork Style Transfer</a>.</p>
+<p>En cuanto a la integración, es muy interesante ver que podemos integrar con <a href="https://cloudinary.com/documentation/framework_integration#cms_ecommerce_integrations">CMS-eCommerce integrations</a> Salesforce Commerce Cloud, Magento, Wordpress o Zapier.</p>
+<h3 id="esto-no-acaba-aqui">Esto no acaba aquí</h3>
+<p>Hay muchas funcionalidades, Add-ons, plugins, herramientas, así que para que podáis tener una guía simple y visual de lo más destacado de Cloudinary, aquí os dejo una web donde podréis jugar con la API y algunas de las fotos que me hicieron en la <strong>JS Camp 2019</strong>, <a href="https://cloudycam.dev/nucliweb">CloudiCam.dev</a></p>
+<h2 id="one-more-think">One more think</h2>
+<h3 id="otros-servicios-online">Otros servicios online</h3>
+<p>Existen muchos servicios online para comprimir imágenes, por lo general comprime las imágenes una a una, y no por lote como lo hacen las aplicaciones de escritorio. Sólo quiero comentar un par de ellas que me parecen interesantes:</p>
+<ul>
+<li><a href="https://squoosh.app/">Squoosh</a>, lo que me gusta de esta aplicación es que se ejecuta totalmente en el navegador. La ha desarrollado la gente de Google, es <a href="https://github.com/GoogleChromeLabs/squoosh/">Open Source</a> y utiliza <a href="https://webassembly.org/">WebAssembly</a> para ejecutar en el navegador los <a href="https://github.com/GoogleChromeLabs/squoosh/tree/4a01d0d548bf51e75ddb1d9e3d0259b5ab1c87b5/codecs">codecs binarios</a> escritos en C o C++.</li>
+<li><a href="https://compress-or-die.com/">Compress-Or-Die</a> utiliza el formato tradicional de ejecutar la compresión en el lado del servidor, lo que me gusta es que ofrece muchas opciones de personalización, todas ellas documentadas y unos resultados muy buenos. También incluye una <a href="https://compress-or-die.com/analyze">analizador de imágenes</a> con una muy detallada información de la imagen</li>
+</ul>
+<h3 id="eps-no-olvides-optimizar-ninguna-imagen">Eps! no olvides optimizar ninguna imagen</h3>
+<p>Es muy fácil que el día a día nos haga caer <em>(inconscientemente)</em> en el error de no optimizar nuestras imágenes, pero tenemos la opción de integrar una de las siguientes herramientas.</p>
+<h4 id="imgbot"><a href="https://imgbot.net/">ImgBot</a></h4>
+<p>Un sevicio para optimizar imágenes basado en <a href="https://github.com/dlemstra/Magick.NET">Magick.NET</a> (una libreía .NET para <a href="https://imagemagick.org/">ImageMagick</a>) que podemos integrar con nuestro repositorio de GitHub, lo podemos configurar para indicar cada cuanto “parseará” nuestras imágenes, definir carpetas, imágenes o extensiones a ignorar, así como el nivel de compresión. Lo más interesante es que genera una Pull Request con la sugerencia de las imágenes optimizadas.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1238px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/68d3516f9467ad623b456ed32d32de00/50cee/imgbot-PR.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.78190630048466%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'259\'%3e%3cpath%20d=\'M150%2065h-7l-1%202c0%202%200%202%201%201l1-1c1%202%204%203%204%201h18c1%202%204%200%204-2%200-3-1-4-3-1h-10l-1%201h-3l-1-1c1-2-1-2-2%200\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/68d3516f9467ad623b456ed32d32de00/277cf/imgbot-PR.webp 310w,
+/static/68d3516f9467ad623b456ed32d32de00/5077d/imgbot-PR.webp 620w,
+/static/68d3516f9467ad623b456ed32d32de00/38b4b/imgbot-PR.webp 1238w"
+          sizes="(max-width: 1238px) 100vw, 1238px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/68d3516f9467ad623b456ed32d32de00/fa223/imgbot-PR.png 310w,
+/static/68d3516f9467ad623b456ed32d32de00/a5ed1/imgbot-PR.png 620w,
+/static/68d3516f9467ad623b456ed32d32de00/50cee/imgbot-PR.png 1238w"
+          sizes="(max-width: 1238px) 100vw, 1238px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/68d3516f9467ad623b456ed32d32de00/50cee/imgbot-PR.png"
+          alt="ImgBot: Pull Request"
+          title="ImgBot: Pull Request"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">ImgBot: Pull Request</figcaption>
+  </figure></p>
+<h4 id="image-actions"><a href="https://github.com/marketplace/actions/image-actions">image-actions</a></h4>
+<p>Con las recién llegadas <a href="https://github.com/features/actions">Actions de GitHub</a>, la gente de <a href="https://calibreapp.com/blog/compress-images-in-prs/">Calibre</a> han trabajado en una solución similar a la de <strong>ImgBot</strong>. La filosofía es la misma, generar una Pull Request con las imágenes optimizadas.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/de96a64ae01601a445e7f9136f25c89c/5cf6a/image-actions.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.36842105263158%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'309\'%3e%3cpath%20d=\'M6%207v12l1%2010h23V6H18L6%207m6%205c-3%204-4%208-2%2011h4c2%200%202%200%200-2-2-1-2-2-2-5%201-3%201-4%206-3%205%200%205%200%206%202%201%203%200%207-2%207l-1%202c0%203%201%203%204%200l2-6c0-9-10-12-15-6m149%2030h-3l-2%201-1%201v-1l-1-1-2%201-1%201-1-1-4-1c-4%200-5%200-6%202l-2%201%201-2c1-1-1-1-6-1s-6%201-6%202c0%202%205%202%205%200l1%201%201%202v-2c0-2%200-2%201-1%201%203%208%203%208%200h1c0%202%203%203%203%201l1-1%201%201h4l5%201c6%200%206%200%206-3%200-2-1-2-3-1m170%2025c0%203%202%204%204%201%201-1%201-1%201%201v2l1-2%201-2v2h2c0%202%200%202%202%201h3l1-2h1c1%202%204%203%204%201h10l1-1c0%202%2010%202%2010%200h1c1%203%204%202%204-1%200-2-3-3-6-1h-35l-4-1c-1-1-1-1-1%202\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/de96a64ae01601a445e7f9136f25c89c/277cf/image-actions.webp 310w,
+/static/de96a64ae01601a445e7f9136f25c89c/5077d/image-actions.webp 620w,
+/static/de96a64ae01601a445e7f9136f25c89c/e1adb/image-actions.webp 1240w,
+/static/de96a64ae01601a445e7f9136f25c89c/22ca9/image-actions.webp 1520w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/de96a64ae01601a445e7f9136f25c89c/fa223/image-actions.png 310w,
+/static/de96a64ae01601a445e7f9136f25c89c/a5ed1/image-actions.png 620w,
+/static/de96a64ae01601a445e7f9136f25c89c/7bfa5/image-actions.png 1240w,
+/static/de96a64ae01601a445e7f9136f25c89c/5cf6a/image-actions.png 1520w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/de96a64ae01601a445e7f9136f25c89c/7bfa5/image-actions.png"
+          alt="image-actions: Pull Request"
+          title="image-actions: Pull Request"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">image-actions: Pull Request</figcaption>
+  </figure></p>
+<h3 id="en-casa-de-herrero">En casa de herrero…</h3>
+<p>Todas la imágenes de este artículo han sido optimizadas con <strong>ImageOptim</strong>, la mayoría en formato <strong>PNG</strong> ya que són capturas de pantalla con texto. <strong>PNG</strong> es el formato ideal para mantener la calidad y no generar ruido alrededor de los textos.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a47da392c45de60aba0f24c3ea7faf5f/884f2/ImageOptim.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'213\'%3e%3cpath%20d=\'M182%204l-1%203c0%202%200%202%206%202h6l2%201%201-1h9l2%201%207-1c5%200%205%200%205-2s-1-2-3-2l-3-1h-13l-1%201h-10l-6-1h-1M18%2027l-1%203c0%202%200%202%202%200%201-1%201-1%202%201h1c0-2%200-2%201-1h3v1l1%201%201-1h1l1%201v-2h1c1%202%208%202%209%200h1c0%201%201%202%203%202h3l2-1v-1h2l2%201%203%201c2%200%202%200%201-1-1%200-2-1-1-3%200-2-2-3-3-1%200%202-11%202-13%200l-1%201-1%202v-1l-1-1-2%201-2%201v-1c1-1%200-1-1-1h-3l-8-1h-3m325%2011c0%203%200%203%202%202h2l3%201h14c1%202%203%200%203-2%201-2%201-2%201%200%200%203%202%203%202-1%201-2%200-2-2-2s-2%201-2%202l-1%202-1-1-1-2h-11c-1-1-1-1-1%201h-1l-4-2c-3%200-3%200-3%202M43%2048c-2%202-2%202-2%200h-2l-1-1-1%202c0%202%201%202%205%202%203%200%205%200%204-1l-1-1h2c2%202%209%203%209%201h4l2%201h4c2%200%203%200%203-2l1%201%201%201h1c1%202%202%202%203%201%202-3%201-5-4-5H59l-7%201h-2l-2-1h-2c-1-1-2%200-3%201m-7%2018l-6%201-5%201h-1l-4-1c-3-1-3%200-3%202%200%201%200%202%202%201l1-1h4l3%202h1l2%201%201-1h2l2-1h1l2%201v-4l1%202%201%201%201%201h2l2-1%201-1h1l2%201%201-1c0-1%201-1%201%201l1%202v-4l1%202c1%201%201%201%201-1%200-1-1-2-4-2h-5l-6-1h-3M17%2077c0%202%201%203%202%203l1-1h4l2%201%202%201h5l2-1h5c1-1%201-1%201%201h2l4-1%203-1h4c0-2-1-2-8-3-5%200-7%201-7%202l-1%201v-4l-1%201-7%201h-6l-3-1h-3c-1-1-1%200-1%201m45%200c-1%203%206%204%208%202l1%201c1%202%201%202%204%201l2-2h2c2%202%2013%202%2015%200%201-1%202-1%202%201l1%201%201-1v-2c0-2-7-2-9-1h-3l-1%201c0-2-22-2-23-1m-26%209h-3c-3%200-4%200-3%202h-1c-2-2-4-3-4-1l-1%201h-1l2%202%204%201h2c0-1%201-2%202-1l2-1h1l2%201%202-1h1c0%201%200%202%201%201h5c2%200%203%200%203-2l1%201%201%202v-4l1%202c1%201%201%201%201-1s0-2-3-2h-6l-2%201-3-1-2-1-2%201M17%2098c0%202%203%203%203%200%201-1%201-1%201%201v2l1-2%201-1c0%202%201%202%202%202h3l3%201%203-1%201-1%203-1c1%201%202%200%202-1l1-1v4l2-1h1c0%202%200%202%202%201h4l3-2c1-1%201-1%201%201v2l1-2%201-1c0%202%201%202%203%202s3%200%202-1h-1l-1-1%202-1h1l-2-1H32l-7%201h-1l-4-1c-3-1-3%200-3%202m65-2l-1%203%201%201h21l1-2%202%201c2%203%205%202%205-1%200-2-1-2-6-2s-6%201-6%202l-1%201-1-2-6-1c-4%200-5%201-5%202l-1-1c-1-2-3-3-3-1m-64%2038l-1%203c1%202%2020%203%2021%200h1c0%202%206%203%206%201l1-2%201%202c0%202%200%202%202%201%202-3%201-4-3-4l-5%201h-1l-2-1h-2c-1-2-7%200-7%202h-1l-3-2h-2c0-1-4-2-5-1m-1%2022l1%202h3c1%201%202%201%203-1h1c1%202%2011%202%2012%200l1-1%201%201c-1%201%201%201%203%201h13c2%201%206%200%206-2l1%201c1%201%202%202%2011%201l11-1h3c1%201%201%201%201-1s0-2-3-2h-7c-3%200-4%201-5%202h-1v-1l-1-1h-6l-5%201h-1c0-2-3-3-4%200H24l-4-1c-1-2-3-1-3%202m19%2027l-2%201h-5l-4%201h-1c-1-2-7-2-7%200l2%202%201-1h4l3%202h1l2%201%201-1h2l2-1h4c2-1%202-1%202%201h2l2-1%201-1h1l2%201%201-1h4c0-1-1-2-4-2h-5l-6-1h-3\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/a47da392c45de60aba0f24c3ea7faf5f/277cf/ImageOptim.webp 310w,
+/static/a47da392c45de60aba0f24c3ea7faf5f/5077d/ImageOptim.webp 620w,
+/static/a47da392c45de60aba0f24c3ea7faf5f/e1adb/ImageOptim.webp 1240w,
+/static/a47da392c45de60aba0f24c3ea7faf5f/063e3/ImageOptim.webp 1560w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/a47da392c45de60aba0f24c3ea7faf5f/fa223/ImageOptim.png 310w,
+/static/a47da392c45de60aba0f24c3ea7faf5f/a5ed1/ImageOptim.png 620w,
+/static/a47da392c45de60aba0f24c3ea7faf5f/7bfa5/ImageOptim.png 1240w,
+/static/a47da392c45de60aba0f24c3ea7faf5f/884f2/ImageOptim.png 1560w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/a47da392c45de60aba0f24c3ea7faf5f/7bfa5/ImageOptim.png"
+          alt="ImageOptim: list images"
+          title="ImageOptim: list images"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">ImageOptim: list images</figcaption>
+  </figure></p>
+<blockquote>
+<p>Listado de las imágenes optimizadas con ImageOptim<sup>(16)</sup></p>
+</blockquote>
+<h2 id="recursos">Recursos</h2>
+<ul>
+<li><a href="https://images.guide/">Essential Image Optimization</a>, creo que es la mejor y más completa guía de optimización de imágenes, mantenida por <a href="https://twitter.com/addyosmani">Addy Osmani</a>.</li>
+<li><a href="https://addyosmani.com/blog/image-optimization-tools/">Tools for image optimization</a></li>
+<li><a href="https://jamiemason.github.io/ImageOptim-CLI/">ImageOptim-CLI</a></li>
+<li><a href="https://foldleft.io/image-tools/">Benchmarks of Image Optimisation Tools</a></li>
+<li><a href="https://addyosmani.com/blog/lazy-loading/">Native image lazy-loading for the web!</a></li>
+<li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization">Optimización de imágenes</a></li>
+<li><a href="https://codeburst.io/5-steps-to-speed-up-your-image-heavy-website-65c874a86966">5 steps to speed up your image heavy website</a></li>
+<li><a href="https://dougsillars.com/2018/05/21/state-of-the-web-top-image-optimization-strategies/">State of the Web: Top Image Optimization Strategies</a></li>
+<li><a href="https://www.smashingmagazine.com/2018/07/converting-images-to-webp/">Converting Images To WebP</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-create-and-serve-webp-images-to-speed-up-your-website">How To Create and Serve WebP Images to Speed Up Your Website</a></li>
+<li><a href="https://web.dev/use-imagemin-to-compress-images">Use Imagemin to compress images</a></li>
+<li><a href="https://cloudinary.com/blog/low_quality_image_placeholders_lqip_explained">Low Quality Image Placeholders (LQIP) Explained</a></li>
+<li><a href="https://medium.com/breaktheloop/jpeg-compression-algorithm-969af03773da">JPEG Compression Algorithm</a></li>
+<li><a href="https://compress-or-die.com/Understanding-JPG">Finally understanding JPG</a></li>
+<li><a href="https://compress-or-die.com/Understanding-PNG">Finally understanding PNG</a></li>
+</ul>
+<h2 id="curso-optimizacion-de-imagenes-y-videos">Curso Optimización de Imágenes y Vídeos</h2>
+<p>Por último, os quiero compartir que estoy trabajando en un curso online de <strong>Optimización de Imágenes y Vídeos</strong>.</p>
+<p><a href="https://optimizacion-imagenes.github.io/Curso/"><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1240px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 30%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'120\'%3e%3cpath%20d=\'M46%2011l-7%202c-5%201-9%205-9%2010l-2%2011c-1%206-1%207%201%209s0%203-3%200h-2l1%204h1c1-2%203%204%202%206s2%2012%204%2018c2%205%202%2012%200%2013l-19%207-9%204-4%202v23h14c14%200%2015%200%2014-2%200-1%200-2%202-2l1%202c-1%202%200%202%2012%202l13-1h1l2%201-1-2-1-2h3l2-2%201-4v4l-1%205%2049%201h48l-1-2%201-2h2c1-1%201-1%201%201l-1%203h99v-2l1-4%201%203-1%203h140v-11c0-12%200-15-3-15l-2-1%201-1h2c1-1-4-2-9-2-6%200-9-1-9-3l2-1c1-1-2-1-7-1-11%200-11%200-11-6%200-4%200-4%203-4%202%200%202%200%202-7v-8h-10c-9%200-11-1-11-2%200-4%200-4-2-4s-2%201-2%203v3h-8l-7-1v8c0%207%200%207%203%207%202%200%202%200%202%206l-1%205h-5c-4%200-4%200-4%203%200%202%200%202-7%202-8%200-8%200-8%203%200%202%200%202-5%202l-5-1c-1-1-7-4-10-4l-2-1-3-1-4-1c-2-2-9-3-9-1l-2%201-2-2-1-3c-1-1%201-10%202-10l1-3%201-4%201-22%201-22-3-3-4-3-1-1c0-1-1-2-3-2l-4-1h-13l-2%201-5%202-5%201v1l-1%202c-2%200-2%202-2%206%200%205%202%207%203%203l1-2%201-2%201-1%201-1c1-1%2011-2%2011%200l1%201%201-1c-1-1%201-1%205-1l7%201%203%201%202%202%201%203c2%201%202%203%201%207v6h-6c-5%200-8%201-8%204%200%202-6%201-7-1-1-3-5-4-10-4-3%200-3%200-3-3s-3-6-4-4l-2-2-1%206v7l1%202-2-1c-1-1-2-1-2%201l1%202c1%200%202%202%202%206l1%207%201%205%201%204%201%208c1%207%200%208-2%208l-2%201-3%202-4%201-3%201c-4%200-16%205-16%206l-1%201-1-2c0-2%200-2-16-7-12-4-13-5-12-3l-1%203c-2%201-2%201-3-2%200-4-2-6-2-3l-5%2014c-2%202-9%204-16%203l-6-3-3-2-1-5c0-5%202-5%207-1l5%202c2%200%2013-5%2016-8%204-4%2013-32%209-29l-1%202c0%205-8%206-14%203h-14c0%202-5%202-8%201l-4-3-1-4h1c2%202%203%201%203-3v-4l1%202c0%201%204%202%207%200h4l1%201a2412%202412%200%2001-1%205c1%200%203-2%203-4%201-4%203-3%204%200%202%204%204%205%2011%205l5-1h-6l-6-2c-2-2-2-4%201-4l8%201c3%200%203%200%203%202-1%203%201%202%203-1l1-2c1%200%201-6-1-20%200-8%200-9-4-12s-11-6-16-6c-9%200-22%207-22%2011l-1%207c-1%207-2%2013-1%2015s1%202-1%201c-4-2-4-1%200%203%201%202%202%204%201%205-1%204%200%205%203%2015%203%2012%203%2016%200%2018l-18%206-7%203c-6%203-6%203-6%201s-3-3-15-7l-14-4v4c-2%202-2%202-2-1l-2-6c-1-1%200-4%202-10%204-10%205-16%203-19v-2c1-1%202-10%201-22-1-8-1-9-5-12l-4-3-5-2H46m294%201c0%203%200%203-5%203l-4%201v5c0%204%200%205%202%205s2-1%202-3l1-2h28l1%202c1%202%201%202%203%202%203%200%203%200%202%203%200%203%200%204%203%202%203-1%202-9-1-9l-2-3c0-2-1-3-3-3l-3-2v-2l-12-1h-12v2M37%2021c-2%200-7%209-7%2011s0%202%201%201c0-1%201-2%203-2%202%201%202%205%200%207s-1%203%201%202c4-2%209-1%2012%202%203%204%206%204%209%201%202-3%203-3%207-3%206%200%206%200%206-3l1-4c1-3-2-10-6-11-2-1-25-2-27-1m100%200l-3%203-2%203-1%205c2-1%204%203%203%205%200%203%200%203%205%202%204%200%205%200%208%203%204%203%206%203%209%200%201-2%202-2%207-2h6l-1-4%201-4c2%202%202-1%200-4-2-6-6-7-19-7h-13m194%209l-1%209c-1%205-2%205-2%203-1-2-1-2-1%201l-1%206%201%201c1-1%204%202%204%204%200%201%201%201%201-1%201-2%201-2%201%200%200%201%200%202%201%201l1-2c0-1%201-2%2020-2h20v-3l-1-9c0-6-1-6-1-4%200%204%200%204-1%202-2-1-2-1-2%201v3h-7c-8%200-8%200-8%203%200%202%200%202-2%202s-3%200-3-2c0-3%200-3-7-3h-8v-4l-1-4-1%201v1c-1%201-1%200-1-2s0-2%202-2c1%201%201%200%201-1l-2-2c-2%200-2%201-2%203M55%2049c1%204%201%204%207%205%205%201%205%201%201%201-6%200-9-1-9-5-1-4-4-4-5%200-2%204-4%205-10%205h-4l5-1c6-1%207-2%207-5-1-1-3-2-11-1-3%201-4%204-2%205v1l-2-1-1-1c-3%200-1%205%202%207%204%203%208%203%2010%200%201-2%206-2%207%200h7l6%202c5%200%208-2%208-6%200-3%200-3-1-1-2%201-2%201-1-2%200-3%200-3-2-3l-3-1h-6l-2-1c-1-1-1%200-1%202m196-1l-1%202c0%203-3%203-3%200-2-4-14-3-14%202l-1%202c-1-1-2%202%200%204%203%203%207%203%2010%201%204-2%207-3%208%200%200%201%203%202%203%200s3-2%204-1c2%202%207%203%2011%202%202%200%204-5%202-6l-1-2-2-2-2-1-5-1c-4%200-5%201-5%202l-1%202-1-2c0-2-1-3-2-2M60%2085l-9%204-6%202-4-3-5-4c-2-2-2%200-1%204v4c-2%201%205%207%209%208s8%201%2014-2c3-1%204-2%206-7%204-9%203-11-4-6m203-2c0%202-7%205-12%205l-3%201-3%201-3-1-2-1-1-1-2-2c-2-1-2-1-2%204%200%203%201%205%203%207l2%203c0%202%2016%201%2017%200l3-2%202-2%202-4c1-2%202-8%200-8h-1m72%204c-1%204%200%208%203%208%201%200%202%200%202%202v3h20v-8c0-3%202-2%202%201l1%203v-3l1-3%201-2c0-3-1-3-6-2-3%200-4%202-1%202%205%200-4%202-11%202s-7%200-7-2c0-4-4-4-5-1\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/876285eb2564b76428aa5e4e6c4078a7/277cf/optimizacion-img-video.webp 310w,
+/static/876285eb2564b76428aa5e4e6c4078a7/5077d/optimizacion-img-video.webp 620w,
+/static/876285eb2564b76428aa5e4e6c4078a7/e1adb/optimizacion-img-video.webp 1240w,
+/static/876285eb2564b76428aa5e4e6c4078a7/ded3f/optimizacion-img-video.webp 1600w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/876285eb2564b76428aa5e4e6c4078a7/b0751/optimizacion-img-video.jpg 310w,
+/static/876285eb2564b76428aa5e4e6c4078a7/e1d7b/optimizacion-img-video.jpg 620w,
+/static/876285eb2564b76428aa5e4e6c4078a7/d1f04/optimizacion-img-video.jpg 1240w,
+/static/876285eb2564b76428aa5e4e6c4078a7/8179c/optimizacion-img-video.jpg 1600w"
+          sizes="(max-width: 1240px) 100vw, 1240px"
+          type="image/jpeg"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/876285eb2564b76428aa5e4e6c4078a7/d1f04/optimizacion-img-video.jpg"
+          alt="Curso Optimización de Imágenes y Vídeos"
+          title="Curso Optimización de Imágenes y Vídeos"
+          loading="lazy"
+        />
+      </picture>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Curso Optimización de Imágenes y Vídeos</figcaption>
+  </figure></a></p>
+<ul>
+<li><a href="https://optimizacion-imagenes.github.io/Curso/">Web y temario del curso</a></li>
+<li><a href="https://github.com/optimizacion-imagenes/AMA">Ask Me Anything, sobre Optimización de Imágenes y Vídeos</a></li>
+</ul>
+<h3 id="notas">Notas</h3>
+<ul>
+<li><strong>(1)</strong> Añado Sketch como aplicación para exportar imágenes ya que en entornos de aplicaciones móviles es más habitual utilizar archivos PNG para la interfaz de la aplicación. Por lo general, en entornos web, las interfaces definidas en Sketch acaban siendo representadas con CSS de forma sencilla.</li>
+<li><strong>(2)</strong> Cada programa de edición, aplicación de compresión o compresor por línea de comandos, tiene su propia escala de valores para medir la calidad de la compresión. Esto hace prácticamente imposible una comparación justa entre distintos programas. Aquí os dejo un artículo <a href="https://kornel.ski/en/faircomparison">How to compare images fairly</a> de <a href="https://twitter.com/kornelski">Kornel Lesiński</a> donde habla de ello.</li>
+<li><strong>(3)</strong> Podéis investigar más sobre el impacto del Submuestreos (Chroma Subsampling en inglés) aquí <a href="https://images.guide/#chroma-subsampling">Chroma (or Color) Subsampling</a></li>
+<li><strong>(4)</strong> En Photoshop si en lugar de exportar, seleccionamos “Save as…”, nos ofrece una gran cantidad de formatos de imágenes <a href="https://helpx.adobe.com/photoshop/using/file-formats.html">“Graphic file formats”</a>, la mayoría no compatibles con los navegadores.</li>
+<li><strong>(5)</strong> WebP es un formato de imagen con pérdida que sacrifica mucho la calidad, así que recomiendo validar la calidad de la imagen en porcentajes de calidad bajos</li>
+<li><strong>(6)</strong> GIMP dispone de una documentación muy buena, en la sección de <a href="https://docs.gimp.org/2.10/es/gimp-images-out.html">Guardar / exportar imágenes</a> tendremos todos los detalles de los parámetros que podemos configurar en esta ventana.</li>
+<li><strong>(7)</strong> Si buscáis ImageOptim en la App Store, encontraréis una aplicación llamada <strong>Image optimizer Compression</strong>, que [no es la aplicación(<a href="https://twitter.com/nucliweb/status/1175353637117353984">https://twitter.com/nucliweb/status/1175353637117353984</a>) <strong>ImageOptim</strong> de la que estamos hablando.</li>
+<li><strong>(8)</strong> En la lista de compresores que utiliza ImageOptim se encuentra <a href="https://github.com/google/guetzli">Guetzli</a> de Google. Se trata de un compresor muy efectivo calidad/peso de las imágenes, pero es extremadamente lento en el proceso. Si seleccionamos ese compresor en la configuración, ImageOptim nos avisará con un mensaje muy disuasorio “Puede tomar hasta 30 minutos por imagen. Su sistema puede no responder mientras Guetzli se está ejecutando.”. </li>
+<li><strong>(9)</strong> Estoy <a href="https://twitter.com/nucliweb/status/1174964957990928384">trabajando</a> en una comparativa de esas aplicaciones, estad atentas/os a <a href="https://twitter.com/nucliweb">twitter</a>.</li>
+<li><strong>(10)</strong> Os dejo enlace al repositorio <a href="https://github.com/nucliweb/images-optimization-env">images-optimization-env</a> donde podréis hacer pruebas de compresión con los compresores nativos en Mac <em>(compilé los códigos fuente en mi máquina)</em>. Utilicé <strong>npm</strong> sólo para gestionar los <a href="https://github.com/nucliweb/images-optimization-env/blob/master/package.json#L6-L25">scripts</a>, así que no requiere hacer instalación.</li>
+<li><strong>(11)</strong> Mi compañero y amigo <a href="https://twitter.com/jmperezperez">José M. Pérez</a> nos cuenta sobre esta técnica en el artículo <a href="https://jmperezperez.com/medium-image-progressive-loading-placeholder/">How Medium does progressive image loading</a> <em>(octubre del 2015)</em></li>
+<li><strong>(12)</strong> FLIF es el acrónimo de Free Lossless Image Format, un nuevo formato de imagen sin pérdida con unos ratios de compresión muy interesantes, podéis encontrar más información en la web oficial <a href="https://flif.info/">flif.info</a>.</li>
+<li><strong>(13)</strong> <a href="https://cloudinary.com/documentation/image_transformations#delivery_types">Cloudinary Delivery Types</a></li>
+<li><strong>(14)</strong> <a href="https://cloudinary.com/documentation/image_transformations#supported_image_formats">Cloudinary Supported image formats</a>.</li>
+<li><strong>(15)</strong> <a href="https://en.wikipedia.org/wiki/Pixel_density">Pixel density</a> <em>(Wikipedia)</em>.</li>
+<li><strong>(16)</strong> En la columna <strong>Best tool</strong> podemos ver el codec o combinación de codecs utilizados para la compresión. Por defecto esta columna no es visible, la podéis añadir con botón derecho <em>(menú contextual)</em> en la cabecera de las columnas.</li>
+</ul></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA3IiBoZWlnaHQ9IjEwNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNzAuMyA0Ny40SDU0LjdjLTEuMiAwLTIuMS0xLTItMi4yTDU0LjYgMjRjMC0xLjMtLjgtMi4zLTIuMS0yLjYtMS4yLS4zLTIuNC4zLTMgMS41TDMzLjIgNThjLS40LjgtLjMgMS44LjIgMi41LjUuOCAxLjMgMS4yIDIuMiAxLjJoMTUuNmMxLjIgMCAyLjEgMSAyIDIuMkw1MS4zIDg1YzAgMS4zLjggMi4zIDIuMSAyLjYuMiAwIC40LjEuNi4xIDEgMCAxLjktLjYgMi40LTEuNWwxNi40LTM1LjFjLjQtLjguMy0xLjgtLjItMi41LS41LS44LTEuNC0xLjItMi4zLTEuMnoiIGZpbGw9IiMyNDI0MjQiLz48cGF0aCBkPSJNMjguOSAxNC45YzIuMyAwIDQuMi0xLjkgNC4yLTQuMiAwLTIuMy0xLjktNC4yLTQuMi00LjItMi4zIDAtNC4yIDEuOS00LjIgNC4yLS4xIDIuMyAxLjggNC4yIDQuMiA0LjJ6TTEwLjYgMjQuNmMtMi4zIDAtNC4yIDEuOS00LjIgNC4yIDAgMi4zIDEuOSA0LjIgNC4yIDQuMiAyLjMgMCA0LjItMS45IDQuMi00LjIuMS0yLjMtMS44LTQuMi00LjItNC4yek00LjIgNTcuN2E0LjIgNC4yIDAgMSAwIDAtOC40IDQuMiA0LjIgMCAwIDAgMCA4LjR6TTEwLjYgNzMuOWMtMi4zIDAtNC4yIDEuOS00LjIgNC4yIDAgMi4zIDEuOSA0LjIgNC4yIDQuMiAyLjMgMCA0LjItMS45IDQuMi00LjIuMS0yLjMtMS44LTQuMi00LjItNC4yek0yOC45IDkyLjFjLTIuMyAwLTQuMiAxLjktNC4yIDQuMiAwIDIuMyAxLjkgNC4yIDQuMiA0LjIgMi4zIDAgNC4yLTEuOSA0LjItNC4yIDAtMi4zLTEuOS00LjItNC4yLTQuMnpNNTMuNSA5OC42Yy0yLjMgMC00LjIgMS45LTQuMiA0LjIgMCAyLjMgMS45IDQuMiA0LjIgNC4yIDIuMyAwIDQuMi0xLjkgNC4yLTQuMiAwLTIuMy0xLjktNC4yLTQuMi00LjJ6TTc4LjEgOTIuMWMtMi4zIDAtNC4yIDEuOS00LjIgNC4yIDAgMi4zIDEuOSA0LjIgNC4yIDQuMiAyLjMgMCA0LjItMS45IDQuMi00LjIuMS0yLjMtMS44LTQuMi00LjItNC4yek05Ni40IDczLjljLTIuMyAwLTQuMiAxLjktNC4yIDQuMiAwIDIuMyAxLjkgNC4yIDQuMiA0LjIgMi4zIDAgNC4yLTEuOSA0LjItNC4yIDAtMi4zLTEuOS00LjItNC4yLTQuMnpNMTAyLjggNTcuN2E0LjIgNC4yIDAgMSAwIDAtOC40IDQuMiA0LjIgMCAwIDAgMCA4LjR6TTk2IDMyLjhjLjcgMCAxLjUtLjIgMi4xLS42IDEtLjYgMS43LTEuNSAxLjktMi42LjMtMS4xLjEtMi4yLS40LTMuMkM5MC4xIDEwLjEgNzIuNCAwIDUzLjUgMGMtMi4zIDAtNC4yIDEuOS00LjIgNC4yIDAgMi4zIDEuOSA0LjIgNC4yIDQuMiAxNS45IDAgMzAuOCA4LjUgMzguOSAyMi4zLjggMS4zIDIuMiAyLjEgMy42IDIuMXoiIGZpbGw9IiMwMEFBNTgiLz48L3N2Zz4=" alt="PerfReviews" style="height:56px;margin-right:0.875rem;margin-bottom:0;width:56px;border-radius:50%"/><p>PerfReviews es un proyecto de <a href="/nosotros/"><strong>Joan León y José M. Pérez</strong></a>.<br/>Hablamos sobre web performance en <a href="https://twitter.com/PerfReviews_">Twitter</a> y<!-- --> <a href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww">Youtube</a>.</p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blog/video-en-la-web/en/">← <!-- -->The video format on the web</a></li><li></li></ul></main><footer style="margin-top:4.375rem;padding-top:1.75rem"><a href="/servicios/">Servicios</a> <!-- -->•<!-- --> <a href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww" target="_blank" rel="noopener noreferrer">Youtube</a> <!-- -->•<!-- --> <a href="https://mobile.twitter.com/PerfReviews_" target="_blank" rel="noopener noreferrer">Twitter</a> <!-- -->•<!-- --> <a href="https://www.facebook.com/PerfReviews-221286588787407/" target="_blank" rel="noopener noreferrer">Facebook</a> <!-- -->•<!-- --> <a href="https://github.com/PerfReviews/PerfReviews" target="_blank" rel="noopener noreferrer">Github</a> <!-- -->•<!-- --> <a href="mailto:perfreviews.mail@gmail.com" target="_blank" rel="noopener noreferrer">Email</a> </footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-136400909-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/image-optimization/";window.webpackCompilationHash="4ee8b307865fbeeb9263";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-82a431b3f41feb7028b6.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-b1f290e234b608390d59.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-24c470ad1102dfc2b577.js"],"component---src-pages-404-js":["/component---src-pages-404-js-67be99acaae5f2f0e561.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-f2ba940b28525afd11cb.js"],"component---src-pages-en-services-js":["/component---src-pages-en-services-js-d81faac155329c48991d.js"],"component---src-pages-index-js":["/component---src-pages-index-js-4a63885caf1be85104b0.js"],"component---src-pages-nosotros-js":["/component---src-pages-nosotros-js-a3ba2fa029cc3117813d.js"],"component---src-pages-reviews-js":["/component---src-pages-reviews-js-55c6989475e0dde8ac3b.js"],"component---src-pages-servicios-js":["/component---src-pages-servicios-js-84c657c8cc4b0e367e76.js"]};/*]]>*/</script><script src="/webpack-runtime-1eafb3ebf4e3e6253abc.js" async=""></script><script src="/commons-424ae224b8acbc7bd10a.js" async=""></script><script src="/styles-23050e051cdbfe9c9cfa.js" async=""></script><script src="/component---src-templates-blog-post-js-24c470ad1102dfc2b577.js" async=""></script><script src="/app-82a431b3f41feb7028b6.js" async=""></script><script>
+    (function() {
+      if (location.host === 'perf.reviews') {
+        function loadFacebook() {
+          (function(f,b,e,v,n,t,s) {
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)})(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1251206408378715');
+          fbq('track', 'PageView');
+        }
+
+        if (window.requestIdleCallback) {
+            window.requestIdleCallback(loadFacebook, {timeout: 5000});
+        } else {
+            setTimeout(loadFacebook, 5000);
+        }
+      }
+    })();</script></body></html>
