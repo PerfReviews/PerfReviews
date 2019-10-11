@@ -272,6 +272,6 @@ Finally, I want to share that I am working on an online **Optimization course Im
 - **(11)** My partner and friend [José M. Pérez](https://twitter.com/jmperezperez) tells us about this technique in the article [How Medium does progressive image loading](https://jmperezperez.com/medium-image-progressive-loading-placeholder/) _(October 2015)_
 - **(12)** FLIF is the acronym for Free Lossless Image Format, a new lossless image format with a few ratios Very interesting compression, you can find more information on the official website [flif.info](https://flif.info/).
 - **(13)** [Cloudinary Delivery Types](https://cloudinary.com/documentation/image_transformations#delivery_types)
-- **(14)** [Cloudinary Supported image formats](https://cloudinary.com/documentation/image_transformations # supported_image_formats).
+- **(14)** [Cloudinary Supported image formats](https://cloudinary.com/documentation/image_transformations#supported_image_formats).
 - **(15)** [Pixel density](https://en.wikipedia.org/wiki/Pixel_density)_(Wikipedia)_.
 - **(16)** In the column **Best tool** we can see the codec or combination of codecs used for compression. By default this column is not visible, you can add it with the right button _(context menu)_ in the column header.
