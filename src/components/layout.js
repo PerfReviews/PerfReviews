@@ -2,12 +2,42 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
+import Bio from "../components/bio"
+import BioEn from "../components/en/bio"
 
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
+    const language = location.pathname.indexOf('/en/') === -1 ? 'es' : 'en'
+
+    const activeStyle = { boxShadow: "none", fontWeight: 'bold', color: "hsla(0,0%,0%,0.7)" };
+    const submenu = <div>
+      <Link
+        to={language === 'en' ? '/en/' : '/'}
+        activeStyle={activeStyle}
+      >Home
+</Link>{' '}
+      &bull;{' '}
+      <Link
+        to="/reviews/"
+        activeStyle={activeStyle}
+      >{language === 'en' ? 'Web Performance Audits' : 'Análisis de Performance'}
+      </Link>{' '}
+      &bull;{' '}
+      <Link
+        to={language === 'en' ? '/en/services/' : '/servicios/'}
+        activeStyle={activeStyle}>
+        {language === 'en' ? 'Our Services' : 'Servicios'}
+      </Link>{' '}
+      &bull;{' '}
+      <Link
+        to={language === 'en' ? '/' : '/en/'}
+        activeStyle={activeStyle}>
+        {language === 'en' ? 'En Español' : 'In English'}
+      </Link>
+    </div>;
 
     if (location.pathname === rootPath) {
       header = (
@@ -61,56 +91,10 @@ class Layout extends React.Component {
         }}
       >
         <header>{header}</header>
+        {language === 'en' ? <BioEn /> : <Bio />}
+        {submenu}
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: rhythm(2.5),
-            paddingTop: rhythm(1),
-          }}>
-          <Link
-          to="/servicios/"
-        >Servicios
-      </Link>{' '}
-        &bull;{' '}
-          <a
-          href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Youtube
-        </a>{' '}
-        &bull;{' '}
-          <a
-          href="https://mobile.twitter.com/PerfReviews_"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Twitter
-        </a>{' '}
-        &bull;{' '}
-        <a
-          href="https://www.facebook.com/PerfReviews-221286588787407/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Facebook
-        </a>{' '}
-        &bull;{' '}
-        <a
-          href="https://github.com/PerfReviews/PerfReviews"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Github
-        </a>{' '}
-        &bull;{' '}
-        <a
-          href="mailto:perfreviews.mail@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Email
-        </a>{' '}
-      </footer>
+        {submenu}
       </div>
     )
   }

@@ -2,7 +2,7 @@
 title: ¿Por dónde empiezo para optimizar mis imágenes?
 date: "2019-10-11"
 description: Como profesionales del desarrollo web, nos preocupamos de escoger el mejor framework, la librería más actual, aplicar buenas prácticas en Javascript y CSS, ser cuidadosos de la semántica en el HTML para mejorar el SEO, estamos mejorando la accesibilidad de nuestro contenido, empaquetamos y dividimos los archivos para optimizar la carga, pero ¿qué pasa con las imágenes?
-featuredImage: ./featured-image.png
+featuredImage: ./thumbs/Optimizacion-Imagenes.jpg
 ---
 
 > Como profesionales del desarrollo web, nos preocupamos de escoger el mejor framework, la librería más actual, aplicar buenas prácticas en Javascript y CSS, ser cuidadosos de la semántica en el HTML para mejorar el SEO, estamos mejorando la accesibilidad de nuestro contenido, empaquetamos y dividimos los archivos para optimizar la carga, pero ¿qué pasa con las imágenes?

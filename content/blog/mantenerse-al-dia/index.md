@@ -2,7 +2,7 @@
 title: Cómo mantenerse al día sobre rendimiento web
 date: "2019-08-09"
 description: Consejos y recursos para aprender sobre web performance. Herramientas, sitios web y desarrolladores que escriben sobre técnicas y nuevas APIs para crear sitios que cargan rápido y consumen pocos datos.
-featuredImage: ./featured-image.png
+featuredImage: ./thumbs/portada.jpg
 ---
 
 ¿Cómo mantenerse al día sobre rendimiento web? El mundo del desarrollo web cambia rápidamente y **la medición y optimización de la performance no es una excepción**. Con frecuencia nos encontramos ante nuevas herramientas, nuevas API y nuevas técnicas para construir webs que cargan rápido.

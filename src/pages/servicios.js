@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -55,7 +54,6 @@ class Servicios extends React.Component {
           marginTop: rhythm(2.5),
           marginBottom: rhythm(2.5),
         }} />
-        <Bio />
       </Layout>
     )
   }
