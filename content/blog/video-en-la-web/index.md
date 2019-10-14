@@ -2,7 +2,7 @@
 title: El formato vídeo en la web
 date: "2019-08-26"
 description: Después de encontrarnos con la imagen más pesada de la web (según HTTP Archive), no hemos resistido la tentación de analizar el caso y encontrar una solución para mejorar el rendimiento.
-featuredImage: ./featured-image.png
+featuredImage: ./assets/video-format-web.png
 ---
 
 Después de este tweet de [Yoav Weiss](https://twitter.com/yoavweiss) en el que [Addy Osmani](https://twitter.com/addyosmani) le pregunta por la “mejor” imagen de la web.

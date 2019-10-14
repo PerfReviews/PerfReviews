@@ -2,7 +2,7 @@
 title: Where do I start to optimize my images?
 date: "2019-10-11"
 description: As web development professionals, we care about choosing the best framework, the most current library, applying good practices in Javascript and CSS, being careful of the semantics in HTML to improve SEO, we are improving the accessibility of our content, we package and we divide the files to optimize the load... But what about images?
-featuredImage: ./featured-image.png
+featuredImage: ./thumbs/Optimizacion-Imagenes.jpg
 ---
 
 > As web development professionals, we care about choosing the best framework, the most current library, applying good practices in Javascript and CSS, being careful of the semantics in HTML to improve SEO, we are improving the accessibility of our content, we package and we divide the files to optimize the load... But what about images?

@@ -2,7 +2,7 @@
 title: The video format on the web
 date: "2019-08-28"
 description: After founding the heaviest image on the web (according to HTTP Archive), we have not resisted the temptation to dig further and figure out what went wrong and alternatives to serve a lighter alternative.
-featuredImage: ./featured-image.png
+featuredImage: ./assets/video-format-web.png
 ---
 
 We came across this tweet by [Yoav Weiss](https://twitter.com/yoavweiss) in which [Addy Osmani](https://twitter.com/addyosmani) asks about the "best" image on the web:

@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -18,10 +17,10 @@ class BlogIndex extends React.Component {
           title="Nuestros análisis de web performance"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <Bio />
+        <h1>Análisis de rendimiento web de sitios reales.</h1>
         <p>En PerfReviews analizamos el rendimiento de sitios web. Es una forma ideal de enseñar cómo utilizar herramientas para detectar, corregir y prevenir problemas de performance.</p>
-
         <p>Somos reconocidos Google Developer Experts en tecnologías web y tenemos una larga experiencia desarrollando sitios web con un especial foco en usabilidad, accessibilidad y rendimiento.</p>
+        <p>Dado que los sitios web son proyectos dinámicos, es posible que los análisis mencionen aspectos que no sean reproducibles actualmente. Por ello acompañamos los vídeos con una serie de informes que permiten visualizar un “snapshot” de la web en el momento en que hicimos el estudio.</p>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
