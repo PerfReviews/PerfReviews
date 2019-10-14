@@ -13,7 +13,7 @@ This is a non-exhaustive list of the new tools and features that were presented.
 
 _Presented in [Speed at Scale: Web Performance Tips and Tricks from the Trenches](https://youtu.be/YJGCZCaIZkQ?t=101). Also mentioned in [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=73)._
 
-[LightWallet](https;//bit.ly/lightwallet-docs) adds support for _performance budgets_ in Lighthouse and is available in the Lighthouse command-line version.
+[LightWallet](https://bit.ly/lightwallet-docs) adds support for _performance budgets_ in Lighthouse and is available in the Lighthouse command-line version.
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_252.jpg)
 

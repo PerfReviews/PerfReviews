@@ -36,8 +36,10 @@ featuredImage: ../../assets/review-mediamarkt.png
 
 ### DevTools Coverage
 
-- [Home Coverage](./reports/Coverage-Home.jpg) `3.0Mb of 4.5Mb are not used (67%)`
-- [Product Coverage](./reports/Coverate-Product.jpg) `3.3Mb of 4.9Mb are not used (67%)`
+- Home Coverage: 3.0Mb of 4.5Mb are not used (67%)
+![67% of the code is not used in the home page](./reports/Coverage-Home.jpg)
+- Product Coverage: 3.3Mb of 4.9Mb are not used (67%)
+![67% of the code is not used in the product page](./reports/Coverage-Product.jpg)
 
 ### Enlaces a otros recursos mencionados
 

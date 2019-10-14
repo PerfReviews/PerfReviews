@@ -21,7 +21,7 @@ featuredImage: ../../assets/review-eci.png
 
 ### Webpagetest
 
-- [Home](https://www.webpagetest.org/result/181229_R8_4290f9e55cf33f85a1907de91e4063a5/) | _Chrome - Moto G4 - Chrome - **4G**_  | [📺 **Video**](hhttps://www.webpagetest.org/video/view.php?id=181229_R8_4290f9e55cf33f85a1907de91e4063a5.3.0)
+- [Home](https://www.webpagetest.org/result/181229_R8_4290f9e55cf33f85a1907de91e4063a5/) | _Chrome - Moto G4 - Chrome - **4G**_  | [📺 **Video**](https://www.webpagetest.org/video/view.php?id=181229_R8_4290f9e55cf33f85a1907de91e4063a5.3.0)
 - [Home](https://www.webpagetest.org/result/181221_YY_6d961c32b00c53203fd62838c00a0956/) | _Chrome - **Cable**_ | [📺 **Video**](https://www.webpagetest.org/result/181221_YY_6d961c32b00c53203fd62838c00a0956/1/screen_shot/)
 - [Product detail](https://www.webpagetest.org/result/181220_EY_bfe5daffcdc00de54aa7a887b9f0513d/) | _Chrome - Moto G4 - Chrome - **4G**_ | [📺 **Video**](https://www.webpagetest.org/video/view.php?id=181220_EY_bfe5daffcdc00de54aa7a887b9f0513d.3.0)
 - [Product detail](https://www.webpagetest.org/result/181222_DW_2524938b8a7051d396433cb2f5e874c1/) | _Chrome - **Cable**_ | [📺 **Video**](https://www.webpagetest.org/result/181222_DW_2524938b8a7051d396433cb2f5e874c1/1/screen_shot/)

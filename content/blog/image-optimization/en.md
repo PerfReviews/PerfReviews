@@ -45,7 +45,7 @@ Given that we want to show images on our site, the most common question is "**wh
 
 ## Optimization from graphic editors
 
-Graphic editors are first in line when talking about optimization. Software like [Photoshop](httpsd://www.adobe.com/Photoshop), [Affinity Photo](https://affinity.serif.com/en-gb/photo/), [Pixelmator](https://www.pixelmator.com/pro/), [PaintShopPro](https://www.paintshoppro.com/), [Paint.net](https://www.getpaint.net/) or [GIMP](https://www.gimp.org/) among others. Let's not forget [Sketch](https://www.sketch.com/), which despite not focused on image editing, it is widely used to create user interfaces<sup>(1)</sup>.
+Graphic editors are first in line when talking about optimization. Software like [Photoshop](https://www.adobe.com/Photoshop), [Affinity Photo](https://affinity.serif.com/en-gb/photo/), [Pixelmator](https://www.pixelmator.com/pro/), [PaintShopPro](https://www.paintshoppro.com/), [Paint.net](https://www.getpaint.net/) or [GIMP](https://www.gimp.org/) among others. Let's not forget [Sketch](https://www.sketch.com/), which despite not focused on image editing, it is widely used to create user interfaces<sup>(1)</sup>.
 
 ### Photoshop
 
@@ -239,9 +239,9 @@ List of optimized images with ImageOptim<sup>(16)</sup>:
 - [Native image lazy-loading for the web!](https://addyosmani.com/blog/lazy-loading/)
 - [Optimization of images](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization)
 - [5 steps to speed up your image heavy website](https://codeburst.io/5-steps-to-speed-up-your-image-heavy-website-65c874a86966)
-- [State of the Web: Top Image Optimization Strategies](https://dougsillars.com/2018/05/21/state- of-the-web-top-image-optimization-strategies/)
+- [State of the Web: Top Image Optimization Strategies](https://dougsillars.com/2018/05/21/state-of-the-web-top-image-optimization-strategies/)
 - [Converting Images To WebP](https://www.smashingmagazine.com/2018/07/converting-images-to-webp/)
-- [How To Create and Serve WebP Images to Speed ​​Up Your Website](https://www.digitalocean.com/community/tutorials/how-to-create-and-serve-webp-images-to-speed-up-your-websi te)
+- [How To Create and Serve WebP Images to Speed Up Your Website](https://www.digitalocean.com/community/tutorials/how-to-create-and-serve-webp-images-to-speed-up-your-website)
 - [Use Imagemin to compress images](https://web.dev/use-imagemin-to-compress-images)
 - [Low Quality Image Placeholders (LQIP) Explained](https://cloudinary.com/blog/low_quality_image_placeholders_lqip_explained)
 - [JPEG Compression Algorithm](https://medium.com/breaktheloop/jpeg-compression-algorithm-969af03773da)

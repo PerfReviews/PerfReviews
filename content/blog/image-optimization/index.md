@@ -45,7 +45,7 @@ En el escenario que nos encontramos ya hemos hecho el análisis previo de la nec
 
 ## Optimización desde editores gráficos
 
-En la primera línea de acción en la optimización de imágenes tenemos los editores de imágenes, como [Photoshop](https://fwww.adobe.com/Photoshop‎), [Affinity Photo](https://affinity.serif.com/en-gb/photo/), [Pixelmator](https://www.pixelmator.com/pro/), [PaintShopPro](https://www.paintshoppro.com/), [Paint.net](https://www.getpaint.net/) o [GIMP](https://www.gimp.org/) entre otros. No olvidemos a [Sketch](https://www.sketch.com/) que aún no siendo un programa para la edición de imágenes, se utiliza mucho en la edición de interfaces<sup>(1)</sup>.
+En la primera línea de acción en la optimización de imágenes tenemos los editores de imágenes, como [Photoshop](https://www.adobe.com/Photoshop). [Affinity Photo](https://affinity.serif.com/en-gb/photo/), [Pixelmator](https://www.pixelmator.com/pro/), [PaintShopPro](https://www.paintshoppro.com/), [Paint.net](https://www.getpaint.net/) o [GIMP](https://www.gimp.org/) entre otros. No olvidemos a [Sketch](https://www.sketch.com/) que aún no siendo un programa para la edición de imágenes, se utiliza mucho en la edición de interfaces<sup>(1)</sup>.
 
 ### Photoshop
 

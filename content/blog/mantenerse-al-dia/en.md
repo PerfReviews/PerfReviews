@@ -38,7 +38,7 @@ This site from Google collects information that was previously dispersed in diff
 
 ## Tools
 
-To detect performance problems the best approach is to run a web audit. From within the browser [it is possible to perform a quick check](https://perf.reviews/tools/1.2-Interpretando-Lighthouse-Performance/), and there are also websites like [web.dev/measure](https:// web.dev/measure) that generate a detailed report of the performance of a particular URL.
+To detect performance problems the best approach is to run a web audit. From within the browser [it is possible to perform a quick check](https://perf.reviews/tools/1.2-Interpretando-Lighthouse-Performance/), and there are also websites like [web.dev/measure](https://web.dev/measure) that generate a detailed report of the performance of a particular URL.
 
 ![Performance report of perf.reviews using the online version of Lighthouse at https://web.dev/measure. Overview and report view.](thumbs/google-web-lighthouse-perf-reviews.png)
 
@@ -46,7 +46,7 @@ A tool we recommend is [WebPageTest](https://webpagetest.org), which is also use
 
 ![Comparing two websites with WebPagetest, filmstrip view](thumbs/webpagetest-filmstrip.png)
 
-Through its advanced options you can also [check the impact of 3rd party scripts](https://andydavies.me/blog/2018/02/19/using-webpagetest-to-measure-the-impact-of-3rd -party-tags/), simulate [single point of failures (SPOF)](http://blog.patrickmeenan.com/2011/10/testing-for-frontend-spof.html) and [much more](https://deanhume.com/ten-things-you-didnt-know-about-webpagetest-org/). It even [has an API](https://css-tricks.com/use-webpagetest-api/) that lets to run all this from a script or integrate it in a build and deployment pipeline.
+Through its advanced options you can also [check the impact of 3rd party scripts](https://andydavies.me/blog/2018/02/19/using-webpagetest-to-measure-the-impact-of-3rd-party-tags/), simulate [single point of failures (SPOF)](http://blog.patrickmeenan.com/2011/10/testing-for-frontend-spof.html) and [much more](https://deanhume.com/ten-things-you-didnt-know-about-webpagetest-org/). It even [has an API](https://css-tricks.com/use-webpagetest-api/) that lets to run all this from a script or integrate it in a build and deployment pipeline.
 
 Other tools analyze periodically a site and can alert us when any of the metrics worsens substantially, below a certain threshold. We recommend [Calibre](https://calibreapp.com), [DebugBear](https://www.debugbear.com), [SiteSpeed](https://www.sitespeed.io/) and [SpeedCurve](https://speedcurve.com/).
 

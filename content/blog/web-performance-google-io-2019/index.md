@@ -13,7 +13,7 @@ Ya hemos dejado atrás Google I/O 2019. Un evento repleto de novedades relaciona
 
 _Presentado en [Speed at Scale: Web Performance Tips and Tricks from the Trenches](https://youtu.be/YJGCZCaIZkQ?t=101). Mencionado también en [Demystifying Speed Tooling](https://www.youtube.com/watch?v=mLjxXPHuIJo?t=73)._
 
-[LightWallet](https;//bit.ly/lightwallet-docs) añade soporte para _performance budgets_ en Lighthouse y está disponible en la versión de línea de comando de Lighthouse.
+[LightWallet](https://bit.ly/lightwallet-docs) añade soporte para _performance budgets_ en Lighthouse y está disponible en la versión de línea de comando de Lighthouse.
 
 ![](thumbs/demystifying_speed_tooling_google_io_19_252.jpg)
 
