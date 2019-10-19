@@ -9,7 +9,7 @@ featuredImage: ./thumbs/Optimizacion-Imagenes.jpg
 
 ## Las imágenes en la web
 
-Las imágenes són una parte muy importante de la web. Seguro que con el constante avance de la tecnología, donde vemos una mejora contínua en la conectividad, posiblemente en un futuro los contenidos tendrán más vídeos que imágenes. Pero la base seguirá siendo la misma, mejorar la experiencia de usuarias y usuarios, que es de lo que va realmente nuestro trabajo.
+Las imágenes son una parte muy importante de la web. Seguro que con el constante avance de la tecnología, donde vemos una mejora continua en la conectividad, posiblemente en un futuro los contenidos tendrán más vídeos que imágenes. Pero la base seguirá siendo la misma, mejorar la experiencia de usuarias y usuarios, que es de lo que va realmente nuestro trabajo.
 
 De acuerdo con el [HTTP Archive](http://httparchive.org/), el 50% de los datos transferidos para buscar una página web son imágenes (JPEG, PNG y GIF). En agosto de 2019, en móvil las imágenes representaban 911KB del contenido cargado para el sitio promedio de 1.8MB, y en desktop son 1MB imágenes en un promedio de 2MB.
 
@@ -19,7 +19,7 @@ De acuerdo con el [HTTP Archive](http://httparchive.org/), el 50% de los datos t
 
 Hace unos días, en el artículo [Performance Web en tiempos modernos](https://octuweb.com/performance-web-en-tiempos-modernos/), Miguel Ángel nos hablaba de una situación donde tenía problemas para planificar una actividad para el fin de semana: _"Donde tendría que ver los horarios, aparece blanco sobre blanco. Creo que está cargando, tampoco estoy seguro... el tren ha llegado y mi móvil se va al bolsillo. "Luego pruebo con la web del otro cine"..."_.
 
-Es muy probable que el texto de color blanco de los horarios esté sobre una fantástica e increíble imagen de una escena clave del último estreno cinematográfico, perfectamente contrastada, perfectamente encuadrada para llamar la atención del espectador e informar de los horarios para poder ver esa gran película... **pero**, no se ha cargado la imagen.
+Es muy probable que el texto de color blanco de los horarios esté sobre una fantástica e increíble imagen de una escena clave del último estreno cinematográfico, perfectamente contrastada, perfectamente encuadrada para llamar la atención del espectador e informar de los horarios para poder ver esa gran película... pero **no** se ha cargado la imagen.
 
 Es ahí donde me permito utilizar el término IX (Image eXperience), hay varios puntos a tener en cuenta para una buena IX, y no sólo pasar las imágenes por el compresor que promete optimizar nuestras imágenes de la forma más efectiva.
 
@@ -111,7 +111,7 @@ Os dejo referencia de otras aplicaciones (para Mac) que podéis probar, muchas d
 
 ![Image Optimization Apps](./thumbs/Image-Optimization-Apps.png)
 
-De estas alternativas, la que me ha gustado es [Optimage](https://optimage.app/), en la web prometen que es más efectivo<sup>(9)</sup> que **ImageOptim**. Se trata de una aplicación más completa, ya que nos permite cambiar el formato de la imagen, cambiar sus dimensiones, podemos configurar carpeta de salida o añadir prefijo/sufijo para no sobrescribir las imágenes originales. [JPEGmini Pro](https://www.jpegmini.com/) está muy enfocada al mundo de la fotografía, y realmente consigue resultados muy impresionantes.
+De estas alternativas, la que me ha gustado es [Optimage](https://optimage.app/), en la web prometen que es más efectivo<sup>(9)</sup> que **ImageOptim**. Se trata de una aplicación más completa, ya que nos permite cambiar el formato de la imagen, cambiar sus dimensiones, podemos configurar carpeta de salida o añadir prefijo/sufijo para no sobreescribir las imágenes originales. [JPEGmini Pro](https://www.jpegmini.com/) está muy enfocada al mundo de la fotografía, y realmente consigue resultados muy impresionantes.
 
 ## Optimización desde herramientas CLI en local
 
@@ -212,7 +212,7 @@ Existen muchos servicios online para comprimir imágenes, por lo general comprim
 Es muy fácil que el día a día nos haga caer _(inconscientemente)_ en el error de no optimizar nuestras imágenes, pero tenemos la opción de integrar una de las siguientes herramientas.
 
 #### [ImgBot](https://imgbot.net/)
-Un sevicio para optimizar imágenes basado en [Magick.NET](https://github.com/dlemstra/Magick.NET) (una libreía .NET para [ImageMagick](https://imagemagick.org/)) que podemos integrar con nuestro repositorio de GitHub, lo podemos configurar para indicar cada cuanto "parseará" nuestras imágenes, definir carpetas, imágenes o extensiones a ignorar, así como el nivel de compresión. Lo más interesante es que genera una Pull Request con la sugerencia de las imágenes optimizadas.
+Un servicio para optimizar imágenes basado en [Magick.NET](https://github.com/dlemstra/Magick.NET) (una librería .NET para [ImageMagick](https://imagemagick.org/)) que podemos integrar con nuestro repositorio de GitHub, lo podemos configurar para indicar cada cuanto "parseará" nuestras imágenes, definir carpetas, imágenes o extensiones a ignorar, así como el nivel de compresión. Lo más interesante es que genera una Pull Request con la sugerencia de las imágenes optimizadas.
 
 ![ImgBot: Pull Request](./thumbs/imgbot-PR.png)
 
@@ -224,7 +224,7 @@ Con las recién llegadas [Actions de GitHub](https://github.com/features/actions
 
 ### En casa de herrero...
 
-Todas la imágenes de este artículo han sido optimizadas con **ImageOptim**, la mayoría en formato **PNG** ya que són capturas de pantalla con texto. **PNG** es el formato ideal para mantener la calidad y no generar ruido alrededor de los textos.
+Todas la imágenes de este artículo han sido optimizadas con **ImageOptim**, la mayoría en formato **PNG** ya que son capturas de pantalla con texto. **PNG** es el formato ideal para mantener la calidad y no generar ruido alrededor de los textos.
 
 ![ImageOptim: list images](./thumbs/ImageOptim.png)
 
