@@ -204,7 +204,7 @@ There are many features, add-ons, plugins, and tools. If you want to have a simp
 
 There are many online services to compress images which usually compress the images one by one, and not in batch as desktop applications do. I just want to comment a couple of them that I find interesting:
 
-- [Squoosh](https://squoosh.app/). What I like about this application is that it runs entirely in the browser. It has been developed by the engineers at Google, it is [open source](https://github.com/GoogleChromeLabs/squoosh/) and uses [WebAssembly](https://webassembly.org/) to run the [codecs] in the browser binaries](https://github.com/GoogleChromeLabs/squoosh/tree/4a01d0d548bf51e75ddb1d9e3d0259b5ab1c87b5/codecs) written in C or C ++.
+- [Squoosh](https://squoosh.app/). What I like about this application is that it runs entirely in the browser. It has been developed by the engineers at Google, it is [open source](https://github.com/GoogleChromeLabs/squoosh/) and uses [WebAssembly](https://webassembly.org/) to run the [codecs in the browser binaries](https://github.com/GoogleChromeLabs/squoosh/tree/4a01d0d548bf51e75ddb1d9e3d0259b5ab1c87b5/codecs) written in C or C ++.
 - [Compress-Or-Die](https://compress-or-die.com/) uses the traditional format of running compression on the server side. What I like is that it offers many customization options, all of them documented, with very good results. It also includes an [image analyzer](https://compress-or-die.com/analyze) with very detailed image information.
 
 ### Ooops! Do not forget to optimize any image
