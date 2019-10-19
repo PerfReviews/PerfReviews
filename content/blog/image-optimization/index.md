@@ -142,7 +142,7 @@ Este enfoque lo convierte en una solución muy versátil, ya que se pueden mante
 
 Se puede utilizar tanto como CLI _(Command Line Interface)_ con [imagemin-cli](https://github.com/imagemin/imagemin-cli) como desde Javascript. [Aquí](https://github.com/EscuelaIt/Optimizacion-Imagenes) encontraréis ejemplos de implementación en **mpm**, **Gulp** y **Webpack** de unos ejercicios de un curso que impartí en Escuela IT. Es esos ejemplos podréis ver que siempre mantengo la imagen original, para poder comprimir siempre desde la imagen original y no **re-comprimir** una imagen que ya ha sido comprimida, y en ocasiones por otro compresor.
 
-No es buena idea hacer eso, en este vídeo podréis ver un ejemplo de lo que pasa al re-comprimir la misma imágen:
+No es buena idea hacer eso, en este vídeo podréis ver un ejemplo de lo que pasa al re-comprimir la misma imagen:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w7vXJbLhTyI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
