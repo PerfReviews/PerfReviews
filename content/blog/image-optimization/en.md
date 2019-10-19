@@ -9,7 +9,7 @@ featuredImage: ./thumbs/Optimizacion-Imagenes.jpg
 
 ## Images on the web
 
-Images are a very important part of the web. Surely with the constant advance of technology and improvemenets in connectivity, in the future the content might be more video-based than image-based. No matter what, our goal of improving user's experience will remain. After all, that's what our work really is about.
+Images are a very important part of the web. Surely with the constant advance of technology and improvements in connectivity, in the future the content might be more video-based than image-based. No matter what, our goal of improving user's experience will remain. After all, that's what our work really is about.
 
 According to [HTTP Archive](http://httparchive.org/), 50% of the data transferred to load a web page are images (JPEG, PNG and GIF). In August 2019, images on mobile represented 911KB of the content loaded for the average 1.8MB site, and on desktop there were 1MB of images on an average site weighting 2MB.
 
@@ -37,7 +37,7 @@ Let's continue with the example of the cinema schedule page that Michelangelo co
 
 As you can see, the optimization of images for the web is not only about choose the percentage of compression when saving an image. There are many things to consider and many people that can intervene and detect a possible failure in a part of the product as critical as the example above.
 
-> Explaining all these points in depth would be enough content for a wholee book... Actually, I am already working on it 🤪
+> Explaining all these points in depth would be enough content for a whole book... Actually, I am already working on it 🤪
 
 ## ~~Optimization~~ Adventure Time
 
@@ -156,7 +156,7 @@ Take into account the time to find the correct parameters for the best result, s
 
 Another option is to use an online service such as [Cloudinary](https://cloudinary.com/), [imgix](https://www.imgix.com/), [Fastly's Image Optimizer](https://www.fastly.com/io), [ImageOptim API](https://imageoptim.com/api) or [Kraken](https://kraken.io/). These services offer us much more than optimize, resize or change their format, like a cache service and [CDN](https://en.wikipedia.org/wiki/Content_delivery_network). This is an option to consider if our product is visited from different parts of the world.
 
-Each of them has its own functionalities, advantages, configurations and integrations, butbeing a [Cloudinary MDE](https://cloudinary.com/partners/media-developers) I will talk about **Cloudinary** 😊
+Each of them has its own functionalities, advantages, configurations and integrations, but being a [Cloudinary MDE](https://cloudinary.com/partners/media-developers) I will talk about **Cloudinary** 😊
 
 To know more about Cloudinary's features you can check the web. I want to talk about the features that I like, which I think provide value, both for us as demanding developers and for the IX.
 
@@ -202,7 +202,7 @@ There are many features, add-ons, plugins, and tools. If you want to have a simp
 
 ### Other online services
 
-There are many online services to compress images which usually compress the images one by one, and not by batch as desktop applications do. I just want to comment a couple of them that I find interesting:
+There are many online services to compress images which usually compress the images one by one, and not in batch as desktop applications do. I just want to comment a couple of them that I find interesting:
 
 - [Squoosh](https://squoosh.app/). What I like about this application is that it runs entirely in the browser. It has been developed by the engineers at Google, it is [open source](https://github.com/GoogleChromeLabs/squoosh/) and uses [WebAssembly](https://webassembly.org/) to run the [codecs] in the browser binaries](https://github.com/GoogleChromeLabs/squoosh/tree/4a01d0d548bf51e75ddb1d9e3d0259b5ab1c87b5/codecs) written in C or C ++.
 - [Compress-Or-Die](https://compress-or-die.com/) uses the traditional format of running compression on the server side. What I like is that it offers many customization options, all of them documented, with very good results. It also includes an [image analyzer](https://compress-or-die.com/analyze) with very detailed image information.
