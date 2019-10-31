@@ -196,7 +196,7 @@ As for integration, it is very interesting to see that we can integrate through 
 
 ### This does not end here
 
-There are many features, add-ons, plugins, and tools. If you want to have a simple and visual guide of the highlights of Cloudinary, here is a website where you can play with the API and some of the photos that were taken at the **JS Camp 2019**, [CloudiCam.dev](https://cloudycam.dev/nucliweb)
+There are many features, add-ons, plugins, and tools. If you want to have a simple and visual guide of the highlights of Cloudinary, here is a website where you can play with the API and some of the photos that were taken at the **JS Camp 2019**, [CloudyCAM.dev](https://cloudycam.dev/nucliweb)
 
 ## One more thing
 
