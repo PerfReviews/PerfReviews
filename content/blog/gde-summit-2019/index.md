@@ -5,7 +5,7 @@ description: Asistimos al Google Developer Experts Summit 2019 y visitamos las o
 featuredImage: ../../assets/gde-summit-2019/gde-summit-2019.jpg
 ---
 
-A finales de octubre tuvimos la oportunidad de asistir al evento anual que Google organiza para los *Developer Experts* en Santa Clara, California. Después del evento conocimos a parte del equipo de [Cloudinary](https://cloudinary.com/), cuyas herramientas y servicios hemos utilizado a menudo para realizar revisiones de rendimiento. Fue también la primera vez que nos reunimos en persona desde que empezamos el proyecto PerfReviews (Joan está en Barcelona y Jose en Estocolmo).
+A finales de octubre tuvimos la oportunidad de asistir al evento anual que Google organiza para los *Developer Experts* en Sunnyvale, California. Después del evento conocimos a parte del equipo de [Cloudinary](https://cloudinary.com/), cuyas herramientas y servicios hemos utilizado a menudo para realizar revisiones de rendimiento. Fue también la primera vez que nos reunimos en persona desde que empezamos el proyecto PerfReviews (Joan está en Barcelona y Jose en Estocolmo).
 
 ## Google Developer Experts Summit 2019
 
