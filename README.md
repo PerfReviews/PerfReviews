@@ -6,7 +6,6 @@ Dado que los sitios web son proyectos dinámicos, es posible que los análisis m
 
 > Performance Reviews por [Jose M. Pérez](https://twitter.com/jmperezperez) y [Joan León](https://twitter.com/nucliweb) en [YouTube](https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww).
 
-
 ## Desarrollo
 
 Clonar el repositorio, instalar dependencias y ejecutar `npm start`.
