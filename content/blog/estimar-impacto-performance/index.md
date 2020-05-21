@@ -43,8 +43,6 @@ La idea es que **si podemos demostrar que los usuarios que tienen un mejor rendi
 
 Nos podríamos preguntar si los usuarios tienen un mejor rendimiento web y gastan más porque están usando mejores dispositivos (por ejemplo, el último iPhone), que tienen mejores CPU y sus usuarios tienen probablemente un mayor poder adquisitivo.
 
-One could wonder if users having a better performance and spending more because they are using better devices (ie the latest iPhone), which have better CPUs and their users have likely a higher purchase power.
-
 ![Representando ingresos por sesión para un dispositivo específico dependiendo de los FPS después de click](thumbs/assess-performance-impact_simplified-iphone8-dollar-per-session.png)
 
 Usando Google Analytics puedes ver qué tipo de dispositivo está usando el usuario y representar resultados agrupados por modelos específicos.
@@ -78,7 +76,7 @@ Google dice que **un buen objetivo para Rel mCvR es 70%**, lo que significa que 
 
 ![Explicación de la tasa de conversión móvil relativa y sus componentes](thumbs/assess-performance-impact_rel-mcvr.png)
 
-Ten en cuenta que Rel mCvR también está influido por ls experiencia de usuario (UX), ya que una mala UX en dispositivos móviles dañará las tasas de conversión de dispositivos móviles. **Debes usar [Lighthouse](https://web.dev/measure) o [WebPageTest](https://www.webpagetest.org/) para asegurarte de que haya problemas de rendimiento y que la velocidad sea el principal factor en Rel mCvR, y no usabilidad.**
+Ten en cuenta que Rel mCvR también está influido por ls experiencia de usuario (UX), ya que una mala UX en dispositivos móviles dañará las tasas de conversión de dispositivos móviles. **Debes usar [Lighthouse](https://web.dev/measure) o [WebPageTest](https://www.webpagetest.org/) para asegurarte de que haya problemas de rendimiento y que la velocidad sea el principal factor en Rel mCvR, y no la usabilidad.**
 
 La pregunta clave es: _¿cuál es un buen valor objetivo de Rel mCvR?_ Si lo supiéramos, podríamos evaluar los ingresos que representaría un aumento en las tasas de conversión. Para esto, podemos utilizar un enfoque similar a la primera técnica que describimos, agrupando las tasas de conversión en función de las métricas de rendimiento y calculando cuántos usuarios podrían "actualizarse" al siguiente grupo (por ejemplo, de experiencia lenta a media y de media a rápida).
 
@@ -95,7 +93,7 @@ Para calcular el aumento potencial en los ingresos, sólo necesitas proporcionar
 
 ![Cálculo del aumento potencial de los ingresos anuales utilizando Test My Site de Google](thumbs/assess-performance-impact_test-my-site-potential-revenue.png)
 
-La herramienta utilliza la base de datos de informes de Chrome User Experience (HTTP Archive), que contiene métricas de rendimiento recopiladas de usuarios reales que han visitado tu sitio (si estás interesado en estos datos, te recomiendo visitar [CRUX.RUN](https://crux.run/)). También utiliza Lighthouse para calcular los ahorros potenciales en el tiempo de carga.
+La herramienta utiliza la base de datos de informes de Chrome User Experience (HTTP Archive), que contiene métricas de rendimiento recopiladas de usuarios reales que han visitado tu sitio (si estás interesado en estos datos, te recomiendo visitar [CRUX.RUN](https://crux.run/)). También utiliza Lighthouse para calcular los ahorros potenciales en el tiempo de carga.
 
 ## Conclusión
 
