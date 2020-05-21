@@ -51,7 +51,7 @@ Usando Google Analytics puedes ver qué tipo de dispositivo está usando el usua
 
 ## 2.Mediendo la tasa de conversión móvil relativa
 
-Otra forma fácil de detectar problemas de rendimiento y hacer un caso de negocio es calcular las tasas de conversación. Esto es [lo que Google llama tasa de conversión móvil relativa (Rel mCvR)](https://www.blog.google/products/marketingplatform/analytics/mobile-challenge-and-how-measure-it/), que se calcula dividiendo la tasa de conversión móvil por la tasa de conversión de escritorio.
+Otra forma fácil de detectar problemas de rendimiento y hacer un caso de negocio es calcular las tasas de conversión. Esto es [lo que Google llama tasa de conversión móvil relativa (Rel mCvR)](https://www.blog.google/products/marketingplatform/analytics/mobile-challenge-and-how-measure-it/), que se calcula dividiendo la tasa de conversión móvil por la tasa de conversión de escritorio.
 
 Mira este ejemplo:
 
