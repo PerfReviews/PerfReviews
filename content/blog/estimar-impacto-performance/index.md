@@ -29,7 +29,7 @@ Durante los últimos meses he encontrado varias técnicas para estimar el impact
 
 ## 1. Representar métricas de negocio frente a métricas de rendimiento
 
-Piense en cuál es el objectivo de tu web. ¿Es aumentar los registros a una newsletter? ¿Leads? ¿Ventas? Cuando un usuario realiza esas acciones, decimos que ha "convertido". Es importante realizar un seguimiento de estos eventos de conversión, y puedes hacerlo en tu propio sistema o aprovechando herramientas como Google Analytics o Facebook Analytics.
+Piensa en cuál es el objectivo de tu web. ¿Es aumentar los registros a una newsletter? ¿Leads? ¿Ventas? Cuando un usuario realiza esas acciones, decimos que ha "convertido". Es importante realizar un seguimiento de estos eventos de conversión, y puedes hacerlo en tu propio sistema o aprovechando herramientas como Google Analytics o Facebook Analytics.
 
 La siguiente pregunta importante es **¿cómo afecta la experiencia del usuario a la tasa de conversión?**. Suponiendo que haya suficientes conversiones, es posible agrupar estas conversiones en función de una métrica de rendimiento. Esto es exactamente lo que [CP Clermont](https://twitter.com/cpclermont) hizo en ALDO y [describió en su post "El impacto del rendimiento web"](https://simplified.dev/performance/impact-of-web-performance).
 
