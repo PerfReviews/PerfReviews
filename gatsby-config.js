@@ -87,6 +87,16 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/report/kavehome": [
+            "Basic-Auth: perfreviews:NosConocimosEnCallao2018 kavehome:wKe491F3CKepV7sY",
+          ]
+        }
+      },
+    },
   ],
 }
