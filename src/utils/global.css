@@ -1,12 +1,13 @@
 body {
-  --textColorLink: #00AA58;
-  --textColorDate: #888888;
+  --textColorLink: #008846;
+  --textColorDate: #757575;
 }
 
 .gatsby-highlight {
   margin-bottom: 1.75rem;
 }
 
-.gatsby-resp-image-figcaption {
-  font-size: 80%;
+.gatsby-resp-image-figcaption,
+small {
+  font-size: 85%;
 }
