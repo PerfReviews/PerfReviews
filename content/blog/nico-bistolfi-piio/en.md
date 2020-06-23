@@ -9,7 +9,7 @@ featuredImage: ./featured-image.png
 
 ![Screenshot from Piio's website](./thumbs/piio.jpg)
 
-We talked to [Nico Bistolfi](https://www.linkedin.com/in/nicolasbistolfi/) about the philosophy behind Piio, what makes it special, and why it is necessary to automate web performance related tasks. You have [the video available on Youtube](https://youtu.be/SLzhWFU52WQ) and [the audio on MP3](./interview.mp3).
+We talked to [Nico Bistolfi](https://www.linkedin.com/in/nicolasbistolfi/) about the philosophy behind Piio, what makes it special, and why it is necessary to automate web performance related tasks. The interview is in Spanish, and the [video is available on Youtube](https://youtu.be/SLzhWFU52WQ). You can also listen to [the audio on MP3](./interview.mp3).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SLzhWFU52WQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in -picture "allowfullscreen> </iframe>
 
@@ -25,7 +25,7 @@ My name is José Pérez and Joan León accompanies me as always
 
 **Nico**: How are you doing? Thank you very much for the invitation.
 
-**Jose**: Very well, thank you for being with us today. I think the first thing is to talk about Piio. What is Piio?
+**Jose**: Very well, thank you for being with us today. First and foremost, let's talk about Piio. What is Piio?
 
 **Nico**: Our main product is an image optimization service with a very simple installation. It is primarily for websites, and we are not focused on apps yet. What we are going to achieve, and what our service is going to achieve, is to apply all the techniques and best practices for image optimization on your website [through a JavaScript library](https://docs.piio.co/?utm_source=Blog&utm_medium=referral&utm_campaign=PerfReviews).
 
