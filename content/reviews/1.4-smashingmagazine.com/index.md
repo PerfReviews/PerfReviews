@@ -11,7 +11,6 @@ featuredImage: ../../assets/review-smashingmagazine.png
 
 - [Preload, Prefetch And Priorities in Chrome](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf)
 
-
 ## Informes
 
 ### PageSpeed Insights
@@ -30,9 +29,9 @@ featuredImage: ../../assets/review-smashingmagazine.png
 
 ### WebPageTest
 
-- [Home](./reports/WebPageTest/Home/)
-- [Articles](./reports/WebPageTest/Articles/)
-- [Article](./reports/WebPageTest/Article/)
+- [Home](./reports/WebPageTest/Home/WebPagetest.pdf)
+- [Articles](./reports/WebPageTest/Articles/WebPagetest.pdf)
+- [Article](./reports/WebPageTest/Article/WebPagetest.pdf)
 
 ### CSS Stats
 
