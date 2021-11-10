@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
-
 import { rhythm, scale } from "../utils/typography"
+
 import Bio from "../components/bio"
 import BioEn from "../components/en/bio"
+import { Link } from "gatsby"
+import React from "react"
 
 class Layout extends React.Component {
   render() {
@@ -18,7 +18,13 @@ class Layout extends React.Component {
         to={language === 'en' ? '/en/' : '/'}
         activeStyle={activeStyle}
       >Home
-</Link>{' '}
+      </Link>{' '}
+      &bull;{' '}
+      <Link
+        to={language === 'en' ? '/en/blog/' : '/blog/'}
+        activeStyle={activeStyle}>
+        Blog
+      </Link>{' '}
       &bull;{' '}
       <Link
         to="/reviews/"
@@ -26,12 +32,7 @@ class Layout extends React.Component {
       >{language === 'en' ? 'Web Performance Audits' : 'Análisis de Performance'}
       </Link>{' '}
       &bull;{' '}
-      <Link
-        to={language === 'en' ? '/en/services/' : '/servicios/'}
-        activeStyle={activeStyle}>
-        {language === 'en' ? 'Our Services' : 'Servicios'}
-      </Link>{' '}
-      &bull;{' '}
+
       <Link
         to={language === 'en' ? '/' : '/en/'}
         activeStyle={activeStyle}>
