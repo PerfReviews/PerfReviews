@@ -20,7 +20,7 @@ class Reviews extends React.Component {
 
         <h1>Mejoramos el rendimiento de tu web.</h1>
         <p>Tenemos una larga experiencia llevando a cambio mejoras en el rendimiento de webs y estudiando el impacto en las métricas de negocio que te preocupan. Sabemos cuál es el balance entre esfuerzo técnico y retorno de la inversión.</p>
-        <p>Hemoso desarrollado proyectos web a escala en empresas como Facebook, Spotify, Mediaset, Infojobs, Coches, Tuenti y Mil Anuncios. Con un especial énfasis en usabilidad y rendimiento. Tenemos el reconocimiento de Google como Google Developer Experts en tecnologías web.</p>
+        <p>Hemoso desarrollado proyectos web a escala en empresas como Facebook, Spotify, Mediaset, Infojobs, Coches.net, Tuenti y Mil Anuncios. Con un especial énfasis en usabilidad y rendimiento. Tenemos el reconocimiento de Google como Google Developer Experts en tecnologías web y Media Developer Expert por Cloudinary.</p>
 
         <h2>Nuestros servicios</h2>
 
@@ -42,7 +42,7 @@ class Reviews extends React.Component {
           <span style={{ color: '#656565' }}> (IVA no incluido)</span>
         </p>
 
-        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviews">Contrata nuestro servicio de análisis</a></strong></p>
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviews?subject=Perf Review">Contrata nuestro servicio de análisis</a></strong></p>
 
         <hr />
 
@@ -54,13 +54,13 @@ class Reviews extends React.Component {
           <span style={{ color: '#656565' }}> (IVA no incluido)</span>
         </p>
 
-        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviews">Contrata nuestro servicio de consultoría</a></strong></p>
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviewsi?subject=Consultoría Web Performance">Contrata nuestro servicio de consultoría</a></strong></p>
 
         <hr />
 
         <h3>Formación: Workshops y talleres</h3>
         <p>Aprende cuáles son los principales problemas de rendimiento en sitios web, cómo corregirlos y monitorizarlos.</p>
-        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviews">Contáctanos para condiciones</a></strong></p>
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviews?subject=Información Worlshops">Contáctanos para condiciones</a></strong></p>
 
         <hr />
 
