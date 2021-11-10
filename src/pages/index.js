@@ -42,7 +42,7 @@ class Reviews extends React.Component {
           <span style={{ color: '#656565' }}> (IVA no incluido)</span>
         </p>
 
-        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:perfreviews.mail@gmail.com">Contrata nuestro servicio de análisis</a></strong></p>
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviews">Contrata nuestro servicio de análisis</a></strong></p>
 
         <hr />
 
@@ -54,13 +54,13 @@ class Reviews extends React.Component {
           <span style={{ color: '#656565' }}> (IVA no incluido)</span>
         </p>
 
-        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:perfreviews.mail@gmail.com">Contrata nuestro servicio de consultoría</a></strong></p>
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviews">Contrata nuestro servicio de consultoría</a></strong></p>
 
         <hr />
 
         <h3>Formación: Workshops y talleres</h3>
         <p>Aprende cuáles son los principales problemas de rendimiento en sitios web, cómo corregirlos y monitorizarlos.</p>
-        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:perfreviews.mail@gmail.com">Contáctanos para condiciones</a></strong></p>
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviews">Contáctanos para condiciones</a></strong></p>
 
         <hr />
 

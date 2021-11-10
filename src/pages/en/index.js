@@ -37,7 +37,7 @@ class Reviews extends React.Component {
           <span style={{ color: '#656565' }}> (VAT not included)</span>
         </p>
 
-        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:perfreviews.mail@gmail.com">Hire our performance audit services</a></strong></p>
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviews">Hire our performance audit services</a></strong></p>
 
         <hr />
 
@@ -49,14 +49,14 @@ class Reviews extends React.Component {
           <span style={{ color: '#656565' }}> (VAT not included)</span>
         </p>
 
-        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:perfreviews.mail@gmail.com">Hire our hourly consulting services</a></strong></p>
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviews">Hire our hourly consulting services</a></strong></p>
 
         <hr />
 
         <h3>Workshops and Training</h3>
         <p>Learn about the main culprits in web performance, how to fix them and keep them under control.</p>
 
-        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:perfreviews.mail@gmail.com">Contact us to know more</a></strong></p>
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviews">Contact us to know more</a></strong></p>
 
         <hr />
 
