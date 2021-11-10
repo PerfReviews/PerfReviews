@@ -1,8 +1,8 @@
-import React from "react"
 import { Link, graphql } from "gatsby"
-import PostExtract from "../components/post-extract"
-import Layout from "../components/layout"
 
+import Layout from "../components/layout"
+import PostExtract from "../components/post-extract"
+import React from "react"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
@@ -15,8 +15,63 @@ class Reviews extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="El mejor contenido sobre web performance en español" />
-        <h2>Posts recientes</h2>
+        <SEO title="Auditorías de rendimiento web"
+          description="Somos expertos consultores en web performance. Hacemos auditorías de sitios web, workshops y talleres. Identificamos problemas de rendimiento y explicamos herramientas y técnicas para corregirlos y prevenirlos." />
+
+        <h1>Mejoramos el rendimiento de tu web.</h1>
+        <p>Tenemos una larga experiencia llevando a cambio mejoras en el rendimiento de webs y estudiando el impacto en las métricas de negocio que te preocupan. Sabemos cuál es el balance entre esfuerzo técnico y retorno de la inversión.</p>
+        <p>Hemoso desarrollado proyectos web a escala en empresas como Facebook, Spotify, Mediaset, Infojobs, Coches, Tuenti y Mil Anuncios. Con un especial énfasis en usabilidad y rendimiento. Tenemos el reconocimiento de Google como Google Developer Experts en tecnologías web.</p>
+
+        <h2>Nuestros servicios</h2>
+
+        <h3>Auditorías de rendimiento web</h3>
+        <p>El rendimiento de tu sitio web es muy importante. Una web que carga rápido en cualquier dispositivo y condiciones de red mejora las métricas clave de negocio. Trabajaremos contigo y tu equipo para identificar los principales problemas que afectan a la performance de tu web.</p>
+
+        <p>Una vez realizado el estudio proporcionaremos un documento detallado con consejos para ayudar al equipo de desarrollo a mejorar tanto el rendimiento como la experiencia de usuario de tu web.</p>
+
+        <h4>Nuestro proceso</h4>
+        <ol style={{ marginLeft: '2em' }}>
+          <li>Todo empieza con una llamada. Juntos estableceremos <strong>las mejoras y objetivos deseados</strong>.</li>
+          <li>Proporcionaremos un informe detallado del rendimiento, incluyendo <strong>soluciones concretas</strong>, listo para pasárselo a tu equipo de desarrollo.</li>
+          <li>Planificaremos <strong>2 reuniones de seguimiento</strong> de una hora de duración para asegurarnos de que estamos haciendo progresos.</li>
+        </ol>
+
+        <h4>Reserva tu análisis de rendimiento</h4>
+        <p>
+          <span style={{ color: 'var(--textColorLink)', fontWeight: 'bold' }}>795 €</span>
+          <span style={{ color: '#656565' }}> (IVA no incluido)</span>
+        </p>
+
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:perfreviews.mail@gmail.com">Contrata nuestro servicio de análisis</a></strong></p>
+
+        <hr />
+
+        <h3>Consultoría experta</h3>
+        <p>Si tienes dudas sobre concretas sobre tu web o estás planteando mejoras en el rendimiento de la misma, estamos aquí para ayudarte. Contáctanos para reservar una videollamada para que te podamos asesorar.</p>
+        <h4>Reserva tu servicio de consultoría</h4>
+        <p>
+          <span style={{ color: 'var(--textColorLink)', fontWeight: 'bold' }}>99 € / hora</span>
+          <span style={{ color: '#656565' }}> (IVA no incluido)</span>
+        </p>
+
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:perfreviews.mail@gmail.com">Contrata nuestro servicio de consultoría</a></strong></p>
+
+        <hr />
+
+        <h3>Formación: Workshops y talleres</h3>
+        <p>Aprende cuáles son los principales problemas de rendimiento en sitios web, cómo corregirlos y monitorizarlos.</p>
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:perfreviews.mail@gmail.com">Contáctanos para condiciones</a></strong></p>
+
+        <hr />
+
+        <h3>In English</h3>
+        <p><Link to="/en/services/">Read about our services</Link></p>
+
+        <hr style={{
+          marginTop: rhythm(2.5),
+          marginBottom: rhythm(2.5),
+        }} />
+        <h2>Posts recientes en nuestro blog</h2>
         {blog
           .filter(p => p.node.fields.slug.indexOf("/en/") === -1)
           .map(({ node }) => (
@@ -89,9 +144,9 @@ class Reviews extends React.Component {
         />
         <p>
           En PerfReviews hablamos sobre web performance analizando diferentes
-          sitios reales. Queremos divulgar sobre la importancia de crear
+          sitios reales.Queremos divulgar sobre la importancia de crear
           productos que ofrezcan una buena experiencia de usuario en cualquier
-          dispositivo. Y lo haremos desde un punto de vista práctico, con
+          dispositivo.Y lo haremos desde un punto de vista práctico, con
           herramientas y técnicas que podéis aplicar en vuestros proyectos.
         </p>
       </Layout>
