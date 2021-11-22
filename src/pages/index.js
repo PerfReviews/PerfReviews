@@ -4,7 +4,13 @@ import Layout from "../components/layout"
 import PostExtract from "../components/post-extract"
 import React from "react"
 import SEO from "../components/seo"
+import adevintaLogo from "../../static/img/logo-adevinta.png"
+import domestikaLogo from "../../static/img/logo-domestika.png"
+import kaveHomeLogo from "../../static/img/logo-kave-home.png"
+import mediasetLogo from "../../static/img/logo-mediaset.png"
+import metaLogo from "../../static/img/logo-meta.png"
 import { rhythm } from "../utils/typography"
+import spotifyLogo from "../../static/img/logo-spotify.png"
 
 class Reviews extends React.Component {
   render() {
@@ -20,7 +26,29 @@ class Reviews extends React.Component {
 
         <h1>Mejoramos el rendimiento de tu web.</h1>
         <p>Tenemos una larga experiencia llevando a cambio mejoras en el rendimiento de webs y estudiando el impacto en las métricas de negocio que te preocupan. Sabemos cuál es el balance entre esfuerzo técnico y retorno de la inversión.</p>
-        <p>Hemoso desarrollado proyectos web a escala en empresas como Facebook, Spotify, Mediaset, Infojobs, Coches.net, Tuenti y Mil Anuncios. Con un especial énfasis en usabilidad y rendimiento. Tenemos el reconocimiento de Google como Google Developer Experts en tecnologías web y Media Developer Expert por Cloudinary.</p>
+        <p>Hemos desarrollado proyectos web a escala en empresas como Facebook, Spotify, Mediaset, Infojobs, Coches.net, Tuenti y Mil Anuncios. Con un especial énfasis en usabilidad y rendimiento.</p>
+        <p>Tenemos el reconocimiento de Google como <a href="https://developers.google.com/community/experts">Google Developer Experts</a> en tecnologías web y Media Developer Expert por Cloudinary.</p>
+        <p style={{ textTransform: 'uppercase', textAlign: 'center', fontWeight: 'bold', fontSize: '80%', marginBottom: 0, paddingTop: '2em', color: '#9CA3AF' }}>Algunas empresas con las que hemos trabajado</p>
+        <div style={{ display: 'flex', alignItems: "center", flexWrap: 'wrap', paddingBottom: '1.75rem' }}>
+          <div style={{ width: '33%' }}>
+            <img alt="Spotify logo" src={spotifyLogo} style={{ marginBottom: 0, padding: '1em', display: 'block' }} />
+          </div>
+          <div style={{ width: '33%' }}>
+            <img alt="Adevinta logo" src={adevintaLogo} style={{ marginBottom: 0, padding: '1em', display: 'block' }} />
+          </div>
+          <div style={{ width: '33%' }}>
+            <img alt="Meta (Facebook) logo" src={metaLogo} style={{ marginBottom: 0, padding: '1em', display: 'block' }} />
+          </div>
+          <div style={{ width: '33%' }}>
+            <img alt="Kave Home logo" src={kaveHomeLogo} style={{ marginBottom: 0, padding: '1em', display: 'block' }} />
+          </div>
+          <div style={{ width: '33%' }}>
+            <img alt="Domestika logo" src={domestikaLogo} style={{ marginBottom: 0, padding: '1em', display: 'block' }} />
+          </div>
+          <div style={{ width: '33%' }}>
+            <img alt="Mediaset logo" src={mediasetLogo} style={{ marginBottom: 0, padding: '1em', display: 'block' }} />
+          </div>
+        </div>
 
         <h2>Nuestros servicios</h2>
 

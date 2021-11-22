@@ -2,7 +2,13 @@ import Layout from "../../components/layout"
 import PostExtract from "../../components/post-extract"
 import React from "react"
 import SEO from "../../components/seo"
+import adevintaLogo from "../../../static/img/logo-adevinta.png"
+import domestikaLogo from "../../../static/img/logo-domestika.png"
 import { graphql } from "gatsby"
+import kaveHomeLogo from "../../../static/img/logo-kave-home.png"
+import mediasetLogo from "../../../static/img/logo-mediaset.png"
+import metaLogo from "../../../static/img/logo-meta.png"
+import spotifyLogo from "../../../static/img/logo-spotify.png"
 
 class Reviews extends React.Component {
   render() {
@@ -17,7 +23,31 @@ class Reviews extends React.Component {
           lang="en" />
         <h1>We improve the performance of your website.</h1>
         <p>We have broad experience improving web performance and analyzing the impact on business metrics. We know how to balance effort and impact to focus on changes that are affordable and will improve your results.</p>
-        <p>We have proven experience building sites at scale in companies like Tuenti, Spotify, Mediaset, Infojobs, Coches, and Mil Anuncios, with a strong focus in usability and performance. We are also recognized as Google Developer Experts in web technologies.</p>
+        <p>We have proven experience building sites at scale in companies like Tuenti, Spotify, Mediaset, Infojobs, Coches, and Mil Anuncios, with a strong focus in usability and performance.</p>
+        <p>We are also recognized as <a href="https://developers.google.com/community/experts">Google Developer Experts</a> in Web Technologies.</p>
+
+        <p style={{ textTransform: 'uppercase', textAlign: 'center', fontWeight: 'bold', fontSize: '80%', marginBottom: 0, paddingTop: '2em', color: '#9CA3AF' }}>We have worked with these companies</p>
+        <div style={{ display: 'flex', alignItems: "center", flexWrap: 'wrap', paddingBottom: '1.75rem' }}>
+          <div style={{ width: '33%' }}>
+            <img alt="Spotify logo" src={spotifyLogo} style={{ marginBottom: 0, padding: '1em', display: 'block' }} />
+          </div>
+          <div style={{ width: '33%' }}>
+            <img alt="Adevinta logo" src={adevintaLogo} style={{ marginBottom: 0, padding: '1em', display: 'block' }} />
+          </div>
+          <div style={{ width: '33%' }}>
+            <img alt="Meta (Facebook) logo" src={metaLogo} style={{ marginBottom: 0, padding: '1em', display: 'block' }} />
+          </div>
+          <div style={{ width: '33%' }}>
+            <img alt="Kave Home logo" src={kaveHomeLogo} style={{ marginBottom: 0, padding: '1em', display: 'block' }} />
+          </div>
+          <div style={{ width: '33%' }}>
+            <img alt="Domestika logo" src={domestikaLogo} style={{ marginBottom: 0, padding: '1em', display: 'block' }} />
+          </div>
+          <div style={{ width: '33%' }}>
+            <img alt="Mediaset logo" src={mediasetLogo} style={{ marginBottom: 0, padding: '1em', display: 'block' }} />
+          </div>
+        </div>
+
         <h2>Our Services</h2>
         <h3>Web Performance Audits</h3>
         <p>The performance of your website is very important. A web that loads quickly on any device and network conditions improves key business metrics. We will work with you and your team to identify the main problems that affect the performance of your website.</p>
