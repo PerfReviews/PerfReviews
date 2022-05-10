@@ -56,7 +56,7 @@ We install ffmpeg (in our case as easy as running `brew install ffmpeg` on Mac),
 
 We can adjust the parameter [CRF](https://trac.ffmpeg.org/wiki/Encode/H.264) that allows us to define the level of quality loss. After some tests, we decide to set the CRT at 22, one point below the default value, with the intention of being as faithful as possible to the quality of the original file.
 
-```sh
+```bash
 ffmpeg -i video.gif -b:v 0 -crf 22 video.mp4
 ```
 
@@ -68,7 +68,7 @@ Another video format is **WebM**, the video version of **WebP**, a lossy image f
 
 After doing some tests by adjusting the value of CRF, we set it to the value suggested by Google, 41:
 
-```sh
+```bash
 ffmpeg -i video.gif -c vp9 -b:v 0 -crf 41 video.webm
 ```
 
