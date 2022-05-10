@@ -35,7 +35,7 @@ Lo primero que haremos es inicializar **npm** en nuestra carpeta PerfTools-Light
 
 Desde la terminal ejecutamos el siguiente comando para instalar las dependencias.
 
-```sh
+```bash
 npm install --save chrome-launcher lighthouse
 ```
 
