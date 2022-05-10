@@ -82,7 +82,7 @@ class Reviews extends React.Component {
           <span style={{ color: '#656565' }}> (IVA no incluido)</span>
         </p>
 
-        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviewsi?subject=Consultoría Web Performance">Contrata nuestro servicio de consultoría</a></strong></p>
+        <p style={{ marginBottom: '4em' }}><strong><a style={{ padding: '0.5em 1em', backgroundColor: 'var(--textColorLink)', color: '#fff' }} href="mailto:mail@perf.reviews?subject=Consultoría Web Performance">Contrata nuestro servicio de consultoría</a></strong></p>
 
         <hr />
 
