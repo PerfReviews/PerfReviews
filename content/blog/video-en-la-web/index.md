@@ -55,7 +55,7 @@ Después de la instalación, en nuestro caso algo tan simple como `brew install 
 
 Podemos ajustar el parámetro [CRF](https://trac.ffmpeg.org/wiki/Encode/H.264) que nos permite definir el nivel de pérdida de calidad. Tras algunas pruebas, optamos por definir el CRT a 22, un punto por debajo del valor por defecto, con la intención de ser lo más fieles posibles a la calidad que nos hemos encontrado con el fichero original.
 
-```sh
+```bash
 ffmpeg -i video.gif -b:v 0 -crf 22 video.mp4
 ```
 
@@ -67,7 +67,7 @@ Otro formato de vídeo es **WebM**, la versión para vídeos de **WebP**, el for
 
 Después de hacer algunas pruebas ajustando  el valor de CRF, lo establecemos al valor sugerido por Google, 41:
 
-```sh
+```bash
 ffmpeg -i video.gif -c vp9 -b:v 0 -crf 41 video.webm
 ```
 
