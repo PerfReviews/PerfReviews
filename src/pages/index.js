@@ -75,7 +75,7 @@ class Reviews extends React.Component {
         <hr />
 
         <h3>Consultoría experta</h3>
-        <p>Si tienes dudas sobre concretas sobre tu web o estás planteando mejoras en el rendimiento de la misma, estamos aquí para ayudarte. Contáctanos para reservar una videollamada para que te podamos asesorar.</p>
+        <p>Si tienes dudas concretas sobre tu web o estás planteando mejoras en el rendimiento de la misma, estamos aquí para ayudarte. Contáctanos para reservar una videollamada para que te podamos asesorar.</p>
         <h4>Reserva tu servicio de consultoría</h4>
         <p>
           <span style={{ color: 'var(--textColorLink)', fontWeight: 'bold' }}>99 € / hora</span>
