@@ -174,7 +174,7 @@ class Reviews extends React.Component {
           En PerfReviews hablamos sobre web performance analizando diferentes
           sitios reales.Queremos divulgar sobre la importancia de crear
           productos que ofrezcan una buena experiencia de usuario en cualquier
-          dispositivo.Y lo haremos desde un punto de vista práctico, con
+          dispositivo. Y lo haremos desde un punto de vista práctico, con
           herramientas y técnicas que podéis aplicar en vuestros proyectos.
         </p>
       </Layout>
