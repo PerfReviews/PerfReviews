@@ -1,65 +1,26 @@
 {
-  "name": "gatsby-starter-blog",
-  "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "name": "my-app",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "gatsby": "^4.1.2",
-    "gatsby-image": "^3.11.0",
-    "gatsby-plugin-client-side-redirect": "^1.1.0",
-    "gatsby-plugin-feed": "^4.1.1",
-    "gatsby-plugin-google-analytics": "^4.1.0",
-    "gatsby-plugin-manifest": "^4.1.1",
-    "gatsby-plugin-offline": "^5.1.1",
-    "gatsby-plugin-react-helmet": "^5.1.0",
-    "gatsby-plugin-sharp": "^4.1.1",
-    "gatsby-plugin-sitemap": "^5.1.1",
-    "gatsby-plugin-typography": "^4.1.0",
-    "gatsby-remark-autolink-headers": "^5.1.1",
-    "gatsby-remark-copy-linked-files": "^5.1.0",
-    "gatsby-remark-images": "^6.1.1",
-    "gatsby-remark-prismjs": "^6.1.0",
-    "gatsby-remark-responsive-iframe": "^5.1.0",
-    "gatsby-remark-smartypants": "^5.1.0",
-    "gatsby-source-filesystem": "^4.1.0",
-    "gatsby-transformer-remark": "^5.1.1",
-    "gatsby-transformer-sharp": "^4.1.0",
-    "gh-pages": "^3.2.3",
-    "prismjs": "^1.27.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "react-typography": "^0.16.20",
-    "typeface-merriweather": "1.1.13",
-    "typeface-montserrat": "1.1.13",
-    "typography": "^0.16.21",
-    "typography-theme-wordpress-2016": "^0.16.19"
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.5"
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
-  },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "now-build": "npm run build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build && gh-pages -d public -b gh-pages"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5"
   }
 }
