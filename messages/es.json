@@ -1,0 +1,11 @@
+{
+  "HomePage": {
+    "meta": {
+      "title": "Hello world!",
+      "description": "blah"
+    },
+    "title": "Hello world!",
+    "description": "blah",
+    "button": "rere"
+  }
+}
