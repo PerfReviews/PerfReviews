@@ -4,24 +4,17 @@ import { useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
 
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/components/ui/core";
 import { Icon } from "@/components/ui/icon";
-
-import { Button } from "../ui/button";
+import { PricingPlan } from "@/types/PricingPlan";
 
 export interface PricingCardProps extends ComponentPropsWithoutRef<"article"> {
-  plan: {
-    title: string;
-    benefits: Array<string>;
-    price: number;
-    original?: number;
-    stripeId?: string;
-    isPopular?: boolean;
-  };
+  plan: PricingPlan;
 }
 
 export const PricingCard = ({ plan, ...others }: PricingCardProps) => {
-  const t = useTranslations("common");
+  const t = useTranslations("HomePage");
 
   const variant = plan.isPopular ? "default" : "outline";
 
@@ -35,22 +28,13 @@ export const PricingCard = ({ plan, ...others }: PricingCardProps) => {
     >
       {plan.isPopular && (
         <Badge className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          {t("payment.pricing.popular-badge")}
+          {t("pricing.popular-badge")}
         </Badge>
       )}
 
       <h3 className="text-lg md:text-xl font-semibold">{t(plan.title)}</h3>
 
-      <p className="text-3xl md:text-4xl font-bold">
-        {plan.original !== undefined && (
-          <>
-            <span className="text-muted-foreground text-lg md:text-xl line-through font-semibold">
-              ${plan.original}
-            </span>{" "}
-          </>
-        )}
-        ${plan.price}
-      </p>
+      <p className="text-3xl md:text-4xl font-bold">{plan.price}€</p>
 
       <ul className="flex flex-col gap-2 py-6 flex-1 text-left">
         {plan.benefits.map((key, index) => (
@@ -58,13 +42,13 @@ export const PricingCard = ({ plan, ...others }: PricingCardProps) => {
             <Icon className="text-green-600">
               <CircleCheck />
             </Icon>
-            rewrewrrew
+            {t(key)}
           </li>
         ))}
       </ul>
 
       <Button variant={variant} asChild>
-        <Link href="/private">{t("payment.pricing.free-button")}</Link>
+        <Link href="/private">{t("pricing.button")}</Link>
       </Button>
     </article>
   );

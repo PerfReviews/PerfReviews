@@ -26,11 +26,97 @@ export default function HomePage() {
   const t = useTranslations("HomePage");
 
   const clients = ["adevinta", "mediaset", "meta", "spotify"];
+  const audits = [
+    {
+      id: "basic",
+      title: "audits.pricing.basic.title",
+      benefits: [
+        "audits.pricing.basic.item-1",
+        "audits.pricing.basic.item-2",
+        "audits.pricing.basic.item-3",
+        "audits.pricing.basic.item-4",
+        "audits.pricing.basic.item-5",
+        "audits.pricing.basic.item-6",
+      ],
+      price: 0,
+    },
+    {
+      id: "pro",
+      title: "audits.pricing.pro.title",
+      benefits: [
+        "audits.pricing.pro.item-1",
+        "audits.pricing.pro.item-2",
+        "audits.pricing.pro.item-3",
+        "audits.pricing.pro.item-4",
+        "audits.pricing.pro.item-5",
+        "audits.pricing.pro.item-6",
+      ],
+      original: 10,
+      price: 5,
+      credits: 35,
+      stripeId: process.env.NEXT_PUBLIC_STRIPE_EXPLORER_PLAN_ID,
+      isPopular: true,
+    },
+    {
+      id: "premium",
+      title: "audits.pricing.premium.title",
+      benefits: [
+        "audits.pricing.premium.item-1",
+        "audits.pricing.premium.item-2",
+        "audits.pricing.premium.item-3",
+        "audits.pricing.premium.item-4",
+        "audits.pricing.premium.item-5",
+        "audits.pricing.premium.item-6",
+      ],
+      original: 15,
+      price: 10,
+      credits: 80,
+      stripeId: process.env.NEXT_PUBLIC_STRIPE_VOYAGER_PLAN_ID,
+    },
+  ];
+  const subscriptions = [
+    {
+      id: "basic",
+      title: "subscriptions.pricing.basic.title",
+      benefits: [
+        "subscriptions.pricing.basic.item-1",
+        "subscriptions.pricing.basic.item-2",
+        "subscriptions.pricing.basic.item-3",
+      ],
+      price: 1400,
+    },
+    {
+      id: "pro",
+      title: "subscriptions.pricing.pro.title",
+      benefits: [
+        "subscriptions.pricing.pro.item-1",
+        "subscriptions.pricing.pro.item-2",
+        "subscriptions.pricing.pro.item-3",
+        "subscriptions.pricing.pro.item-4",
+        "subscriptions.pricing.pro.item-5",
+      ],
+      price: 2500,
+      isPopular: true,
+    },
+    {
+      id: "premium",
+      title: "subscriptions.pricing.premium.title",
+      benefits: [
+        "subscriptions.pricing.premium.item-1",
+        "subscriptions.pricing.premium.item-2",
+        "subscriptions.pricing.premium.item-3",
+        "subscriptions.pricing.premium.item-4",
+        "subscriptions.pricing.premium.item-5",
+        "subscriptions.pricing.premium.item-6",
+      ],
+      price: 3500,
+    },
+  ];
 
   return (
     <Container asChild>
       <main>
-        <div className="max-w-2xl space-y-4 text-center mx-auto">
+        <div className="max-w-lg space-y-4 text-center mx-auto">
           <div className="space-y-2">
             <h1 className="text-3xl md:text-4xl font-bold">{t("title")}</h1>
 
@@ -66,23 +152,39 @@ export default function HomePage() {
         </div>
 
         <section className="py-10 space-y-10">
-          <div className="space-y-2">
-            <h2 className="text-2xl md:text-3xl font-bold text-center">
-              {t("pricing.title")}
+          <div className="space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold">
+              {t("audits.title")}
             </h2>
 
-            <p className="text-muted-foreground text-center">
-              {t("pricing.description")}
+            <p className="text-muted-foreground">
+              {t.rich("audits.description", {
+                br: () => <br />,
+              })}
             </p>
           </div>
 
-          <PricingCardGrid />
+          <PricingCardGrid plans={audits} />
         </section>
 
         <section className="py-10 space-y-10">
-          <div className="space-y-2 text-center">
-            <Badge variant="secondary">{t("faqs.badge")}</Badge>
+          <div className="space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold">
+              {t("subscriptions.title")}
+            </h2>
 
+            <p className="text-muted-foreground">
+              {t.rich("subscriptions.description", {
+                br: () => <br />,
+              })}
+            </p>
+          </div>
+
+          <PricingCardGrid plans={subscriptions} />
+        </section>
+
+        <section className="py-10 space-y-10">
+          <div className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold">
               {t("faqs.title")}
             </h2>

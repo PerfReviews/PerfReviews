@@ -1,11 +1,78 @@
 {
   "HomePage": {
     "meta": {
-      "title": "Hello world!",
-      "description": "blah"
+      "title": "PerfReviews | Consultoría de rendimiento web",
+      "description": "Mejora el rendimiento de tu sitio web con nuestros servicios de auditoría y optimización. Expertos en usabilidad y rendimiento con experiencia en empresas líderes."
     },
-    "title": "Hello world!",
-    "description": "blah",
-    "button": "rere"
+    "title": "Mejoramos el rendimiento de tu web",
+    "description": "Obtén más ingresos y haz a tus usuarios más felices con nuestros servicios de auditoría y optimización web",
+    "button": "Contáctanos",
+    "rating": "+20 empresas nos recomiendan",
+    "audits": {
+      "title": "Auditorías de rendimiento web",
+      "description": "El rendimiento de tu sitio web es muy importante. Una web que carga rápido en cualquier dispositivo y condiciones de red mejora las métricas clave de negocio. Trabajaremos contigo y tu equipo para identificar los principales problemas que afectan a la performance de tu web.<br></br><br></br>Una vez realizado el estudio proporcionaremos un documento detallado con consejos para ayudar al equipo de desarrollo a mejorar tanto el rendimiento como la experiencia de usuario de tu web.",
+      "pricing": {
+        "basic": {
+          "title": "Básico",
+          "item-1": "111",
+          "item-2": "111",
+          "item-3": "111",
+          "item-4": "111",
+          "item-5": "111",
+          "item-6": "111"
+        },
+        "pro": {
+          "title": "Pro",
+          "item-1": "111",
+          "item-2": "111",
+          "item-3": "111",
+          "item-4": "111",
+          "item-5": "111",
+          "item-6": "111"
+        },
+        "premium": {
+          "title": "Premium",
+          "item-1": "111",
+          "item-2": "111",
+          "item-3": "111",
+          "item-4": "111",
+          "item-5": "111",
+          "item-6": "111"
+        }
+      }
+    },
+    "subscriptions": {
+      "title": "Subscriptions",
+      "description": "El rendimiento de tu sitio web es muy importante. Una web que carga rápido en cualquier dispositivo y condiciones de red mejora las métricas clave de negocio. Trabajaremos contigo y tu equipo para identificar los principales problemas que afectan a la performance de tu web.<br></br><br></br>Una vez realizado el estudio proporcionaremos un documento detallado con consejos para ayudar al equipo de desarrollo a mejorar tanto el rendimiento como la experiencia de usuario de tu web.",
+      "pricing": {
+        "basic": {
+          "title": "Básico",
+          "item-1": "10 horas/mes",
+          "item-2": "Consultas",
+          "item-3": "Reportes mensuales"
+        },
+        "pro": {
+          "title": "Pro",
+          "item-1": "20 horas/mes",
+          "item-2": "Consultas",
+          "item-3": "Reportes mensuales",
+          "item-4": "Observabilidad",
+          "item-5": "Pair programming"
+        },
+        "premium": {
+          "title": "Premium",
+          "item-1": "30 horas/mes",
+          "item-2": "Consultas",
+          "item-3": "Reportes mensuales",
+          "item-4": "Observabilidad",
+          "item-5": "Pair programming",
+          "item-6": "Workshops"
+        }
+      }
+    },
+    "pricing": {
+      "popular-badge": "Popular",
+      "button": "Contactar"
+    }
   }
 }
