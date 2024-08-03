@@ -1,6 +1,6 @@
 import { allPosts } from "content-collections";
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 
 import { Markdown } from "@/components/shared/markdown";
 import { Container } from "@/components/ui/container";
@@ -16,9 +16,7 @@ export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
   const post = allPosts.find((post) => {
-    const [locale, slug] = post._meta.path.split("/");
-
-    if (locale === params.locale && slug === params.slug) {
+    if (post.locale === params.locale && post.locale === params.slug) {
       return post;
     }
   });
@@ -47,9 +45,7 @@ export async function generateMetadata({
 
 export default function PostPage({ params }: PostPageProps) {
   const post = allPosts.find((post) => {
-    const [locale, slug] = post._meta.path.split("/");
-
-    if (locale === params.locale && slug === params.slug) {
+    if (post.locale === params.locale && post.slug === params.slug) {
       return post;
     }
   });
@@ -58,12 +54,34 @@ export default function PostPage({ params }: PostPageProps) {
     notFound();
   }
 
+  const siteURL = process.env.SITE_URL;
+  const prefix = params.locale === "en" ? "" : `/${params.locale}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    datePublished: post.date,
+    dateModified: post.date,
+    description: post.summary,
+    image: post.featuredImage,
+    url: `${siteURL}${prefix}/blog/${post.slug}`,
+  };
+
   return (
-    <main>
-      <Container className="my-6">
-        <Markdown>{post.content}</Markdown>
+    <>
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
+      <Container className="my-6" asChild>
+        <main>
+          <Markdown>{post.content}</Markdown>
+        </main>
       </Container>
-    </main>
+    </>
   );
 }
 
