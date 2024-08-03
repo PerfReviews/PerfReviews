@@ -1,12 +1,15 @@
+import { allPosts } from "content-collections";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 import { FAQAccordion } from "@/components/shared/faq-accordion";
+import { PricingCard } from "@/components/shared/pricing-card";
 import { PricingCardGrid } from "@/components/shared/pricing-card-grid";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { LinkBox, LinkOverlay } from "@/components/ui/link-overlay";
 import Ratings from "@/components/ui/ratings";
 
 interface HomePageProps {
@@ -22,58 +25,22 @@ export async function generateMetadata({ params: { locale } }: HomePageProps) {
   };
 }
 
-export default function HomePage() {
+export default function HomePage({ params: { locale } }: HomePageProps) {
   const t = useTranslations("HomePage");
 
   const clients = ["adevinta", "mediaset", "meta", "spotify"];
-  const audits = [
-    {
-      id: "basic",
-      title: "audits.pricing.basic.title",
-      benefits: [
-        "audits.pricing.basic.item-1",
-        "audits.pricing.basic.item-2",
-        "audits.pricing.basic.item-3",
-        "audits.pricing.basic.item-4",
-        "audits.pricing.basic.item-5",
-        "audits.pricing.basic.item-6",
-      ],
-      price: 0,
-    },
-    {
-      id: "pro",
-      title: "audits.pricing.pro.title",
-      benefits: [
-        "audits.pricing.pro.item-1",
-        "audits.pricing.pro.item-2",
-        "audits.pricing.pro.item-3",
-        "audits.pricing.pro.item-4",
-        "audits.pricing.pro.item-5",
-        "audits.pricing.pro.item-6",
-      ],
-      original: 10,
-      price: 5,
-      credits: 35,
-      stripeId: process.env.NEXT_PUBLIC_STRIPE_EXPLORER_PLAN_ID,
-      isPopular: true,
-    },
-    {
-      id: "premium",
-      title: "audits.pricing.premium.title",
-      benefits: [
-        "audits.pricing.premium.item-1",
-        "audits.pricing.premium.item-2",
-        "audits.pricing.premium.item-3",
-        "audits.pricing.premium.item-4",
-        "audits.pricing.premium.item-5",
-        "audits.pricing.premium.item-6",
-      ],
-      original: 15,
-      price: 10,
-      credits: 80,
-      stripeId: process.env.NEXT_PUBLIC_STRIPE_VOYAGER_PLAN_ID,
-    },
-  ];
+  const audit = {
+    id: "audit",
+    title: "audits.pricing.title",
+    benefits: [
+      "audits.pricing.item-1",
+      "audits.pricing.item-2",
+      "audits.pricing.item-3",
+      "audits.pricing.item-4",
+    ],
+    price: 3000,
+    isPopular: true,
+  };
   const subscriptions = [
     {
       id: "basic",
@@ -116,7 +83,7 @@ export default function HomePage() {
   return (
     <Container asChild>
       <main>
-        <div className="max-w-lg space-y-4 text-center mx-auto">
+        <div className="max-w-lg space-y-4 py-8 text-center mx-auto">
           <div className="space-y-2">
             <h1 className="text-3xl md:text-4xl font-bold">{t("title")}</h1>
 
@@ -125,7 +92,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-8">
             <Button className="shadow-md" size="lg">
               {t("button")}
             </Button>
@@ -151,7 +118,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <section className="py-10 space-y-10">
+        <section className="py-8 space-y-8">
           <div className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold">
               {t("audits.title")}
@@ -164,10 +131,14 @@ export default function HomePage() {
             </p>
           </div>
 
-          <PricingCardGrid plans={audits} />
+          <div className="flex justify-center">
+            <div className="w-full lg:w-1/3 lg:px-3">
+              <PricingCard plan={audit} />
+            </div>
+          </div>
         </section>
 
-        <section className="py-10 space-y-10">
+        <section className="py-8 space-y-8">
           <div className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold">
               {t("subscriptions.title")}
@@ -183,7 +154,40 @@ export default function HomePage() {
           <PricingCardGrid plans={subscriptions} />
         </section>
 
-        <section className="py-10 space-y-10">
+        <section className="py-8 space-y-8">
+          <div className="space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold">
+              {t("blog.title")}
+            </h2>
+          </div>
+
+          <div>
+            {allPosts
+              .filter((post, index) => index < 4)
+              .filter((post) => {
+                const [current] = post._meta.path.split("/");
+
+                return locale === current;
+              })
+              .map((post, index) => {
+                const [locale, slug] = post._meta.path.split("/");
+                return (
+                  <LinkBox key={index} asChild>
+                    <article>
+                      <h3 className="text-primary">
+                        <LinkOverlay href={`/blog/${slug}`}>
+                          {post.title}
+                        </LinkOverlay>
+                      </h3>
+                      <p>{post.summary}</p>
+                    </article>
+                  </LinkBox>
+                );
+              })}
+          </div>
+        </section>
+
+        <section className="py-8 space-y-8">
           <div className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold">
               {t("faqs.title")}

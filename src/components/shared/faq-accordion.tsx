@@ -10,7 +10,7 @@ import {
 export interface FAQAccordionProps {}
 
 export const FAQAccordion = (props: FAQAccordionProps) => {
-  const t = useTranslations("index");
+  const t = useTranslations("HomePage");
 
   const faqs = Array.from(Array(10).keys()).map((_, index) => ({
     title: t(`faqs.item-${index + 1}.title`),

@@ -60,7 +60,7 @@ export default function PostPage({ params }: PostPageProps) {
 
   return (
     <main>
-      <Container>
+      <Container className="my-6">
         <Markdown>{post.content}</Markdown>
       </Container>
     </main>

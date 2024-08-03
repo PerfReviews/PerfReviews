@@ -1,11 +1,102 @@
 {
   "HomePage": {
     "meta": {
-      "title": "Hello world!",
-      "description": "blah"
+      "title": "PerfReviews | Web Performance Consulting",
+      "description": "Improve your website's performance with our audit and optimization services. Usability and performance experts with experience in leading companies."
     },
-    "title": "Hello world!",
-    "description": "blah",
-    "button": "rere"
+    "title": "We Improve Your Website's Performance",
+    "description": "Increase your revenue and make your users happier with our web audit and optimization services.",
+    "button": "Contact Us",
+    "rating": "+20 companies recommend us",
+    "audits": {
+      "title": "Audit",
+      "description": "Your website's performance is very important. A site that loads quickly on any device and under any network conditions improves key business metrics. We will work with you and your team to identify the main issues affecting your website's performance.<br></br><br></br>Once the study is completed, we will provide a detailed document with recommendations to help the development team improve both the performance and user experience of your site.",
+      "pricing": {
+        "title": "Audit",
+        "item-1": "PDF Report",
+        "item-2": "Focused on Core Web Vitals",
+        "item-3": "Concrete Solutions",
+        "item-4": "2 Follow-up Meetings"
+      }
+    },
+    "subscriptions": {
+      "title": "Continuous Support",
+      "description": "Ensure your website is always optimized. You will receive continuous support and periodic updates to guarantee your site functions at its maximum capacity. We take care of monitoring and improving your site to offer the best experience to your users and maximize your results.",
+      "pricing": {
+        "basic": {
+          "title": "Basic",
+          "item-1": "10 hours/month",
+          "item-2": "Consultations",
+          "item-3": "Monthly Reports"
+        },
+        "pro": {
+          "title": "Pro",
+          "item-1": "20 hours/month",
+          "item-2": "Consultations",
+          "item-3": "Monthly Reports",
+          "item-4": "Observability",
+          "item-5": "Pair Programming"
+        },
+        "premium": {
+          "title": "Premium",
+          "item-1": "30 hours/month",
+          "item-2": "Consultations",
+          "item-3": "Monthly Reports",
+          "item-4": "Observability",
+          "item-5": "Pair Programming",
+          "item-6": "Workshops"
+        }
+      }
+    },
+    "pricing": {
+      "popular-badge": "Popular",
+      "button": "Contact"
+    },
+    "faqs": {
+      "title": "Frequently Asked Questions",
+      "item-1": {
+        "title": "What is a web performance audit?",
+        "description": "A web performance audit is a thorough analysis of your website to identify issues affecting its speed, usability, and overall performance."
+      },
+      "item-2": {
+        "title": "How long does the audit take?",
+        "description": "The complete audit process usually takes between 10 and 15 business days, depending on the size and complexity of your website."
+      },
+      "item-3": {
+        "title": "What will I receive at the end of the audit?",
+        "description": "You will receive a detailed report with key findings, specific recommendations, and an action plan to improve your website's performance."
+      },
+      "item-4": {
+        "title": "How is the audit conducted?",
+        "description": "We use advanced tools and proven methods to evaluate all aspects of your website, including load speed, image optimization, code, site structure, and more."
+      },
+      "item-5": {
+        "title": "How does continuous support work?",
+        "description": "We become part of your team. We constantly monitor your website and provide specific advice to improve it. Depending on the plan, we also perform pair programming and workshops."
+      },
+      "item-6": {
+        "title": "Can I cancel my subscription at any time?",
+        "description": "Yes, you can cancel your subscription at any time by contacting us."
+      },
+      "item-7": {
+        "title": "Which metrics do we focus on?",
+        "description": "We focus on improving the Core Web Vitals of your website."
+      },
+      "item-8": {
+        "title": "What are the Core Web Vitals?",
+        "description": "Core Web Vitals are a series of metrics defined by Google that measure the real user experience."
+      },
+      "item-9": {
+        "title": "Which communication channel do we use?",
+        "description": "We create a Discord channel where we include your entire team so they can ask for help or resolve doubts whenever they want."
+      },
+      "item-10": {
+        "title": "Do you guarantee performance improvement?",
+        "description": "While we cannot guarantee specific improvements due to the variability in each website's conditions, our track record shows that all our clients experience significant improvements in their Core Web Vitals."
+      }
+    },
+    "blog": {
+      "title": "Recent Posts on Our Blog"
+    }
   }
 }

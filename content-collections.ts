@@ -7,6 +7,8 @@ const posts = defineCollection({
   schema: (z) => ({
     title: z.string(),
     summary: z.string(),
+    date: z.string(),
+    featuredImage: z.string(),
   }),
 });
 

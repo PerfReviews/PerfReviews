@@ -9,41 +9,19 @@
     "button": "Contáctanos",
     "rating": "+20 empresas nos recomiendan",
     "audits": {
-      "title": "Auditorías de rendimiento web",
+      "title": "Auditoría",
       "description": "El rendimiento de tu sitio web es muy importante. Una web que carga rápido en cualquier dispositivo y condiciones de red mejora las métricas clave de negocio. Trabajaremos contigo y tu equipo para identificar los principales problemas que afectan a la performance de tu web.<br></br><br></br>Una vez realizado el estudio proporcionaremos un documento detallado con consejos para ayudar al equipo de desarrollo a mejorar tanto el rendimiento como la experiencia de usuario de tu web.",
       "pricing": {
-        "basic": {
-          "title": "Básico",
-          "item-1": "111",
-          "item-2": "111",
-          "item-3": "111",
-          "item-4": "111",
-          "item-5": "111",
-          "item-6": "111"
-        },
-        "pro": {
-          "title": "Pro",
-          "item-1": "111",
-          "item-2": "111",
-          "item-3": "111",
-          "item-4": "111",
-          "item-5": "111",
-          "item-6": "111"
-        },
-        "premium": {
-          "title": "Premium",
-          "item-1": "111",
-          "item-2": "111",
-          "item-3": "111",
-          "item-4": "111",
-          "item-5": "111",
-          "item-6": "111"
-        }
+        "title": "Auditoría",
+        "item-1": "Reporte en PDF",
+        "item-2": "Enfocado en las Core Web Vitals",
+        "item-3": "Soluciones concretas",
+        "item-4": "2 reuniones de seguimiento"
       }
     },
     "subscriptions": {
-      "title": "Subscriptions",
-      "description": "El rendimiento de tu sitio web es muy importante. Una web que carga rápido en cualquier dispositivo y condiciones de red mejora las métricas clave de negocio. Trabajaremos contigo y tu equipo para identificar los principales problemas que afectan a la performance de tu web.<br></br><br></br>Una vez realizado el estudio proporcionaremos un documento detallado con consejos para ayudar al equipo de desarrollo a mejorar tanto el rendimiento como la experiencia de usuario de tu web.",
+      "title": "Soporte continuo",
+      "description": "Asegúrate de que tu sitio web siempre esté optimizado. Recibirás soporte continuo y actualizaciones periódicas para garantizar que tu sitio funcione al máximo de su capacidad. Nos encargamos de monitorear y mejorar tu web para ofrecer la mejor experiencia a tus usuarios y maximizar tus resultados.",
       "pricing": {
         "basic": {
           "title": "Básico",
@@ -73,6 +51,52 @@
     "pricing": {
       "popular-badge": "Popular",
       "button": "Contactar"
+    },
+    "faqs": {
+      "title": "Preguntas frecuentes",
+      "item-1": {
+        "title": "¿Qué es una auditoría de web performance?",
+        "description": "Una auditoría de web performance es un análisis exhaustivo de tu sitio web para identificar problemas que afectan su velocidad, usabilidad y rendimiento general."
+      },
+      "item-2": {
+        "title": "¿Cuánto tiempo tarda la auditoría?",
+        "description": "El proceso de auditoría completa suele tardar entre 10 y 15 días hábiles, dependiendo del tamaño y complejidad de tu sitio web."
+      },
+      "item-3": {
+        "title": "¿Qué recibiré al final de la auditoría?",
+        "description": "Recibirás un informe detallado con hallazgos clave, recomendaciones específicas y un plan de acción para mejorar el rendimiento de tu sitio web."
+      },
+      "item-4": {
+        "title": "¿Cómo se realiza la auditoría?",
+        "description": "Utilizamos herramientas avanzadas y métodos probados para evaluar todos los aspectos de tu sitio web, incluyendo la velocidad de carga, la optimización de imágenes, el código, la estructura del sitio y más."
+      },
+      "item-5": {
+        "title": "¿Cómo funciona el soporte continuo?",
+        "description": "Seremos parte de tu equipo. Monitorizaremos constantemente tu sitio web y te daremos consejos específicos para mejorarlo. Dependiendo del plan, también realizaremos pair programming y talleres."
+      },
+      "item-6": {
+        "title": "¿Puedo cancelar mi suscripción en cualquier momento?",
+        "description": "Sí, puedes cancelar tu suscripción en cualquier momento contactándonos."
+      },
+      "item-7": {
+        "title": "¿En qué métricas nos enfocamos?",
+        "description": "Nos enfocamos en mejorar las Core Web Vitals de tu sitio web."
+      },
+      "item-8": {
+        "title": "¿Qué son las Core Web Vitals?",
+        "description": "Las Core Web Vitals son una serie de métricas definidas por Google que miden la experiencia real de los usuarios."
+      },
+      "item-9": {
+        "title": "¿Qué canal de comunicación usamos?",
+        "description": "Creamos un canal en Discord donde incluimos a todo tu equipo para que puedan pedir ayuda o resolver dudas cuando lo deseen."
+      },
+      "item-10": {
+        "title": "¿Ofrecen garantías de mejora en el rendimiento?",
+        "description": "Si bien no podemos garantizar mejoras específicas debido a la variabilidad en las condiciones de cada sitio web, nuestro historial demuestra que todos nuestros clientes experimentan mejoras significativas en sus Core Web Vitals."
+      }
+    },
+    "blog": {
+      "title": "Posts recientes en nuestro blog"
     }
   }
 }
