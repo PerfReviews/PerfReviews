@@ -81,6 +81,12 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
     },
   ];
 
+  console.log(
+    allPosts
+      .filter((post) => locale === post.locale)
+      .filter((post, index) => index < 3)
+  );
+
   return (
     <Container asChild>
       <main>
@@ -242,25 +248,34 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
             </h2>
           </div>
 
-          <div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 mx-auto">
             {allPosts
-              .filter((post, index) => index < 4)
-              .filter((post) => {
-                const [current] = post._meta.path.split("/");
-
-                return locale === current;
-              })
+              .filter((post) => locale === post.locale)
+              .filter((post, index) => index < 3)
               .map((post, index) => {
-                const [locale, slug] = post._meta.path.split("/");
                 return (
                   <LinkBox key={index} asChild>
-                    <article>
-                      <h3 className="text-primary">
-                        <LinkOverlay href={`/blog/${slug}`}>
-                          {post.title}
-                        </LinkOverlay>
-                      </h3>
-                      <p>{post.summary}</p>
+                    <article className="space-y-4">
+                      <div className="relative aspect-video shadow-md rounded-lg overflow-hidden">
+                        <Image
+                          className="object-cover"
+                          src={post.featuredImage}
+                          alt=""
+                          fill
+                        />
+                      </div>
+
+                      <div className="space-y-1 overflow-hidden max-w-full">
+                        <h3 className="text-primary text-md font-semibold line-clamp-2">
+                          <LinkOverlay href={`/blog/${post.slug}`}>
+                            {post.title}
+                          </LinkOverlay>
+                        </h3>
+                        <p className="text-sm line-clamp-2">{post.summary}</p>
+                        <p className="text-muted-foreground text-xs">
+                          {new Date(post.date).toLocaleDateString()}
+                        </p>
+                      </div>
                     </article>
                   </LinkBox>
                 );

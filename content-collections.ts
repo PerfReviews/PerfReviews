@@ -10,6 +10,13 @@ const posts = defineCollection({
     date: z.string(),
     featuredImage: z.string(),
   }),
+  transform: (post) => {
+    const [locale, slug] = post._meta.path.split("/");
+    return { ...post, locale, slug };
+  },
+  onSuccess: (docs) => {
+    console.log(`generated collection with ${docs.length}`);
+  },
 });
 
 export default defineConfig({
