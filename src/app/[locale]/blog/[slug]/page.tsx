@@ -16,7 +16,7 @@ export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
   const post = allPosts.find((post) => {
-    if (post.locale === params.locale && post.locale === params.slug) {
+    if (post.locale === params.locale && post.slug === params.slug) {
       return post;
     }
   });
@@ -87,8 +87,6 @@ export default function PostPage({ params }: PostPageProps) {
 
 export async function generateStaticParams() {
   return allPosts.map((post) => {
-    const [locale, slug] = post._meta.path.split("/");
-
-    return { locale, slug };
+    return { locale: post.locale, slug: post.slug };
   });
 }
