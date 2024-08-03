@@ -95,6 +95,25 @@
         "description": "Si bien no podemos garantizar mejoras específicas debido a la variabilidad en las condiciones de cada sitio web, nuestro historial demuestra que todos nuestros clientes experimentan mejoras significativas en sus Core Web Vitals."
       }
     },
+    "how": {
+      "title": "¿Cómo trabajamos?",
+      "description": "Nuestro proceso se enfoca en mejorar el rendimiento de tu sitio web de manera sistemática y efectiva. Aquí te explicamos cada paso:",
+      "step-1": {
+        "badge": "Paso 1",
+        "title": "Analizamos tu Web",
+        "description": "Examinamos tu sitio web para identificar problemas de desempeño y los priorizamos según su impacto, enfocados en las Core Web Vitals."
+      },
+      "step-2": {
+        "badge": "Paso 2",
+        "title": "Medimos y optimizamos",
+        "description": "Te ayudamos a medir el rendimiento de tu aplicación con datos reales y de laboratorio, y te proporcionamos soluciones para los problemas encontrados."
+      },
+      "step-3": {
+        "badge": "Paso 3",
+        "title": "Compartimos conocimientos",
+        "description": "Mejoramos las habilidades de tu equipo en desempeño web mediante análisis de resultados, artículos y videos educativos."
+      }
+    },
     "blog": {
       "title": "Posts recientes en nuestro blog"
     }

@@ -7,6 +7,7 @@ import { FAQAccordion } from "@/components/shared/faq-accordion";
 import { PricingCard } from "@/components/shared/pricing-card";
 import { PricingCardGrid } from "@/components/shared/pricing-card-grid";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { LinkBox, LinkOverlay } from "@/components/ui/link-overlay";
@@ -117,6 +118,86 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
             </div>
           </div>
         </div>
+
+        <section className="py-8 space-y-8">
+          <div className="space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold">{t("how.title")}</h2>
+
+            <p className="text-muted-foreground">
+              {t.rich("how.description", {
+                br: () => <br />,
+              })}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
+            <div className="flex flex-col justify-center gap-2 items-center text-center">
+              <Badge variant="secondary">{t("how.step-1.badge")}</Badge>
+
+              <h3 className="text-xl md:text-2xl font-bold">
+                {t("how.step-1.title")}
+              </h3>
+
+              <p className="text-muted-foreground">
+                {t("how.step-1.description")}
+              </p>
+            </div>
+
+            <div className="flex items-center justify-center">
+              <Image
+                className="rounded-xl rotate-2 shadow-md"
+                src="/images/step-1.jpg"
+                alt=""
+                width={460}
+                height={460}
+              />
+            </div>
+
+            <div className="flex items-center justify-center order-1 md:order-none">
+              <Image
+                className="rounded-xl -rotate-2"
+                src="/images/step-2.png"
+                alt=""
+                width={460}
+                height={460}
+              />
+            </div>
+
+            <div className="flex flex-col justify-center gap-2 items-center text-center">
+              <Badge variant="secondary">{t("how.step-2.badge")}</Badge>
+
+              <h3 className="text-xl md:text-2xl font-bold">
+                {t("how.step-2.title")}
+              </h3>
+
+              <p className="text-muted-foreground">
+                {t("how.step-2.description")}
+              </p>
+            </div>
+
+            <div className="flex flex-col justify-center gap-2 items-center text-center">
+              <Badge variant="secondary">{t("how.step-3.badge")}</Badge>
+
+              <h3 className="text-xl md:text-2xl font-bold">
+                {t("how.step-3.title")}
+              </h3>
+
+              <p className="text-muted-foreground">
+                {t("how.step-3.description")}
+              </p>
+            </div>
+
+            <div className="flex items-center justify-center">
+              <Image
+                className="rounded-xl rotate-2 shadow-md"
+                src="/images/step-3.jpg"
+                alt=""
+                width={460}
+                height={460}
+              />
+            </div>
+          </div>
+        </section>
 
         <section className="py-8 space-y-8">
           <div className="space-y-4">
