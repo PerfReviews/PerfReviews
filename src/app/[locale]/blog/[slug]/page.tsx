@@ -1,6 +1,7 @@
 import { allPosts } from "content-collections";
 import { Metadata } from "next";
-import { notFound, usePathname } from "next/navigation";
+import { notFound } from "next/navigation";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 import { Markdown } from "@/components/shared/markdown";
 import { Container } from "@/components/ui/container";
@@ -44,6 +45,8 @@ export async function generateMetadata({
 }
 
 export default function PostPage({ params }: PostPageProps) {
+  unstable_setRequestLocale(params.locale);
+
   const post = allPosts.find((post) => {
     if (post.locale === params.locale && post.slug === params.slug) {
       return post;
