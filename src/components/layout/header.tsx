@@ -1,19 +1,19 @@
-import { Github } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
 
 import { Logo } from "@/components/shared/logo";
-import { ModeToggleButton } from "@/components/shared/mode-toggle-button";
+import { LogoExtended } from "@/components/shared/logo-extended";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/components/ui/core";
 import { Icon } from "@/components/ui/icon";
 
-import { LogoExtended } from "../shared/logo-extended";
-
 export interface HeaderProps extends ComponentPropsWithoutRef<"header"> {}
 
 export const Header = ({ className, ...others }: HeaderProps) => {
+  const t = useTranslations("Common");
+
   return (
     <header
       className={cn(
@@ -35,16 +35,14 @@ export const Header = ({ className, ...others }: HeaderProps) => {
           </Link>
         </div>
 
-        <div className="flex gap-2">
-          <Button size="icon" variant="outline" aria-label="GitHub" asChild>
-            <a href="https://github.com/PerfReviews" target="_blank">
-              <Icon>
-                <Github />
-              </Icon>
-            </a>
+        <div className="flex gap-0.5">
+          <Button variant="link" asChild>
+            <Link href="/blog">{t("header.blog-button")}</Link>
           </Button>
 
-          <ModeToggleButton />
+          <Button variant="link">{t("header.cases-button")}</Button>
+
+          <Button>{t("header.contact-button")}</Button>
         </div>
       </Container>
     </header>

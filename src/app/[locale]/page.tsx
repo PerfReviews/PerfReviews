@@ -1,5 +1,6 @@
 import { allPosts } from "content-collections";
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
@@ -136,8 +137,6 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
               <div className="flex flex-col justify-center gap-2 items-center text-center">
-                <Badge variant="secondary">{t("how.step-1.badge")}</Badge>
-
                 <h3 className="text-xl md:text-2xl font-bold">
                   {t("how.step-1.title")}
                 </h3>
@@ -168,8 +167,6 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
               </div>
 
               <div className="flex flex-col justify-center gap-2 items-center text-center">
-                <Badge variant="secondary">{t("how.step-2.badge")}</Badge>
-
                 <h3 className="text-xl md:text-2xl font-bold">
                   {t("how.step-2.title")}
                 </h3>
@@ -180,8 +177,6 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
               </div>
 
               <div className="flex flex-col justify-center gap-2 items-center text-center">
-                <Badge variant="secondary">{t("how.step-3.badge")}</Badge>
-
                 <h3 className="text-xl md:text-2xl font-bold">
                   {t("how.step-3.title")}
                 </h3>
@@ -253,6 +248,12 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
                 .map((post, index) => (
                   <BlogCard key={index} post={post} />
                 ))}
+            </div>
+
+            <div className="flex justify-center">
+              <Button asChild>
+                <Link href="/blog">{t("blog.button")}</Link>
+              </Button>
             </div>
           </section>
 

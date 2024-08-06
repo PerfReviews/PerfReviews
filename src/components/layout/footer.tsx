@@ -1,9 +1,8 @@
-import { Instagram, Twitter } from "lucide-react";
+import { Twitter } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
 
-import { ModeToggleButton } from "@/components/shared/mode-toggle-button";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/components/ui/core";
@@ -16,24 +15,32 @@ export const Footer = ({ className, ...others }: FooterProps) => {
 
   const nav = [
     {
-      title: t("footer.legal.title"),
+      title: t("footer.links.title"),
       links: [
-        { text: t("footer.legal.warning"), href: "/legal-notice" },
-        { text: t("footer.legal.cookies"), href: "/cookies-policy" },
-        { text: t("footer.legal.privacy"), href: "/privacy-policy" },
-        { text: t("footer.legal.refund"), href: "/refund-policy" },
+        {
+          text: t("footer.links.blog"),
+          href: "/blog",
+        },
+        {
+          text: t("footer.links.tools"),
+          href: "/tools",
+        },
+        {
+          text: t("footer.links.reviews"),
+          href: "/reviews",
+        },
       ],
     },
     {
       title: t("footer.about.title"),
       links: [
         {
-          text: t("footer.about.work-with-us"),
+          text: t("footer.about.about-us"),
           href: "https://www.linkedin.com/company/x",
         },
         {
           text: t("footer.about.contact-us"),
-          href: "mailto:freetourai@gmail.com",
+          href: "mailto:mail@perf.reviews",
         },
       ],
     },
@@ -74,8 +81,6 @@ export const Footer = ({ className, ...others }: FooterProps) => {
           <div className="text-sm">{t("footer.copyright")}</div>
 
           <div className="space-x-2">
-            <ModeToggleButton />
-
             <Button
               aria-label={t("footer.twitter-button")}
               variant="outline"
