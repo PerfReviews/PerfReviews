@@ -14,11 +14,24 @@ const posts = defineCollection({
     const [locale, slug] = post._meta.path.split("/");
     return { ...post, locale, slug };
   },
-  onSuccess: (docs) => {
-    console.log(`generated collection with ${docs.length}`);
+});
+
+const reviews = defineCollection({
+  name: "reviews",
+  directory: "src/reviews",
+  include: "**/*.mdx",
+  schema: (z) => ({
+    title: z.string(),
+    summary: z.string(),
+    date: z.string(),
+    featuredImage: z.string(),
+  }),
+  transform: (post) => {
+    const [locale, slug] = post._meta.path.split("/");
+    return { ...post, locale, slug };
   },
 });
 
 export default defineConfig({
-  collections: [posts],
+  collections: [posts, reviews],
 });

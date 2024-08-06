@@ -1,4 +1,4 @@
-import { allPosts } from "content-collections";
+import { allReviews } from "content-collections";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { unstable_setRequestLocale } from "next-intl/server";
@@ -6,7 +6,7 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { MDX } from "@/components/shared/mdx";
 import { Container } from "@/components/ui/container";
 
-export interface PostPageProps {
+export interface ReviewPageProps {
   params: {
     locale: string;
     slug: string;
@@ -15,18 +15,18 @@ export interface PostPageProps {
 
 export async function generateMetadata({
   params,
-}: PostPageProps): Promise<Metadata> {
-  const post = allPosts.find((post) => {
-    if (post.locale === params.locale && post.slug === params.slug) {
-      return post;
+}: ReviewPageProps): Promise<Metadata> {
+  const review = allReviews.find((review) => {
+    if (review.locale === params.locale && review.slug === params.slug) {
+      return review;
     }
   });
 
-  if (!post) {
+  if (!review) {
     return {};
   }
 
-  const { title, summary: description } = post;
+  const { title, summary: description } = review;
 
   return {
     title,
@@ -44,16 +44,16 @@ export async function generateMetadata({
   };
 }
 
-export default function PostPage({ params }: PostPageProps) {
+export default function ReviewPage({ params }: ReviewPageProps) {
   unstable_setRequestLocale(params.locale);
 
-  const post = allPosts.find((post) => {
+  const review = allReviews.find((post) => {
     if (post.locale === params.locale && post.slug === params.slug) {
       return post;
     }
   });
 
-  if (!post) {
+  if (!review) {
     notFound();
   }
 
@@ -62,12 +62,12 @@ export default function PostPage({ params }: PostPageProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: post.title,
-    datePublished: post.date,
-    dateModified: post.date,
-    description: post.summary,
-    image: post.featuredImage,
-    url: `${siteURL}${prefix}/blog/${post.slug}`,
+    headline: review.title,
+    datePublished: review.date,
+    dateModified: review.date,
+    description: review.summary,
+    image: review.featuredImage,
+    url: `${siteURL}${prefix}/reviews/${review.slug}`,
   };
 
   return (
@@ -81,15 +81,15 @@ export default function PostPage({ params }: PostPageProps) {
       />
       <Container className="my-6" asChild>
         <main>
-          <MDX source={post.content} />
+          <MDX source={review.content} />
         </main>
       </Container>
     </>
   );
 }
 
-export async function generateStaticParams() {
-  return allPosts.map((post) => {
-    return { locale: post.locale, slug: post.slug };
+export function generateStaticParams() {
+  return allReviews.map((review) => {
+    return { locale: review.locale, slug: review.slug };
   });
 }

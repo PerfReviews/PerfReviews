@@ -144,5 +144,13 @@
     },
     "title": "Blog",
     "description": "En nuestro blog escribimos sobre novedades en el mundo de la optimización de rendimiento web."
+  },
+  "ReviewsPage": {
+    "meta": {
+      "title": "Nuestros análisis de web performance",
+      "description": "Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web."
+    },
+    "title": "Análisis de rendimiento web de sitios reales",
+    "description": "En PerfReviews analizamos el rendimiento de sitios web. Es una forma ideal de enseñar cómo utilizar herramientas para detectar, corregir y prevenir problemas de performance.<br></br><br></br>Somos reconocidos Google Developer Experts en tecnologías web y tenemos una larga experiencia desarrollando sitios web con un especial foco en usabilidad, accessibilidad y rendimiento.<br></br><br></br>Dado que los sitios web son proyectos dinámicos, es posible que los análisis mencionen aspectos que no sean reproducibles actualmente. Por ello acompañamos los vídeos con una serie de informes que permiten visualizar un “snapshot” de la web en el momento en que hicimos el estudio."
   }
 }

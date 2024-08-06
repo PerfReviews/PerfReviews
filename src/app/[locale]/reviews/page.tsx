@@ -1,4 +1,4 @@
-import { allPosts } from "content-collections";
+import { allPosts, allReviews } from "content-collections";
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -6,7 +6,7 @@ import { getTranslations } from "next-intl/server";
 import { BlogCard } from "@/components/blog/blog-card";
 import { Container } from "@/components/ui/container";
 
-export interface BlogPageProps {
+export interface ReviewsPageProps {
   params: {
     locale: string;
   };
@@ -14,8 +14,8 @@ export interface BlogPageProps {
 
 export async function generateMetadata({
   params: { locale },
-}: BlogPageProps): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: "BlogPage" });
+}: ReviewsPageProps): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: "ReviewsPage" });
 
   const title = t("meta.title");
   const description = t("meta.description");
@@ -35,11 +35,11 @@ export async function generateMetadata({
   };
 }
 
-export default function BlogPage({ params }: BlogPageProps) {
-  const t = useTranslations("BlogPage");
+export default function ReviewsPage({ params }: ReviewsPageProps) {
+  const t = useTranslations("ReviewsPage");
 
   const { locale } = params;
-  const posts = allPosts.filter((post) => post.locale === locale);
+  const reviews = allReviews.filter((review) => review.locale === locale);
 
   return (
     <Container className="py-8 space-y-8" asChild>
@@ -55,8 +55,8 @@ export default function BlogPage({ params }: BlogPageProps) {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mx-auto">
-          {posts.map((post, index) => (
-            <BlogCard key={index} post={post} />
+          {reviews.map((review, index) => (
+            <BlogCard key={index} post={review} />
           ))}
         </div>
       </main>
