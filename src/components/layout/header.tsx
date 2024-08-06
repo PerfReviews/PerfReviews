@@ -29,7 +29,7 @@ export const Header = ({ className, ...others }: HeaderProps) => {
               <LogoExtended />
             </Icon>
 
-            <Icon className="text-4xl block md:hidden" size="current">
+            <Icon className="text-5xl block md:hidden" size="current">
               <Logo />
             </Icon>
           </Link>

@@ -98,5 +98,13 @@
     "blog": {
       "title": "Recent Posts on Our Blog"
     }
+  },
+  "BlogPage": {
+    "meta": {
+      "title": "Blog",
+      "description": "Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web."
+    },
+    "title": "Blog",
+    "description": "En nuestro blog escribimos sobre novedades en el mundo de la optimización de rendimiento web."
   }
 }

@@ -31,7 +31,7 @@ interface RatingsProps extends React.HTMLAttributes<HTMLDivElement> {
   onValueChange?: (value: number) => void;
 }
 
-const Ratings = ({ ...props }: RatingsProps) => {
+export const Ratings = ({ ...props }: RatingsProps) => {
   const {
     totalStars = 5,
     size = 20,
@@ -131,5 +131,3 @@ const PartialStar = ({ ...props }: PartialStarProps) => {
     </div>
   );
 };
-
-export default Ratings;

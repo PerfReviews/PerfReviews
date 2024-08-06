@@ -1,4 +1,9 @@
 {
+  "Common": {
+    "footer": {
+      "copyright": "Copyright © PerfReviews"
+    }
+  },
   "HomePage": {
     "meta": {
       "title": "PerfReviews | Consultoría de rendimiento web",
@@ -117,5 +122,13 @@
     "blog": {
       "title": "Posts recientes en nuestro blog"
     }
+  },
+  "BlogPage": {
+    "meta": {
+      "title": "Blog",
+      "description": "Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web."
+    },
+    "title": "Blog",
+    "description": "En nuestro blog escribimos sobre novedades en el mundo de la optimización de rendimiento web."
   }
 }
