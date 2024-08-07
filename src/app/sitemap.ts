@@ -3,14 +3,6 @@ import { MetadataRoute } from "next";
 
 import { defaultLocale, locales } from "@/i18n.config";
 
-const getLocale = (locale: string) => {
-  if (locale === defaultLocale) {
-    return "";
-  }
-
-  return locale;
-};
-
 type ChangeFrequency =
   | "daily"
   | "always"
@@ -20,6 +12,14 @@ type ChangeFrequency =
   | "yearly"
   | "never"
   | undefined;
+
+const getLocale = (locale: string) => {
+  if (locale === defaultLocale) {
+    return "";
+  }
+
+  return locale;
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteURL = process.env.SITE_URL as string;
