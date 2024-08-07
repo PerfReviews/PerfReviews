@@ -1,5 +1,6 @@
 import "../globals.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
@@ -52,6 +53,7 @@ export default async function RootLayout({
 
             {children}
           </ThemeProvider>
+          <SpeedInsights />
         </NextIntlClientProvider>
       </body>
     </html>
