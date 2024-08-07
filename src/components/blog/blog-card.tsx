@@ -8,9 +8,15 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-overlay";
 
 export interface BlogCardProps extends ComponentPropsWithoutRef<"article"> {
   post: Post;
+  section: String;
 }
 
-export const BlogCard = ({ className, post, ...others }: BlogCardProps) => {
+export const BlogCard = ({
+  className,
+  post,
+  section,
+  ...others
+}: BlogCardProps) => {
   return (
     <LinkBox asChild>
       <article className={cn("space-y-4", className)} {...others}>
@@ -28,7 +34,7 @@ export const BlogCard = ({ className, post, ...others }: BlogCardProps) => {
             <LinkOverlay asChild>
               <Link
                 className="hover:underline-offset-4 hover:underline"
-                href={`/reviews/${post.slug}`}
+                href={`/${section}/${post.slug}`}
               >
                 {post.title}
               </Link>
