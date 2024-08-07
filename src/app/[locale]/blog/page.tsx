@@ -39,7 +39,6 @@ export default function BlogPage({ params }: BlogPageProps) {
   const t = useTranslations("BlogPage");
 
   const { locale } = params;
-  console.log({ params });
   const posts = allPosts.filter((post) => post.locale === locale);
 
   return (
