@@ -1,4 +1,4 @@
-import { Post } from "content-collections";
+import { Review } from "content-collections";
 import Image from "next/image";
 import Link from "next/link";
 import { ComponentPropsWithoutRef } from "react";
@@ -6,19 +6,23 @@ import { ComponentPropsWithoutRef } from "react";
 import { cn } from "@/components/ui/core";
 import { LinkBox, LinkOverlay } from "@/components/ui/link-overlay";
 
-export interface BlogCardProps extends ComponentPropsWithoutRef<"article"> {
-  post: Post;
+export interface ReviewCardProps extends ComponentPropsWithoutRef<"article"> {
+  review: Review;
 }
 
-export const BlogCard = ({ className, post, ...others }: BlogCardProps) => {
+export const ReviewCard = ({
+  className,
+  review,
+  ...others
+}: ReviewCardProps) => {
   return (
     <LinkBox asChild>
       <article className={cn("space-y-4", className)} {...others}>
         <div className="relative aspect-video shadow-md rounded-lg overflow-hidden">
           <Image
             className="object-cover"
-            src={post.featuredImage}
-            alt={post.title}
+            src={review.featuredImage}
+            alt={review.title}
             fill
           />
         </div>
@@ -28,17 +32,17 @@ export const BlogCard = ({ className, post, ...others }: BlogCardProps) => {
             <LinkOverlay asChild>
               <Link
                 className="hover:underline-offset-4 hover:underline"
-                href={`/blog/${post.slug}`}
+                href={`/reviews/${review.slug}`}
               >
-                {post.title}
+                {review.title}
               </Link>
             </LinkOverlay>
           </h3>
 
-          <p className="text-sm line-clamp-2">{post.summary}</p>
+          <p className="text-sm line-clamp-2">{review.summary}</p>
 
           <p className="text-muted-foreground text-xs">
-            {new Date(post.date).toLocaleDateString()}
+            {new Date(review.date).toLocaleDateString()}
           </p>
         </div>
       </article>

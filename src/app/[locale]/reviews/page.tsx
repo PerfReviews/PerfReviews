@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 import { BlogCard } from "@/components/blog/blog-card";
+import { ReviewCard } from "@/components/review/review-card";
 import { Container } from "@/components/ui/container";
 
 export interface ReviewsPageProps {
@@ -56,7 +57,7 @@ export default function ReviewsPage({ params }: ReviewsPageProps) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mx-auto">
           {reviews.map((review, index) => (
-            <BlogCard key={index} post={review} section="reviews" />
+            <ReviewCard key={index} review={review} />
           ))}
         </div>
       </main>

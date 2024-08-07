@@ -53,6 +53,8 @@ export default function PostPage({ params }: PostPageProps) {
     }
   });
 
+  console.log("post", post);
+
   if (!post) {
     notFound();
   }

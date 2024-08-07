@@ -68,3 +68,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+.prose .anchor {
+  @apply absolute invisible no-underline ml-[-1em] pr-[0.5em] w-[80%] cursor-pointer max-w-[700px];
+}
+
+.prose .anchor:hover {
+  @apply visible;
+}
+
+.prose a {
+  @apply transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+}
+
+.prose .icon.icon-link:after {
+  @apply text-neutral-300 dark:text-neutral-700;
+  content: "#";
+}
+
+.prose *:hover > .anchor {
+  @apply visible;
+}
+
+.prose pre {
+  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 relative;
+}

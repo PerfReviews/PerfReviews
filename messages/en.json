@@ -2,20 +2,20 @@
   "Common": {
     "header": {
       "blog-button": "Blog",
-      "cases-button": "Casos",
-      "contact-button": "Contáctanos"
+      "cases-button": "Cases",
+      "contact-button": "Contact Us"
     },
     "footer": {
       "links": {
-        "title": "Enlaces",
+        "title": "Links",
         "blog": "Blog",
-        "reviews": "Análisis de Performance",
-        "tools": "Herramientas"
+        "reviews": "Performance Reviews",
+        "tools": "Tools"
       },
       "about": {
-        "title": "Sobre",
-        "about-us": "Nosotros",
-        "contact-us": "Contáctanos"
+        "title": "About",
+        "about-us": "About Us",
+        "contact-us": "Contact Us"
       },
       "copyright": "Copyright © PerfReviews"
     }
@@ -23,15 +23,15 @@
   "HomePage": {
     "meta": {
       "title": "PerfReviews | Web Performance Consulting",
-      "description": "Improve your website's performance with our audit and optimization services. Usability and performance experts with experience in leading companies."
+      "description": "Improve your website's performance with our audit and optimization services. Experts in usability and performance with experience in leading companies."
     },
-    "title": "We Improve Your Website's Performance",
-    "description": "Increase your revenue and make your users happier with our web audit and optimization services.",
+    "title": "We Improve Your Web Performance",
+    "description": "Gain more revenue and make your users happier with our web audit and optimization services",
     "button": "Contact Us",
     "rating": "+20 companies recommend us",
     "audits": {
       "title": "Audit",
-      "description": "Your website's performance is very important. A site that loads quickly on any device and under any network conditions improves key business metrics. We will work with you and your team to identify the main issues affecting your website's performance.<br></br><br></br>Once the study is completed, we will provide a detailed document with recommendations to help the development team improve both the performance and user experience of your site.",
+      "description": "The performance of your website is very important. A website that loads quickly on any device and network conditions improves key business metrics. We will work with you and your team to identify the main issues affecting your website's performance.<br></br><br></br>Once the study is complete, we will provide a detailed document with tips to help the development team improve both the performance and user experience of your website.",
       "pricing": {
         "title": "Audit",
         "item-1": "PDF Report",
@@ -42,7 +42,7 @@
     },
     "subscriptions": {
       "title": "Continuous Support",
-      "description": "Ensure your website is always optimized. You will receive continuous support and periodic updates to guarantee your site functions at its maximum capacity. We take care of monitoring and improving your site to offer the best experience to your users and maximize your results.",
+      "description": "Ensure your website is always optimized. Receive continuous support and regular updates to ensure your site operates at its best capacity. We monitor and improve your website to offer the best experience to your users and maximize your results.",
       "pricing": {
         "basic": {
           "title": "Basic",
@@ -77,7 +77,7 @@
       "title": "Frequently Asked Questions",
       "item-1": {
         "title": "What is a web performance audit?",
-        "description": "A web performance audit is a thorough analysis of your website to identify issues affecting its speed, usability, and overall performance."
+        "description": "A web performance audit is a comprehensive analysis of your website to identify issues that affect its speed, usability, and overall performance."
       },
       "item-2": {
         "title": "How long does the audit take?",
@@ -93,7 +93,7 @@
       },
       "item-5": {
         "title": "How does continuous support work?",
-        "description": "We become part of your team. We constantly monitor your website and provide specific advice to improve it. Depending on the plan, we also perform pair programming and workshops."
+        "description": "We become part of your team. We constantly monitor your website and provide specific advice to improve it. Depending on the plan, we also conduct pair programming and workshops."
       },
       "item-6": {
         "title": "Can I cancel my subscription at any time?",
@@ -101,31 +101,56 @@
       },
       "item-7": {
         "title": "Which metrics do we focus on?",
-        "description": "We focus on improving the Core Web Vitals of your website."
+        "description": "We focus on improving your website's Core Web Vitals."
       },
       "item-8": {
-        "title": "What are the Core Web Vitals?",
-        "description": "Core Web Vitals are a series of metrics defined by Google that measure the real user experience."
+        "title": "What are Core Web Vitals?",
+        "description": "Core Web Vitals are a set of metrics defined by Google that measure the real user experience."
       },
       "item-9": {
         "title": "Which communication channel do we use?",
-        "description": "We create a Discord channel where we include your entire team so they can ask for help or resolve doubts whenever they want."
+        "description": "We create a channel on Discord where your entire team can ask for help or resolve doubts whenever they want."
       },
       "item-10": {
-        "title": "Do you guarantee performance improvement?",
+        "title": "Do you offer performance improvement guarantees?",
         "description": "While we cannot guarantee specific improvements due to the variability in each website's conditions, our track record shows that all our clients experience significant improvements in their Core Web Vitals."
       }
     },
+    "how": {
+      "title": "How do we work?",
+      "description": "Our process focuses on systematically and effectively improving your website's performance. Here we explain each step:",
+      "step-1": {
+        "title": "We Analyze Your Web",
+        "description": "We examine your website to identify performance issues and prioritize them based on their impact, focusing on Core Web Vitals."
+      },
+      "step-2": {
+        "title": "We Measure and Optimize",
+        "description": "We help you measure your application's performance with real-world and lab data and provide solutions for the issues found."
+      },
+      "step-3": {
+        "title": "We Share Knowledge",
+        "description": "We enhance your team's web performance skills through result analysis, articles, and educational videos."
+      }
+    },
     "blog": {
-      "title": "Recent Posts on Our Blog"
+      "title": "Recent Posts on Our Blog",
+      "button": "View All"
     }
   },
   "BlogPage": {
     "meta": {
       "title": "Blog",
-      "description": "Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web."
+      "description": "We teach web performance by analyzing real websites. We share tips, tools, and workflows to improve website performance."
     },
     "title": "Blog",
-    "description": "En nuestro blog escribimos sobre novedades en el mundo de la optimización de rendimiento web."
+    "description": "In our blog, we write about the latest in the world of web performance optimization."
+  },
+  "ReviewsPage": {
+    "meta": {
+      "title": "Our Web Performance Reviews",
+      "description": "We teach web performance by analyzing real websites. We share tips, tools, and workflows to improve website performance."
+    },
+    "title": "Web Performance Reviews of Real Sites",
+    "description": "At PerfReviews, we analyze the performance of websites. It's an ideal way to teach how to use tools to detect, fix, and prevent performance issues.<br></br><br></br>We are recognized Google Developer Experts in web technologies and have extensive experience developing websites with a special focus on usability, accessibility, and performance.<br></br><br></br>Since websites are dynamic projects, the reviews may mention aspects that are no longer reproducible. Therefore, we accompany the videos with a series of reports that allow you to visualize a 'snapshot' of the website at the time of the study."
   }
 }
