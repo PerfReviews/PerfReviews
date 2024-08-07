@@ -11,7 +11,7 @@ featuredImage: /images/blog/thumbs/performance-is-money.png
 
 Web Performance is important for user experience and business metrics. Only by knowing its impact can you prioritize it, yet it's difficult to quantify its benefits until the work has been done.
 
-![](thumbs/performance-is-money.png)
+![](/images/blog/thumbs/performance-is-money.png)
 
 We need to break this chicken-and-egg loop. This post explains several ways of assessing the potential performance gains with little effort and, more importantly, without actually implementing fixes.
 
@@ -43,11 +43,11 @@ The idea is that **if we can prove that users having better web performance are 
 2. Add an event with a performance metric category. CP Clermont chose First Paint, Time to Interactive, Time to App Load (a custom metric for ALDO's SPA), and Frames per Second. Then, he translated the metrics into 3 categories (good, average, and poor) and logged a custom dimension on Google Analytics.
 3. Plot business metrics vs performance metrics over time. For business metrics, CP Clermont chose Conversion Rate and Revenue.
 
-![Plotting Conversion Rate for each First Paint Category (good, average, slow)](thumbs/assess-performance-impact_simplified-first-paint-cr.png)
+![Plotting Conversion Rate for each First Paint Category (good, average, slow)](/images/blog/thumbs/assess-performance-impact_simplified-first-paint-cr.png)
 
 One could wonder if users have better performance and spend more because they are using better devices (ie the latest iPhone), which have better CPUs and their users have likely a higher purchase power.
 
-![Plotting Revenue per session for a specific device (iPhone 8) depending on FPS after click](thumbs/assess-performance-impact_simplified-iphone8-dollar-per-session.png)
+![Plotting Revenue per session for a specific device (iPhone 8) depending on FPS after click](/images/blog/thumbs/assess-performance-impact_simplified-iphone8-dollar-per-session.png)
 
 Using Google Analytics you can see what type of device the user is using and plot results by specific models to get an answer.
 
@@ -78,7 +78,7 @@ In this case, the Rel mCvR is 40%.
 
 Google says that **a good target for Rel mCvR is 70%**, meaning that mobile conversion rates are 30% lower than desktop. The reason why Rel mCvR can be a good metric is that it is not influenced by changes in traffic (eg seasonality or promotional campaigns). The following diagram explains it in more detail ([source](https://www.blog.google/products/marketingplatform/analytics/mobile-challenge-and-how-measure-it/)):
 
-![Explanation of Relative mobile conversion rate and its components](thumbs/assess-performance-impact_rel-mcvr.png)
+![Explanation of Relative mobile conversion rate and its components](/images/blog/thumbs/assess-performance-impact_rel-mcvr.png)
 
 Note that Rel mCvR is influenced by UX too since a bad UX on mobile will hurt mobile conversion rates. **You should use [Lighthouse](https://web.dev/measure) or [WebPageTest](https://www.webpagetest.org/) to ensure that there are performance issues and speed is the main contributor in Rel mCvR and not usability.**
 
@@ -91,11 +91,11 @@ In [their post "Value of Speed"](https://web.dev/value-of-speed/), you can find 
 
 Google has [a handy microsite called Test My Site](https://www.thinkwithgoogle.com/feature/testmysite/) that gives you a snapshot of your site and calculates the potential increase in revenue when improving your site speed. I would describe it as a "Lighthouse report for business people".
 
-![Screenshot of Google's Test My Site page](thumbs/assess-performance-impact_test-my-site.png)
+![Screenshot of Google's Test My Site page](/images/blog/thumbs/assess-performance-impact_test-my-site.png)
 
 To calculate the potential increase in revenue you only need to provide your average monthly visitors, conversion rate, and average order value.
 
-![Calculating potential increase in annual revenue using Google's Test My Site](thumbs/assess-performance-impact_test-my-site-potential-revenue.png)
+![Calculating potential increase in annual revenue using Google's Test My Site](/images/blog/thumbs/assess-performance-impact_test-my-site-potential-revenue.png)
 
 Behind the scenes, it is powered by data from the Chrome User Experience report database or HTTP Archive, which contains performance metrics gathered from real users that have visited your site (if you are interested in this data I recommend checking [CRUX.RUN](https://crux.run/)). It also uses Lighthouse to calculate the potential savings in loading time.
 
