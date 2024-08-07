@@ -1,4 +1,25 @@
 {
+  "Common": {
+    "header": {
+      "blog-button": "Blog",
+      "cases-button": "Casos",
+      "contact-button": "Contáctanos"
+    },
+    "footer": {
+      "links": {
+        "title": "Enlaces",
+        "blog": "Blog",
+        "reviews": "Análisis de Performance",
+        "tools": "Herramientas"
+      },
+      "about": {
+        "title": "Sobre",
+        "about-us": "Nosotros",
+        "contact-us": "Contáctanos"
+      },
+      "copyright": "Copyright © PerfReviews"
+    }
+  },
   "HomePage": {
     "meta": {
       "title": "PerfReviews | Web Performance Consulting",
