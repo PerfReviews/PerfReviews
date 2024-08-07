@@ -5,6 +5,14 @@
       "reviews-button": "Reviews",
       "contact-button": "Contact Us"
     },
+    "lang": {
+      "button": "Change language",
+      "menu": {
+        "title": "Languages",
+        "es": "Spanish",
+        "en": "English"
+      }
+    },
     "footer": {
       "links": {
         "title": "Links",

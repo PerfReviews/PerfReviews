@@ -8,6 +8,8 @@ import { Container } from "@/components/ui/container";
 import { cn } from "@/components/ui/core";
 import { Icon } from "@/components/ui/icon";
 
+import { LangButton } from "../shared/lang-button";
+
 export interface FooterProps extends ComponentPropsWithoutRef<"footer"> {}
 
 export const Footer = ({ className, ...others }: FooterProps) => {
@@ -81,22 +83,7 @@ export const Footer = ({ className, ...others }: FooterProps) => {
           <div className="text-sm">{t("footer.copyright")}</div>
 
           <div className="space-x-2">
-            <Button
-              aria-label={t("footer.twitter-button")}
-              variant="outline"
-              size="icon"
-              asChild
-            >
-              <a
-                href="https://twitter.com/x"
-                rel="noopener noreferrer nofollow"
-                target="_blank"
-              >
-                <Icon>
-                  <Twitter />
-                </Icon>
-              </a>
-            </Button>
+            <LangButton variant="outline" />
           </div>
         </div>
       </Container>
