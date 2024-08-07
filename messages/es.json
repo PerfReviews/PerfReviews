@@ -152,5 +152,26 @@
     },
     "title": "Análisis de rendimiento web de sitios reales",
     "description": "En PerfReviews analizamos el rendimiento de sitios web. Es una forma ideal de enseñar cómo utilizar herramientas para detectar, corregir y prevenir problemas de performance.<br></br><br></br>Somos reconocidos Google Developer Experts en tecnologías web y tenemos una larga experiencia desarrollando sitios web con un especial foco en usabilidad, accessibilidad y rendimiento.<br></br><br></br>Dado que los sitios web son proyectos dinámicos, es posible que los análisis mencionen aspectos que no sean reproducibles actualmente. Por ello acompañamos los vídeos con una serie de informes que permiten visualizar un “snapshot” de la web en el momento en que hicimos el estudio."
+  },
+  "AboutUsPage": {
+    "meta": {
+      "title": "Quiénes somos",
+      "description": "Somos expertos consultores en web performance con una amplia experiencia."
+    },
+    "title": "Sobre nosotros",
+    "team": {
+      "joan": {
+        "name": "Joan León",
+        "description": "Me apasiona todo lo relacionado con el desarrollo e interacción en la interfaz de usuario en entornos web.<br></br><br></br>Trato de estar al día en todo lo relacionado con HTML5, CSS, SVG, web Animation y Javascript. Otra de mis pasiones es la de colaborar en proyectos Open Source.<br></br><br></br>Me encanta compartir conocimiento, ya sea en MeetUps, Workshops o como docente en Escuela IT... siempre activo en @nucliweb para compartir todos los recursos y novedades del mundo frontend."
+      },
+      "andres": {
+        "name": "Andrés Alvarez",
+        "description": "Trabajo como Staff Front-End Engineer en Adevinta Spain."
+      },
+      "jose": {
+        "name": "José M. Pérez",
+        "description": "Soy tech lead, desarrollador full-stack web, especialista web performance, speaker y contribuidor open-source.<br></br><br></br>Google Developer Expert en tecnologías web. Me gusta crear productos útiles y con buena experience de usuario.<br></br><br></br>Publico en jmperezperez.com sobre mis proyectos y exploraciones de web performance."
+      }
+    }
   }
 }

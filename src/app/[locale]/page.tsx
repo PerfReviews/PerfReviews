@@ -148,7 +148,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
 
               <div className="flex items-center justify-center">
                 <Image
-                  className="rounded-xl rotate-2 shadow-md"
+                  className="rounded-xl rotate-2 shadow-md bg-muted"
                   src="/images/step-1.jpg"
                   alt=""
                   width={460}
@@ -158,7 +158,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
 
               <div className="flex items-center justify-center order-1 md:order-none">
                 <Image
-                  className="rounded-xl -rotate-2"
+                  className="rounded-xl -rotate-2 shadow-md bg-muted"
                   src="/images/step-2.png"
                   alt=""
                   width={460}
@@ -188,7 +188,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
 
               <div className="flex items-center justify-center">
                 <Image
-                  className="rounded-xl rotate-2 shadow-md"
+                  className="rounded-xl rotate-2 shadow-md bg-muted"
                   src="/images/step-3.jpg"
                   alt=""
                   width={460}

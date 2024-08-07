@@ -46,7 +46,7 @@ export default function ReviewsPage({ params }: ReviewsPageProps) {
     <Container className="py-8 space-y-8" asChild>
       <main>
         <div className="space-y-4">
-          <h2 className="text-2xl md:text-3xl font-bold">{t("title")}</h2>
+          <h1 className="text-2xl md:text-3xl font-bold">{t("title")}</h1>
 
           <p className="text-muted-foreground">
             {t.rich("description", {

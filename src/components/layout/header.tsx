@@ -36,11 +36,11 @@ export const Header = ({ className, ...others }: HeaderProps) => {
         </div>
 
         <div className="flex gap-0.5">
-          <Button variant="link" asChild>
+          <Button className="hidden md:flex" variant="link" asChild>
             <Link href="/blog">{t("header.blog-button")}</Link>
           </Button>
 
-          <Button variant="link" asChild>
+          <Button className="hidden md:flex" variant="link" asChild>
             <Link href="/reviews">{t("header.reviews-button")}</Link>
           </Button>
 

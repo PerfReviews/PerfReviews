@@ -36,7 +36,7 @@ export const Footer = ({ className, ...others }: FooterProps) => {
       links: [
         {
           text: t("footer.about.about-us"),
-          href: "https://www.linkedin.com/company/x",
+          href: "/nosotros",
         },
         {
           text: t("footer.about.contact-us"),

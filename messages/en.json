@@ -152,5 +152,26 @@
     },
     "title": "Web Performance Reviews of Real Sites",
     "description": "At PerfReviews, we analyze the performance of websites. It's an ideal way to teach how to use tools to detect, fix, and prevent performance issues.<br></br><br></br>We are recognized Google Developer Experts in web technologies and have extensive experience developing websites with a special focus on usability, accessibility, and performance.<br></br><br></br>Since websites are dynamic projects, the reviews may mention aspects that are no longer reproducible. Therefore, we accompany the videos with a series of reports that allow you to visualize a 'snapshot' of the website at the time of the study."
+  },
+  "AboutUsPage": {
+    "meta": {
+      "title": "Who we are",
+      "description": "We are expert consultants in web performance with extensive experience."
+    },
+    "title": "About us",
+    "team": {
+      "joan": {
+        "name": "Joan León",
+        "description": "I am passionate about everything related to development and interaction in the user interface in web environments.<br></br><br></br>I try to stay up to date with everything related to HTML5, CSS, SVG, web animation, and Javascript. Another one of my passions is collaborating on Open Source projects.<br></br><br></br>I love sharing knowledge, whether in MeetUps, Workshops, or as an instructor at Escuela IT... always active on @nucliweb to share all the resources and news from the frontend world."
+      },
+      "andres": {
+        "name": "Andrés Alvarez",
+        "description": "I work as a Staff Front-End Engineer at Adevinta Spain."
+      },
+      "jose": {
+        "name": "José M. Pérez",
+        "description": "I am a tech lead, full-stack web developer, web performance specialist, speaker, and open-source contributor.<br></br><br></br>Google Developer Expert in web technologies. I like to create useful products with a good user experience.<br></br><br></br>I publish on jmperezperez.com about my projects and explorations in web performance."
+      }
+    }
   }
 }
