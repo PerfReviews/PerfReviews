@@ -41,7 +41,7 @@ export const Header = ({ className, ...others }: HeaderProps) => {
           </Button>
 
           <Button variant="link" asChild>
-            <Link href="/reviews">{t("header.cases-button")}</Link>
+            <Link href="/reviews">{t("header.reviews-button")}</Link>
           </Button>
 
           <Button>{t("header.contact-button")}</Button>
