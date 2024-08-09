@@ -10,9 +10,16 @@ export interface PricingCardGridProps extends ComponentPropsWithoutRef<"div"> {
 
 export const PricingCardGrid = ({ plans, ...others }: PricingCardGridProps) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 mx-auto" {...others}>
+    <div
+      className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-4 mx-auto"
+      {...others}
+    >
       {plans.map((plan, index) => (
-        <PricingCard key={index} plan={plan} />
+        <PricingCard
+          className="max-w-md w-full mx-auto"
+          key={index}
+          plan={plan}
+        />
       ))}
     </div>
   );

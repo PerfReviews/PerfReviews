@@ -126,7 +126,7 @@
     },
     "how": {
       "title": "¿Cómo trabajamos?",
-      "description": "Nuestro proceso se enfoca en mejorar el rendimiento de tu sitio web de manera sistemática y efectiva. Aquí te explicamos cada paso:",
+      "description": "Nuestro proceso se enfoca en mejorar el rendimiento de tu sitio web de manera sistemática y efectiva.",
       "step-1": {
         "title": "Analizamos tu Web",
         "description": "Examinamos tu sitio web para identificar problemas de desempeño y los priorizamos según su impacto, enfocados en las Core Web Vitals."

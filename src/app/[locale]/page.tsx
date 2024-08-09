@@ -10,7 +10,6 @@ import { FAQAccordion } from "@/components/shared/faq-accordion";
 import { PricingCard } from "@/components/shared/pricing-card";
 import { PricingCardGrid } from "@/components/shared/pricing-card-grid";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Ratings } from "@/components/ui/ratings";
@@ -104,7 +103,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
               <div className="flex flex-col gap-y-4 items-center">
                 <div className="flex -space-x-1 *:ring *:ring-background">
                   {clients.map((name) => (
-                    <Avatar className="bg-muted w-12 h-12" key={name}>
+                    <Avatar className="bg-white w-12 h-12" key={name}>
                       <AvatarImage
                         className="object-contain"
                         src={`/images/${name}.svg`}
@@ -148,21 +147,21 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
 
               <div className="flex items-center justify-center">
                 <Image
-                  className="rounded-xl rotate-2 shadow-md bg-muted"
-                  src="/images/step-1.jpg"
+                  className="rounded-xl shadow-md bg-muted border-2 border-muted"
+                  src="/images/home/step-1.png"
                   alt=""
-                  width={460}
-                  height={460}
+                  width={380}
+                  height={380}
                 />
               </div>
 
               <div className="flex items-center justify-center order-1 md:order-none">
                 <Image
-                  className="rounded-xl -rotate-2 shadow-md bg-muted"
-                  src="/images/step-2.png"
+                  className="rounded-xl shadow-md bg-muted border-2 border-muted"
+                  src="/images/home/step-2.png"
                   alt=""
-                  width={460}
-                  height={460}
+                  width={380}
+                  height={380}
                 />
               </div>
 
@@ -188,11 +187,11 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
 
               <div className="flex items-center justify-center">
                 <Image
-                  className="rounded-xl rotate-2 shadow-md bg-muted"
-                  src="/images/step-3.jpg"
+                  className="rounded-xl shadow-md bg-muted border-2 border-muted"
+                  src="/images/home/step-3.jpg"
                   alt=""
-                  width={460}
-                  height={460}
+                  width={380}
+                  height={380}
                 />
               </div>
             </div>
