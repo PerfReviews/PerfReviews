@@ -126,7 +126,6 @@
     },
     "how": {
       "title": "How do we work?",
-      "description": "Our process focuses on systematically and effectively improving your website's performance.",
       "step-1": {
         "title": "We Analyze Your Web",
         "description": "We examine your website to identify performance issues and prioritize them based on their impact, focusing on Core Web Vitals."

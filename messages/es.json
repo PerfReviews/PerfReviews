@@ -13,6 +13,11 @@
         "en": "Inglés"
       }
     },
+    "pricing": {
+      "popular-badge": "Popular",
+      "monthly": "mes",
+      "button": "Contactar"
+    },
     "footer": {
       "links": {
         "title": "Enlaces",
@@ -37,49 +42,58 @@
     "description": "Obtén más ingresos y haz a tus usuarios más felices con nuestros servicios de auditoría y optimización web",
     "button": "Contáctanos",
     "rating": "+20 empresas nos recomiendan",
-    "audits": {
-      "title": "Auditoría",
-      "description": "El rendimiento de tu sitio web es muy importante. Una web que carga rápido en cualquier dispositivo y condiciones de red mejora las métricas clave de negocio. Trabajaremos contigo y tu equipo para identificar los principales problemas que afectan a la performance de tu web.<br></br><br></br>Una vez realizado el estudio proporcionaremos un documento detallado con consejos para ayudar al equipo de desarrollo a mejorar tanto el rendimiento como la experiencia de usuario de tu web.",
-      "pricing": {
-        "title": "Auditoría",
-        "item-1": "Reporte en PDF",
-        "item-2": "Enfocado en las Core Web Vitals",
-        "item-3": "Soluciones concretas",
-        "item-4": "2 reuniones de seguimiento"
+    "how": {
+      "title": "¿Cómo trabajamos?",
+      "step-1": {
+        "title": "Analizamos tu Web",
+        "description": "Examinamos tu sitio web para identificar problemas de desempeño y los priorizamos según su impacto, enfocados en las <strong>Core Web Vitals</strong>."
+      },
+      "step-2": {
+        "title": "Medimos y optimizamos",
+        "description": "Te ayudamos a medir el rendimiento de tu aplicación con datos reales y de laboratorio, y te proporcionamos soluciones para los problemas encontrados."
+      },
+      "step-3": {
+        "title": "Compartimos conocimientos",
+        "description": "Mejoramos las habilidades de tu equipo en desempeño web mediante análisis de resultados, artículos y videos educativos."
       }
     },
-    "subscriptions": {
-      "title": "Soporte continuo",
-      "description": "Asegúrate de que tu sitio web siempre esté optimizado. Recibirás soporte continuo y actualizaciones periódicas para garantizar que tu sitio funcione al máximo de su capacidad. Nos encargamos de monitorear y mejorar tu web para ofrecer la mejor experiencia a tus usuarios y maximizar tus resultados.",
-      "pricing": {
-        "basic": {
-          "title": "Básico",
-          "item-1": "10 horas/mes",
-          "item-2": "Consultas",
-          "item-3": "Reportes mensuales"
-        },
-        "pro": {
-          "title": "Pro",
-          "item-1": "20 horas/mes",
-          "item-2": "Consultas",
-          "item-3": "Reportes mensuales",
-          "item-4": "Observabilidad",
-          "item-5": "Pair programming"
-        },
-        "premium": {
-          "title": "Premium",
-          "item-1": "30 horas/mes",
-          "item-2": "Consultas",
-          "item-3": "Reportes mensuales",
-          "item-4": "Observabilidad",
-          "item-5": "Pair programming",
-          "item-6": "Workshops"
-        }
-      }
+    "why": {
+      "title": "¿Por qué contratarnos?",
+      "description": "Con años de experiencia optimizando la <strong>web performance</strong> de más de 20 sitios web y ofreciendo talleres y formaciones, somos la elección ideal para mejorar tu sitio web. Descubre algunos de los proyectos en los que hemos trabajado."
     },
     "pricing": {
-      "popular-badge": "Popular",
-      "button": "Contactar"
+      "title": "Precios",
+      "description": "Explora nuestros servicios para mejorar la <strong>web performance</strong> de tu sitio web. Elige entre una auditoría detallada o nuestros servicios de soporte continuo.",
+      "plans": {
+        "audit": {
+          "title": "Auditoría",
+          "item-1": "Llamada previa",
+          "item-2": "Llamada entrega",
+          "item-3": "Enfocado en las Core Web Vitals",
+          "item-4": "Listado de problemas",
+          "item-5": "Soluciones concretas"
+        },
+        "business": {
+          "title": "Business",
+          "item-1": "Onboarding inicial",
+          "item-2": "Auditoría inicial",
+          "item-3": "Configuración de análitica",
+          "item-4": "Consultas",
+          "item-5": "Contacto directo",
+          "item-6": "Soluciones concretas",
+          "item-7": "Reunión mensual"
+        },
+        "enterprise": {
+          "title": "Enterprise",
+          "item-1": "Onboarding inicial",
+          "item-2": "Auditoría inicial",
+          "item-3": "Configuración de análitica",
+          "item-4": "Consultas",
+          "item-5": "Contacto directo",
+          "item-6": "Soluciones concretas",
+          "item-7": "Reunión mensual"
+        }
+      }
     },
     "faqs": {
       "title": "Preguntas frecuentes",
@@ -122,22 +136,6 @@
       "item-10": {
         "title": "¿Ofrecen garantías de mejora en el rendimiento?",
         "description": "Si bien no podemos garantizar mejoras específicas debido a la variabilidad en las condiciones de cada sitio web, nuestro historial demuestra que todos nuestros clientes experimentan mejoras significativas en sus Core Web Vitals."
-      }
-    },
-    "how": {
-      "title": "¿Cómo trabajamos?",
-      "description": "Nuestro proceso se enfoca en mejorar el rendimiento de tu sitio web de manera sistemática y efectiva.",
-      "step-1": {
-        "title": "Analizamos tu Web",
-        "description": "Examinamos tu sitio web para identificar problemas de desempeño y los priorizamos según su impacto, enfocados en las Core Web Vitals."
-      },
-      "step-2": {
-        "title": "Medimos y optimizamos",
-        "description": "Te ayudamos a medir el rendimiento de tu aplicación con datos reales y de laboratorio, y te proporcionamos soluciones para los problemas encontrados."
-      },
-      "step-3": {
-        "title": "Compartimos conocimientos",
-        "description": "Mejoramos las habilidades de tu equipo en desempeño web mediante análisis de resultados, artículos y videos educativos."
       }
     },
     "blog": {

@@ -4,6 +4,6 @@ export interface PricingPlan {
   benefits: Array<string>;
   price: number;
   original?: number;
-  stripeId?: string;
   isPopular?: boolean;
+  isRecurrent?: boolean;
 }

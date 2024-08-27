@@ -19,7 +19,7 @@ export const PricingCard = ({
   ...others
 }: PricingCardProps) => {
   const format = useFormatter();
-  const t = useTranslations("HomePage");
+  const t = useTranslations();
 
   const variant = plan.isPopular ? "default" : "outline";
 
@@ -34,11 +34,11 @@ export const PricingCard = ({
     >
       {plan.isPopular && (
         <Badge className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          {t("pricing.popular-badge")}
+          {t("Common.pricing.popular-badge")}
         </Badge>
       )}
 
-      <h3 className="text-lg md:text-xl font-semibold">{t(plan.title)}</h3>
+      <h3 className="text-lg md:text-xl font-semibold">{plan.title}</h3>
 
       <p className="text-3xl md:text-4xl font-bold">
         {format.number(plan.price, {
@@ -46,25 +46,31 @@ export const PricingCard = ({
           currency: "EUR",
           minimumFractionDigits: 0,
           maximumFractionDigits: 0,
-        })}{" "}
-        <span className="text-muted-foreground text-sm font-semibold">
-          / month
-        </span>
+        })}
+
+        {plan.isRecurrent && (
+          <>
+            {" "}
+            <span className="text-muted-foreground text-sm font-semibold">
+              / {t("Common.pricing.monthly")}
+            </span>
+          </>
+        )}
       </p>
 
       <ul className="flex flex-col gap-2 py-6 flex-1 text-left">
-        {plan.benefits.map((key, index) => (
+        {plan.benefits.map((value, index) => (
           <li className="flex gap-2 items-center" key={index}>
             <Icon className="text-green-600">
               <CircleCheck />
             </Icon>
-            {t(key)}
+            {value}
           </li>
         ))}
       </ul>
 
       <Button variant={variant} asChild>
-        <Link href="/private">{t("pricing.button")}</Link>
+        <Link href="/private">{t("Common.pricing.button")}</Link>
       </Button>
     </article>
   );
