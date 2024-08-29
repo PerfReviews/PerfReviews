@@ -1,0 +1,194 @@
+{
+  "Common": {
+    "header": {
+      "blog-button": "Blog",
+      "reviews-button": "Análisis",
+      "contact-button": "Contáctanos"
+    },
+    "lang": {
+      "button": "Cambiar idioma",
+      "menu": {
+        "title": "Idiomas",
+        "es": "Español",
+        "en": "Inglés"
+      }
+    },
+    "pricing": {
+      "popular-badge": "Popular",
+      "monthly": "mes",
+      "button": "Contactar"
+    },
+    "footer": {
+      "links": {
+        "title": "Enlaces",
+        "blog": "Blog",
+        "reviews": "Análisis de Performance",
+        "tools": "Herramientas"
+      },
+      "about": {
+        "title": "Sobre",
+        "about-us": "Nosotros",
+        "contact-us": "Contáctanos"
+      },
+      "copyright": "Copyright © PerfReviews"
+    }
+  },
+  "HomePage": {
+    "meta": {
+      "title": "PerfReviews | Consultoría de rendimiento web",
+      "description": "Mejora el rendimiento de tu sitio web con nuestros servicios de auditoría y optimización. Expertos en usabilidad y rendimiento con experiencia en empresas líderes."
+    },
+    "title": "Mejoramos el rendimiento de tu web",
+    "description": "Obtén más ingresos y haz a tus usuarios más felices con nuestros servicios de auditoría y optimización web",
+    "button": "Contáctanos",
+    "rating": "+20 empresas nos recomiendan",
+    "how": {
+      "title": "¿Cómo trabajamos?",
+      "step-1": {
+        "title": "Analizamos tu Web",
+        "description": "Examinamos tu sitio web para identificar problemas de desempeño y los priorizamos según su impacto, enfocados en las <strong>Core Web Vitals</strong>.",
+        "alt": "Captura de las herramientas de desarrollo de Chrome durante el proceso de análisis de rendimiento."
+      },
+      "step-2": {
+        "title": "Medimos y optimizamos",
+        "description": "Te ayudamos a medir el rendimiento de tu aplicación con datos reales y de laboratorio, y te proporcionamos soluciones para los problemas encontrados.",
+        "alt": "Captura de la pestaña de rendimiento de Google Search Console con todas las URL en 'bueno' de uno de nuestros clientes."
+      },
+      "step-3": {
+        "title": "Compartimos conocimientos",
+        "description": "Mejoramos las habilidades de tu equipo en desempeño web mediante análisis de resultados, artículos y videos educativos.",
+        "alt": "Foto de Joan Leon dando una formación sobre Web Performance"
+      }
+    },
+    "why": {
+      "title": "¿Por qué contratarnos?",
+      "description": "Con años de experiencia optimizando la <strong>web performance</strong> de más de 20 sitios web y ofreciendo talleres y formaciones, somos la elección ideal para mejorar tu sitio web. Descubre algunos de los proyectos en los que hemos trabajado."
+    },
+    "pricing": {
+      "title": "Precios",
+      "description": "Explora nuestros servicios para mejorar la <strong>web performance</strong> de tu sitio web. Elige entre una auditoría detallada o nuestros servicios de soporte continuo.",
+      "plans": {
+        "audit": {
+          "title": "Auditoría",
+          "item-1": "Llamada previa",
+          "item-2": "Llamada entrega",
+          "item-3": "Enfocado en las Core Web Vitals",
+          "item-4": "Listado de problemas",
+          "item-5": "Soluciones concretas"
+        },
+        "business": {
+          "title": "Business",
+          "item-1": "<strong>10 h/mes</strong>",
+          "item-2": "Onboarding inicial",
+          "item-3": "Auditoría inicial",
+          "item-4": "Configuración de análitica",
+          "item-5": "Consultas",
+          "item-6": "Contacto directo",
+          "item-7": "Soluciones concretas",
+          "item-8": "Reunión mensual"
+        },
+        "enterprise": {
+          "title": "Enterprise",
+          "item-1": "<strong>20 h/mes</strong>",
+          "item-2": "Onboarding inicial",
+          "item-3": "Auditoría inicial",
+          "item-4": "Configuración de análitica",
+          "item-5": "Consultas",
+          "item-6": "Contacto directo",
+          "item-7": "Soluciones concretas",
+          "item-8": "Reunión mensual"
+        }
+      }
+    },
+    "workshops": {
+      "title": "Workshops y talleres sobre Web Performance",
+      "description": "Aprende cuáles son los principales problemas de rendimiento en sitios web, cómo corregirlos y monitorizarlos.",
+      "button": "Contactar",
+      "subject": "Información Workshops"
+    },
+    "faqs": {
+      "title": "Preguntas frecuentes",
+      "item-1": {
+        "title": "¿Qué es una auditoría de web performance?",
+        "description": "Una auditoría de web performance es un análisis exhaustivo de tu sitio web para identificar problemas que afectan su velocidad, usabilidad y rendimiento general."
+      },
+      "item-2": {
+        "title": "¿Cuánto tiempo tarda la auditoría?",
+        "description": "El proceso de auditoría completa suele tardar entre 10 y 15 días hábiles, dependiendo del tamaño y complejidad de tu sitio web."
+      },
+      "item-3": {
+        "title": "¿Qué recibiré al final de la auditoría?",
+        "description": "Recibirás un informe detallado con hallazgos clave, recomendaciones específicas y un plan de acción para mejorar el rendimiento de tu sitio web."
+      },
+      "item-4": {
+        "title": "¿Cómo se realiza la auditoría?",
+        "description": "Utilizamos herramientas avanzadas y métodos probados para evaluar todos los aspectos de tu sitio web, incluyendo la velocidad de carga, la optimización de imágenes, el código, la estructura del sitio y más."
+      },
+      "item-5": {
+        "title": "¿Cómo funciona el soporte continuo?",
+        "description": "Seremos parte de tu equipo. Monitorizaremos constantemente tu sitio web y te daremos consejos específicos para mejorarlo. Dependiendo del plan, también realizaremos pair programming y talleres."
+      },
+      "item-6": {
+        "title": "¿Puedo cancelar mi suscripción en cualquier momento?",
+        "description": "Sí, puedes cancelar tu suscripción en cualquier momento contactándonos."
+      },
+      "item-7": {
+        "title": "¿En qué métricas nos enfocamos?",
+        "description": "Nos enfocamos en mejorar las Core Web Vitals de tu sitio web."
+      },
+      "item-8": {
+        "title": "¿Qué son las Core Web Vitals?",
+        "description": "Las Core Web Vitals son una serie de métricas definidas por Google que miden la experiencia real de los usuarios."
+      },
+      "item-9": {
+        "title": "¿Qué canal de comunicación usamos?",
+        "description": "Creamos un canal en Discord donde incluimos a todo tu equipo para que puedan pedir ayuda o resolver dudas cuando lo deseen."
+      },
+      "item-10": {
+        "title": "¿Ofrecen garantías de mejora en el rendimiento?",
+        "description": "Si bien no podemos garantizar mejoras específicas debido a la variabilidad en las condiciones de cada sitio web, nuestro historial demuestra que todos nuestros clientes experimentan mejoras significativas en sus Core Web Vitals."
+      }
+    },
+    "blog": {
+      "title": "Posts recientes en nuestro blog",
+      "button": "Ver todos"
+    }
+  },
+  "BlogPage": {
+    "meta": {
+      "title": "Blog",
+      "description": "Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web."
+    },
+    "title": "Blog",
+    "description": "En nuestro blog escribimos sobre novedades en el mundo de la optimización de rendimiento web."
+  },
+  "ReviewsPage": {
+    "meta": {
+      "title": "Nuestros análisis de web performance",
+      "description": "Enseñamos web performance analizando sitios webs reales. Compartimos trucos, herramientas y workflows para mejorar el rendimiento de sitios web."
+    },
+    "title": "Análisis de rendimiento web de sitios reales",
+    "description": "En PerfReviews analizamos el rendimiento de sitios web. Es una forma ideal de enseñar cómo utilizar herramientas para detectar, corregir y prevenir problemas de performance.<br></br><br></br>Somos reconocidos Google Developer Experts en tecnologías web y tenemos una larga experiencia desarrollando sitios web con un especial foco en usabilidad, accessibilidad y rendimiento.<br></br><br></br>Dado que los sitios web son proyectos dinámicos, es posible que los análisis mencionen aspectos que no sean reproducibles actualmente. Por ello acompañamos los vídeos con una serie de informes que permiten visualizar un “snapshot” de la web en el momento en que hicimos el estudio."
+  },
+  "AboutUsPage": {
+    "meta": {
+      "title": "Quiénes somos",
+      "description": "Somos expertos consultores en web performance con una amplia experiencia."
+    },
+    "title": "Sobre nosotros",
+    "team": {
+      "joan": {
+        "name": "Joan León",
+        "description": "Me apasiona todo lo relacionado con el desarrollo e interacción en la interfaz de usuario en entornos web.<br></br><br></br>Trato de estar al día en todo lo relacionado con HTML5, CSS, SVG, web Animation y Javascript. Otra de mis pasiones es la de colaborar en proyectos Open Source.<br></br><br></br>Me encanta compartir conocimiento, ya sea en MeetUps, Workshops o como docente en Escuela IT... siempre activo en @nucliweb para compartir todos los recursos y novedades del mundo frontend."
+      },
+      "andres": {
+        "name": "Andrés Alvarez",
+        "description": "Trabajo como Staff Front-End Engineer en Adevinta Spain."
+      },
+      "jose": {
+        "name": "José M. Pérez",
+        "description": "Soy tech lead, desarrollador full-stack web, especialista web performance, speaker y contribuidor open-source.<br></br><br></br>Google Developer Expert en tecnologías web. Me gusta crear productos útiles y con buena experience de usuario.<br></br><br></br>Publico en jmperezperez.com sobre mis proyectos y exploraciones de web performance."
+      }
+    }
+  }
+}

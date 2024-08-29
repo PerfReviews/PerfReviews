@@ -1,0 +1,141 @@
+---
+title: Web Performance Analysis of the Escuela IT Website
+date: "2019-04-14"
+summary: We analyzed the website of the e-learning platform Escuela IT. We'll explore unminified statics, avoidable reflows, and opportunities to improve font loading.
+featuredImage: /images/reviews/escuelait/thumb.png
+---
+
+# Web Performance Analysis of the Escuela IT Website
+
+We analyzed [the Escuela IT website](https://escuela.it/). The homepage is relatively simple and serves as a good example of improvements that can be applied when serving static files like JS, SVG, and fonts.
+
+Here’s our analysis:
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/qyXs6d7wc5Y"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+/>
+
+---
+
+## Video Summary
+
+In this review, we chose [the Escuela IT website](https://escuela.it). It is an online learning platform with which we have previously collaborated [by recording a webinar on web performance](https://www.youtube.com/watch?v=bhSEp44mrKQ). The site's homepage is lightweight, with most images in SVG format and few third-party dependencies.
+
+![The Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-010.jpg)
+
+### Lighthouse Report
+
+As is common, we begin with an initial pass using [web.dev](https://web.dev). The performance score is acceptable, at 67/100.
+
+![Lighthouse for the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-017.jpg)
+
+The main issues are related to Speed Index and Time to Interactive. The Speed Index can be improved by optimizing the few JPG images and avoiding a relayout caused by loading additional JavaScript, which forces the browser to repaint.
+
+![Lighthouse tips for improving image serving on the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-027.jpg)
+
+### Reflow Issues
+
+The reflow issue can be reproduced by blocking the request for the resource that adds the JavaScript code that hides the menu behind a "hamburger" menu.
+
+![Blocking a request from the network panel on the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-045.jpg)
+
+When the request is blocked and the page reloaded, the menu no longer hides behind the top right button.
+
+![Escuela IT menu displayed](/images/reviews/escuelait/perfreview-escuelait-046.jpg)
+
+Displaying the menu and then using JavaScript to collapse it can sometimes be justified as a measure to make content more accessible. Thus, sessions where JavaScript is not supported, has been blocked, or the request simply hasn’t succeeded, will show the menu fully displayed and functional. In this case, however, it seems more like an issue introduced by adding the script rather than a decision to make it accessible.
+
+### CSS Stats Report
+
+The CSS of Escuela IT is well-constructed, although the number of rules, media queries, and fonts could be reduced. Overall, we didn’t find any performance issues in this area.
+
+![CSS Stats report on the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-056.jpg)
+
+### Static Files Optimization
+
+The Escuela IT website uses SVGs for most images, even to create a map that is later animated with JavaScript. This format is ideal for illustrations and simple images, so we commend the decision to use it here.
+
+![User map of the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-101.jpg)
+
+The initial HTML is not minified. The performance gain from removing these superfluous spaces is usually minimal, but in Escuela IT's case, it’s more important because it includes several inline SVGs that aren’t optimized. One of them is the map, where both the SVG for the map (which could save 20% of compressed size by optimizing it with [SVG OMG](https://jakearchibald.github.io/svgomg/)) and the JavaScript for the animation are unminified.
+
+![Unminified script on the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-109.jpg)
+
+The external SVG resources, which are not included inline, are also unminified and include information about the application used to generate them as well as unnecessary markup like empty `<g>` groups.
+
+![Empty groups in the SVG of the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-124.jpg)
+
+Again, SVG OMG will help us remove this redundant content.
+
+![SVG optimized with SVG OMG on the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-134.jpg)
+
+Static files are served using HTTP/1.1, which is not the best option when making many requests to static files as on this site. HTTP/2 is much more suitable, and while it may not be trivial to implement on the server that generates dynamic content, it is straightforward to take advantage of it by moving static content to a CDN. Escuela IT is not using CDNs, resulting in higher latency for those far from the main server. We believe a CDN would significantly improve load times.
+
+There are at least three JavaScript resources that are unminified. One of them, `custom.js`, uses jQuery to add functionality that could be replaced by standard calls to browser APIs. This would eliminate the need to include jQuery and significantly reduce the TTI.
+
+![Unminified custom.js on the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-147.jpg)
+
+In addition to some minification issues, we observed a cache time that is too short. Returning to the Lighthouse report, we found a warning about 32 resources with a cache TTL that is too short.
+
+![Suboptimal cache policy on the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-184.jpg)
+
+One way to resolve this is to version static files using a hash based on their content. Thus, when a change is made to the code of that static file, a new file name will be generated. This will prevent the browser from using the cached version and request the new one from the server. This setup allows for much longer cache times.
+
+In addition to improving performance on subsequent visits, versioning static files prevents issues with releases where the browser uses old resources, delaying bug resolution and introducing potential inconsistencies.
+
+### Font Loading
+
+It’s important to avoid situations like the following where text is not displayed to the user:
+
+![Invisible fonts on the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-219.jpg)
+
+What does the orange call-to-action (CTA) button do? When we rely on web fonts on our websites, we make the user wait to read the text because it simply isn’t displayed. That’s why it’s important to offer a system font as a fallback or have a clear strategy. This is a very common problem on websites.
+
+In Escuela IT, it seems they were following a [loading technique similar to the one described on CSS Tricks](https://css-tricks.com/font-display-masses/#article-header-id-3), where a CSS class is added to the `<html>` element when the web font has loaded. However, the `fonts-loaded` class is included in the initial markup, invalidating the progressive font loading process.
+
+![fonts-loaded on the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-266.jpg)
+
+We recommend using `font-display: swap`, which solves the problem without using JavaScript and is widely supported.
+
+Another issue that occurs when some assets take a long time to load is text with poor legibility. This often happens when we place text over an image. The text should be legible when the image has loaded, but what happens if it hasn’t loaded yet? On Escuela IT, there is a hero image that, if not loaded, makes the main text difficult to read. This is because there isn’t an adequate background color used while the image is being requested.
+
+![Legibility issues on the Escuela IT website](/images/reviews/escuelait/perfreview-escuelait-220.jpg)
+
+The solution is simple: use a background color that provides enough contrast. Ideally, the color should be extracted from the image we want to load so that there isn’t a jarring change.
+
+Escuela IT uses Google fonts, and their loading can be [sped up by using `preconnect`](https://twitter.com/PerfReviews_/status/1095766791220015105):
+
+![Using preconnect to improve Google font loading](/images/reviews/escuelait/perfreview-escuelait-233.jpg)
+
+Using the code:
+
+```html
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+```
+
+we initiate a connection to fonts.gstatic.com before the browser knows it needs to make a request to that domain. This same technique can be used to improve the loading of third-party resources. In the case of Escuela IT, some examples would be Google Analytics, Stripe, or Digicert, as seen by the DNS, Connect, and SSL bars in WebPageTest:
+
+![Webpagetest para la web de Escuela IT](/images/reviews/escuelait/perfreview-escuelait-246.jpg)
+
+These bars can be "uncoupled" and moved to the left so that the connection is already established when the browser makes the request.
+
+### Conclusion
+
+From a web performance perspective, we didn’t find major issues. We wanted to focus on multiple improvements that can be applied to this and other websites to serve static files efficiently.
+
+---
+
+## Reports
+
+- [Lighthouse](https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https://escuela.it/)
+- [WebPageTest desktop](http://webpagetest.org/result/190413_6F_3ca940a31e7f0821fdf72008a985680b/)
+- [CSS Stats](https://cssstats.com/stats?url=https%3A%2F%2Fescuela.it&ua=Browser%20Default)
+
+## Resource
+
+- [The best way to load Google Analytics on your website for performance](https://midu.dev/cargar-google-analytics-de-forma-optima) by [Miguel Ángel Durán](https://twitter.com/midudev).
