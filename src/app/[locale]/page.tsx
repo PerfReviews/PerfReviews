@@ -188,7 +188,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
               </p>
             </div>
 
-            <div className="grid grid-cols-4">
+            <div className="grid grid-cols-2 md:grid-cols-4">
               {clients.map((name, index) => (
                 <div key={index} className="flex items-center justify-center">
                   <Image
