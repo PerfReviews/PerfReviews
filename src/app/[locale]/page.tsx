@@ -108,7 +108,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
             <h2 className="text-2xl md:text-3xl font-bold">{t("how.title")}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
-              <div className="flex flex-col justify-center gap-2 items-center text-center">
+              <div className="flex flex-col justify-center gap-2 items-center text-center order-1 md:order-none">
                 <h3 className="text-xl md:text-2xl font-bold">
                   {t("how.step-1.title")}
                 </h3>
@@ -120,7 +120,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
                 </p>
               </div>
 
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center order-2 md:order-none">
                 <div className="relative aspect-video size-full">
                   <Image
                     className="object-contain rounded-xl shadow-md bg-muted"
@@ -131,7 +131,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center order-1 md:order-none">
+              <div className="flex items-center justify-center order-4 md:order-none">
                 <div className="relative aspect-video size-full">
                   <Image
                     className="object-contain rounded-xl shadow-md bg-muted"
@@ -142,7 +142,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
                 </div>
               </div>
 
-              <div className="flex flex-col justify-center gap-2 items-center text-center">
+              <div className="flex flex-col justify-center gap-2 items-center text-center order-3 md:order-none">
                 <h3 className="text-xl md:text-2xl font-bold">
                   {t("how.step-2.title")}
                 </h3>
@@ -152,7 +152,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
                 </p>
               </div>
 
-              <div className="flex flex-col justify-center gap-2 items-center text-center">
+              <div className="flex flex-col justify-center gap-2 items-center text-center order-5 md:order-none">
                 <h3 className="text-xl md:text-2xl font-bold">
                   {t("how.step-3.title")}
                 </h3>
@@ -162,7 +162,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
                 </p>
               </div>
 
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center order-6 md:order-none">
                 <div className="relative aspect-video size-full">
                   <Image
                     className="object-cover rounded-xl shadow-md bg-muted"
@@ -188,7 +188,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
               {clients.map((name, index) => (
                 <div key={index} className="flex items-center justify-center">
                   <Image
