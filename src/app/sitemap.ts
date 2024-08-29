@@ -13,68 +13,48 @@ type ChangeFrequency =
   | "never"
   | undefined;
 
-const getLocale = (locale: string) => {
-  if (locale === defaultLocale) {
-    return "";
-  }
+const getSitemapFile = ({ pathname }: { pathname: string }) => {
+  const siteURL = process.env.SITE_URL as string;
+  const languages = locales
+    .filter((locale) => locale !== defaultLocale)
+    .reduce((alternates, locale) => {
+      const current = [siteURL, locale, pathname].filter(Boolean).join("/");
 
-  return locale;
+      return {
+        ...alternates,
+        [locale]: current,
+      };
+    }, {});
+
+  return {
+    url: [siteURL, pathname].filter(Boolean).join("/"),
+    lastModified: new Date(),
+    changeFrequency: "daily" as ChangeFrequency,
+    priority: 0.7,
+    alternates: { languages },
+  };
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteURL = process.env.SITE_URL as string;
+  const urls = ["", "blog", "reviews"].map((pathname) =>
+    getSitemapFile({ pathname })
+  );
 
-  const urls = locales
-    .reduce((urls: Array<string>, locale: string) => {
-      const current = ["blog", "reviews"].map((value) => {
-        const current = getLocale(locale);
-        const pathname = [current, value].filter(Boolean).join("/");
+  const posts = allPosts
+    .filter((post) => post.locale === defaultLocale)
+    .map((post) =>
+      getSitemapFile({
+        pathname: ["blog", post.slug].filter(Boolean).join("/"),
+      })
+    );
 
-        return `${siteURL}/${pathname}`;
-      });
+  const reviews = allReviews
+    .filter((review) => review.locale === defaultLocale)
+    .map((review) =>
+      getSitemapFile({
+        pathname: ["reviews", review.slug].filter(Boolean).join("/"),
+      })
+    );
 
-      return [...urls, ...current];
-    }, [])
-    .map((url) => ({
-      url,
-      lastModified: new Date(),
-      changeFrequency: "daily" as ChangeFrequency,
-      priority: 0.7,
-    }));
-
-  const posts = allPosts.map((post) => {
-    const locale = getLocale(post.locale);
-    const pathname = [locale, "blog", post.slug].filter(Boolean).join("/");
-
-    return {
-      url: `${siteURL}/${pathname}`,
-      lastModified: new Date(),
-      changeFrequency: "daily" as ChangeFrequency,
-      priority: 0.7,
-    };
-  });
-
-  const reviews = allReviews.map((review) => {
-    const locale = getLocale(review.locale);
-    const pathname = [locale, "reviews", review.slug].filter(Boolean).join("/");
-
-    return {
-      url: `${siteURL}/${pathname}`,
-      lastModified: new Date(),
-      changeFrequency: "daily" as ChangeFrequency,
-      priority: 0.7,
-    };
-  });
-
-  return [
-    {
-      url: siteURL,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.7,
-    },
-    ...urls,
-    ...posts,
-    ...reviews,
-  ];
+  return [...urls, ...posts, ...reviews];
 }

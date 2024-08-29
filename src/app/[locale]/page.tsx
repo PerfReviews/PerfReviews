@@ -6,10 +6,9 @@ import { getTranslations } from "next-intl/server";
 
 import { BlogCard } from "@/components/blog/blog-card";
 import { Footer } from "@/components/layout/footer";
+import { ContactButton } from "@/components/shared/contact-button";
 import { FAQAccordion } from "@/components/shared/faq-accordion";
-import { PricingCard } from "@/components/shared/pricing-card";
 import { PricingCardGrid } from "@/components/shared/pricing-card-grid";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Ratings } from "@/components/ui/ratings";
@@ -34,27 +33,28 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
   const plans = [
     {
       id: "audit",
-      title: t("pricing.plans.audit.title"),
+      title: "pricing.plans.audit.title",
       benefits: [
-        t("pricing.plans.audit.item-1"),
-        t("pricing.plans.audit.item-2"),
-        t("pricing.plans.audit.item-3"),
-        t("pricing.plans.audit.item-4"),
-        t("pricing.plans.audit.item-5"),
+        "pricing.plans.audit.item-1",
+        "pricing.plans.audit.item-2",
+        "pricing.plans.audit.item-3",
+        "pricing.plans.audit.item-4",
+        "pricing.plans.audit.item-5",
       ],
       price: 1400,
     },
     {
       id: "business",
-      title: t("pricing.plans.business.title"),
+      title: "pricing.plans.business.title",
       benefits: [
-        t("pricing.plans.business.item-1"),
-        t("pricing.plans.business.item-2"),
-        t("pricing.plans.business.item-3"),
-        t("pricing.plans.business.item-4"),
-        t("pricing.plans.business.item-5"),
-        t("pricing.plans.enterprise.item-6"),
-        t("pricing.plans.enterprise.item-7"),
+        "pricing.plans.business.item-1",
+        "pricing.plans.business.item-2",
+        "pricing.plans.business.item-3",
+        "pricing.plans.business.item-4",
+        "pricing.plans.business.item-5",
+        "pricing.plans.business.item-6",
+        "pricing.plans.business.item-7",
+        "pricing.plans.business.item-8",
       ],
       price: 1600,
       isPopular: true,
@@ -62,15 +62,16 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
     },
     {
       id: "enterprise",
-      title: t("pricing.plans.enterprise.title"),
+      title: "pricing.plans.enterprise.title",
       benefits: [
-        t("pricing.plans.enterprise.item-1"),
-        t("pricing.plans.enterprise.item-2"),
-        t("pricing.plans.enterprise.item-3"),
-        t("pricing.plans.enterprise.item-4"),
-        t("pricing.plans.enterprise.item-5"),
-        t("pricing.plans.enterprise.item-6"),
-        t("pricing.plans.enterprise.item-7"),
+        "pricing.plans.enterprise.item-1",
+        "pricing.plans.enterprise.item-2",
+        "pricing.plans.enterprise.item-3",
+        "pricing.plans.enterprise.item-4",
+        "pricing.plans.enterprise.item-5",
+        "pricing.plans.enterprise.item-6",
+        "pricing.plans.enterprise.item-7",
+        "pricing.plans.enterprise.item-8",
       ],
       price: 2500,
       isRecurrent: true,
@@ -91,8 +92,8 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
             </div>
 
             <div className="space-y-4">
-              <Button className="shadow-md" size="lg">
-                {t("button")}
+              <Button className="shadow-md" size="lg" asChild>
+                <Link href="#pricing">{t("button")}</Link>
               </Button>
 
               <div className="flex flex-col gap-y-1 items-center">
@@ -124,7 +125,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
                   <Image
                     className="object-contain rounded-xl shadow-md bg-muted"
                     src="/images/home/step-1.png"
-                    alt=""
+                    alt={t("how.step-1.alt")}
                     fill
                   />
                 </div>
@@ -135,7 +136,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
                   <Image
                     className="object-contain rounded-xl shadow-md bg-muted"
                     src="/images/home/step-2.png"
-                    alt=""
+                    alt={t("how.step-2.alt")}
                     fill
                   />
                 </div>
@@ -166,7 +167,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
                   <Image
                     className="object-cover rounded-xl shadow-md bg-muted"
                     src="/images/home/step-3.png"
-                    alt=""
+                    alt={t("how.step-3.alt")}
                     fill
                   />
                 </div>
@@ -192,7 +193,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
                 <div key={index} className="flex items-center justify-center">
                   <Image
                     src={`/images/${name}.svg`}
-                    alt=""
+                    alt={name}
                     width={84}
                     height={84}
                   />
@@ -201,7 +202,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
             </div>
           </section>
 
-          <section className="py-8 space-y-8">
+          <section id="pricing" className="py-8 space-y-8">
             <div className="space-y-4">
               <h2 className="text-2xl md:text-3xl font-bold">
                 {t("pricing.title")}
@@ -215,6 +216,24 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
             </div>
 
             <PricingCardGrid plans={plans} />
+          </section>
+
+          <section className="py-16 space-y-8 text-center max-w-xl mx-auto">
+            <div className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold">
+                {t("workshops.title")}
+              </h2>
+
+              <p className="text-muted-foreground">
+                {t.rich("workshops.description", {
+                  strong: (children) => <strong>{children}</strong>,
+                })}
+              </p>
+            </div>
+
+            <ContactButton subject={t("workshops.subject")}>
+              {t("workshops.button")}
+            </ContactButton>
           </section>
 
           <section className="py-8 space-y-8">

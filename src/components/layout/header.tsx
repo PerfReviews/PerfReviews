@@ -44,7 +44,9 @@ export const Header = ({ className, ...others }: HeaderProps) => {
             <Link href="/reviews">{t("header.reviews-button")}</Link>
           </Button>
 
-          <Button>{t("header.contact-button")}</Button>
+          <Button className="shadow-md" size="lg" asChild>
+            <Link href="/#pricing">{t("header.contact-button")}</Link>
+          </Button>
         </div>
       </Container>
     </header>

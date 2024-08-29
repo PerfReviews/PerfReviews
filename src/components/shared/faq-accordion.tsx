@@ -17,34 +17,16 @@ export const FAQAccordion = (props: FAQAccordionProps) => {
     description: t(`faqs.item-${index + 1}.description`),
   }));
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.title,
-      acceptedAnswer: { "@type": "Answer", text: faq.description },
-    })),
-  };
-
   return (
-    <>
-      <Accordion type="single" collapsible {...props}>
-        {faqs.map(({ title, description }, index) => (
-          <AccordionItem key={index} value={index.toString()}>
-            <AccordionTrigger className="text-left">{title}</AccordionTrigger>
-            <AccordionContent className="text-md">
-              {description}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-    </>
+    <Accordion type="single" collapsible {...props}>
+      {faqs.map(({ title, description }, index) => (
+        <AccordionItem key={index} value={index.toString()}>
+          <AccordionTrigger className="text-left">{title}</AccordionTrigger>
+          <AccordionContent className="text-md" forceMount>
+            {description}
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
   );
 };

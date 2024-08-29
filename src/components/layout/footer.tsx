@@ -1,4 +1,4 @@
-import { Twitter } from "lucide-react";
+import { Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
@@ -83,6 +83,30 @@ export const Footer = ({ className, ...others }: FooterProps) => {
           <div className="text-sm">{t("footer.copyright")}</div>
 
           <div className="space-x-2">
+            <Button variant="outline" aria-label="" size="icon">
+              <a
+                href="https://www.youtube.com/channel/UCNoF5_1loBFvW2lZXPxp8ww"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
+                <Icon>
+                  <Youtube />
+                </Icon>
+              </a>
+            </Button>
+
+            <Button variant="outline" aria-label="" size="icon">
+              <a
+                href="https://twitter.com/PerfReviews_"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
+                <Icon>
+                  <Twitter />
+                </Icon>
+              </a>
+            </Button>
+
             <LangButton variant="outline" />
           </div>
         </div>

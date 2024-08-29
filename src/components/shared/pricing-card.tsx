@@ -1,13 +1,13 @@
 import { CircleCheck } from "lucide-react";
-import Link from "next/link";
 import { useFormatter, useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
 
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/components/ui/core";
 import { Icon } from "@/components/ui/icon";
 import { PricingPlan } from "@/types/PricingPlan";
+
+import { ContactButton } from "./contact-button";
 
 export interface PricingCardProps extends ComponentPropsWithoutRef<"article"> {
   plan: PricingPlan;
@@ -22,6 +22,7 @@ export const PricingCard = ({
   const t = useTranslations();
 
   const variant = plan.isPopular ? "default" : "outline";
+  const title = t(`HomePage.${plan.title}`);
 
   return (
     <article
@@ -38,7 +39,7 @@ export const PricingCard = ({
         </Badge>
       )}
 
-      <h3 className="text-lg md:text-xl font-semibold">{plan.title}</h3>
+      <h3 className="text-lg md:text-xl font-semibold">{title}</h3>
 
       <p className="text-3xl md:text-4xl font-bold">
         {format.number(plan.price, {
@@ -64,14 +65,16 @@ export const PricingCard = ({
             <Icon className="text-green-600">
               <CircleCheck />
             </Icon>
-            {value}
+            {t.rich(`HomePage.${value}`, {
+              strong: (children) => <strong>{children}</strong>,
+            })}
           </li>
         ))}
       </ul>
 
-      <Button variant={variant} asChild>
-        <Link href="/private">{t("Common.pricing.button")}</Link>
-      </Button>
+      <ContactButton variant={variant} subject={title}>
+        {t("Common.pricing.button")}
+      </ContactButton>
     </article>
   );
 };

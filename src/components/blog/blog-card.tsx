@@ -16,7 +16,7 @@ export const BlogCard = ({ className, post, ...others }: BlogCardProps) => {
       <article className={cn("space-y-4", className)} {...others}>
         <div className="relative aspect-video shadow-md rounded-lg overflow-hidden">
           <Image
-            className="object-cover"
+            className="object-cover bg-muted"
             src={post.featuredImage}
             alt={post.title}
             fill

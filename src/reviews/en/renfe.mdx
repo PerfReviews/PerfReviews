@@ -1,0 +1,165 @@
+---
+title: Web Performance Analysis of the Renfe Website
+date: "2019-02-26"
+summary: We analyzed the Renfe website. We found issues with unminified static files, asset duplication, manual resource combination, and repaint problems caused by tracking libraries.
+featuredImage: /images/reviews/renfe/thumb.png
+---
+
+# Web Performance Analysis of the Renfe Website
+
+We analyzed [the Renfe website](http://www.renfe.com/). It is a site with minimal content but with potential for improvements. We observed unminified static files, asset duplication, manual resource combination, and repaint issues caused by tracking libraries.
+
+Here is our analysis:
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/pi02YqNHjJs"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+/>
+
+---
+
+## Video Summary
+
+In this review, we chose [the Renfe website](http://www.renfe.com/). It is a site that has historically faced criticism for [accessibility issues](http://accesibilidadweb.dlsi.ua.es/?menu=accesibilidad-web-renfe), [usability](https://www.mastermarketingdigital.com/everriculum/2017/06/10/hands-on-informe-de-usabilidad-renfe-app/), and [availability](https://www.elplural.com/politica/twitter-se-ceba-con-los-errores-en-la-web-de-renfe_103904102). Until now, we hadn't seen a performance analysis of their website, and since this is what we enjoy doing at Perf Reviews, we decided to dive in.
+
+![The Renfe.com website](/images/reviews/renfe/img010.jpg)
+
+We decided to conduct the review taking advantage of the announcement of upcoming improvements to their website. There are several news articles about the changes they are making [and even the budget](https://www.xataka.com/empresas-y-economia/que-700-000-euros-presupuesto-ridiculo-para-arreglar-web-renfe). Some people are concerned about the amount, while others say they wouldn't work on the site for that amount. We want to focus on reviewing the performance.
+
+### Lighthouse, WebPageTest, Cloudinary, and CSS Stats Reports
+
+As usual, we start with a preliminary assessment using [web.dev](https://web.dev). The performance score is very low.
+
+![Lighthouse for the Renfe.com website](/images/reviews/renfe/img024.jpg)
+
+The First Contentful Paint times shoot up to 8 seconds, and the number of requested resources and the structure of the HTML for requesting these resources can be improved. In WebPageTest, the main issue is caching.
+
+![WebPageTest for the Renfe.com website](/images/reviews/renfe/img034.jpg)
+
+The Renfe website on desktop is relatively fast. It also has minimal content: a sales form, a slider, a few images, and a menu. The homepage is relatively light for a performance analysis, but the HTML structure and resource requests reveal several areas for improvement.
+
+Images are fine, although their compression could be significantly increased while retaining the JPG format.
+
+![Cloudinary for the Renfe.com website](/images/reviews/renfe/img044.jpg)
+
+Most images are served at the appropriate size. Some images, like the Renfe logo and various icons, could be converted to SVG. On mobile, slider images are cut off.
+
+![Images cut off on mobile in the Renfe.com website](/images/reviews/renfe/img060.jpg)
+
+These are 1600-pixel wide images designed so that the central part of the image contains the text. It would be better to use responsive images to serve images that adapt to the device rather than requesting large images. Additionally, images are referenced in the HTML, which prevents lazy loading and results in all images being requested upon page load.
+
+![CSS Stats for the Renfe.com website](/images/reviews/renfe/img077.jpg)
+
+The CSS state is relatively positive. It has a sawtooth specificity pattern, indicating that over time, more specific selectors have been added to override previous ones. Later, we will explain some CSS that is served unminified.
+
+![CSS Stats for the Renfe.com website](/images/reviews/renfe/img084.jpg)
+
+### Redirects and Lack of SSL
+
+One notable issue with Renfe is that the domain does not redirect uniformly. Renfe.es does not work, but www.renfe.es does, redirecting to renfe.com. The main page is not served using HTTPS. This is an area for improvement, as it enhances security and data integrity and allows the implementation of features like service workers or HTTP/2 that only work over HTTPS.
+
+The sales site that users reach after selecting origin and destination does support HTTPS.
+
+![HTTPS Support on venta.renfe.com](/images/reviews/renfe/img110.jpg)
+
+### Lack of Minification and Combination
+
+Analyzing the static files, we see that there is unminified CSS and JS.
+
+![Unminified CSS on Renfe.com](/images/reviews/renfe/img120.jpg)
+
+Libraries like jQuery and jQuery UI are at least minified. There are files that are the result of a "manual" combination of two static files.
+
+![Manual JS Combination on Renfe.com](/images/reviews/renfe/img127.jpg)
+
+Overall, the management of static files on the Renfe website seems to have been frozen in time, quite far back. They do not use any tools for minification or combining static files, and files have been added to HTML without much care.
+
+Four uncombined CSS resources are requested, causing the browser to wait for them to download before starting to render.
+
+![Multiple Blocking CSS on Renfe.com](/images/reviews/renfe/img136.jpg)
+
+Moreover, right after the CSS, JS resources are requested, which means the browser cannot start rendering anything because the JS request will block the rendering of content in the body. These resources are added to the critical path, causing the content to take much longer to load.
+
+![Blocking JS Right After CSS on Renfe.com](/images/reviews/renfe/img143.jpg)
+
+### Conditional Code
+
+There are details like the awesomplete.css that seems to apply only to Safari, or that was the idea, and also an awesomplete.min.js which is the JS part of [this library](https://leaverou.github.io/awesomplete/), an autocomplete library developed by [Lea Verou](https://twitter.com/leaverou). If it was intended for Safari only, a good solution is to check the browser making the request. However, browser detection on the server side is not recommended; instead, feature detection on the client side should be used.
+
+### Commented Code
+
+There is a lot of commented code in CSS and JS. It sometimes seems that there is not even a source code version control tool.
+
+![Commented Code on Renfe.com](/images/reviews/renfe/img153.jpg)
+
+In another file, it reads "all this doesn't work either," followed by commented code. This code can be removed and no longer served to the browser.
+
+![Commented Code on Renfe.com](/images/reviews/renfe/img160.jpg)
+
+There are also comments that act as a pseudo changelog, with dates of changes made to files. This information should be stored in version control.
+
+![Commented Code on Renfe.com](/images/reviews/renfe/img170.jpg)
+
+### Potential Improvements for Serving Static Files
+
+JS static files could be loaded asynchronously at the end of the body. A CDN is not used, and many resources are requested from the same domain, which, combined with not using HTTP/2, increases load time.
+
+Caching times are very short. In some cases, like with woff2 fonts, only 1 second. Combined with ETags, it necessitates making a request to the browser for resources that could be versioned and cached for a longer period.
+
+![Very Short Caching Times for Fonts on Renfe.com](/images/reviews/renfe/img180.jpg)
+
+The Renfe logo image could be served in SVG format and even inline, as it will appear _above the fold_.
+
+Resources are well compressed, but the favicon.ico is 32 KB. It is quite large for a favicon and, moreover, is uncompressed. The ico format is compressible, so there's no excuse for forgetting to serve it compressed.
+
+![Uncompressed Favicon on Renfe.com](/images/reviews/renfe/img224.jpg)
+
+### In-Page Performance
+
+When analyzing the performance after the page loads, we found a timer that is constantly firing.
+
+![Function Executing Periodically on Renfe.com](/images/reviews/renfe/img244.jpg)
+
+It is an Adobe tracker that executes a function every 50 milliseconds up to 18,000 times, causing changes in two main DOM elements.
+
+![Changes in Two DOM Elements Continuously on Renfe.com](/images/reviews/renfe/img271.jpg)
+
+One way to verify if the tracker is the issue is to block the loading of resources from the domain of that file, in which case the problem ceases to appear.
+
+![Blocking the Domain Serving the Adobe Tracker on Renfe.com](/images/reviews/renfe/img285.jpg)
+
+In addition to analyzing the main page, we wanted to review the sales site, the one shown when selecting a ticket. The resources served are very different from those on the main page. They are served from different locations, versioned using a query parameter...
+
+Some files have almost identical content, but at some point, a change was made to one of them and not the other. This leads to consistency issues and also prevents reusing the already downloaded file when the user moves from the home page to the sales page.
+
+![JS Function File from the Sales Section of Renfe.com](/images/reviews/renfe/img326.jpg)
+
+The i18n file has an extensive introduction listing all changes from 2009 to 2017. The file contains all text strings in unminified code. Besides minifying, the file could be split, as most strings are not used on the current page.
+
+![i18n File Change List from Sales Section of Renfe.com](/images/reviews/renfe/img328.jpg)
+
+### Conclusion
+
+From a web performance perspective, there are many areas for improvement. It is clear that this is a project that has evolved over time through different teams, and no global consistency or oversight has been maintained.
+
+That’s all for now; we hope you enjoyed this review. As you can see, we aimed to provide a different perspective on analyzing the Renfe website.
+
+---
+
+## References
+
+- [Why 700,000 Euros is a Ridiculous Budget to "Fix" the Renfe Website](https://www.xataka.com/empresas-y-economia/que-700-000-euros-presupuesto-ridiculo-para-arreglar-web-renfe)
+
+## Reports
+
+- [Lighthouse](https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=http://www.renfe.com/)
+- [WebPageTest Desktop](https://www.webpagetest.org/result/190203_6W_f731e8558a0ba75cf55b33eae476cd6d/)
+- [CSS Stats](https://cssstats.com/stats?url=http%3A%2F%2Frenfe.com&ua=Browser%20Default)
+
+## Resource
+
+- [JavaScript Loading Priorities in Chrome](https://addyosmani.com/blog/script-priorities/) by Addy Osmani.

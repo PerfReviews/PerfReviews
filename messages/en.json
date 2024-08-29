@@ -6,12 +6,17 @@
       "contact-button": "Contact Us"
     },
     "lang": {
-      "button": "Change language",
+      "button": "Change Language",
       "menu": {
         "title": "Languages",
         "es": "Spanish",
         "en": "English"
       }
+    },
+    "pricing": {
+      "popular-badge": "Popular",
+      "monthly": "month",
+      "button": "Contact"
     },
     "footer": {
       "links": {
@@ -31,77 +36,97 @@
   "HomePage": {
     "meta": {
       "title": "PerfReviews | Web Performance Consulting",
-      "description": "Improve your website's performance with our audit and optimization services. Experts in usability and performance with experience in leading companies."
+      "description": "Improve your website's performance with our auditing and optimization services. Experts in usability and performance with experience in leading companies."
     },
-    "title": "We Improve Your Web Performance",
-    "description": "Gain more revenue and make your users happier with our web audit and optimization services",
+    "title": "We Improve Your Website's Performance",
+    "description": "Increase your revenue and make your users happier with our web auditing and optimization services.",
     "button": "Contact Us",
     "rating": "+20 companies recommend us",
-    "audits": {
-      "title": "Audit",
-      "description": "The performance of your website is very important. A website that loads quickly on any device and network conditions improves key business metrics. We will work with you and your team to identify the main issues affecting your website's performance.<br></br><br></br>Once the study is complete, we will provide a detailed document with tips to help the development team improve both the performance and user experience of your website.",
-      "pricing": {
-        "title": "Audit",
-        "item-1": "PDF Report",
-        "item-2": "Focused on Core Web Vitals",
-        "item-3": "Concrete Solutions",
-        "item-4": "2 Follow-up Meetings"
+    "how": {
+      "title": "How do we work?",
+      "step-1": {
+        "title": "We analyze your website",
+        "description": "We examine your website to identify performance issues and prioritize them based on their impact, focusing on <strong>Core Web Vitals</strong>.",
+        "alt": "Screenshot of Chrome Developer Tools during the performance analysis process."
+      },
+      "step-2": {
+        "title": "We measure and optimize",
+        "description": "We help you measure the performance of your application with real and lab data, and provide solutions for the identified issues.",
+        "alt": "Screenshot of the performance tab in Google Search Console with all URLs marked as 'good' from one of our clients."
+      },
+      "step-3": {
+        "title": "We share knowledge",
+        "description": "We enhance your team's web performance skills through result analysis, articles, and educational videos.",
+        "alt": "Photo of Joan Leon giving a training session on Web Performance"
       }
     },
-    "subscriptions": {
-      "title": "Continuous Support",
-      "description": "Ensure your website is always optimized. Receive continuous support and regular updates to ensure your site operates at its best capacity. We monitor and improve your website to offer the best experience to your users and maximize your results.",
-      "pricing": {
-        "basic": {
-          "title": "Basic",
-          "item-1": "10 hours/month",
-          "item-2": "Consultations",
-          "item-3": "Monthly Reports"
+    "why": {
+      "title": "Why hire us?",
+      "description": "With years of experience optimizing the <strong>web performance</strong> of over 20 websites and providing workshops and training, we are the ideal choice to improve your website. Discover some of the projects we have worked on."
+    },
+    "pricing": {
+      "title": "Pricing",
+      "description": "Explore our services to improve your website's <strong>web performance</strong>. Choose between a detailed audit or our ongoing support services.",
+      "plans": {
+        "audit": {
+          "title": "Audit",
+          "item-1": "Pre-call",
+          "item-2": "Delivery call",
+          "item-3": "Focused on Core Web Vitals",
+          "item-4": "List of issues",
+          "item-5": "Concrete solutions"
         },
-        "pro": {
-          "title": "Pro",
-          "item-1": "20 hours/month",
-          "item-2": "Consultations",
-          "item-3": "Monthly Reports",
-          "item-4": "Observability",
-          "item-5": "Pair Programming"
+        "business": {
+          "title": "Business",
+          "item-1": "<strong>10 hours/month</strong>",
+          "item-2": "Initial onboarding",
+          "item-3": "Initial audit",
+          "item-4": "Analytics setup",
+          "item-5": "Consultations",
+          "item-6": "Direct contact",
+          "item-7": "Concrete solutions",
+          "item-8": "Monthly meeting"
         },
-        "premium": {
-          "title": "Premium",
-          "item-1": "30 hours/month",
-          "item-2": "Consultations",
-          "item-3": "Monthly Reports",
-          "item-4": "Observability",
-          "item-5": "Pair Programming",
-          "item-6": "Workshops"
+        "enterprise": {
+          "title": "Enterprise",
+          "item-1": "<strong>20 hours/month</strong>",
+          "item-2": "Initial onboarding",
+          "item-3": "Initial audit",
+          "item-4": "Analytics setup",
+          "item-5": "Consultations",
+          "item-6": "Direct contact",
+          "item-7": "Concrete solutions",
+          "item-8": "Monthly meeting"
         }
       }
     },
-    "pricing": {
-      "popular-badge": "Popular",
-      "button": "Contact"
+    "workshops": {
+      "title": "Workshops and web performance training",
+      "description": "Learn about the main performance issues in websites, how to fix them, and how to monitor them.",
+      "button": "Contact",
+      "subject": "Workshop Information"
     },
     "faqs": {
-      "title": "Frequently Asked Questions",
+      "title": "Frequently asked questions",
       "item-1": {
         "title": "What is a web performance audit?",
-        "description": "A web performance audit is a comprehensive analysis of your website to identify issues that affect its speed, usability, and overall performance."
+        "description": "A web performance audit is a comprehensive analysis of your website to identify issues affecting its speed, usability, and overall performance."
       },
       "item-2": {
         "title": "How long does the audit take?",
-        "description": "The complete audit process usually takes between 10 and 15 business days, depending on the size and complexity of your website."
+        "description": "The complete audit process typically takes between 10 and 15 business days, depending on the size and complexity of your website."
       },
       "item-3": {
         "title": "What will I receive at the end of the audit?",
         "description": "You will receive a detailed report with key findings, specific recommendations, and an action plan to improve your website's performance."
       },
       "item-4": {
-        "title": "How is the audit conducted?",
+        "title": "How is the audit performed?",
         "description": "We use advanced tools and proven methods to evaluate all aspects of your website, including load speed, image optimization, code, site structure, and more."
       },
       "item-5": {
-        "title": "How does continuous support work?",
-        "description": "We become part of your team. We constantly monitor your website and provide specific advice to improve it. Depending on the plan, we also conduct pair programming and workshops."
+        "title": "How does ongoing support work?",
+        "description": "We become part of your team. We will continuously monitor your website and provide specific advice to improve it. Depending on the plan, we will also conduct pair programming and workshops."
       },
       "item-6": {
         "title": "Can I cancel my subscription at any time?",
@@ -109,38 +134,23 @@
       },
       "item-7": {
         "title": "Which metrics do we focus on?",
-        "description": "We focus on improving your website's Core Web Vitals."
+        "description": "We focus on improving the Core Web Vitals of your website."
       },
       "item-8": {
         "title": "What are Core Web Vitals?",
         "description": "Core Web Vitals are a set of metrics defined by Google that measure the real user experience."
       },
       "item-9": {
-        "title": "Which communication channel do we use?",
-        "description": "We create a channel on Discord where your entire team can ask for help or resolve doubts whenever they want."
+        "title": "What communication channel do we use?",
+        "description": "We create a channel on Discord where we include your entire team so they can request help or resolve doubts whenever they want."
       },
       "item-10": {
         "title": "Do you offer performance improvement guarantees?",
         "description": "While we cannot guarantee specific improvements due to the variability in each website's conditions, our track record shows that all our clients experience significant improvements in their Core Web Vitals."
       }
     },
-    "how": {
-      "title": "How do we work?",
-      "step-1": {
-        "title": "We Analyze Your Web",
-        "description": "We examine your website to identify performance issues and prioritize them based on their impact, focusing on Core Web Vitals."
-      },
-      "step-2": {
-        "title": "We Measure and Optimize",
-        "description": "We help you measure your application's performance with real-world and lab data and provide solutions for the issues found."
-      },
-      "step-3": {
-        "title": "We Share Knowledge",
-        "description": "We enhance your team's web performance skills through result analysis, articles, and educational videos."
-      }
-    },
     "blog": {
-      "title": "Recent Posts on Our Blog",
+      "title": "Recent posts on our blog",
       "button": "View All"
     }
   },

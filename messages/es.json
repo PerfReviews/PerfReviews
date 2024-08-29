@@ -46,15 +46,18 @@
       "title": "¿Cómo trabajamos?",
       "step-1": {
         "title": "Analizamos tu Web",
-        "description": "Examinamos tu sitio web para identificar problemas de desempeño y los priorizamos según su impacto, enfocados en las <strong>Core Web Vitals</strong>."
+        "description": "Examinamos tu sitio web para identificar problemas de desempeño y los priorizamos según su impacto, enfocados en las <strong>Core Web Vitals</strong>.",
+        "alt": "Captura de las herramientas de desarrollo de Chrome durante el proceso de análisis de rendimiento."
       },
       "step-2": {
         "title": "Medimos y optimizamos",
-        "description": "Te ayudamos a medir el rendimiento de tu aplicación con datos reales y de laboratorio, y te proporcionamos soluciones para los problemas encontrados."
+        "description": "Te ayudamos a medir el rendimiento de tu aplicación con datos reales y de laboratorio, y te proporcionamos soluciones para los problemas encontrados.",
+        "alt": "Captura de la pestaña de rendimiento de Google Search Console con todas las URL en 'bueno' de uno de nuestros clientes."
       },
       "step-3": {
         "title": "Compartimos conocimientos",
-        "description": "Mejoramos las habilidades de tu equipo en desempeño web mediante análisis de resultados, artículos y videos educativos."
+        "description": "Mejoramos las habilidades de tu equipo en desempeño web mediante análisis de resultados, artículos y videos educativos.",
+        "alt": "Foto de Joan Leon dando una formación sobre Web Performance"
       }
     },
     "why": {
@@ -75,25 +78,33 @@
         },
         "business": {
           "title": "Business",
-          "item-1": "Onboarding inicial",
-          "item-2": "Auditoría inicial",
-          "item-3": "Configuración de análitica",
-          "item-4": "Consultas",
-          "item-5": "Contacto directo",
-          "item-6": "Soluciones concretas",
-          "item-7": "Reunión mensual"
+          "item-1": "<strong>10 h/mes</strong>",
+          "item-2": "Onboarding inicial",
+          "item-3": "Auditoría inicial",
+          "item-4": "Configuración de análitica",
+          "item-5": "Consultas",
+          "item-6": "Contacto directo",
+          "item-7": "Soluciones concretas",
+          "item-8": "Reunión mensual"
         },
         "enterprise": {
           "title": "Enterprise",
-          "item-1": "Onboarding inicial",
-          "item-2": "Auditoría inicial",
-          "item-3": "Configuración de análitica",
-          "item-4": "Consultas",
-          "item-5": "Contacto directo",
-          "item-6": "Soluciones concretas",
-          "item-7": "Reunión mensual"
+          "item-1": "<strong>20 h/mes</strong>",
+          "item-2": "Onboarding inicial",
+          "item-3": "Auditoría inicial",
+          "item-4": "Configuración de análitica",
+          "item-5": "Consultas",
+          "item-6": "Contacto directo",
+          "item-7": "Soluciones concretas",
+          "item-8": "Reunión mensual"
         }
       }
+    },
+    "workshops": {
+      "title": "Workshops y talleres sobre Web Performance",
+      "description": "Aprende cuáles son los principales problemas de rendimiento en sitios web, cómo corregirlos y monitorizarlos.",
+      "button": "Contactar",
+      "subject": "Información Workshops"
     },
     "faqs": {
       "title": "Preguntas frecuentes",
