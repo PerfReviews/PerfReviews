@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import { useEffect } from "react";
 
 import { BlogCard } from "@/components/blog/blog-card";
 import { Footer } from "@/components/layout/footer";
@@ -27,6 +28,21 @@ export async function generateMetadata({ params: { locale } }: HomePageProps) {
 }
 
 export default function HomePage({ params: { locale } }: HomePageProps) {
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        registrations.forEach((registration) => {
+          registration.unregister().then((boolean) => {
+            if (boolean) {
+              console.log("Service Worker successfully unregistered");
+            } else {
+              console.log("Service Worker could not be unregistered");
+            }
+          });
+        });
+      });
+    }
+  }, []);
   const t = useTranslations("HomePage");
 
   const clients = ["adevinta", "mediaset", "meta", "spotify"];
