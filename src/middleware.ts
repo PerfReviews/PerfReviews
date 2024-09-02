@@ -6,8 +6,15 @@ import { defaultLocale, locales } from "./i18n.config";
 export default function middleware(req: NextRequest) {
   const url = req.nextUrl;
 
+  // Log the URL being requested
+  console.log(`Middleware intercepted request to: ${url.pathname}`);
+
   // Intercept the request to /sw.js
   if (url.pathname === "/sw.js") {
+    console.log(
+      "/sw.js request intercepted, returning script to unregister Service Worker",
+    );
+
     // Return a script that forces the Service Worker to unregister
     return new NextResponse(
       `self.addEventListener('install', function(event) {
@@ -36,6 +43,9 @@ export default function middleware(req: NextRequest) {
       },
     );
   }
+
+  // Log that the request is being handled by next-intl middleware
+  console.log("Request being handled by next-intl middleware");
 
   // Call next-intl middleware to handle localization
   return createMiddleware({
