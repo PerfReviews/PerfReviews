@@ -4,7 +4,6 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
@@ -56,19 +55,6 @@ export default async function RootLayout({
           </ThemeProvider>
           <SpeedInsights />
         </NextIntlClientProvider>
-        <Script
-          id="unregister-sw-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-            navigator.serviceWorker.getRegistrations().then(registrations => {
-              for (const registration of registrations) {
-                registration.unregister();
-              }
-            });
-          `,
-          }}
-        />
       </body>
 
       <GoogleAnalytics gaId="G-S8X5QGZ58F" />
