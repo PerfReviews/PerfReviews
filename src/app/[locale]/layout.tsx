@@ -43,19 +43,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${montserrat.variable} font-sans`}>
-        <Script
-          id="unregister-sw-script"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-            navigator.serviceWorker.getRegistrations().then(registrations => {
-              for (const registration of registrations) {
-                registration.unregister();
-              }
-            });
-          `,
-          }}
-        />
+        <Script strategy="beforeInteractive" src="/sw.js" />
 
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider

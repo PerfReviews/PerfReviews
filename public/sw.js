@@ -3,11 +3,11 @@ self.addEventListener("activate", (event) => {
     (async () => {
       const cacheNames = await caches.keys();
       await Promise.all(
-        cacheNames.map((cacheName) => caches.delete(cacheName)),
+        cacheNames.map((cacheName) => caches.delete(cacheName))
       );
 
       const registration = await self.registration.unregister();
       console.log("Service Worker unregistred:", registration);
-    })(),
+    })()
   );
 });
