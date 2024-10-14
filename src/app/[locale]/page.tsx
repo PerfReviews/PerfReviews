@@ -41,7 +41,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
         "pricing.plans.audit.item-4",
         "pricing.plans.audit.item-5",
       ],
-      price: 1400,
+      price: 2400,
     },
     {
       id: "business",
@@ -56,7 +56,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
         "pricing.plans.business.item-7",
         "pricing.plans.business.item-8",
       ],
-      price: 1600,
+      price: 1800,
       isPopular: true,
       isRecurrent: true,
     },
@@ -73,7 +73,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
         "pricing.plans.enterprise.item-7",
         "pricing.plans.enterprise.item-8",
       ],
-      price: 2500,
+      price: 2800,
       isRecurrent: true,
     },
   ];
