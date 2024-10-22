@@ -34,10 +34,7 @@ interface RootLayoutProps {
   params: { locale: string };
 }
 
-export default async function RootLayout({
-  children,
-  params: { locale },
-}: RootLayoutProps) {
+export default async function RootLayout({ children, params: { locale } }: RootLayoutProps) {
   const messages = await getMessages();
 
   return (
@@ -46,12 +43,7 @@ export default async function RootLayout({
         <Script strategy="beforeInteractive" src="/sw.js" />
 
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem={false}
-            disableTransitionOnChange
-          >
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
             <Header />
 
             {children}
@@ -61,6 +53,7 @@ export default async function RootLayout({
       </body>
 
       <GoogleAnalytics gaId="G-S8X5QGZ58F" />
+      <Script strategy="afterInteractive" src="https://cdn.debugbear.com/Liln55bQWTT1.js" />
     </html>
   );
 }
