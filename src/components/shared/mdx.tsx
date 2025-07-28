@@ -5,6 +5,8 @@ import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import { highlight } from "sugar-high";
 
+import { OptimizedImage } from "./optimized-image";
+
 interface CodeProps extends ComponentPropsWithoutRef<"code"> {}
 
 const Code = ({ children, className, ...props }: CodeProps) => {
@@ -29,7 +31,9 @@ const Code = ({ children, className, ...props }: CodeProps) => {
   );
 };
 
-const components = { code: Code };
+const components = { 
+  code: Code,
+};
 
 export type MDXProps = MDXRemoteProps;
 

@@ -8,9 +8,14 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-overlay";
 
 export interface BlogCardProps extends ComponentPropsWithoutRef<"article"> {
   post: Post;
+  priority?: boolean;
 }
 
-export const BlogCard = ({ className, post, ...others }: BlogCardProps) => {
+export const BlogCard = ({ className, post, priority = false, ...others }: BlogCardProps) => {
+  if (!post.featuredImage) {
+    return null;
+  }
+
   return (
     <LinkBox asChild>
       <article className={cn("space-y-4", className)} {...others}>
@@ -20,6 +25,8 @@ export const BlogCard = ({ className, post, ...others }: BlogCardProps) => {
             src={post.featuredImage}
             alt={post.title}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={priority}
           />
         </div>
 

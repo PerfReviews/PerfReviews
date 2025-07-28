@@ -248,7 +248,7 @@ export default function HomePage({ params: { locale } }: HomePageProps) {
                 .filter((post) => locale === post.locale)
                 .filter((post, index) => index < 3)
                 .map((post, index) => (
-                  <BlogCard key={index} post={post} />
+                  <BlogCard key={index} post={post} priority={index === 0} />
                 ))}
             </div>
 
