@@ -8,6 +8,10 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: "/insights",
+        destination: "https://perfreviews-insights.vercel.app/insights",
+      },
+      {
         source: "/insights/:path*",
         destination: "https://perfreviews-insights.vercel.app/insights/:path*",
       },
