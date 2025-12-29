@@ -10,6 +10,7 @@ const nextConfig = {
       {
         source: "/insights/:path*",
         destination: "https://perfreviews-insights.vercel.app/:path*",
+        permanent: true,
       },
       {
         source: "/reviews/1.1-mediamarkt.es",
