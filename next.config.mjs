@@ -9,7 +9,7 @@ const nextConfig = {
     return [
       {
         source: "/insights/:path*",
-        destination: "https://perfreviews-insights.vercel.app/:path*",
+        destination: "https://perfreviews-insights.vercel.app/insights/:path*",
       },
     ];
   },
