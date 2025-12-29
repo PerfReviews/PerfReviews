@@ -5,13 +5,16 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
+  async rewrites() {
     return [
       {
         source: "/insights/:path*",
         destination: "https://perfreviews-insights.vercel.app/:path*",
-        permanent: true,
       },
+    ];
+  },
+  async redirects() {
+    return [
       {
         source: "/reviews/1.1-mediamarkt.es",
         destination: "/reviews/mediamarkt",
