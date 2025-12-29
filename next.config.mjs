@@ -8,6 +8,10 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/insights/:path*",
+        destination: "https://perfreviews-insights.vercel.app/:path*",
+      },
+      {
         source: "/reviews/1.1-mediamarkt.es",
         destination: "/reviews/mediamarkt",
         permanent: true,
