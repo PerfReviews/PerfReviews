@@ -27,7 +27,7 @@
       },
       "about": {
         "title": "Sobre",
-        "about-us": "Nosotros",
+        "about-us": "Sobre mí",
         "contact-us": "Contáctanos"
       },
       "copyright": "Copyright © PerfReviews"
@@ -170,25 +170,47 @@
     "title": "Análisis de rendimiento web de sitios reales",
     "description": "En PerfReviews analizamos el rendimiento de sitios web. Es una forma ideal de enseñar cómo utilizar herramientas para detectar, corregir y prevenir problemas de performance.<br></br><br></br>Somos reconocidos Google Developer Experts en tecnologías web y tenemos una larga experiencia desarrollando sitios web con un especial foco en usabilidad, accessibilidad y rendimiento.<br></br><br></br>Dado que los sitios web son proyectos dinámicos, es posible que los análisis mencionen aspectos que no sean reproducibles actualmente. Por ello acompañamos los vídeos con una serie de informes que permiten visualizar un “snapshot” de la web en el momento en que hicimos el estudio."
   },
+  "ToolsPage": {
+    "meta": {
+      "title": "Herramientas de Web Performance",
+      "description": "Herramientas y plataformas que utilizo para auditorías de rendimiento web. Desde snippets hasta soluciones enterprise de monitorización."
+    },
+    "title": "Herramientas de Web Performance",
+    "description": "Herramientas y plataformas que utilizo en mi día a día para analizar, monitorizar y optimizar el rendimiento web de proyectos de cualquier escala.",
+    "primary": {
+      "title": "Herramientas principales de auditoría",
+      "snippets": {
+        "title": "WebPerf Snippets",
+        "description": "Colección de snippets para la consola del navegador con scripts listos para analizar Core Web Vitals, detectar imágenes sin optimizar, auditar recursos críticos y debugging de JavaScript, ideal para auditorías rápidas sin necesidad de herramientas adicionales."
+      },
+      "devtools": {
+        "title": "Chrome DevTools",
+        "description": "Herramienta fundamental para análisis de performance en tiempo real con Performance panel para identificar cuellos de botella, Lighthouse para auditorías completas, Coverage para detectar código no utilizado y Network panel para optimizar recursos."
+      },
+      "debugbear": {
+        "title": "DebugBear",
+        "description": "Plataforma de monitorización continua con métricas sintéticas y RUM que incluye tracking de Core Web Vitals en múltiples páginas, análisis de regresiones de performance, alertas automáticas y reportes detallados con recomendaciones específicas."
+      },
+      "speedcurve": {
+        "title": "SpeedCurve",
+        "description": "Monitorización de performance con métricas sintéticas, RUM y análisis competitivo que permite comparar tu rendimiento con competidores, trackear presupuestos de performance y analizar el impacto de cambios en producción."
+      },
+      "webperfreport": {
+        "title": "Web Performance Report",
+        "description": "Generador de informes detallados de rendimiento web basados en Lighthouse con análisis automático de múltiples URLs, reportes exportables y recomendaciones priorizadas por impacto, perfecto para auditorías documentadas y presentaciones a clientes."
+      }
+    },
+    "secondary": {
+      "title": "Experiencia con plataformas enterprise",
+      "description": "He implementado y trabajado con diversas soluciones de monitorización y observabilidad a nivel enterprise en proyectos de diferentes escalas y tráficos. Experiencia con <strong>Datadog</strong> (APM y RUM), <strong>New Relic</strong> (full-stack observability), <strong>Sentry</strong> (error tracking y performance), <strong>Akamai mPulse</strong> (RUM a gran escala) y <strong>Treo.sh</strong> (monitorización de Core Web Vitals)."
+    }
+  },
   "AboutUsPage": {
     "meta": {
-      "title": "Quiénes somos",
-      "description": "Somos expertos consultores en web performance con una amplia experiencia."
+      "title": "Sobre mí",
+      "description": "Web Performance Artisan, Google Developer Expert en Web Technologies y Cloudinary Ambassador. Ayudo a equipos y empresas a crear experiencias digitales más rápidas."
     },
-    "title": "Sobre nosotros",
-    "team": {
-      "joan": {
-        "name": "Joan León",
-        "description": "Me apasiona todo lo relacionado con el desarrollo e interacción en la interfaz de usuario en entornos web.<br></br><br></br>Trato de estar al día en todo lo relacionado con HTML5, CSS, SVG, web Animation y Javascript. Otra de mis pasiones es la de colaborar en proyectos Open Source.<br></br><br></br>Me encanta compartir conocimiento, ya sea en MeetUps, Workshops o como docente en Escuela IT... siempre activo en @nucliweb para compartir todos los recursos y novedades del mundo frontend."
-      },
-      "andres": {
-        "name": "Andrés Alvarez",
-        "description": "Trabajo como Staff Front-End Engineer en Adevinta Spain."
-      },
-      "jose": {
-        "name": "José M. Pérez",
-        "description": "Soy tech lead, desarrollador full-stack web, especialista web performance, speaker y contribuidor open-source.<br></br><br></br>Google Developer Expert en tecnologías web. Me gusta crear productos útiles y con buena experience de usuario.<br></br><br></br>Publico en jmperezperez.com sobre mis proyectos y exploraciones de web performance."
-      }
-    }
+    "title": "Sobre mí",
+    "bio": "Soy Joan León, Web Performance Artisan. Trabajo con equipos y empresas para crear experiencias digitales que realmente funcionan: rápidas, eficientes y que generan resultados de negocio.<br></br><br></br>Como Google Developer Expert en Web Technologies y Cloudinary Ambassador, combino experiencia técnica con visión estratégica. No solo identifico problemas de rendimiento, sino que ayudo a resolverlos y, más importante aún, a prevenirlos.<br></br><br></br>Mi enfoque es artesanal: cada proyecto es único y merece una atención personalizada. Desde auditorías detalladas hasta optimización continua, me aseguro de que tu equipo no solo mejore las métricas, sino que comprenda el porqué detrás de cada cambio.<br></br><br></br>Comparto conocimiento en conferencias, workshops y en <link>joanleon.dev</link> porque creo que una web más rápida es una web mejor para todos. Actualmente exploro cómo la IA puede automatizar auditorías sin perder la experiencia y el toque humano que marcan la diferencia.<br></br><br></br>La velocidad web no es solo una métrica técnica: es la diferencia entre perder o ganar un cliente, entre frustración o satisfacción. Y ahí es donde puedo ayudarte."
   }
 }

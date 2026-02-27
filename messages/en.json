@@ -27,7 +27,7 @@
       },
       "about": {
         "title": "About",
-        "about-us": "About Us",
+        "about-us": "About me",
         "contact-us": "Contact Us"
       },
       "copyright": "Copyright © PerfReviews"
@@ -170,25 +170,47 @@
     "title": "Web Performance Reviews of Real Sites",
     "description": "At PerfReviews, we analyze the performance of websites. It's an ideal way to teach how to use tools to detect, fix, and prevent performance issues.<br></br><br></br>We are recognized Google Developer Experts in web technologies and have extensive experience developing websites with a special focus on usability, accessibility, and performance.<br></br><br></br>Since websites are dynamic projects, the reviews may mention aspects that are no longer reproducible. Therefore, we accompany the videos with a series of reports that allow you to visualize a 'snapshot' of the website at the time of the study."
   },
+  "ToolsPage": {
+    "meta": {
+      "title": "Web Performance Tools",
+      "description": "Tools and platforms I use for web performance audits. From snippets to enterprise monitoring solutions."
+    },
+    "title": "Web Performance Tools",
+    "description": "Tools and platforms I use daily to analyze, monitor, and optimize web performance for projects of any scale.",
+    "primary": {
+      "title": "Primary audit tools",
+      "snippets": {
+        "title": "WebPerf Snippets",
+        "description": "Collection of browser console snippets with ready-to-use scripts to analyze Core Web Vitals, detect unoptimized images, audit critical resources, and debug JavaScript, ideal for quick audits without additional tools."
+      },
+      "devtools": {
+        "title": "Chrome DevTools",
+        "description": "Essential tool for real-time performance analysis with Performance panel to identify bottlenecks, Lighthouse for complete audits, Coverage to detect unused code, and Network panel to optimize resources."
+      },
+      "debugbear": {
+        "title": "DebugBear",
+        "description": "Continuous monitoring platform with synthetic and RUM metrics including Core Web Vitals tracking across multiple pages, performance regression analysis, automatic alerts, and detailed reports with specific recommendations."
+      },
+      "speedcurve": {
+        "title": "SpeedCurve",
+        "description": "Performance monitoring with synthetic metrics, RUM, and competitive analysis that allows you to compare your performance against competitors, track performance budgets, and analyze the impact of production changes."
+      },
+      "webperfreport": {
+        "title": "Web Performance Report",
+        "description": "Detailed web performance report generator based on Lighthouse with automatic analysis of multiple URLs, exportable reports, and recommendations prioritized by impact, perfect for documented audits and client presentations."
+      }
+    },
+    "secondary": {
+      "title": "Experience with enterprise platforms",
+      "description": "I have implemented and worked with various enterprise-level monitoring and observability solutions across projects of different scales and traffic levels. Experience with <strong>Datadog</strong> (APM and RUM), <strong>New Relic</strong> (full-stack observability), <strong>Sentry</strong> (error tracking and performance), <strong>Akamai mPulse</strong> (RUM at scale), and <strong>Treo.sh</strong> (Core Web Vitals monitoring)."
+    }
+  },
   "AboutUsPage": {
     "meta": {
-      "title": "Who we are",
-      "description": "We are expert consultants in web performance with extensive experience."
+      "title": "About me",
+      "description": "Web Performance Artisan, Google Developer Expert in Web Technologies, and Cloudinary Ambassador. I help teams and companies create faster digital experiences."
     },
-    "title": "About us",
-    "team": {
-      "joan": {
-        "name": "Joan León",
-        "description": "I am passionate about everything related to development and interaction in the user interface in web environments.<br></br><br></br>I try to stay up to date with everything related to HTML5, CSS, SVG, web animation, and Javascript. Another one of my passions is collaborating on Open Source projects.<br></br><br></br>I love sharing knowledge, whether in MeetUps, Workshops, or as an instructor at Escuela IT... always active on @nucliweb to share all the resources and news from the frontend world."
-      },
-      "andres": {
-        "name": "Andrés Alvarez",
-        "description": "I work as a Staff Front-End Engineer at Adevinta Spain."
-      },
-      "jose": {
-        "name": "José M. Pérez",
-        "description": "I am a tech lead, full-stack web developer, web performance specialist, speaker, and open-source contributor.<br></br><br></br>Google Developer Expert in web technologies. I like to create useful products with a good user experience.<br></br><br></br>I publish on jmperezperez.com about my projects and explorations in web performance."
-      }
-    }
+    "title": "About me",
+    "bio": "I'm Joan León, Web Performance Artisan. I work with teams and companies to create digital experiences that truly deliver: fast, efficient, and driving real business results.<br></br><br></br>As a Google Developer Expert in Web Technologies and Cloudinary Ambassador, I combine technical expertise with strategic vision. I don't just identify performance issues—I help solve them and, more importantly, prevent them.<br></br><br></br>My approach is artisanal: every project is unique and deserves personalized attention. From detailed audits to continuous optimization, I ensure your team not only improves metrics but understands the why behind every change.<br></br><br></br>I share knowledge at conferences, workshops, and on <link>joanleon.dev</link> because I believe a faster web is a better web for everyone. Currently, I'm exploring how AI can automate audits without losing the experience and human touch that make the difference.<br></br><br></br>Web performance isn't just a technical metric: it's the difference between losing or winning a customer, between frustration or satisfaction. And that's where I can help you."
   }
 }

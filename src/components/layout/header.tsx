@@ -1,7 +1,10 @@
-import Link from "next/link";
+"use client";
+
 import { useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
 
+import { Link } from "@/components/shared/navigation";
+import { LangButton } from "@/components/shared/lang-button";
 import { Logo } from "@/components/shared/logo";
 import { LogoExtended } from "@/components/shared/logo-extended";
 import { Button } from "@/components/ui/button";
@@ -13,6 +16,14 @@ export interface HeaderProps extends ComponentPropsWithoutRef<"header"> {}
 
 export const Header = ({ className, ...others }: HeaderProps) => {
   const t = useTranslations("Common");
+
+  const scrollToPricing = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const pricingSection = document.getElementById("pricing");
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <header
@@ -35,7 +46,7 @@ export const Header = ({ className, ...others }: HeaderProps) => {
           </Link>
         </div>
 
-        <div className="flex gap-0.5">
+        <div className="flex gap-0.5 items-center">
           <Button className="hidden md:flex" variant="link" asChild>
             <Link href="/blog">{t("header.blog-button")}</Link>
           </Button>
@@ -44,8 +55,10 @@ export const Header = ({ className, ...others }: HeaderProps) => {
             <Link href="/reviews">{t("header.reviews-button")}</Link>
           </Button>
 
+          <LangButton />
+
           <Button className="shadow-md" size="lg" asChild>
-            <Link href="/#pricing">{t("header.contact-button")}</Link>
+            <a href="#pricing" onClick={scrollToPricing}>{t("header.contact-button")}</a>
           </Button>
         </div>
       </Container>

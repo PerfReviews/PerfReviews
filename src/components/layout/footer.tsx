@@ -1,6 +1,8 @@
+"use client";
+
 import { Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -8,12 +10,13 @@ import { Container } from "@/components/ui/container";
 import { cn } from "@/components/ui/core";
 import { Icon } from "@/components/ui/icon";
 
-import { LangButton } from "../shared/lang-button";
-
 export interface FooterProps extends ComponentPropsWithoutRef<"footer"> {}
 
 export const Footer = ({ className, ...others }: FooterProps) => {
   const t = useTranslations("Common");
+  const locale = useLocale();
+
+  const aboutPath = locale === "es" ? "/acerca-de" : "/about";
 
   const nav = [
     {
@@ -38,7 +41,7 @@ export const Footer = ({ className, ...others }: FooterProps) => {
       links: [
         {
           text: t("footer.about.about-us"),
-          href: "/nosotros",
+          href: aboutPath,
         },
         {
           text: t("footer.about.contact-us"),
@@ -106,8 +109,6 @@ export const Footer = ({ className, ...others }: FooterProps) => {
                 </Icon>
               </a>
             </Button>
-
-            <LangButton variant="outline" />
           </div>
         </div>
       </Container>
