@@ -1,7 +1,6 @@
 import { allPosts } from "content-collections";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 import { BlogCard } from "@/components/blog/blog-card";
@@ -29,7 +28,7 @@ export async function generateMetadata({ params }: HomePageProps) {
 
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
-  const t = useTranslations("HomePage");
+  const t = await getTranslations("HomePage");
 
   const clients = ["adevinta", "mediaset", "meta", "spotify"];
   const plans = [

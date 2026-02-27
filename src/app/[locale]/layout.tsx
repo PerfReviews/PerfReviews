@@ -16,7 +16,7 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-const siteURL = process.env.SITE_URL as string;
+const siteURL = process.env.SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteURL),
@@ -39,7 +39,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${montserrat.variable} font-sans`}>
         <Script strategy="beforeInteractive" src="/sw.js" />
 

@@ -58,7 +58,7 @@ export default async function PostPage({ params }: PostPageProps) {
     notFound();
   }
 
-  const siteURL = process.env.SITE_URL;
+  const siteURL = process.env.SITE_URL || "http://localhost:3000";
   const prefix = locale === "en" ? "" : `/${locale}`;
   const jsonLd = {
     "@context": "https://schema.org",

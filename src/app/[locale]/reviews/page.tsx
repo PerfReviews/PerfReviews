@@ -1,6 +1,5 @@
 import { allPosts, allReviews } from "content-collections";
 import { Metadata } from "next";
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 import { BlogCard } from "@/components/blog/blog-card";
@@ -39,7 +38,7 @@ export async function generateMetadata({
 
 export default async function ReviewsPage({ params }: ReviewsPageProps) {
   const { locale } = await params;
-  const t = useTranslations("ReviewsPage");
+  const t = await getTranslations("ReviewsPage");
   const reviews = allReviews.filter((review) => review.locale === locale);
 
   return (

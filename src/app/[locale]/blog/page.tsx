@@ -1,6 +1,5 @@
 import { allPosts } from "content-collections";
 import { Metadata } from "next";
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 import { BlogCard } from "@/components/blog/blog-card";
@@ -38,7 +37,7 @@ export async function generateMetadata({
 
 export default async function BlogPage({ params }: BlogPageProps) {
   const { locale } = await params;
-  const t = useTranslations("BlogPage");
+  const t = await getTranslations("BlogPage");
   const posts = allPosts.filter((post) => post.locale === locale);
 
   return (
