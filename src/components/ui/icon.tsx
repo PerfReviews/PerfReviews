@@ -33,7 +33,7 @@ export const Icon = ({
 
   return (
     <>
-      {React.cloneElement(child as React.ReactElement, {
+      {React.cloneElement(child as React.ReactElement<any>, {
         className: iconStyles({ className, size }),
         "aria-hidden": "true",
         focusable: "false",

@@ -7,14 +7,15 @@ import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/ui/container";
 
 export interface AboutUsPageProps {
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: AboutUsPageProps): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "AboutUsPage" });
 
   const title = t("meta.title");
@@ -35,10 +36,9 @@ export async function generateMetadata({
   };
 }
 
-export default function AboutUsPage({ params }: AboutUsPageProps) {
+export default async function AboutUsPage({ params }: AboutUsPageProps) {
+  const { locale } = await params;
   const t = useTranslations("AboutUsPage");
-
-  const { locale } = params;
 
   const team = [
     {

@@ -7,14 +7,15 @@ import { BlogCard } from "@/components/blog/blog-card";
 import { Container } from "@/components/ui/container";
 
 export interface BlogPageProps {
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: BlogPageProps): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "BlogPage" });
 
   const title = t("meta.title");
@@ -35,10 +36,9 @@ export async function generateMetadata({
   };
 }
 
-export default function BlogPage({ params }: BlogPageProps) {
+export default async function BlogPage({ params }: BlogPageProps) {
+  const { locale } = await params;
   const t = useTranslations("BlogPage");
-
-  const { locale } = params;
   const posts = allPosts.filter((post) => post.locale === locale);
 
   return (

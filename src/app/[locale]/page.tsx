@@ -14,10 +14,11 @@ import { Container } from "@/components/ui/container";
 import { Ratings } from "@/components/ui/ratings";
 
 interface HomePageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({ params: { locale } }: HomePageProps) {
+export async function generateMetadata({ params }: HomePageProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "HomePage" });
 
   return {
@@ -26,7 +27,8 @@ export async function generateMetadata({ params: { locale } }: HomePageProps) {
   };
 }
 
-export default function HomePage({ params: { locale } }: HomePageProps) {
+export default async function HomePage({ params }: HomePageProps) {
+  const { locale } = await params;
   const t = useTranslations("HomePage");
 
   const clients = ["adevinta", "mediaset", "meta", "spotify"];
