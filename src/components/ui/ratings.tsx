@@ -61,7 +61,7 @@ export const Ratings = ({ ...props }: RatingsProps) => {
   return (
     <div className={cn("flex items-center gap-1")} {...props}>
       {[...Array(fullStars)].map((_, i) =>
-        React.cloneElement(icon, {
+        React.cloneElement(icon as React.ReactElement<any>, {
           key: i,
           size,
           className: cn(
@@ -75,7 +75,7 @@ export const Ratings = ({ ...props }: RatingsProps) => {
       )}
       {partialStar}
       {[...Array(totalStars - fullStars - (partialStar ? 1 : 0))].map((_, i) =>
-        React.cloneElement(icon, {
+        React.cloneElement(icon as React.ReactElement<any>, {
           key: i + fullStars + 1,
           size,
           className: cn(
@@ -111,7 +111,7 @@ const PartialStar = ({ ...props }: PartialStarProps) => {
       onClick={() => onValueChange && onValueChange()}
       className={cn("relative inline-block", asInput && "cursor-pointer")}
     >
-      {React.cloneElement(icon, {
+      {React.cloneElement(icon as React.ReactElement<any>, {
         size,
         className: cn("fill-transparent", className),
       })}
@@ -123,7 +123,7 @@ const PartialStar = ({ ...props }: PartialStarProps) => {
           width: `${fillPercentage * 100}%`,
         }}
       >
-        {React.cloneElement(icon, {
+        {React.cloneElement(icon as React.ReactElement<any>, {
           size,
           className: cn("fill-current", className),
         })}

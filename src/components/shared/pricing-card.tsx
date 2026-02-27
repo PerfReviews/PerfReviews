@@ -1,3 +1,5 @@
+"use client";
+
 import { CircleCheck } from "lucide-react";
 import { useFormatter, useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";

@@ -1,6 +1,5 @@
 import { allPosts, allReviews } from "content-collections";
 import { Metadata } from "next";
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 import { BlogCard } from "@/components/blog/blog-card";
@@ -8,14 +7,15 @@ import { ReviewCard } from "@/components/review/review-card";
 import { Container } from "@/components/ui/container";
 
 export interface ReviewsPageProps {
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: ReviewsPageProps): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "ReviewsPage" });
 
   const title = t("meta.title");
@@ -36,10 +36,9 @@ export async function generateMetadata({
   };
 }
 
-export default function ReviewsPage({ params }: ReviewsPageProps) {
-  const t = useTranslations("ReviewsPage");
-
-  const { locale } = params;
+export default async function ReviewsPage({ params }: ReviewsPageProps) {
+  const { locale } = await params;
+  const t = await getTranslations("ReviewsPage");
   const reviews = allReviews.filter((review) => review.locale === locale);
 
   return (

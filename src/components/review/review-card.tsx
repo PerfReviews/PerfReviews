@@ -41,9 +41,16 @@ export const ReviewCard = ({
 
           <p className="text-sm line-clamp-2">{review.summary}</p>
 
-          <p className="text-muted-foreground text-xs">
-            {new Date(review.date).toLocaleDateString()}
-          </p>
+          <div className="flex items-center gap-2">
+            <p className="text-muted-foreground text-xs">
+              {new Date(review.date).toLocaleDateString()}
+            </p>
+            {review.archived && (
+              <span className="text-xs px-2 py-0.5 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-400 rounded">
+                Archivado
+              </span>
+            )}
+          </div>
         </div>
       </article>
     </LinkBox>

@@ -1,7 +1,6 @@
 import { allPosts } from "content-collections";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 import { BlogCard } from "@/components/blog/blog-card";
@@ -14,10 +13,11 @@ import { Container } from "@/components/ui/container";
 import { Ratings } from "@/components/ui/ratings";
 
 interface HomePageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({ params: { locale } }: HomePageProps) {
+export async function generateMetadata({ params }: HomePageProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "HomePage" });
 
   return {
@@ -26,8 +26,9 @@ export async function generateMetadata({ params: { locale } }: HomePageProps) {
   };
 }
 
-export default function HomePage({ params: { locale } }: HomePageProps) {
-  const t = useTranslations("HomePage");
+export default async function HomePage({ params }: HomePageProps) {
+  const { locale } = await params;
+  const t = await getTranslations("HomePage");
 
   const clients = ["adevinta", "mediaset", "meta", "spotify"];
   const plans = [

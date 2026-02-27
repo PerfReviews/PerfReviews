@@ -1,59 +1,54 @@
 "use client";
 
-import { Globe } from "lucide-react";
-import { usePathname } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
 
-import { Button, ButtonProps } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Icon } from "@/components/ui/icon";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/components/ui/core";
 import { locales } from "@/i18n.config";
 
-import { useRouter } from "./navigation";
+const localeLabels: Record<string, string> = {
+  es: "ES",
+  en: "EN",
+};
 
-export interface CopyButtonProps extends ButtonProps {}
-
-export const LangButton = (props: CopyButtonProps) => {
-  const t = useTranslations("Common");
+export const LangButton = () => {
+  const locale = useLocale();
   const router = useRouter();
+  const pathname = usePathname();
 
-  const handleClick = (locale: string) => {
-    router.replace("/", { locale });
+  const handleClick = (newLocale: string) => {
+    if (newLocale === locale) return;
+
+    const segments = pathname.split("/").filter(Boolean);
+
+    // Remove current locale if present
+    if (locales.includes(segments[0])) {
+      segments.shift();
+    }
+
+    // Build new path with new locale
+    const newPath = `/${newLocale}${segments.length > 0 ? `/${segments.join("/")}` : ""}`;
+    router.push(newPath);
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger className="cursor-pointer" asChild>
-        <Button size="icon" aria-label={t("lang.button")} {...props}>
-          <Icon>
-            <Globe />
-          </Icon>
+    <div className="flex gap-1 items-center">
+      {locales.map((loc) => (
+        <Button
+          key={loc}
+          size="sm"
+          variant="ghost"
+          aria-label={`Change language to ${localeLabels[loc]}`}
+          onClick={() => handleClick(loc)}
+          className={cn(
+            "font-semibold",
+            locale === loc && "text-primary underline underline-offset-4"
+          )}
+        >
+          {localeLabels[loc]}
         </Button>
-      </DropdownMenuTrigger>
-
-      <DropdownMenuContent>
-        <DropdownMenuLabel className="text-md">
-          {t("lang.menu.title")}
-        </DropdownMenuLabel>
-
-        {locales.map((locale) => (
-          <DropdownMenuItem
-            key={locale}
-            className="w-full text-md cursor-pointer"
-            asChild
-          >
-            <button onClick={() => handleClick(locale)}>
-              {t(`lang.menu.${locale}`)}
-            </button>
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+      ))}
+    </div>
   );
 };

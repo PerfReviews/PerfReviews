@@ -1,23 +1,24 @@
 import { allPosts } from "content-collections";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { unstable_setRequestLocale } from "next-intl/server";
 
+import { ArchivedNotice } from "@/components/shared/archived-notice";
 import { MDX } from "@/components/shared/mdx";
 import { Container } from "@/components/ui/container";
 
 export interface PostPageProps {
-  params: {
+  params: Promise<{
     locale: string;
     slug: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
+  const { locale, slug } = await params;
   const post = allPosts.find((post) => {
-    if (post.locale === params.locale && post.slug === params.slug) {
+    if (post.locale === locale && post.slug === slug) {
       return post;
     }
   });
@@ -44,11 +45,11 @@ export async function generateMetadata({
   };
 }
 
-export default function PostPage({ params }: PostPageProps) {
-  unstable_setRequestLocale(params.locale);
+export default async function PostPage({ params }: PostPageProps) {
+  const { locale, slug } = await params;
 
   const post = allPosts.find((post) => {
-    if (post.locale === params.locale && post.slug === params.slug) {
+    if (post.locale === locale && post.slug === slug) {
       return post;
     }
   });
@@ -57,8 +58,8 @@ export default function PostPage({ params }: PostPageProps) {
     notFound();
   }
 
-  const siteURL = process.env.SITE_URL;
-  const prefix = params.locale === "en" ? "" : `/${params.locale}`;
+  const siteURL = process.env.SITE_URL || "http://localhost:3000";
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -81,6 +82,7 @@ export default function PostPage({ params }: PostPageProps) {
       />
       <Container className="my-6" asChild>
         <main>
+          {post.archived && <ArchivedNotice date={post.date} />}
           <MDX source={post.content} />
         </main>
       </Container>

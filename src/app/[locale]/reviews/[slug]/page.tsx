@@ -1,23 +1,24 @@
 import { allReviews } from "content-collections";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { unstable_setRequestLocale } from "next-intl/server";
 
+import { ArchivedNotice } from "@/components/shared/archived-notice";
 import { MDX } from "@/components/shared/mdx";
 import { Container } from "@/components/ui/container";
 
 export interface ReviewPageProps {
-  params: {
+  params: Promise<{
     locale: string;
     slug: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({
   params,
 }: ReviewPageProps): Promise<Metadata> {
+  const { locale, slug } = await params;
   const review = allReviews.find((review) => {
-    if (review.locale === params.locale && review.slug === params.slug) {
+    if (review.locale === locale && review.slug === slug) {
       return review;
     }
   });
@@ -44,11 +45,11 @@ export async function generateMetadata({
   };
 }
 
-export default function ReviewPage({ params }: ReviewPageProps) {
-  unstable_setRequestLocale(params.locale);
+export default async function ReviewPage({ params }: ReviewPageProps) {
+  const { locale, slug } = await params;
 
   const review = allReviews.find((post) => {
-    if (post.locale === params.locale && post.slug === params.slug) {
+    if (post.locale === locale && post.slug === slug) {
       return post;
     }
   });
@@ -57,8 +58,8 @@ export default function ReviewPage({ params }: ReviewPageProps) {
     notFound();
   }
 
-  const siteURL = process.env.SITE_URL;
-  const prefix = params.locale === "en" ? "" : `/${params.locale}`;
+  const siteURL = process.env.SITE_URL || "http://localhost:3000";
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -81,6 +82,7 @@ export default function ReviewPage({ params }: ReviewPageProps) {
       />
       <Container className="my-6" asChild>
         <main>
+          {review.archived && <ArchivedNotice date={review.date} />}
           <MDX source={review.content} />
         </main>
       </Container>
