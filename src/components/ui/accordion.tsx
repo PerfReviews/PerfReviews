@@ -8,7 +8,8 @@ export interface AccordionProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
-  ({ className, children, ...props }, ref) => {
+  ({ className, children, type, collapsible, ...props }, ref) => {
+    // type and collapsible are consumed here and not passed to DOM
     return (
       <div ref={ref} className={cn("space-y-2", className)} {...props}>
         {children}
@@ -66,7 +67,8 @@ export interface AccordionContentProps extends React.HTMLAttributes<HTMLDivEleme
 }
 
 export const AccordionContent = React.forwardRef<HTMLDivElement, AccordionContentProps>(
-  ({ className, children, ...props }, ref) => {
+  ({ className, children, forceMount, ...props }, ref) => {
+    // forceMount is consumed here and not passed to DOM
     return (
       <div ref={ref} className={cn("pb-4 pt-0", className)} {...props}>
         {children}
