@@ -74,7 +74,8 @@
           "item-2": "Llamada entrega",
           "item-3": "Enfocado en las Core Web Vitals",
           "item-4": "Listado de problemas",
-          "item-5": "Soluciones concretas"
+          "item-5": "Soluciones concretas",
+          "item-6": "Agentes de IA especializados en la auditoría"
         },
         "business": {
           "title": "Business",
@@ -85,7 +86,8 @@
           "item-5": "Consultas",
           "item-6": "Contacto directo",
           "item-7": "Soluciones concretas",
-          "item-8": "Reunión mensual"
+          "item-8": "Reunión mensual",
+          "item-9": "Monitorización y test de regresión con IA"
         },
         "enterprise": {
           "title": "Enterprise",
@@ -96,7 +98,8 @@
           "item-5": "Consultas",
           "item-6": "Contacto directo",
           "item-7": "Soluciones concretas",
-          "item-8": "Reunión mensual"
+          "item-8": "Reunión mensual",
+          "item-9": "Monitorización y test de regresión con IA"
         }
       }
     },
@@ -122,11 +125,11 @@
       },
       "item-4": {
         "title": "¿Cómo se realiza la auditoría?",
-        "description": "Utilizamos herramientas avanzadas y métodos probados para evaluar todos los aspectos de tu sitio web, incluyendo la velocidad de carga, la optimización de imágenes, el código, la estructura del sitio y más."
+        "description": "Utilizamos herramientas avanzadas, métodos probados y agentes de IA especializados para evaluar todos los aspectos de tu sitio web, incluyendo la velocidad de carga, la optimización de imágenes, el código, la estructura del sitio y más."
       },
       "item-5": {
         "title": "¿Cómo funciona el soporte continuo?",
-        "description": "Seremos parte de tu equipo. Monitorizaremos constantemente tu sitio web y te daremos consejos específicos para mejorarlo. Dependiendo del plan, también realizaremos pair programming y talleres."
+        "description": "Seremos parte de tu equipo. Monitorizaremos constantemente tu sitio web con flujos automatizados de IA, incluyendo test de regresión en rendimiento, y te daremos consejos específicos para mejorarlo. Dependiendo del plan, también realizaremos pair programming y talleres."
       },
       "item-6": {
         "title": "¿Puedo cancelar mi suscripción en cualquier momento?",

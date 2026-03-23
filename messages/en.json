@@ -74,7 +74,8 @@
           "item-2": "Delivery call",
           "item-3": "Focused on Core Web Vitals",
           "item-4": "List of issues",
-          "item-5": "Concrete solutions"
+          "item-5": "Concrete solutions",
+          "item-6": "Specialized AI agents for auditing"
         },
         "business": {
           "title": "Business",
@@ -85,7 +86,8 @@
           "item-5": "Consultations",
           "item-6": "Direct contact",
           "item-7": "Concrete solutions",
-          "item-8": "Monthly meeting"
+          "item-8": "Monthly meeting",
+          "item-9": "AI-powered monitoring and regression testing"
         },
         "enterprise": {
           "title": "Enterprise",
@@ -96,7 +98,8 @@
           "item-5": "Consultations",
           "item-6": "Direct contact",
           "item-7": "Concrete solutions",
-          "item-8": "Monthly meeting"
+          "item-8": "Monthly meeting",
+          "item-9": "AI-powered monitoring and regression testing"
         }
       }
     },
@@ -122,11 +125,11 @@
       },
       "item-4": {
         "title": "How is the audit performed?",
-        "description": "We use advanced tools and proven methods to evaluate all aspects of your website, including load speed, image optimization, code, site structure, and more."
+        "description": "We use advanced tools, proven methods, and specialized AI agents to evaluate all aspects of your website, including load speed, image optimization, code, site structure, and more."
       },
       "item-5": {
         "title": "How does ongoing support work?",
-        "description": "We become part of your team. We will continuously monitor your website and provide specific advice to improve it. Depending on the plan, we will also conduct pair programming and workshops."
+        "description": "We become part of your team. We continuously monitor your website using AI-powered automated workflows, including performance regression testing, and provide specific advice to improve it. Depending on the plan, we will also conduct pair programming and workshops."
       },
       "item-6": {
         "title": "Can I cancel my subscription at any time?",
