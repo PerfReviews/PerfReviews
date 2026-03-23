@@ -1,6 +1,6 @@
 import { allPosts } from "content-collections";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/components/shared/navigation";
 import { getTranslations } from "next-intl/server";
 
 import { BlogCard } from "@/components/blog/blog-card";
