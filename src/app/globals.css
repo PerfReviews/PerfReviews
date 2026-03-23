@@ -93,3 +93,28 @@
 .prose pre {
   @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 relative;
 }
+
+/* sugar-high syntax highlighting tokens */
+:root {
+  --sh-identifier: #334155;
+  --sh-keyword:    #7c3aed;
+  --sh-string:     #0f766e;
+  --sh-class:      #1d4ed8;
+  --sh-property:   #0369a1;
+  --sh-entity:     #b45309;
+  --sh-jsxliterals:#6d28d9;
+  --sh-sign:       #475569;
+  --sh-comment:    #94a3b8;
+}
+
+.dark {
+  --sh-identifier: #cbd5e1;
+  --sh-keyword:    #c084fc;
+  --sh-string:     #34d399;
+  --sh-class:      #93c5fd;
+  --sh-property:   #38bdf8;
+  --sh-entity:     #fbbf24;
+  --sh-jsxliterals:#a78bfa;
+  --sh-sign:       #94a3b8;
+  --sh-comment:    #64748b;
+}

@@ -38,7 +38,9 @@ export async function generateMetadata({
 export default async function BlogPage({ params }: BlogPageProps) {
   const { locale } = await params;
   const t = await getTranslations("BlogPage");
-  const posts = allPosts.filter((post) => post.locale === locale);
+  const posts = allPosts
+    .filter((post) => post.locale === locale)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <Container className="py-8 space-y-8" asChild>
