@@ -28,7 +28,9 @@ export async function generateMetadata({
     return {};
   }
 
-  const { title, summary: description } = post;
+  const { title, summary: description, featuredImage } = post;
+  const siteURL = process.env.SITE_URL || "http://localhost:3000";
+  const images = featuredImage ? [`${siteURL}${featuredImage}`] : undefined;
 
   return {
     title,
@@ -37,11 +39,13 @@ export async function generateMetadata({
       title,
       description,
       type: "article",
+      images,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images,
     },
   };
 }
