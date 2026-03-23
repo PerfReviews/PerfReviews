@@ -149,6 +149,14 @@
         "description": "While we cannot guarantee specific improvements due to the variability in each website's conditions, our track record shows that all our clients experience significant improvements in their Core Web Vitals."
       }
     },
+    "testimonials": {
+      "title": "What our clients say",
+      "item-1": {
+        "quote": "We worked with Joan for about a month, and his contribution was extremely valuable. He quickly analyzed our platform and identified numerous performance topics that needed attention, documenting and explaining each of them clearly. He also improved several aspects of our observability, helping us better understand what to monitor and why. Throughout the engagement, he shared his methodology transparently, which made it easy for the team to follow and learn from his approach. At the end of the mission, he delivered a comprehensive document outlining actionable improvements and future optimization opportunities we can explore. His work provided both immediate value and a clear roadmap for continued performance improvements.",
+        "author": "Jean-François Bruel",
+        "company": "leboncoin"
+      }
+    },
     "blog": {
       "title": "Recent posts on our blog",
       "button": "View All"
@@ -203,6 +211,48 @@
     "secondary": {
       "title": "Experience with enterprise platforms",
       "description": "I have implemented and worked with various enterprise-level monitoring and observability solutions across projects of different scales and traffic levels. Experience with <strong>Datadog</strong> (APM and RUM), <strong>New Relic</strong> (full-stack observability), <strong>Sentry</strong> (error tracking and performance), <strong>Akamai mPulse</strong> (RUM at scale), and <strong>Treo.sh</strong> (Core Web Vitals monitoring)."
+    }
+  },
+  "ContactPage": {
+    "meta": {
+      "title": "Contact",
+      "description": "Get in touch with PerfReviews. Tell us about your project and we'll help you improve your website's performance."
+    },
+    "title": "Contact",
+    "description": "Tell us about your project. We'll get back to you within 24 hours.",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@company.com"
+      },
+      "company": {
+        "label": "Company",
+        "placeholder": "Your company (optional)"
+      },
+      "service": {
+        "label": "Service of interest",
+        "placeholder": "Select a service",
+        "audit": "Audit",
+        "business": "Business",
+        "enterprise": "Enterprise",
+        "workshop": "Workshop",
+        "other": "Other"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your project and what you're looking to improve..."
+      },
+      "submit": "Send message",
+      "sending": "Sending...",
+      "error": "Something went wrong. Please try again or email us directly at mail@perf.reviews.",
+      "success": {
+        "title": "Message sent!",
+        "description": "Thanks for reaching out. We'll get back to you within 24 hours."
+      }
     }
   },
   "AboutUsPage": {

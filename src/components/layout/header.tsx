@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
 
 import { Link } from "@/components/shared/navigation";
@@ -16,14 +16,9 @@ export interface HeaderProps extends ComponentPropsWithoutRef<"header"> {}
 
 export const Header = ({ className, ...others }: HeaderProps) => {
   const t = useTranslations("Common");
+  const locale = useLocale();
 
-  const scrollToPricing = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const pricingSection = document.getElementById("pricing");
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+  const contactPath = locale === "es" ? "/contacto" : "/contact";
 
   return (
     <header
@@ -58,7 +53,7 @@ export const Header = ({ className, ...others }: HeaderProps) => {
           <LangButton />
 
           <Button className="shadow-md" size="lg" asChild>
-            <a href="#pricing" onClick={scrollToPricing}>{t("header.contact-button")}</a>
+            <Link href={contactPath}>{t("header.contact-button")}</Link>
           </Button>
         </div>
       </Container>

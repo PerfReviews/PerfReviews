@@ -41,8 +41,6 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${montserrat.variable} font-sans`}>
-        <Script strategy="beforeInteractive" src="/sw.js" />
-
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
             <Header />

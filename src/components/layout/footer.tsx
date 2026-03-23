@@ -17,6 +17,7 @@ export const Footer = ({ className, ...others }: FooterProps) => {
   const locale = useLocale();
 
   const aboutPath = locale === "es" ? "/acerca-de" : "/about";
+  const contactPath = locale === "es" ? "/contacto" : "/contact";
 
   const nav = [
     {
@@ -45,7 +46,7 @@ export const Footer = ({ className, ...others }: FooterProps) => {
         },
         {
           text: t("footer.about.contact-us"),
-          href: "mailto:mail@perf.reviews",
+          href: contactPath,
         },
       ],
     },

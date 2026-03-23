@@ -8,6 +8,7 @@ export default function middleware(req: NextRequest) {
     locales,
     defaultLocale,
     localePrefix: "as-needed",
+    localeDetection: false,
   })(req);
 }
 

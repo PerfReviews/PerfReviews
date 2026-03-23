@@ -203,6 +203,23 @@ export default async function HomePage({ params }: HomePageProps) {
             </div>
           </section>
 
+          <section className="py-8 space-y-8">
+            <h2 className="text-2xl md:text-3xl font-bold">{t("testimonials.title")}</h2>
+
+            <blockquote className="relative rounded-xl bg-muted p-8 space-y-6">
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                &ldquo;{t("testimonials.item-1.quote")}&rdquo;
+              </p>
+
+              <footer className="flex items-center gap-3">
+                <div>
+                  <p className="font-semibold">{t("testimonials.item-1.author")}</p>
+                  <p className="text-sm text-muted-foreground">{t("testimonials.item-1.company")}</p>
+                </div>
+              </footer>
+            </blockquote>
+          </section>
+
           <section id="pricing" className="py-8 space-y-8">
             <div className="space-y-4">
               <h2 className="text-2xl md:text-3xl font-bold">
