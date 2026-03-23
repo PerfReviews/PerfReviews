@@ -28,7 +28,7 @@ export const BlogCard = ({ className, post, ...others }: BlogCardProps) => {
             <LinkOverlay asChild>
               <Link
                 className="hover:underline-offset-4 hover:underline"
-                href={`/blog/${post.slug}`}
+                href={`/${post.locale}/blog/${post.slug}`}
               >
                 {post.title}
               </Link>
