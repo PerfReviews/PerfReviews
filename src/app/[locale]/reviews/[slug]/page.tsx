@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { ArchivedNotice } from "@/components/shared/archived-notice";
+import { JsonLd } from "@/components/shared/json-ld";
 import { MDX } from "@/components/shared/mdx";
 import { Container } from "@/components/ui/container";
 
@@ -73,13 +74,7 @@ export default async function ReviewPage({ params }: ReviewPageProps) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd),
-        }}
-      />
+      <JsonLd data={jsonLd} />
       <Container className="my-6" asChild>
         <main>
           {review.archived && <ArchivedNotice date={review.date} />}
