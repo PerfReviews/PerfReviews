@@ -1,0 +1,106 @@
+---
+title: "AI in Web Performance Audits: Deterministic Measurement and Actionable Reports"
+date: "2026-03-23"
+summary: How to combine deterministic scripts and AI agents to go from metrics collection to an actionable report, and build the foundation for continuous performance regression testing.
+featuredImage: /images/blog/thumbs/ia-auditoria-web-performance.jpg
+---
+
+# AI in Web Performance Audits — Deterministic Measurement and Actionable Reports
+
+![](/images/blog/thumbs/ia-auditoria-web-performance.jpg)
+
+A web performance audit has two phases with very different natures. The first is collecting data: measuring LCP, CLS, INP, TTFB, analyzing resources, detecting antipatterns. The second is interpreting that data: identifying which problems matter most, explaining the mechanism behind each one, and proposing solutions prioritized by impact.
+
+AI helps in both phases, but in completely different ways. Confusing them leads to unreliable results.
+
+## Measurement Does Not Improvise
+
+The problem with letting an AI model generate measurement code on the fly is that nothing guarantees it will execute it the same way if asked again. LLMs can interpret, "optimize," or adapt code based on the conversation context. For performance diagnostics, that is not acceptable: measurements need to be consistent across sessions, agents, and models.
+
+The approach we apply is different: the agent does not generate JavaScript — it **reads predefined, tested, and validated scripts, and executes them directly in the browser** via Chrome DevTools MCP, following the model of [WebPerf Snippets Agent SKILLs](https://joanleon.dev/en/webperf-snippets-agent-skills/). The result of each script is a structured JSON object, not formatted console text:
+
+```json
+{
+  "metric": "LCP",
+  "value": 3840,
+  "rating": "needs-improvement",
+  "element": "IMG",
+  "url": "https://cdn.example.com/hero.jpg",
+  "renderTime": 3840,
+  "loadTime": 2100
+}
+```
+
+The agent knows that `rating: "needs-improvement"` triggers the LCP workflow. That workflow specifies the next step is to break down the time into TTFB, load delay, load time, and render delay. The decision logic lives in the SKILL, not in the model. Scripts also return [structured outputs](https://joanleon.dev/en/webperf-snippets-agent-first/) instead of human-formatted text, so the agent can process them directly without parsing the console.
+
+## From Data to Diagnosis
+
+With metrics collected reliably, the work where AI truly adds value begins: interpreting, connecting, and prioritizing.
+
+The agent receives, for example, these results after analyzing a product page:
+
+```json
+{
+  "LCP": { "value": 4200, "rating": "poor", "element": "IMG" },
+  "CLS": { "value": 0.08, "rating": "needs-improvement" },
+  "INP": { "value": 180, "rating": "good" },
+  "TTFB": { "value": 820, "rating": "poor" },
+  "render_blocking": ["fonts.googleapis.com/css2", "vendor.min.css"],
+  "preload_async_conflicts": 3
+}
+```
+
+From here, the AI is not measuring: it is reasoning. The high TTFB explains part of the poor LCP. Render-blocking resources add latency before painting begins. Preload + async conflicts create priority pressure on resources that do not deserve it. The elevated CLS is likely related to the blocking font resources.
+
+This type of cross-data analysis (where one data point explains another) is where a well-contextualized agent delivers real value. It connects dispersed information and generates a coherent diagnosis that would otherwise require several manual iterations.
+
+## The Complete Audit Workflow
+
+With an agent connected to the browser via Chrome DevTools MCP, the full workflow goes from a series of manual steps to a structured process:
+
+```
+1. Navigate to the URL
+2. Measure Core Web Vitals → LCP, CLS, INP
+3. If LCP > threshold → break down into TTFB, load delay, load time, render delay
+4. If TTFB > threshold → break down into DNS, TCP, TLS and server time
+5. Analyze resources → render-blocking, preload+async conflicts
+6. Collect all structured results
+7. Generate report with diagnosis, prioritization, and concrete solutions
+8. Export in the required format (technical document, executive summary, Slack alert)
+```
+
+Steps 1 through 6 are deterministic: the agent executes fixed scripts and collects reliable data. Steps 7 and 8 are where the AI generates content from that data. The separation ensures the report reflects what is actually on the page, not what the model believes might be there.
+
+> The output format is where the agent has the most flexibility. The same set of metrics can become a technical document for the engineering team, an executive summary for business stakeholders, or an automatic alert when a metric crosses a threshold.
+
+## Regression Testing: From a Point-in-Time Audit to Continuous Monitoring
+
+A point-in-time audit captures the state of a page at a given moment. The real value comes when that audit becomes a baseline against which future changes are compared.
+
+The regression workflow starts from the same set of deterministic scripts:
+
+```
+1. Initial audit → save metrics as baseline
+2. After each deployment → run the same scripts on the same environment
+3. Compare new values against baseline
+4. If any metric regresses → identify what changed
+5. Generate alert with diagnosis of the change
+```
+
+The agent does not just detect that LCP worsened from 2.1s to 3.8s. It cross-references that information with recent changes and generates a concrete diagnosis: "LCP worsened by 1.7s after introducing a font resource without `font-display: swap`." This turns the audit into a safety net that acts before a problem reaches production.
+
+## AI Accelerates; Judgment Remains Human
+
+The agent replaces the repetitive and mechanical parts that consume time without adding analytical value. Navigating to eight different URLs and running the same scripts on each is mechanical work. Detecting that four of them have preload + async conflicts all coming from the same origin is analytical work that the agent handles well when it has reliable data.
+
+Deciding whether the solution is to remove the preloads or add `fetchpriority="low"` based on the role of those resources on each page, or evaluating whether the consent banner should be prioritized because it may be the LCP element for first-time visitors, requires product knowledge. The same principle applies to [Long Task debugging with Gemini and Chrome DevTools MCP](https://joanleon.dev/en/gemini-chrome-devtools-mcp-debugging/): the agent connects directly to the browser and acts on real source code, but the decision of which fix to apply remains human.
+
+AI accelerates data collection and report generation. Interpreting what matters most in the context of each product still requires domain knowledge.
+
+## Conclusion
+
+Separating measurement (deterministic, script-based) from analysis (contextual, AI-generated) is what makes this approach work in practice. Scripts guarantee the agent measures the same thing every time, in the same way, regardless of the model or session. The structured data they produce is the input that enables precise reasoning.
+
+Continuous regression testing is the natural extension: once you have a reliable baseline and reproducible scripts, automating the comparison is the next step. The agent transitions from a point-in-time audit tool to an early-warning system.
+
+At Perf.reviews we apply this approach in our audits and ongoing performance support. If you want to know how it can improve the analysis of your website, [contact us](/contact/).
