@@ -94,7 +94,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
             <div className="space-y-4">
               <Button className="shadow-md" size="lg" asChild>
-                <Link href="#pricing">{t("button")}</Link>
+                <Link href={locale === "es" ? "/contacto" : "/contact"}>{t("button")}</Link>
               </Button>
 
               <div className="flex flex-col gap-y-1 items-center">

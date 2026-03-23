@@ -1,15 +1,15 @@
 "use client";
 
 import { CircleCheck } from "lucide-react";
-import { useFormatter, useTranslations } from "next-intl";
+import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
 
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/components/ui/core";
 import { Icon } from "@/components/ui/icon";
+import { Link } from "@/components/shared/navigation";
 import { PricingPlan } from "@/types/PricingPlan";
-
-import { ContactButton } from "./contact-button";
 
 export interface PricingCardProps extends ComponentPropsWithoutRef<"article"> {
   plan: PricingPlan;
@@ -22,6 +22,9 @@ export const PricingCard = ({
 }: PricingCardProps) => {
   const format = useFormatter();
   const t = useTranslations();
+  const locale = useLocale();
+
+  const contactPath = locale === "es" ? "/contacto" : "/contact";
 
   const variant = plan.isPopular ? "default" : "outline";
   const title = t(`HomePage.${plan.title}`);
@@ -74,9 +77,9 @@ export const PricingCard = ({
         ))}
       </ul>
 
-      <ContactButton variant={variant} subject={title}>
-        {t("Common.pricing.button")}
-      </ContactButton>
+      <Button variant={variant} asChild>
+        <Link href={contactPath}>{t("Common.pricing.button")}</Link>
+      </Button>
     </article>
   );
 };
