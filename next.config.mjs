@@ -24,6 +24,14 @@ const nextConfig = {
         source: "/insights/:path*",
         destination: "https://perfreviews-insights.vercel.app/insights/:path*",
       },
+      {
+        source: "/profile-guide",
+        destination: "https://perf-profile-field-guide.vercel.app/profile-guide",
+      },
+      {
+        source: "/profile-guide/:path*",
+        destination: "https://perf-profile-field-guide.vercel.app/profile-guide/:path*",
+      },
     ];
   },
   async redirects() {
