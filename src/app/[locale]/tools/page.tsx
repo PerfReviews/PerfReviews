@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 import { Footer } from "@/components/layout/footer";
@@ -60,6 +60,13 @@ const tools = [
   },
 ];
 
+const docs = [
+  {
+    key: "profile-guide",
+    href: "/profile-guide",
+  },
+];
+
 export default async function ToolsPage({ params }: ToolsPageProps) {
   const { locale } = await params;
   const t = await getTranslations("ToolsPage");
@@ -102,6 +109,35 @@ export default async function ToolsPage({ params }: ToolsPageProps) {
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed mt-1">
                       {t(`primary.${tool.key}.description`)}
+                    </p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-xl md:text-2xl font-semibold">
+              {t("docs.title")}
+            </h2>
+
+            <ul className="grid md:grid-cols-2 gap-x-8 gap-y-6">
+              {docs.map((doc) => (
+                <li key={doc.key}>
+                  <a href={doc.href} className="group block">
+                    <div className="flex items-start gap-2">
+                      <h3 className="text-base font-semibold group-hover:text-primary transition-colors">
+                        {t(`docs.${doc.key}.title`)}
+                      </h3>
+                      <Icon
+                        size="sm"
+                        className="text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0"
+                      >
+                        <ArrowRight />
+                      </Icon>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed mt-1">
+                      {t(`docs.${doc.key}.description`)}
                     </p>
                   </a>
                 </li>

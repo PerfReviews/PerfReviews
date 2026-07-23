@@ -211,6 +211,13 @@
         "description": "Detailed web performance report generator based on Lighthouse with automatic analysis of multiple URLs, exportable reports, and recommendations prioritized by impact, perfect for documented audits and client presentations."
       }
     },
+    "docs": {
+      "title": "Documentation",
+      "profile-guide": {
+        "title": "Reading a Performance Profile",
+        "description": "Interactive field guide to reading the Chrome DevTools Performance panel: network waterfall, flame chart, Bottom-up and Call tree, Frames, CLS, and INP."
+      }
+    },
     "secondary": {
       "title": "Experience with enterprise platforms",
       "description": "I have implemented and worked with various enterprise-level monitoring and observability solutions across projects of different scales and traffic levels. Experience with <strong>Datadog</strong> (APM and RUM), <strong>New Relic</strong> (full-stack observability), <strong>Sentry</strong> (error tracking and performance), <strong>Akamai mPulse</strong> (RUM at scale), and <strong>Treo.sh</strong> (Core Web Vitals monitoring)."
