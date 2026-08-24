@@ -25,6 +25,10 @@ const nextConfig = {
         destination: "https://perfreviews-insights.vercel.app/insights/:path*",
       },
       {
+        source: "/shared/:path*",
+        destination: "https://perf-profile-field-guide.vercel.app/shared/:path*",
+      },
+      {
         source: "/profile-guide",
         destination: "https://perf-profile-field-guide.vercel.app/profile-guide",
       },
