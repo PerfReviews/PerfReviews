@@ -1,5 +1,5 @@
-import { Metadata } from "next";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 import { Footer } from "@/components/layout/footer";

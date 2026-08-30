@@ -22,7 +22,10 @@ export const ModeToggleButton = ({
     setTheme(isLightMode ? "dark" : "light");
   };
 
+  // The hydration guard next-themes documents: the theme is only known on the
+  // client, so the first client render has to match the server output.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true);
   }, []);
 

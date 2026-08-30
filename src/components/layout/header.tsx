@@ -3,10 +3,10 @@
 import { useLocale, useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
 
-import { Link } from "@/components/shared/navigation";
 import { LangButton } from "@/components/shared/lang-button";
 import { Logo } from "@/components/shared/logo";
 import { LogoExtended } from "@/components/shared/logo-extended";
+import { Link } from "@/components/shared/navigation";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/components/ui/core";
