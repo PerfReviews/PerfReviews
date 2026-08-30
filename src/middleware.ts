@@ -1,16 +1,8 @@
-import { NextRequest, NextResponse } from "next/server";
 import createMiddleware from "next-intl/middleware";
 
-import { defaultLocale, locales } from "./i18n.config";
+import { routing } from "@/i18n/routing";
 
-export default function middleware(req: NextRequest) {
-  return createMiddleware({
-    locales,
-    defaultLocale,
-    localePrefix: "as-needed",
-    localeDetection: false,
-  })(req);
-}
+export default createMiddleware(routing);
 
 export const config = {
   matcher: [
