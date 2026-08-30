@@ -379,9 +379,19 @@ figcaption .src{ color:var(--faint); font-style:italic; }
 }
 .report-cta-actions .primary{ background:var(--brand-dk); color:#fff; border:1px solid var(--brand-dk); }
 .report-cta-actions .secondary{ background:#fff; color:var(--brand-dk); border:1px solid var(--brand-ln); }
-.report-cta-meta{ margin-top:1.1em; font-size:.86em; color:var(--muted); }
-.report-cta-meta a{ color:var(--brand-dk); }
+.report-cta .report-cta-meta{ margin:1.7em 0 0; font-size:.86em; color:var(--muted); }
+.report-cta .report-cta-meta a{ color:var(--brand-dk); }
 @media print{ .report-cta{ display:none; } }
+
+/* ---------------------------------------------------------- 16px base on screen
+   The body is set in 10.4pt (13.87px), a size chosen for printed A4. Every layout
+   measurement is an absolute mm value, so raising the font size alone would overflow
+   the grids, cells and icons. Scaling the whole document instead brings the effective
+   base to 16px while preserving every proportion. Screen only: printing and the
+   generated PDFs are unaffected. */
+@media screen{
+  body{ zoom:1.1538; }
+}
 </style>
 
 <!-- Google Analytics -->
