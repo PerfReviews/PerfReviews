@@ -1,13 +1,13 @@
 import { allPosts } from "content-collections";
 import Image from "next/image";
-import { Link } from "@/components/shared/navigation";
 import { getTranslations } from "next-intl/server";
 
 import { BlogCard } from "@/components/blog/blog-card";
 import { Footer } from "@/components/layout/footer";
-import { ContactButton } from "@/components/shared/contact-button";
 import { FAQAccordion } from "@/components/shared/faq-accordion";
+import { Link } from "@/components/shared/navigation";
 import { PricingCardGrid } from "@/components/shared/pricing-card-grid";
+import { TrackedLink } from "@/components/shared/tracked-link";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Ratings } from "@/components/ui/ratings";
@@ -30,6 +30,7 @@ export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
   const t = await getTranslations("HomePage");
 
+  const contactPath = locale === "es" ? "/contacto" : "/contact";
   const clients = ["adevinta", "mediaset", "meta", "spotify"];
   const plans = [
     {
@@ -98,7 +99,9 @@ export default async function HomePage({ params }: HomePageProps) {
 
             <div className="space-y-4">
               <Button className="shadow-md" size="lg" asChild>
-                <Link href={locale === "es" ? "/contacto" : "/contact"}>{t("button")}</Link>
+                <TrackedLink location="hero" href={contactPath}>
+                  {t("button")}
+                </TrackedLink>
               </Button>
 
               <div className="flex flex-col gap-y-1 items-center">
@@ -253,9 +256,11 @@ export default async function HomePage({ params }: HomePageProps) {
               </p>
             </div>
 
-            <ContactButton subject={t("workshops.subject")}>
-              {t("workshops.button")}
-            </ContactButton>
+            <Button asChild>
+              <TrackedLink location="workshops" href={`${contactPath}?service=workshop`}>
+                {t("workshops.button")}
+              </TrackedLink>
+            </Button>
           </section>
 
           <section className="py-8 space-y-8">

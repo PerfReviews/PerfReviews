@@ -4,11 +4,11 @@ import { CircleCheck } from "lucide-react";
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
 
+import { TrackedLink } from "@/components/shared/tracked-link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/components/ui/core";
 import { Icon } from "@/components/ui/icon";
-import { Link } from "@/components/shared/navigation";
 import { PricingPlan } from "@/types/PricingPlan";
 
 export interface PricingCardProps extends ComponentPropsWithoutRef<"article"> {
@@ -87,7 +87,9 @@ export const PricingCard = ({
       )}
 
       <Button variant={variant} asChild>
-        <Link href={contactPath}>{t("Common.pricing.button")}</Link>
+        <TrackedLink location={`pricing:${plan.id}`} href={contactPath}>
+          {t("Common.pricing.button")}
+        </TrackedLink>
       </Button>
     </article>
   );
