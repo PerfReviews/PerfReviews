@@ -385,6 +385,40 @@ figcaption .src{ color:var(--faint); font-style:italic; }
 .report-cta .report-cta-meta a{ color:var(--brand-dk); }
 @media print{ .report-cta{ display:none; } }
 
+/* ---------------------------------------------------------- skip offscreen work
+   The document is around 60 000 px tall and roughly half of that height is tables,
+   charts, code blocks and callouts. Skipping their layout and paint until they
+   approach the viewport is the technique PERF-010 recommends, applied here to the
+   report itself. The intrinsic sizes are the measured medians per block type, and
+   the auto keyword lets each element remember its real size once rendered. Screen
+   only: printing needs every box laid out. */
+@media screen{
+  table, figure, pre, .note, ul.refs{ content-visibility:auto; }
+  table{ contain-intrinsic-size:auto 232px; }
+  figure{ contain-intrinsic-size:auto 191px; }
+  pre{ contain-intrinsic-size:auto 138px; }
+  .note{ contain-intrinsic-size:auto 113px; }
+  ul.refs{ contain-intrinsic-size:auto 152px; }
+}
+
+/* ---------------------------------------------------------- back to contents
+   Fixed affordance for a document this long. Hidden while the contents are on
+   screen, and never printed. */
+.to-toc{
+  position:fixed; right:5mm; bottom:5mm; z-index:10;
+  display:flex; align-items:center; justify-content:center;
+  width:12mm; height:12mm; border-radius:50%;
+  background:var(--brand-dk); color:#fff; text-decoration:none;
+  box-shadow:0 2px 10px rgba(0,0,0,.22);
+  opacity:0; visibility:hidden; transition:opacity .18s ease, visibility .18s ease;
+}
+.to-toc.is-visible{ opacity:1; visibility:visible; }
+.to-toc:hover{ background:var(--brand); }
+.to-toc:focus-visible{ outline:2px solid var(--brand); outline-offset:3px; }
+.to-toc svg{ width:6mm; height:6mm; }
+@media print{ .to-toc{ display:none; } }
+@media (prefers-reduced-motion:reduce){ .to-toc{ transition:none; } }
+
 /* ---------------------------------------------------------- navigable contents
    Page numbers are meaningful in the PDF and meaningless on screen, so the rows
    become links to their section and the number column collapses. Print keeps the
@@ -458,7 +492,7 @@ a.toc-row{ color:inherit; text-decoration:none; }
 </section>
 
 <!-- ======================= ÍNDICE ======================= -->
-<section class="part">
+<section class="part" id="indice">
   <div class="k">Índice</div>
   <h2>Qué contiene este informe</h2>
 </section>
@@ -2548,5 +2582,21 @@ fs.writeFileSync('dist/assets/now-icon-sprite.svg', sprite.toString());</pre>
   <p class="report-cta-meta">También disponible <a href="/sample-report" data-report-cta="lang">en inglés</a>. Escríbenos a <a href="mailto:mail@perf.reviews">mail@perf.reviews</a>.</p>
 </section>
 
+<a class="to-toc" href="#indice" title="Volver al índice" aria-label="Volver al índice">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+    <path d="M4 6h16M4 12h16M4 18h10"/>
+  </svg>
+</a>
+<script>
+  (function () {
+    var button = document.querySelector('.to-toc');
+    var contents = document.querySelector('.toc');
+    if (!button || !contents || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (entries) {
+      // only once the contents have scrolled off the top, not while still above them
+      button.classList.toggle('is-visible', entries[0].boundingClientRect.bottom <= 0);
+    }).observe(contents);
+  })();
+</script>
 </body>
 </html>
