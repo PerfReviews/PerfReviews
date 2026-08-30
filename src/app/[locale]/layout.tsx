@@ -10,13 +10,12 @@ import { getMessages } from "next-intl/server";
 
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/ui/theme";
+import { siteURL } from "@/site";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
 });
-
-const siteURL = process.env.SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteURL),

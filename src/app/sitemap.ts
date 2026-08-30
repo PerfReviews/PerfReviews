@@ -2,6 +2,7 @@ import { allPosts, allReviews } from "content-collections";
 import { MetadataRoute } from "next";
 
 import { defaultLocale, locales } from "@/i18n.config";
+import { siteURL } from "@/site";
 
 type ChangeFrequency =
   | "daily"
@@ -14,7 +15,6 @@ type ChangeFrequency =
   | undefined;
 
 const getSitemapFile = ({ pathname }: { pathname: string }) => {
-  const siteURL = process.env.SITE_URL as string;
   const languages = locales
     .filter((locale) => locale !== defaultLocale)
     .reduce((alternates, locale) => {
@@ -27,7 +27,8 @@ const getSitemapFile = ({ pathname }: { pathname: string }) => {
     }, {});
 
   return {
-    url: [siteURL, pathname].filter(Boolean).join("/"),
+    // the root keeps its trailing slash; every other path joins onto the origin
+    url: pathname ? [siteURL, pathname].join("/") : `${siteURL}/`,
     lastModified: new Date(),
     changeFrequency: "daily" as ChangeFrequency,
     priority: 0.7,
@@ -56,7 +57,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })
     );
 
-  const siteURL = process.env.SITE_URL as string;
   const sampleReportLanguages = {
     es: [siteURL, "informe-ejemplo"].join("/"),
     en: [siteURL, "sample-report"].join("/"),
