@@ -385,6 +385,19 @@ figcaption .src{ color:var(--faint); font-style:italic; }
 .report-cta .report-cta-meta a{ color:var(--brand-dk); }
 @media print{ .report-cta{ display:none; } }
 
+/* ---------------------------------------------------------- navigable contents
+   Page numbers are meaningful in the PDF and meaningless on screen, so the rows
+   become links to their section and the number column collapses. Print keeps the
+   numbers and the original look: the link inherits colour and drops the underline. */
+a.toc-row{ color:inherit; text-decoration:none; }
+@media screen{
+  .toc-row{ grid-template-columns:20mm 1fr 17mm; }
+  .toc-row.plain{ grid-template-columns:20mm 1fr; }
+  .toc-row .pg{ display:none; }
+  a.toc-row:hover .ti{ color:var(--brand-dk); text-decoration:underline; }
+  a.toc-row:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+}
+
 /* ---------------------------------------------------------- 16px base on screen
    The body is set in 10.4pt (13.87px), a size chosen for printed A4. Every layout
    measurement is an absolute mm value, so raising the font size alone would overflow
@@ -452,29 +465,29 @@ figcaption .src{ color:var(--faint); font-style:italic; }
 
 <div class="toc">
   <div class="toc-group">Preliminares</div>
-  <div class="toc-row plain"><span class="id">§ A</span><span class="ti">Cómo leer este informe</span><span class="pg" data-ref="como-leer">3</span></div>
-  <div class="toc-row plain"><span class="id">§ B</span><span class="ti">Matriz de prioridades y triaje</span><span class="pg" data-ref="triaje">5</span></div>
-  <div class="toc-row plain"><span class="id">§ C</span><span class="ti">Referencia de Core Web Vitals</span><span class="pg" data-ref="cwv-ref">7</span></div>
-  <div class="toc-row plain"><span class="id">§ D</span><span class="ti">Entorno de medición y convenciones de evidencia</span><span class="pg" data-ref="metodo">8</span></div>
+  <a class="toc-row plain" href="#como-leer"><span class="id">§ A</span><span class="ti">Cómo leer este informe</span><span class="pg" data-ref="como-leer">3</span></a>
+  <a class="toc-row plain" href="#triaje"><span class="id">§ B</span><span class="ti">Matriz de prioridades y triaje</span><span class="pg" data-ref="triaje">5</span></a>
+  <a class="toc-row plain" href="#cwv-ref"><span class="id">§ C</span><span class="ti">Referencia de Core Web Vitals</span><span class="pg" data-ref="cwv-ref">7</span></a>
+  <a class="toc-row plain" href="#metodo"><span class="id">§ D</span><span class="ti">Entorno de medición y convenciones de evidencia</span><span class="pg" data-ref="metodo">8</span></a>
 
   <div class="toc-group">Incidencias — un capítulo por cada una</div>
-  <div class="toc-row"><span class="id">PERF-001</span><span class="ti">Encadenamiento de peticiones del formulario<small>32 peticiones de esquema tras una única puerta de 3,9 s</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-001">11</span></div>
-  <div class="toc-row"><span class="id">PERF-002</span><span class="ti">Cargar solo el CSS necesario<small>1,25 MB de bundle; una hoja de terceros 99,3 % sin usar</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-002">15</span></div>
-  <div class="toc-row"><span class="id">PERF-003</span><span class="ti">Preconectar con los dominios externos<small>cero <em>hints</em> de conexión para cuatro orígenes</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-003">19</span></div>
-  <div class="toc-row"><span class="id">PERF-004</span><span class="ti">Precargar las fuentes<small>la primera fuente se descubre a los 4,7 s</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-004">22</span></div>
-  <div class="toc-row"><span class="id">PERF-005</span><span class="ti">TTFB alto y caché de CDN desactivada<small>la causa raíz que multiplica todo lo demás</small></span><span><span class="pri p0">P0</span></span><span class="pg" data-ref="perf-005">25</span></div>
-  <div class="toc-row"><span class="id">PERF-006</span><span class="ti">Aplazar el JavaScript no crítico<small>193 KB bloqueando el render desde el <code>&lt;head&gt;</code></small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-006">30</span></div>
-  <div class="toc-row"><span class="id">PERF-007</span><span class="ti">Consolidar y aplazar los scripts de terceros<small>828 KB transferidos, 5,35 MB descomprimidos</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-007">33</span></div>
-  <div class="toc-row"><span class="id">PERF-008</span><span class="ti">Precargar los chunks críticos<small>2,8 MB que no se descubren hasta que corre el bundle</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-008">37</span></div>
-  <div class="toc-row"><span class="id">PERF-009</span><span class="ti">Speculation Rules para la confirmación<small>1–3 s en el paso de mayor intención del embudo</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-009">40</span></div>
-  <div class="toc-row"><span class="id">PERF-010</span><span class="ti">content-visibility en las secciones ocultas<small>225 de 242 nodos entran en cada pasada de layout</small></span><span><span class="pri p3">P3</span></span><span class="pg" data-ref="perf-010">43</span></div>
-  <div class="toc-row"><span class="id">PERF-011</span><span class="ti">Deduplicar las llamadas a la API<small>57 llamadas donde se esperan ~40</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-011">47</span></div>
-  <div class="toc-row"><span class="id">PERF-012</span><span class="ti">Activar HTTP/2 103 Early Hints<small>hasta 413 ms de ventana ociosa por primera carga</small></span><span><span class="pri p3">P3</span></span><span class="pg" data-ref="perf-012">51</span></div>
-  <div class="toc-row"><span class="id">PERF-013</span><span class="ti">Cargar el SDK de mapas bajo demanda<small>666 KB a los 4,7 s sin ninguna interacción</small></span><span><span class="pri done">Resuelta</span></span><span class="pg" data-ref="perf-013">55</span></div>
-  <div class="toc-row"><span class="id">PERF-014</span><span class="ti">Optimizar el sprite de iconos<small>694 iconos enviados, 76 usados</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-014">59</span></div>
+  <a class="toc-row" href="#perf-001"><span class="id">PERF-001</span><span class="ti">Encadenamiento de peticiones del formulario<small>32 peticiones de esquema tras una única puerta de 3,9 s</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-001">11</span></a>
+  <a class="toc-row" href="#perf-002"><span class="id">PERF-002</span><span class="ti">Cargar solo el CSS necesario<small>1,25 MB de bundle; una hoja de terceros 99,3 % sin usar</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-002">15</span></a>
+  <a class="toc-row" href="#perf-003"><span class="id">PERF-003</span><span class="ti">Preconectar con los dominios externos<small>cero <em>hints</em> de conexión para cuatro orígenes</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-003">19</span></a>
+  <a class="toc-row" href="#perf-004"><span class="id">PERF-004</span><span class="ti">Precargar las fuentes<small>la primera fuente se descubre a los 4,7 s</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-004">22</span></a>
+  <a class="toc-row" href="#perf-005"><span class="id">PERF-005</span><span class="ti">TTFB alto y caché de CDN desactivada<small>la causa raíz que multiplica todo lo demás</small></span><span><span class="pri p0">P0</span></span><span class="pg" data-ref="perf-005">25</span></a>
+  <a class="toc-row" href="#perf-006"><span class="id">PERF-006</span><span class="ti">Aplazar el JavaScript no crítico<small>193 KB bloqueando el render desde el <code>&lt;head&gt;</code></small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-006">30</span></a>
+  <a class="toc-row" href="#perf-007"><span class="id">PERF-007</span><span class="ti">Consolidar y aplazar los scripts de terceros<small>828 KB transferidos, 5,35 MB descomprimidos</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-007">33</span></a>
+  <a class="toc-row" href="#perf-008"><span class="id">PERF-008</span><span class="ti">Precargar los chunks críticos<small>2,8 MB que no se descubren hasta que corre el bundle</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-008">37</span></a>
+  <a class="toc-row" href="#perf-009"><span class="id">PERF-009</span><span class="ti">Speculation Rules para la confirmación<small>1–3 s en el paso de mayor intención del embudo</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-009">40</span></a>
+  <a class="toc-row" href="#perf-010"><span class="id">PERF-010</span><span class="ti">content-visibility en las secciones ocultas<small>225 de 242 nodos entran en cada pasada de layout</small></span><span><span class="pri p3">P3</span></span><span class="pg" data-ref="perf-010">43</span></a>
+  <a class="toc-row" href="#perf-011"><span class="id">PERF-011</span><span class="ti">Deduplicar las llamadas a la API<small>57 llamadas donde se esperan ~40</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-011">47</span></a>
+  <a class="toc-row" href="#perf-012"><span class="id">PERF-012</span><span class="ti">Activar HTTP/2 103 Early Hints<small>hasta 413 ms de ventana ociosa por primera carga</small></span><span><span class="pri p3">P3</span></span><span class="pg" data-ref="perf-012">51</span></a>
+  <a class="toc-row" href="#perf-013"><span class="id">PERF-013</span><span class="ti">Cargar el SDK de mapas bajo demanda<small>666 KB a los 4,7 s sin ninguna interacción</small></span><span><span class="pri done">Resuelta</span></span><span class="pg" data-ref="perf-013">55</span></a>
+  <a class="toc-row" href="#perf-014"><span class="id">PERF-014</span><span class="ti">Optimizar el sprite de iconos<small>694 iconos enviados, 76 usados</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-014">59</span></a>
 
   <div class="toc-group">Cierre</div>
-  <div class="toc-row plain"><span class="id">§ E</span><span class="ti">Dónde este informe es débil</span><span class="pg" data-ref="cierre">63</span></div>
+  <a class="toc-row plain" href="#cierre"><span class="id">§ E</span><span class="ti">Dónde este informe es débil</span><span class="pg" data-ref="cierre">63</span></a>
 </div>
 
 <!-- ======================= § A ======================= -->

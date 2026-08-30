@@ -383,6 +383,19 @@ figcaption .src{ color:var(--faint); font-style:italic; }
 .report-cta .report-cta-meta a{ color:var(--brand-dk); }
 @media print{ .report-cta{ display:none; } }
 
+/* ---------------------------------------------------------- navigable contents
+   Page numbers are meaningful in the PDF and meaningless on screen, so the rows
+   become links to their section and the number column collapses. Print keeps the
+   numbers and the original look: the link inherits colour and drops the underline. */
+a.toc-row{ color:inherit; text-decoration:none; }
+@media screen{
+  .toc-row{ grid-template-columns:20mm 1fr 17mm; }
+  .toc-row.plain{ grid-template-columns:20mm 1fr; }
+  .toc-row .pg{ display:none; }
+  a.toc-row:hover .ti{ color:var(--brand-dk); text-decoration:underline; }
+  a.toc-row:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+}
+
 /* ---------------------------------------------------------- 16px base on screen
    The body is set in 10.4pt (13.87px), a size chosen for printed A4. Every layout
    measurement is an absolute mm value, so raising the font size alone would overflow
@@ -450,29 +463,29 @@ figcaption .src{ color:var(--faint); font-style:italic; }
 
 <div class="toc">
   <div class="toc-group">Front matter</div>
-  <div class="toc-row plain"><span class="id">§ A</span><span class="ti">How to read this report</span><span class="pg" data-ref="como-leer">3</span></div>
-  <div class="toc-row plain"><span class="id">§ B</span><span class="ti">Priority matrix and triage</span><span class="pg" data-ref="triaje">5</span></div>
-  <div class="toc-row plain"><span class="id">§ C</span><span class="ti">Core Web Vitals reference</span><span class="pg" data-ref="cwv-ref">6</span></div>
-  <div class="toc-row plain"><span class="id">§ D</span><span class="ti">Measurement environment and evidence conventions</span><span class="pg" data-ref="metodo">8</span></div>
+  <a class="toc-row plain" href="#como-leer"><span class="id">§ A</span><span class="ti">How to read this report</span><span class="pg" data-ref="como-leer">3</span></a>
+  <a class="toc-row plain" href="#triaje"><span class="id">§ B</span><span class="ti">Priority matrix and triage</span><span class="pg" data-ref="triaje">5</span></a>
+  <a class="toc-row plain" href="#cwv-ref"><span class="id">§ C</span><span class="ti">Core Web Vitals reference</span><span class="pg" data-ref="cwv-ref">6</span></a>
+  <a class="toc-row plain" href="#metodo"><span class="id">§ D</span><span class="ti">Measurement environment and evidence conventions</span><span class="pg" data-ref="metodo">8</span></a>
 
   <div class="toc-group">Issues — one chapter each</div>
-  <div class="toc-row"><span class="id">PERF-001</span><span class="ti">Form request chaining<small>32 schema requests behind a single 3.9 s gate</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-001">11</span></div>
-  <div class="toc-row"><span class="id">PERF-002</span><span class="ti">Ship only the CSS you need<small>1.25 MB bundle; a third-party sheet 99.3% unused</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-002">15</span></div>
-  <div class="toc-row"><span class="id">PERF-003</span><span class="ti">Preconnect to external domains<small>zero connection hints for four origins</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-003">19</span></div>
-  <div class="toc-row"><span class="id">PERF-004</span><span class="ti">Preload the fonts<small>the first font is discovered at 4.7 s</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-004">22</span></div>
-  <div class="toc-row"><span class="id">PERF-005</span><span class="ti">High TTFB and disabled CDN caching<small>the root cause that multiplies everything else</small></span><span><span class="pri p0">P0</span></span><span class="pg" data-ref="perf-005">25</span></div>
-  <div class="toc-row"><span class="id">PERF-006</span><span class="ti">Defer non-critical JavaScript<small>193 KB blocking render from the <code>&lt;head&gt;</code></small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-006">30</span></div>
-  <div class="toc-row"><span class="id">PERF-007</span><span class="ti">Consolidate and defer third-party scripts<small>828 KB transferred, 5.35 MB uncompressed</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-007">33</span></div>
-  <div class="toc-row"><span class="id">PERF-008</span><span class="ti">Preload the critical chunks<small>2.8 MB not discovered until the bundle runs</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-008">37</span></div>
-  <div class="toc-row"><span class="id">PERF-009</span><span class="ti">Speculation Rules for the confirmation step<small>1–3 s at the highest-intent point of the funnel</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-009">40</span></div>
-  <div class="toc-row"><span class="id">PERF-010</span><span class="ti">content-visibility on off-screen sections<small>225 of 242 nodes enter every layout pass</small></span><span><span class="pri p3">P3</span></span><span class="pg" data-ref="perf-010">43</span></div>
-  <div class="toc-row"><span class="id">PERF-011</span><span class="ti">Deduplicate the API calls<small>57 calls where ~40 are expected</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-011">47</span></div>
-  <div class="toc-row"><span class="id">PERF-012</span><span class="ti">Enable HTTP/2 103 Early Hints<small>up to 413 ms of idle window per cold load</small></span><span><span class="pri p3">P3</span></span><span class="pg" data-ref="perf-012">51</span></div>
-  <div class="toc-row"><span class="id">PERF-013</span><span class="ti">Load the maps SDK on demand<small>666 KB at 4.7 s with no interaction</small></span><span><span class="pri done">Fixed</span></span><span class="pg" data-ref="perf-013">55</span></div>
-  <div class="toc-row"><span class="id">PERF-014</span><span class="ti">Optimise the icon sprite<small>694 icons shipped, 76 used</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-014">59</span></div>
+  <a class="toc-row" href="#perf-001"><span class="id">PERF-001</span><span class="ti">Form request chaining<small>32 schema requests behind a single 3.9 s gate</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-001">11</span></a>
+  <a class="toc-row" href="#perf-002"><span class="id">PERF-002</span><span class="ti">Ship only the CSS you need<small>1.25 MB bundle; a third-party sheet 99.3% unused</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-002">15</span></a>
+  <a class="toc-row" href="#perf-003"><span class="id">PERF-003</span><span class="ti">Preconnect to external domains<small>zero connection hints for four origins</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-003">19</span></a>
+  <a class="toc-row" href="#perf-004"><span class="id">PERF-004</span><span class="ti">Preload the fonts<small>the first font is discovered at 4.7 s</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-004">22</span></a>
+  <a class="toc-row" href="#perf-005"><span class="id">PERF-005</span><span class="ti">High TTFB and disabled CDN caching<small>the root cause that multiplies everything else</small></span><span><span class="pri p0">P0</span></span><span class="pg" data-ref="perf-005">25</span></a>
+  <a class="toc-row" href="#perf-006"><span class="id">PERF-006</span><span class="ti">Defer non-critical JavaScript<small>193 KB blocking render from the <code>&lt;head&gt;</code></small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-006">30</span></a>
+  <a class="toc-row" href="#perf-007"><span class="id">PERF-007</span><span class="ti">Consolidate and defer third-party scripts<small>828 KB transferred, 5.35 MB uncompressed</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-007">33</span></a>
+  <a class="toc-row" href="#perf-008"><span class="id">PERF-008</span><span class="ti">Preload the critical chunks<small>2.8 MB not discovered until the bundle runs</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-008">37</span></a>
+  <a class="toc-row" href="#perf-009"><span class="id">PERF-009</span><span class="ti">Speculation Rules for the confirmation step<small>1–3 s at the highest-intent point of the funnel</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-009">40</span></a>
+  <a class="toc-row" href="#perf-010"><span class="id">PERF-010</span><span class="ti">content-visibility on off-screen sections<small>225 of 242 nodes enter every layout pass</small></span><span><span class="pri p3">P3</span></span><span class="pg" data-ref="perf-010">43</span></a>
+  <a class="toc-row" href="#perf-011"><span class="id">PERF-011</span><span class="ti">Deduplicate the API calls<small>57 calls where ~40 are expected</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-011">47</span></a>
+  <a class="toc-row" href="#perf-012"><span class="id">PERF-012</span><span class="ti">Enable HTTP/2 103 Early Hints<small>up to 413 ms of idle window per cold load</small></span><span><span class="pri p3">P3</span></span><span class="pg" data-ref="perf-012">51</span></a>
+  <a class="toc-row" href="#perf-013"><span class="id">PERF-013</span><span class="ti">Load the maps SDK on demand<small>666 KB at 4.7 s with no interaction</small></span><span><span class="pri done">Fixed</span></span><span class="pg" data-ref="perf-013">55</span></a>
+  <a class="toc-row" href="#perf-014"><span class="id">PERF-014</span><span class="ti">Optimise the icon sprite<small>694 icons shipped, 76 used</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-014">59</span></a>
 
   <div class="toc-group">Closing</div>
-  <div class="toc-row plain"><span class="id">§ E</span><span class="ti">Where this report is weak</span><span class="pg" data-ref="cierre">63</span></div>
+  <a class="toc-row plain" href="#cierre"><span class="id">§ E</span><span class="ti">Where this report is weak</span><span class="pg" data-ref="cierre">63</span></a>
 </div>
 
 <!-- ======================= § A ======================= -->
