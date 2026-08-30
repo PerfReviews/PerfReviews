@@ -16,7 +16,8 @@
     "pricing": {
       "popular-badge": "Popular",
       "monthly": "month",
-      "button": "Contact"
+      "button": "Contact",
+      "sample-report": "See a sample report"
     },
     "footer": {
       "links": {
@@ -121,7 +122,7 @@
       },
       "item-3": {
         "title": "What will I receive at the end of the audit?",
-        "description": "You will receive a detailed report with key findings, specific recommendations, and an action plan to improve your website's performance."
+        "description": "You will receive <link>a detailed report</link> with key findings, specific recommendations, and an action plan to improve your website's performance."
       },
       "item-4": {
         "title": "How is the audit performed?",

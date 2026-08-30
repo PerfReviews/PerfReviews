@@ -16,7 +16,8 @@
     "pricing": {
       "popular-badge": "Popular",
       "monthly": "mes",
-      "button": "Contactar"
+      "button": "Contactar",
+      "sample-report": "Ver un informe de ejemplo"
     },
     "footer": {
       "links": {
@@ -121,7 +122,7 @@
       },
       "item-3": {
         "title": "¿Qué recibiré al final de la auditoría?",
-        "description": "Recibirás un informe detallado con hallazgos clave, recomendaciones específicas y un plan de acción para mejorar el rendimiento de tu sitio web."
+        "description": "Recibirás <link>un informe detallado</link> con hallazgos clave, recomendaciones específicas y un plan de acción para mejorar el rendimiento de tu sitio web."
       },
       "item-4": {
         "title": "¿Cómo se realiza la auditoría?",

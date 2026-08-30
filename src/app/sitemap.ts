@@ -56,5 +56,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })
     );
 
-  return [...urls, ...posts, ...reviews];
+  const siteURL = process.env.SITE_URL as string;
+  const sampleReportLanguages = {
+    es: [siteURL, "informe-ejemplo"].join("/"),
+    en: [siteURL, "sample-report"].join("/"),
+  };
+
+  const sampleReports = ["informe-ejemplo", "sample-report"].map((pathname) => ({
+    url: [siteURL, pathname].join("/"),
+    lastModified: new Date(),
+    changeFrequency: "yearly" as ChangeFrequency,
+    priority: 0.8,
+    alternates: { languages: sampleReportLanguages },
+  }));
+
+  return [...urls, ...posts, ...reviews, ...sampleReports];
 }

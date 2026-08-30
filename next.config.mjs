@@ -17,6 +17,14 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: "/informe-ejemplo",
+        destination: "/informe-ejemplo.html",
+      },
+      {
+        source: "/sample-report",
+        destination: "/sample-report.html",
+      },
+      {
         source: "/insights",
         destination: "https://perfreviews-insights.vercel.app/insights",
       },
