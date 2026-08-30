@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import {
   Accordion,
@@ -13,10 +13,22 @@ export interface FAQAccordionProps {}
 
 export const FAQAccordion = (props: FAQAccordionProps) => {
   const t = useTranslations("HomePage");
+  const locale = useLocale();
+
+  const sampleReportPath = locale === "es" ? "/informe-ejemplo" : "/sample-report";
 
   const faqs = Array.from(Array(10).keys()).map((_, index) => ({
     title: t(`faqs.item-${index + 1}.title`),
-    description: t(`faqs.item-${index + 1}.description`),
+    description: t.rich(`faqs.item-${index + 1}.description`, {
+      link: (children) => (
+        <a
+          className="underline underline-offset-4 hover:text-foreground"
+          href={sampleReportPath}
+        >
+          {children}
+        </a>
+      ),
+    }),
   }));
 
   return (
