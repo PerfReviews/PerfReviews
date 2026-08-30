@@ -7,7 +7,17 @@ import { Container } from "@/components/ui/container";
 
 interface ContactPageProps {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ service?: string }>;
 }
+
+// Only a value the form actually offers may preselect the field.
+const services = ["audit", "business", "enterprise", "workshop", "other"];
+
+const toService = (value?: string) => {
+  const match = services.find((service) => service === value?.toLowerCase());
+
+  return match ? `${match[0].toUpperCase()}${match.slice(1)}` : undefined;
+};
 
 export async function generateMetadata({ params }: ContactPageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -24,8 +34,9 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
   };
 }
 
-export default async function ContactPage({ params }: ContactPageProps) {
+export default async function ContactPage({ searchParams }: ContactPageProps) {
   const t = await getTranslations("ContactPage");
+  const { service } = await searchParams;
 
   return (
     <>
@@ -37,7 +48,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
           </div>
 
           <div className="max-w-2xl">
-            <ContactForm />
+            <ContactForm defaultService={toService(service)} />
           </div>
         </main>
       </Container>
