@@ -469,7 +469,7 @@ figcaption .src{ color:var(--faint); font-style:italic; }
   <div class="toc-row"><span class="id">PERF-009</span><span class="ti">Speculation Rules para la confirmación<small>1–3 s en el paso de mayor intención del embudo</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-009">40</span></div>
   <div class="toc-row"><span class="id">PERF-010</span><span class="ti">content-visibility en las secciones ocultas<small>225 de 242 nodos entran en cada pasada de layout</small></span><span><span class="pri p3">P3</span></span><span class="pg" data-ref="perf-010">43</span></div>
   <div class="toc-row"><span class="id">PERF-011</span><span class="ti">Deduplicar las llamadas a la API<small>57 llamadas donde se esperan ~40</small></span><span><span class="pri p1">P1</span></span><span class="pg" data-ref="perf-011">47</span></div>
-  <div class="toc-row"><span class="id">PERF-012</span><span class="ti">Activar HTTP/2 103 Early Hints<small>hasta 413 ms de ventana ociosa por carga en frío</small></span><span><span class="pri p3">P3</span></span><span class="pg" data-ref="perf-012">51</span></div>
+  <div class="toc-row"><span class="id">PERF-012</span><span class="ti">Activar HTTP/2 103 Early Hints<small>hasta 413 ms de ventana ociosa por primera carga</small></span><span><span class="pri p3">P3</span></span><span class="pg" data-ref="perf-012">51</span></div>
   <div class="toc-row"><span class="id">PERF-013</span><span class="ti">Cargar el SDK de mapas bajo demanda<small>666 KB a los 4,7 s sin ninguna interacción</small></span><span><span class="pri done">Resuelta</span></span><span class="pg" data-ref="perf-013">55</span></div>
   <div class="toc-row"><span class="id">PERF-014</span><span class="ti">Optimizar el sprite de iconos<small>694 iconos enviados, 76 usados</small></span><span><span class="pri p2">P2</span></span><span class="pg" data-ref="perf-014">59</span></div>
 
@@ -692,10 +692,10 @@ figcaption .src{ color:var(--faint); font-style:italic; }
 <pre>docs/performance/issues/evidence/
 └── PERF-XXX/
     ├── CAPTURE-GUIDE.md                  instrucciones de captura paso a paso
-    ├── PERF-XXX-no-cache.har             captura de red en frío
-    ├── PERF-XXX-with-cache.har           captura de red en templado
-    ├── PERF-XXX-no-cache-trace.json.gz   traza de rendimiento en frío
-    ├── PERF-XXX-with-cache-trace.json.gz traza de rendimiento en templado
+    ├── PERF-XXX-no-cache.har             captura de red sin caché
+    ├── PERF-XXX-with-cache.har           captura de red con caché
+    ├── PERF-XXX-no-cache-trace.json.gz   traza de rendimiento sin caché
+    ├── PERF-XXX-with-cache-trace.json.gz traza de rendimiento con caché
     ├── PERF-XXX-*.png                    capturas de cascada y flame chart
     └── PERF-XXX-recording.mp4            grabación (solo PERF-001, -002, -010)</pre>
 
@@ -727,7 +727,7 @@ figcaption .src{ color:var(--faint); font-style:italic; }
 
   <div class="keynum">
     <span class="n">6 173 ms</span>
-    <span class="t">de ventana entre la primera petición de esquema y la última respuesta, con caché templada, desde España hacia <code>/es-mx/reserva/crear</code>. Desde el inicio de la navegación hasta el último esquema: <strong>~8 537 ms</strong>.</span>
+    <span class="t">de ventana entre la primera petición de esquema y la última respuesta, con caché, desde España hacia <code>/es-mx/reserva/crear</code>. Desde el inicio de la navegación hasta el último esquema: <strong>~8 537 ms</strong>.</span>
   </div>
 </section>
 
@@ -754,7 +754,7 @@ figcaption .src{ color:var(--faint); font-style:italic; }
 <p>Cada ida y vuelta adicional se traslada directamente a LCP y TTI. En <strong>PERF-005</strong> está el motivo de que cada una de esas idas y vueltas cueste lo que cuesta.</p>
 
 <h3 class="sec">Impacto medido</h3>
-<p>Capturado con <code>devtools-snippet-perf001.js</code> contra producción, caché templada, España (UE) → <code>/es-mx/reserva/crear</code>.</p>
+<p>Capturado con <code>devtools-snippet-perf001.js</code> contra producción, con caché, España (UE) → <code>/es-mx/reserva/crear</code>.</p>
 
 <div class="kpi">
   <div><span class="n">32</span><span class="l">peticiones de esquema</span></div>
@@ -819,11 +819,11 @@ forkJoin({
   <tbody>
     <tr><td class="mono">PERF-001-no-cache-waterfall.png</td><td><span class="st ok">Recopilada</span></td><td>Cascada completa con descarga de assets</td></tr>
     <tr><td class="mono">PERF-001-with-cache-waterfall.png</td><td><span class="st ok">Recopilada</span></td><td>Cascada solo de API, aislando la cadena de esquemas</td></tr>
-    <tr><td class="mono">PERF-001-recording.mp4</td><td><span class="st ok">Recopilada</span></td><td>Grabación del retardo con caché templada</td></tr>
+    <tr><td class="mono">PERF-001-recording.mp4</td><td><span class="st ok">Recopilada</span></td><td>Grabación del retardo con caché</td></tr>
     <tr><td class="mono">PERF-001-Highlight-schema-requests.png</td><td><span class="st ok">Recopilada</span></td><td>Salida por consola del snippet</td></tr>
     <tr><td class="mono">PERF-001-Highlight-schema-requests.json</td><td><span class="st ok">Recopilada</span></td><td>Salida estructurada — 32 peticiones, 6 173 ms</td></tr>
     <tr><td class="mono">PERF-001-no-cache.har · with-cache.har</td><td><span class="st ok">Recopilada</span></td><td>—</td></tr>
-    <tr><td class="mono">PERF-001-*-trace.json.gz</td><td><span class="st ok">Recopilada</span></td><td>Trazas en frío y en templado</td></tr>
+    <tr><td class="mono">PERF-001-*-trace.json.gz</td><td><span class="st ok">Recopilada</span></td><td>Trazas con y sin caché</td></tr>
   </tbody>
 </table>
 
@@ -903,7 +903,7 @@ forkJoin({
 <p>El CSS bloquea el render por diseño. Cada kilobyte extra en la ruta crítica retrasa FCP directamente.</p>
 
 <h3 class="sec">Impacto medido</h3>
-<p>Capturado con <code>devtools-snippet-perf002.js</code>, producción, caché templada, España (UE) → <code>/es-mx/reserva/crear</code>.</p>
+<p>Capturado con <code>devtools-snippet-perf002.js</code>, producción, con caché, España (UE) → <code>/es-mx/reserva/crear</code>.</p>
 
 <figure>
   <div class="fig-frame"><svg class="chart" viewBox="0 0 700 79" xmlns="http://www.w3.org/2000/svg" role="img"><text class="c-lbl" x="152" y="20" text-anchor="end">main-[hash].css</text><rect class="c-bar c-normal" x="160" y="10" width="370.9" height="13" rx="2"/><text class="c-val" x="537.9" y="20">1 280,8 KB  · 88,6 % sin usar</text><text class="c-lbl" x="152" y="41" text-anchor="end">design-system-core.css</text><rect class="c-bar c-poor" x="160" y="31" width="284.5" height="13" rx="2"/><text class="c-val" x="451.5" y="41">982,6 KB  · 96,7 % sin usar</text><text class="c-lbl" x="152" y="62" text-anchor="end">assistant-launcher.css</text><rect class="c-bar c-poor" x="160" y="52" width="4.5" height="13" rx="2"/><text class="c-val" x="171.5" y="62">15,5 KB  · 99,3 % sin usar</text></svg></div>
@@ -1064,7 +1064,7 @@ private preconnectToMaps(): void {
     }
   });
 }</pre>
-<p>Se llama en el <code>mouseenter</code> del campo de dirección: para cuando se añade la etiqueta del script, la conexión ya está caliente.</p>
+<p>Se llama en el <code>mouseenter</code> del campo de dirección: para cuando se añade la etiqueta del script, la conexión ya está establecida.</p>
 
 <h3 class="sec">Evidencia</h3>
 <div class="note env">
@@ -1074,8 +1074,8 @@ private preconnectToMaps(): void {
 <table class="compact">
   <thead><tr><th>Fichero</th><th style="width:26mm">Estado</th><th style="width:56mm">Notas</th></tr></thead>
   <tbody>
-    <tr><td class="mono">PERF-003-cold-waterfall.png</td><td><span class="st ok">Recopilada</span></td><td>Cascada en frío con las columnas de DNS y conexión</td></tr>
-    <tr><td class="mono">PERF-003-cold.har</td><td><span class="st ok">Recopilada</span></td><td>HAR en frío con el detalle por origen</td></tr>
+    <tr><td class="mono">PERF-003-cold-waterfall.png</td><td><span class="st ok">Recopilada</span></td><td>Cascada sin caché con las columnas de DNS y conexión</td></tr>
+    <tr><td class="mono">PERF-003-cold.har</td><td><span class="st ok">Recopilada</span></td><td>HAR sin caché con el detalle por origen</td></tr>
     <tr><td class="mono">PERF-003-tagmanager-timing.png</td><td><span class="st ok">Recopilada</span></td><td>Panel Timing del gestor de etiquetas</td></tr>
     <tr><td class="mono">PERF-003-cdn-timing.png</td><td><span class="st ok">Recopilada</span></td><td>Panel Timing de <code>cdn.vantia.com</code></td></tr>
     <tr><td class="mono">PERF-003-resource-hints-audit.png</td><td><span class="st ok">Recopilada</span></td><td>Confirmación de <code>preconnect: 0</code></td></tr>
@@ -1085,8 +1085,8 @@ private preconnectToMaps(): void {
 </table>
 
 <h3 class="sec">Mejora esperada</h3>
-<p>Cada <em>handshake</em> en frío que se elimina ahorra entre 100 y 300 ms sobre fibra desde España, con unos 120 ms de RTT hasta orígenes alojados en EE. UU. Con tres o cuatro orígenes externos, un ahorro total de <strong>300 a 900 ms</strong> en la primera carga es realista.</p>
-<p>Para el mercado latinoamericano con RTT de 300–500 ms, el coste por origen es de 2 a 4× superior, así que la mejora crece en proporción: entre 600 ms y 1,6 s por carga en frío.</p>
+<p>Cada <em>handshake</em> inicial que se elimina ahorra entre 100 y 300 ms sobre fibra desde España, con unos 120 ms de RTT hasta orígenes alojados en EE. UU. Con tres o cuatro orígenes externos, un ahorro total de <strong>300 a 900 ms</strong> en la primera carga es realista.</p>
+<p>Para el mercado latinoamericano con RTT de 300–500 ms, el coste por origen es de 2 a 4× superior, así que la mejora crece en proporción: entre 600 ms y 1,6 s por primera carga.</p>
 
 <h3 class="sec">Referencias</h3>
 <ul class="refs">
@@ -1183,17 +1183,17 @@ private preconnectToMaps(): void {
 <table class="compact">
   <thead><tr><th>Fichero</th><th style="width:26mm">Estado</th><th style="width:54mm">Notas</th></tr></thead>
   <tbody>
-    <tr><td class="mono">PERF-004-no-cache.har · with-cache.har</td><td><span class="st ok">Recopilada</span></td><td>En templado las fuentes vienen de disco, pero el retardo de descubrimiento persiste</td></tr>
+    <tr><td class="mono">PERF-004-no-cache.har · with-cache.har</td><td><span class="st ok">Recopilada</span></td><td>Con caché las fuentes vienen de disco, pero el retardo de descubrimiento persiste</td></tr>
     <tr><td class="mono">PERF-004-*-trace.json.gz</td><td><span class="st ok">Recopilada</span></td><td>Confirman que el hueco no es un problema de caché</td></tr>
     <tr><td class="mono">PERF-004-no-cache-font-detail.png</td><td><span class="st ok">Recopilada</span></td><td>Detalle de la petición: «Initiated by <code>main-[hash].css</code>»</td></tr>
     <tr><td class="mono">PERF-004-no-cache-font-duplicates.png</td><td><span class="st ok">Recopilada</span></td><td>Filtro de fuentes: <code>Bold</code> y <code>Regular</code> ×2</td></tr>
-    <tr><td class="mono">PERF-004-*-waterfall.png</td><td><span class="st wait">Pendiente</span></td><td>Cascadas en frío y templado</td></tr>
+    <tr><td class="mono">PERF-004-*-waterfall.png</td><td><span class="st wait">Pendiente</span></td><td>Cascadas con y sin caché</td></tr>
   </tbody>
 </table>
 
 <h3 class="sec">Mejora esperada</h3>
 <p>Precargar dos o tres ficheros críticos elimina la cascada de descubrimiento y puede mejorar LCP entre <strong>200 y 400 ms</strong> en la primera visita sin caché, medido desde la línea base España/fibra. Las visitas siguientes no se ven afectadas, porque las fuentes ya vienen de caché.</p>
-<p>Con RTT de 300–500 ms el retardo de descubrimiento es proporcionalmente mayor, lo que sitúa la mejora estimada entre 2 y 4× por encima: unos 400 a 800 ms por carga en frío.</p>
+<p>Con RTT de 300–500 ms el retardo de descubrimiento es proporcionalmente mayor, lo que sitúa la mejora estimada entre 2 y 4× por encima: unos 400 a 800 ms por primera carga.</p>
 
 <h3 class="sec">Referencias</h3>
 <ul class="refs">
@@ -1241,15 +1241,15 @@ server-timing: origin; dur=75</pre>
 <h4 class="sub">Mediciones confirmadas</h4>
 <p>Dos capturas, Chrome estable, España, 1 de junio de 2026.</p>
 <table class="compact">
-  <thead><tr><th style="width:40mm">Métrica</th><th class="num">HAR templado,<br>29 llamadas</th><th class="num">Snippet, sesión<br>completa, 55</th><th class="num" style="width:24mm">Servido desde<br>el <em>edge</em></th></tr></thead>
+  <thead><tr><th style="width:40mm">Métrica</th><th class="num">HAR con caché,<br>29 llamadas</th><th class="num">Snippet, sesión<br>completa, 55</th><th class="num" style="width:24mm">Servido desde<br>el <em>edge</em></th></tr></thead>
   <tbody>
     <tr><th>Estado de caché en CDN</th><td class="num">MISS en todas</td><td class="num">—</td><td class="num">HIT</td></tr>
-    <tr><th>Duración, peticiones templadas</th><td class="num">210–345 ms<br><span class="tag-inline">media ~235 ms</span></td><td class="num">173–957 ms<br><span class="tag-inline">media ~342 ms</span></td><td class="num">~10–20 ms</td></tr>
+    <tr><th>Duración, peticiones con caché</th><td class="num">210–345 ms<br><span class="tag-inline">media ~235 ms</span></td><td class="num">173–957 ms<br><span class="tag-inline">media ~342 ms</span></td><td class="num">~10–20 ms</td></tr>
     <tr><th>Arranque en frío · <code>schemas/default</code></th><td class="num">4 328 ms de TTFB</td><td class="num">—</td><td class="num">~10–20 ms</td></tr>
     <tr><th>Arranque en frío · <code>/feature-toggle</code></th><td class="num">—</td><td class="num">1 671 ms</td><td class="num">~10–20 ms</td></tr>
     <tr><th>Arranque en frío · <code>/user</code></th><td class="num">—</td><td class="num">958 ms</td><td class="num">~10–20 ms</td></tr>
-    <tr><th>Proceso en el <em>edge</em>, templado</th><td class="num">103–136 ms</td><td class="num">—</td><td class="num">—</td></tr>
-    <tr><th>Proceso en el origen, templado</th><td class="num">70–90 ms</td><td class="num">—</td><td class="num">—</td></tr>
+    <tr><th>Proceso en el <em>edge</em>, con caché</th><td class="num">103–136 ms</td><td class="num">—</td><td class="num">—</td></tr>
+    <tr><th>Proceso en el origen, con caché</th><td class="num">70–90 ms</td><td class="num">—</td><td class="num">—</td></tr>
     <tr><th>Llamadas totales</th><td class="num">29</td><td class="num">55</td><td class="num">—</td></tr>
     <tr><th>Duración acumulada</th><td class="num">—</td><td class="num">18,8 s</td><td class="num">~0,5–1 s</td></tr>
     <tr class="total"><th>Sobrecoste frente a un asset estático del CDN</th><td class="num">—</td><td class="num">~211 ms por llamada</td><td class="num">~0 ms</td></tr>
@@ -1263,8 +1263,8 @@ server-timing: origin; dur=75</pre>
 </figure>
 
 <figure>
-  <div class="fig-frame"><svg class="chart" viewBox="0 0 700 90" xmlns="http://www.w3.org/2000/svg" role="img"><text class="c-lbl" x="167" y="22" text-anchor="end">guest-details · templada</text><rect class="c-bar c-info" x="175.0" y="10" width="48.9" height="15" rx="1.5"/><rect class="c-bar c-poor" x="223.9" y="10" width="32.8" height="15" rx="1.5"/><rect class="c-bar c-soft" x="256.7" y="10" width="68.1" height="15" rx="1.5"/><text class="c-val" x="331.7" y="22">353 ms de espera</text><text class="c-lbl" x="167" y="48" text-anchor="end">schemas/default · en frío</text><rect class="c-bar c-info" x="175.0" y="36" width="39.6" height="15" rx="1.5"/><rect class="c-bar c-poor" x="214.6" y="36" width="294.0" height="15" rx="1.5"/><rect class="c-bar c-soft" x="508.5" y="36" width="87.2" height="15" rx="1.5"/><text class="c-val" x="602.7" y="48">989 ms de espera</text><rect class="c-bar c-info" x="175" y="72" width="9" height="9" rx="1.5"/><text class="c-tick" x="188" y="80">edge del CDN</text><rect class="c-bar c-poor" x="255.8" y="72" width="9" height="9" rx="1.5"/><text class="c-tick" x="268.8" y="80">origen</text><rect class="c-bar c-soft" x="304.20000000000005" y="72" width="9" height="9" rx="1.5"/><text class="c-tick" x="317.20000000000005" y="80">red y resto</text></svg></div>
-  <figcaption><b>Dónde se va el tiempo de espera.</b> En una petición templada el origen ya aporta 77 ms sobre 353. En el arranque en frío, 691 ms de 989 son puro tiempo de origen. <span class="src">Reconstruido a partir de PERF-005-cdn-cache-miss-headers.png y PERF-005-cold-start-timing.png.</span></figcaption>
+  <div class="fig-frame"><svg class="chart" viewBox="0 0 700 90" xmlns="http://www.w3.org/2000/svg" role="img"><text class="c-lbl" x="167" y="22" text-anchor="end">guest-details · con caché</text><rect class="c-bar c-info" x="175.0" y="10" width="48.9" height="15" rx="1.5"/><rect class="c-bar c-poor" x="223.9" y="10" width="32.8" height="15" rx="1.5"/><rect class="c-bar c-soft" x="256.7" y="10" width="68.1" height="15" rx="1.5"/><text class="c-val" x="331.7" y="22">353 ms de espera</text><text class="c-lbl" x="167" y="48" text-anchor="end">schemas/default · en frío</text><rect class="c-bar c-info" x="175.0" y="36" width="39.6" height="15" rx="1.5"/><rect class="c-bar c-poor" x="214.6" y="36" width="294.0" height="15" rx="1.5"/><rect class="c-bar c-soft" x="508.5" y="36" width="87.2" height="15" rx="1.5"/><text class="c-val" x="602.7" y="48">989 ms de espera</text><rect class="c-bar c-info" x="175" y="72" width="9" height="9" rx="1.5"/><text class="c-tick" x="188" y="80">edge del CDN</text><rect class="c-bar c-poor" x="255.8" y="72" width="9" height="9" rx="1.5"/><text class="c-tick" x="268.8" y="80">origen</text><rect class="c-bar c-soft" x="304.20000000000005" y="72" width="9" height="9" rx="1.5"/><text class="c-tick" x="317.20000000000005" y="80">red y resto</text></svg></div>
+  <figcaption><b>Dónde se va el tiempo de espera.</b> En una petición con caché el origen ya aporta 77 ms sobre 353. En el arranque en frío, 691 ms de 989 son puro tiempo de origen. <span class="src">Reconstruido a partir de PERF-005-cdn-cache-miss-headers.png y PERF-005-cold-start-timing.png.</span></figcaption>
 </figure>
 
 <h3 class="sec">Causas raíz</h3>
@@ -1279,7 +1279,7 @@ expires: 0</pre>
 <p>La primera petición de esquema de cada sesión tarda 4 328 ms de TTFB, de los cuales 3 667 ms se gastan en el origen. Las siguientes bajan a unos 75 ms. Esa firma es coherente con una inicialización perezosa: pool de conexiones, calentamiento de la máquina virtual o un cálculo bajo demanda.</p>
 
 <h4 class="sub">3 · El origen no está cerca de los usuarios</h4>
-<p>Incluso en templado, 210–345 ms de TTFB indican distancia geográfica real entre el <em>edge</em> y el origen. Con 29 llamadas en la carga del formulario, eso se acumula deprisa.</p>
+<p>Incluso con caché, 210–345 ms de TTFB indican distancia geográfica real entre el <em>edge</em> y el origen. Con 29 llamadas en la carga del formulario, eso se acumula deprisa.</p>
 
 <div class="note">
   <span class="lbl">Nota sobre un hueco previo de investigación</span>
@@ -1318,8 +1318,8 @@ Surrogate-Control: max-age=60</pre>
   <thead><tr><th>Fichero</th><th style="width:26mm">Estado</th><th style="width:54mm">Notas</th></tr></thead>
   <tbody>
     <tr><td class="mono">PERF-005-warm-cache.har</td><td><span class="st ok">Recopilada</span></td><td>29 llamadas, <code>cdn-cache: MISS</code>, TTFB 210–345 ms</td></tr>
-    <tr><td class="mono">PERF-005-with-cache.har</td><td><span class="st ok">Recopilada</span></td><td>Segunda captura templada; confirma el patrón entre sesiones</td></tr>
-    <tr><td class="mono">PERF-005-no-cache.har</td><td><span class="st ok">Recopilada</span></td><td>En frío; TTFB de <code>schemas/default</code> ~4 328 ms</td></tr>
+    <tr><td class="mono">PERF-005-with-cache.har</td><td><span class="st ok">Recopilada</span></td><td>Segunda captura con caché; confirma el patrón entre sesiones</td></tr>
+    <tr><td class="mono">PERF-005-no-cache.har</td><td><span class="st ok">Recopilada</span></td><td>Sin caché; TTFB de <code>schemas/default</code> ~4 328 ms</td></tr>
     <tr><td class="mono">PERF-005-cdn-cache-miss-headers.png</td><td><span class="st ok">Recopilada</span></td><td><code>cdn-cache; desc=MISS</code> junto a <code>Cache-Control: no-store</code></td></tr>
     <tr><td class="mono">PERF-005-cold-start-timing.png</td><td><span class="st ok">Recopilada</span></td><td>Panel Timing con la barra de TTFB en ~4 300 ms</td></tr>
     <tr><td class="mono">PERF-005-TTFB-01.png · -02.png</td><td><span class="st ok">Recopilada</span></td><td>Salida del snippet: TTFB por endpoint</td></tr>
@@ -1344,7 +1344,7 @@ Surrogate-Control: max-age=60</pre>
     <tr><th>Despliegue regional completo</th><td class="num">~5–15 ms</td><td class="num">~5–15 ms</td></tr>
   </tbody>
 </table>
-<p>Las cifras base reflejan condiciones de España sobre fibra. Para el mercado latinoamericano con RTT de 300–500 ms, el TTFB templado se estima entre 500 y 900 ms por llamada, lo que empeora bastante el coste acumulado de sesión (55 llamadas × ~700 ms de media) y hace la corrección de caché proporcionalmente más valiosa.</p>
+<p>Las cifras base reflejan condiciones de España sobre fibra. Para el mercado latinoamericano con RTT de 300–500 ms, el TTFB con caché se estima entre 500 y 900 ms por llamada, lo que empeora bastante el coste acumulado de sesión (55 llamadas × ~700 ms de media) y hace la corrección de caché proporcionalmente más valiosa.</p>
 
 <h3 class="sec">Referencias</h3>
 <ul class="refs">
@@ -1413,12 +1413,12 @@ Surrogate-Control: max-age=60</pre>
 <table class="compact">
   <thead><tr><th>Métrica</th><th class="num" style="width:32mm">Medido</th><th style="width:50mm">Condiciones</th></tr></thead>
   <tbody>
-    <tr><th>JS bloqueante transferido</th><td class="num">193 KB</td><td>Caché en frío, España, fibra, sin limitación</td></tr>
-    <tr><th>JS bloqueante descomprimido</th><td class="num">~378 KB</td><td>Caché en frío, España, fibra, sin limitación</td></tr>
+    <tr><th>JS bloqueante transferido</th><td class="num">193 KB</td><td>Sin caché, España, fibra, sin limitación</td></tr>
+    <tr><th>JS bloqueante descomprimido</th><td class="num">~378 KB</td><td>Sin caché, España, fibra, sin limitación</td></tr>
     <tr><th>Scripts bloqueantes en <code>&lt;head&gt;</code></th><td class="num">3</td><td>Estáticos, sin <code>defer</code>/<code>async</code></td></tr>
-    <tr><th>Inicio de descarga</th><td class="num">~463 ms</td><td>Caché en frío</td></tr>
-    <tr><th>FCP</th><td class="num">~643 ms</td><td>Caché en frío</td></tr>
-    <tr><th>Inicio de inyección del <em>data layer</em></th><td class="num">~1 239 ms</td><td>Caché en frío</td></tr>
+    <tr><th>Inicio de descarga</th><td class="num">~463 ms</td><td>Sin caché</td></tr>
+    <tr><th>FCP</th><td class="num">~643 ms</td><td>Sin caché</td></tr>
+    <tr><th>Inicio de inyección del <em>data layer</em></th><td class="num">~1 239 ms</td><td>Sin caché</td></tr>
   </tbody>
 </table>
 
@@ -1463,7 +1463,7 @@ async load(): Promise&lt;void&gt; {
 <table class="compact">
   <thead><tr><th>Fichero</th><th style="width:26mm">Estado</th><th style="width:54mm">Notas</th></tr></thead>
   <tbody>
-    <tr><td class="mono">PERF-006-no-cache.har · with-cache.har</td><td><span class="st ok">Recopilada</span></td><td>En templado el parseo y la evaluación siguen retrasando el render</td></tr>
+    <tr><td class="mono">PERF-006-no-cache.har · with-cache.har</td><td><span class="st ok">Recopilada</span></td><td>Con caché el parseo y la evaluación siguen retrasando el render</td></tr>
     <tr><td class="mono">PERF-006-*-trace.json.gz</td><td><span class="st ok">Recopilada</span></td><td>Bloques «Evaluate Script» antes del marcador de FCP</td></tr>
     <tr><td class="mono">PERF-006-network-blocking.png</td><td><span class="st ok">Recopilada</span></td><td>Los tres scripts bloqueantes con prioridad alta</td></tr>
     <tr><td class="mono">PERF-006-trace-fcp-blocked.png</td><td><span class="st ok">Recopilada</span></td><td>FCP retrasado por tareas de evaluación</td></tr>
@@ -1501,7 +1501,7 @@ async load(): Promise&lt;void&gt; {
 
   <div class="keynum">
     <span class="n">5,35 MB</span>
-    <span class="t">descomprimidos — 828 KB transferidos — de código de terceros en una carga en frío, sin contar el tracker de personalización ni las respuestas de los <em>beacons</em>. En más de 28 peticiones.</span>
+    <span class="t">descomprimidos — 828 KB transferidos — de código de terceros en una primera carga, sin contar el tracker de personalización ni las respuestas de los <em>beacons</em>. En más de 28 peticiones.</span>
   </div>
 </section>
 
@@ -1511,7 +1511,7 @@ async load(): Promise&lt;void&gt; {
 <ul>
   <li>466 KB comprimidos / 2,25 MB descomprimidos en 13 peticiones: un bundle principal y doce ficheros de extensiones</li>
   <li>Encolado a los 4,06 s del ciclo de vida de la página — lo inyecta el shell dinámicamente, no es una etiqueta <code>&lt;script&gt;</code> descubierta por el parser</li>
-  <li>Coste de conexión en frío al CDN del proveedor: DNS 10 ms + TCP 33 ms + SSL 18 ms = 61 ms de <em>handshake</em> antes de transferir un solo byte</li>
+  <li>Coste de la conexión inicial al CDN del proveedor: DNS 10 ms + TCP 33 ms + SSL 18 ms = 61 ms de <em>handshake</em> antes de transferir un solo byte</li>
   <li><code>EvaluateScript</code> del bundle principal: una tarea larga de 51,3 ms en el hilo principal</li>
   <li>No hace falta hasta que la página es interactiva</li>
 </ul>
@@ -1544,7 +1544,7 @@ async load(): Promise&lt;void&gt; {
 <h3 class="sec">Impacto medido</h3>
 <figure>
   <div class="fig-frame"><svg class="chart" viewBox="0 0 700 100" xmlns="http://www.w3.org/2000/svg" role="img"><text class="c-lbl" x="167" y="20" text-anchor="end">Asistente virtual (chat)</text><rect class="c-bar c-poor" x="175" y="10" width="361.2" height="13" rx="2"/><text class="c-val" x="543.2" y="20">3 099 KB  · 15+ peticiones</text><text class="c-lbl" x="167" y="41" text-anchor="end">Gestor de etiquetas</text><rect class="c-bar c-poor" x="175" y="31" width="262.4" height="13" rx="2"/><text class="c-val" x="444.4" y="41">2 251 KB  · 13 peticiones</text><text class="c-lbl" x="167" y="62" text-anchor="end">Personalización</text><rect class="c-bar c-soft" x="175" y="52" width="1.5" height="13" rx="2"/><text class="c-val" x="183.5" y="62">—  · sin medir</text><text class="c-lbl" x="167" y="83" text-anchor="end">Analítica (beacons)</text><rect class="c-bar c-soft" x="175" y="73" width="1.5" height="13" rx="2"/><text class="c-val" x="183.5" y="83">—  · 12 peticiones, carga ~0</text></svg></div>
-  <figcaption><b>Peso descomprimido por proveedor.</b> Caché en frío, España, fibra, sin limitación. El total medido, excluyendo personalización y beacons, es de 828 KB transferidos y 5 350 KB descomprimidos en más de 28 peticiones. <span class="src">Reconstruido a partir de PERF-007-no-cache.har y las trazas asociadas.</span></figcaption>
+  <figcaption><b>Peso descomprimido por proveedor.</b> Sin caché, España, fibra, sin limitación. El total medido, excluyendo personalización y beacons, es de 828 KB transferidos y 5 350 KB descomprimidos en más de 28 peticiones. <span class="src">Reconstruido a partir de PERF-007-no-cache.har y las trazas asociadas.</span></figcaption>
 </figure>
 
 <h3 class="sec">Solución recomendada</h3>
@@ -1610,7 +1610,7 @@ private flushActivations(): void {
 
 <h3 class="sec">Mejora esperada</h3>
 <ul>
-  <li><strong>Aplazar el gestor de etiquetas</strong> saca 466 KB (2,25 MB descomprimidos) y una tarea de 51,3 ms de la ruta crítica, y elimina los 61 ms de <em>handshake</em> en frío para quien llega por primera vez.</li>
+  <li><strong>Aplazar el gestor de etiquetas</strong> saca 466 KB (2,25 MB descomprimidos) y una tarea de 51,3 ms de la ruta crítica, y elimina los 61 ms de <em>handshake</em> inicial para quien llega por primera vez.</li>
   <li><strong>Corregir la inicialización del asistente</strong> elimina la duplicación por <em>iframe</em>, quita más de 362 KB de la carga inicial para el 80 % largo de usuarios que nunca abren el chat, y detiene los ocho minutos de <em>polling</em> de fondo.</li>
   <li><strong>Agrupar los beacons</strong> elimina siete de las doce peticiones de analítica por carga.</li>
   <li><strong>Auditar la personalización</strong> puede aportar ahorro adicional una vez se mida su alcance.</li>
@@ -1744,7 +1744,7 @@ const criticalChunks = stats.assets
 
   <div class="keynum">
     <span class="n">1–3 s</span>
-    <span class="t">de retardo de navegación en el momento de mayor intención de todo el embudo, medido sobre fibra con caché templada. Estimado en 3–6 s para el mercado latinoamericano.</span>
+    <span class="t">de retardo de navegación en el momento de mayor intención de todo el embudo, medido sobre fibra con caché. Estimado en 3–6 s para el mercado latinoamericano.</span>
   </div>
 </section>
 
@@ -1821,7 +1821,7 @@ private injectSpeculationRules(): void {
 <table class="compact">
   <thead><tr><th>Fichero</th><th style="width:26mm">Estado</th><th style="width:54mm">Notas</th></tr></thead>
   <tbody>
-    <tr><td class="mono">PERF-009-baseline.har</td><td><span class="st ok">Recopilada</span></td><td>Caché templada, sin reglas activas. Todos los recursos de la página de confirmación arrancan de cero al navegar.</td></tr>
+    <tr><td class="mono">PERF-009-baseline.har</td><td><span class="st ok">Recopilada</span></td><td>Con caché, sin reglas activas. Todos los recursos de la página de confirmación arrancan de cero al navegar.</td></tr>
     <tr><td class="mono">devtools-snippet-perf009.js</td><td><span class="st ok">Recopilada</span></td><td>Snippet reutilizable</td></tr>
     <tr><td class="mono">PERF-009-baseline-trace.json</td><td><span class="st wait">Pendiente</span></td><td>Línea temporal completa de la navegación; el coste de LCP y TTI que la corrección eliminaría</td></tr>
     <tr><td class="mono">PERF-009-nav-waterfall.png</td><td><span class="st wait">Pendiente</span></td><td>Cascada con los recursos arrancando de cero</td></tr>
@@ -2059,7 +2059,7 @@ export class SchemaRequestDeduplicator {
 <table class="compact">
   <thead><tr><th>Fichero</th><th style="width:26mm">Estado</th><th style="width:52mm">Notas</th></tr></thead>
   <tbody>
-    <tr><td class="mono">PERF-011.har</td><td><span class="st ok">Recopilada</span></td><td>Caché templada, todas las llamadas de una carga completa</td></tr>
+    <tr><td class="mono">PERF-011.har</td><td><span class="st ok">Recopilada</span></td><td>Con caché, todas las llamadas de una carga completa</td></tr>
     <tr><td class="mono">PERF-011-trace.json.gz</td><td><span class="st ok">Recopilada</span></td><td>Bloques XHR repetidos: no hay cancelación ni deduplicación activa</td></tr>
     <tr><td class="mono">PERF-011-duplicate-calls.png</td><td><span class="st ok">Recopilada</span></td><td>Listado completo, ordenado por nombre</td></tr>
     <tr><td class="mono">PERF-011-endpoint-detail.png</td><td><span class="st ok">Recopilada</span></td><td>Detalle del peor caso, con una petición cancelada en vuelo</td></tr>
@@ -2088,7 +2088,7 @@ export class SchemaRequestDeduplicator {
   <header class="ch-head">
     <div class="ch-kicker"><span class="ch-num">12</span><span class="ch-id">PERF-012</span><span class="pri p3">P3 · Infraestructura</span></div>
     <h2>Activar HTTP/2 103 Early Hints</h2>
-    <p class="standfirst">Durante los primeros 463 ms de una carga en frío el navegador ha enviado su petición y no ha recibido nada. No puede descargar ni un recurso. Early Hints convierte esa ventana muerta en tiempo de descarga.</p>
+    <p class="standfirst">Durante los primeros 463 ms de una primera carga el navegador ha enviado su petición y no ha recibido nada. No puede descargar ni un recurso. Early Hints convierte esa ventana muerta en tiempo de descarga.</p>
     <dl class="ch-meta">
       <div><dt>Alcance</dt><dd>Todas las rutas servidas<br>por el shell</dd></div>
       <div><dt>Métricas</dt><dd><span class="cwv load">FCP</span><span class="cwv load">LCP</span></dd></div>
@@ -2100,7 +2100,7 @@ export class SchemaRequestDeduplicator {
 
   <div class="keynum">
     <span class="n">~413 ms</span>
-    <span class="t">de tiempo ocioso recuperable por carga en frío: una ventana observada de 463 ms menos unos 50 ms estimados de retardo de la respuesta 103.</span>
+    <span class="t">de tiempo ocioso recuperable por primera carga: una ventana observada de 463 ms menos unos 50 ms estimados de retardo de la respuesta 103.</span>
   </div>
 </section>
 
@@ -2124,7 +2124,7 @@ export class SchemaRequestDeduplicator {
 <p>La técnica rinde justo cuando el TTFB es alto, que según <strong>PERF-005</strong> es aquí la condición normal.</p>
 
 <h3 class="sec">Impacto medido</h3>
-<h4 class="sub">Conexión en frío — 2 de junio de 2026, España → <code>/es-mx/</code></h4>
+<h4 class="sub">Conexión nueva — 2 de junio de 2026, España → <code>/es-mx/</code></h4>
 <table class="compact">
   <thead><tr><th style="width:64mm">Fase</th><th class="num" style="width:32mm">Duración</th></tr></thead>
   <tbody>
@@ -2139,7 +2139,7 @@ export class SchemaRequestDeduplicator {
 </table>
 <p>Los 338 ms de TTFB están por encima de la línea base de ~250 ms de PERF-005, algo coherente con la variabilidad del servidor. DNS, TCP y TLS juntos suman unos 81 ms: cuatro veces menos que el TTFB por sí solo, lo que convierte la ventana ociosa en el coste dominante con diferencia.</p>
 
-<h4 class="sub">Conexión templada — reutilización de HTTP/2</h4>
+<h4 class="sub">Conexión reutilizada — HTTP/2</h4>
 <table class="compact">
   <thead><tr><th style="width:64mm">Fase</th><th class="num" style="width:32mm">Duración</th></tr></thead>
   <tbody>
@@ -2150,7 +2150,7 @@ export class SchemaRequestDeduplicator {
     <tr class="total"><th>Total</th><td class="num">232,09 ms</td></tr>
   </tbody>
 </table>
-<p>El TTFB templado es menor porque no hay coste de conexión, pero siguen siendo 228 ms durante los cuales no puede descargarse nada.</p>
+<p>El TTFB con la conexión reutilizada es menor porque no hay coste de conexión, pero siguen siendo 228 ms durante los cuales no puede descargarse nada.</p>
 
 <h4 class="sub">Ausencia de pistas confirmada en las dos capas</h4>
 <ul>
@@ -2179,7 +2179,7 @@ export class SchemaRequestDeduplicator {
   <tbody>
     <tr><td class="mono">PERF-012-no-cache.har</td><td><span class="st ok">Recopilada</span></td><td>TTFB del documento ≈ 338 ms; todo el CSS y JS arrancan después</td></tr>
     <tr><td class="mono">PERF-012-no-cache-trace.json.gz</td><td><span class="st ok">Recopilada</span></td><td>Hueco de TTFB antes de cualquier barra de descarga</td></tr>
-    <tr><td class="mono">PERF-012-ttfb-timing.png · -warm.png</td><td><span class="st ok">Recopilada</span></td><td>Conexión en frío y templada</td></tr>
+    <tr><td class="mono">PERF-012-ttfb-timing.png · -warm.png</td><td><span class="st ok">Recopilada</span></td><td>Conexión nueva y reutilizada</td></tr>
     <tr><td class="mono">PERF-012-response-headers-01.png · -02.png</td><td><span class="st ok">Recopilada</span></td><td>Sin cabecera <code>Link:</code></td></tr>
     <tr><td class="mono">PERF-012-resource-hints.png / .txt</td><td><span class="st ok">Recopilada</span></td><td>Sin <em>preload</em> ni <em>preconnect</em> propios en el DOM</td></tr>
     <tr><td class="mono">PERF-012-ttfb-summary.png</td><td><span class="st ok">Recopilada</span></td><td>Confirmación numérica de la ventana ociosa</td></tr>
@@ -2188,7 +2188,7 @@ export class SchemaRequestDeduplicator {
 </table>
 
 <h3 class="sec">Mejora esperada</h3>
-<p>103 Early Hints puede recuperar hasta <strong>~413 ms</strong> de tiempo ocioso por carga en frío. Los recursos críticos empezarían a descargarse durante la espera de TTFB en lugar de después.</p>
+<p>103 Early Hints puede recuperar hasta <strong>~413 ms</strong> de tiempo ocioso por primera carga. Los recursos críticos empezarían a descargarse durante la espera de TTFB en lugar de después.</p>
 
 <h3 class="sec">Referencias</h3>
 <ul class="refs">
@@ -2217,7 +2217,7 @@ export class SchemaRequestDeduplicator {
 
   <div class="keynum ok">
     <span class="n">666 KB</span>
-    <span class="t">de JavaScript pedidos a los 4 716 ms sin una sola interacción previa — 186 KB comprimidos, 84 ms de parseo fuera del hilo principal y 20 ms de evaluación dentro, en cada visita, también con caché templada.</span>
+    <span class="t">de JavaScript pedidos a los 4 716 ms sin una sola interacción previa — 186 KB comprimidos, 84 ms de parseo fuera del hilo principal y 20 ms de evaluación dentro, en cada visita, también con caché.</span>
   </div>
 </section>
 
@@ -2495,7 +2495,7 @@ fs.writeFileSync('dist/assets/now-icon-sprite.svg', sprite.toString());</pre>
   <tbody>
     <tr><th>Todas</th><td>No existe ninguna captura tomada desde el mercado latinoamericano. Todas las cifras de ese mercado son extrapolaciones desde la línea base europea.</td></tr>
     <tr><th>PERF-003</th><td>Faltan el panel Timing del SDK de mapas y la traza de rendimiento.</td></tr>
-    <tr><th>PERF-004</th><td>Faltan las capturas de cascada en frío y en templado.</td></tr>
+    <tr><th>PERF-004</th><td>Faltan las capturas de cascada con y sin caché.</td></tr>
     <tr><th>PERF-005</th><td>No hay línea base desde EE. UU., así que el delta de RTT está inferido, no medido. Faltan también la captura de red con la columna TTFB y la traza.</td></tr>
     <tr><th>PERF-007</th><td>Faltan el detalle de tiempos del gestor de etiquetas y la cascada ampliada del asistente. El alcance del tracker de personalización está sin medir.</td></tr>
     <tr><th>PERF-009</th><td>Se apoya en un único HAR. Sin traza, sin capturas y sin desglose del 1–3 s en tiempo de chunk frente a tiempo de API.</td></tr>
