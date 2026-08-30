@@ -77,6 +77,15 @@ export const PricingCard = ({
         ))}
       </ul>
 
+      {plan.sampleReportHref && (
+        <a
+          className="text-sm underline underline-offset-4 text-muted-foreground hover:text-foreground"
+          href={plan.sampleReportHref}
+        >
+          {t("Common.pricing.sample-report")}
+        </a>
+      )}
+
       <Button variant={variant} asChild>
         <Link href={contactPath}>{t("Common.pricing.button")}</Link>
       </Button>

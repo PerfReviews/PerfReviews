@@ -44,6 +44,7 @@ export default async function HomePage({ params }: HomePageProps) {
         "pricing.plans.audit.item-6",
       ],
       price: 2400,
+      sampleReportHref: locale === "es" ? "/informe-ejemplo" : "/sample-report",
     },
     {
       id: "business",

@@ -6,4 +6,5 @@ export interface PricingPlan {
   original?: number;
   isPopular?: boolean;
   isRecurrent?: boolean;
+  sampleReportHref?: string;
 }
