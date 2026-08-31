@@ -1,26 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import { z } from "zod";
+
+import { contactSchema, escapeHTML } from "@/contact";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
-const contactSchema = z.object({
-  name: z.string().trim().min(1).max(120),
-  email: z.email().max(254),
-  company: z.string().trim().max(160).optional().or(z.literal("")),
-  service: z.string().trim().max(60).optional().or(z.literal("")),
-  message: z.string().trim().min(1).max(5000),
-  // honeypot: a real person never sees this field, so anything in it is a bot.
-  // Accepted by the schema on purpose, and dealt with below.
-  website: z.string().max(200).optional(),
-});
-
-const escapeHTML = (value: string) =>
-  value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
 
 export async function POST(request: NextRequest) {
   let payload: unknown;

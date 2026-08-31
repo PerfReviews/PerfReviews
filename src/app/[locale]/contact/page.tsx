@@ -4,20 +4,13 @@ import { getTranslations } from "next-intl/server";
 import { Footer } from "@/components/layout/footer";
 import { ContactForm } from "@/components/shared/contact-form";
 import { Container } from "@/components/ui/container";
+import { toService } from "@/contact";
 
 interface ContactPageProps {
   params: Promise<{ locale: string }>;
   searchParams: Promise<{ service?: string }>;
 }
 
-// Only a value the form actually offers may preselect the field.
-const services = ["audit", "business", "enterprise", "workshop", "other"];
-
-const toService = (value?: string) => {
-  const match = services.find((service) => service === value?.toLowerCase());
-
-  return match ? `${match[0].toUpperCase()}${match.slice(1)}` : undefined;
-};
 
 export async function generateMetadata({ params }: ContactPageProps): Promise<Metadata> {
   const { locale } = await params;
