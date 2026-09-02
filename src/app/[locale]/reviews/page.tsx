@@ -1,8 +1,7 @@
-import { allPosts, allReviews } from "content-collections";
+import { allReviews } from "content-collections";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { BlogCard } from "@/components/blog/blog-card";
 import { ReviewCard } from "@/components/review/review-card";
 import { Container } from "@/components/ui/container";
 

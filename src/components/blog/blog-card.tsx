@@ -1,8 +1,8 @@
 import { Post } from "content-collections";
 import Image from "next/image";
-import Link from "next/link";
 import { ComponentPropsWithoutRef } from "react";
 
+import { Link } from "@/components/shared/navigation";
 import { cn } from "@/components/ui/core";
 import { LinkBox, LinkOverlay } from "@/components/ui/link-overlay";
 
@@ -28,7 +28,7 @@ export const BlogCard = ({ className, post, ...others }: BlogCardProps) => {
             <LinkOverlay asChild>
               <Link
                 className="hover:underline-offset-4 hover:underline"
-                href={`/${post.locale}/blog/${post.slug}`}
+                href={`/blog/${post.slug}`}
               >
                 {post.title}
               </Link>

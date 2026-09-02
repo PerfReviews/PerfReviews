@@ -6,6 +6,7 @@ import { ArchivedNotice } from "@/components/shared/archived-notice";
 import { JsonLd } from "@/components/shared/json-ld";
 import { MDX } from "@/components/shared/mdx";
 import { Container } from "@/components/ui/container";
+import { absoluteURL, localeURL } from "@/site";
 
 export interface PostPageProps {
   params: Promise<{
@@ -29,8 +30,7 @@ export async function generateMetadata({
   }
 
   const { title, summary: description, featuredImage } = post;
-  const siteURL = process.env.SITE_URL || "http://localhost:3000";
-  const images = featuredImage ? [`${siteURL}${featuredImage}`] : undefined;
+  const images = featuredImage ? [absoluteURL(featuredImage)] : undefined;
 
   return {
     title,
@@ -63,8 +63,6 @@ export default async function PostPage({ params }: PostPageProps) {
     notFound();
   }
 
-  const siteURL = process.env.SITE_URL || "http://localhost:3000";
-  const prefix = locale === "en" ? "" : `/${locale}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -73,7 +71,7 @@ export default async function PostPage({ params }: PostPageProps) {
     dateModified: post.date,
     description: post.summary,
     image: post.featuredImage,
-    url: `${siteURL}${prefix}/blog/${post.slug}`,
+    url: localeURL(locale, `/blog/${post.slug}`),
   };
 
   return (

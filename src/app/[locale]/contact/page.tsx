@@ -4,10 +4,13 @@ import { getTranslations } from "next-intl/server";
 import { Footer } from "@/components/layout/footer";
 import { ContactForm } from "@/components/shared/contact-form";
 import { Container } from "@/components/ui/container";
+import { toService } from "@/contact";
 
 interface ContactPageProps {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ service?: string }>;
 }
+
 
 export async function generateMetadata({ params }: ContactPageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -24,8 +27,9 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
   };
 }
 
-export default async function ContactPage({ params }: ContactPageProps) {
+export default async function ContactPage({ searchParams }: ContactPageProps) {
   const t = await getTranslations("ContactPage");
+  const { service } = await searchParams;
 
   return (
     <>
@@ -37,7 +41,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
           </div>
 
           <div className="max-w-2xl">
-            <ContactForm />
+            <ContactForm defaultService={toService(service)} />
           </div>
         </main>
       </Container>

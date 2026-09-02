@@ -6,6 +6,7 @@ import { ArchivedNotice } from "@/components/shared/archived-notice";
 import { JsonLd } from "@/components/shared/json-ld";
 import { MDX } from "@/components/shared/mdx";
 import { Container } from "@/components/ui/container";
+import { localeURL } from "@/site";
 
 export interface ReviewPageProps {
   params: Promise<{
@@ -59,8 +60,6 @@ export default async function ReviewPage({ params }: ReviewPageProps) {
     notFound();
   }
 
-  const siteURL = process.env.SITE_URL || "http://localhost:3000";
-  const prefix = locale === "en" ? "" : `/${locale}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -69,7 +68,7 @@ export default async function ReviewPage({ params }: ReviewPageProps) {
     dateModified: review.date,
     description: review.summary,
     image: review.featuredImage,
-    url: `${siteURL}${prefix}/reviews/${review.slug}`,
+    url: localeURL(locale, `/reviews/${review.slug}`),
   };
 
   return (

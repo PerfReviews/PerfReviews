@@ -21,18 +21,19 @@ const posts = defineCollection({
 
 const reviews = defineCollection({
   name: "reviews",
-  directory: "src/reviews/archived",
+  directory: "src/reviews",
   include: "**/*.mdx",
   schema: z.object({
     title: z.string(),
     summary: z.string(),
     date: z.string(),
     featuredImage: z.string(),
-    archived: z.boolean().optional().default(true),
   }),
-  transform: (post) => {
-    const [locale, slug] = post._meta.path.split("/");
-    return { ...post, locale, slug, archived: true };
+  transform: (review) => {
+    const parts = review._meta.path.split("/");
+    const isArchived = parts[0] === "archived";
+    const [locale, slug] = isArchived ? parts.slice(1) : parts;
+    return { ...review, locale, slug, archived: isArchived };
   },
 });
 

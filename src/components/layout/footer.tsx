@@ -1,10 +1,10 @@
 "use client";
 
 import { Twitter, Youtube } from "lucide-react";
-import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
 
+import { Link } from "@/components/shared/navigation";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/components/ui/core";

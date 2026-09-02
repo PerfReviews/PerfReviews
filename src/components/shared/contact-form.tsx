@@ -1,13 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { sendGAEvent } from "@next/third-parties/google";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
-export const ContactForm = () => {
+export interface ContactFormProps {
+  /** Preselects the service when the visitor arrives from a specific offer. */
+  defaultService?: string;
+}
+
+export const ContactForm = ({ defaultService }: ContactFormProps) => {
   const t = useTranslations("ContactPage");
   const [status, setStatus] = useState<FormStatus>("idle");
 
@@ -22,6 +28,7 @@ export const ContactForm = () => {
       company: formData.get("company"),
       service: formData.get("service"),
       message: formData.get("message"),
+      website: formData.get("website"),
     };
 
     try {
@@ -30,6 +37,12 @@ export const ContactForm = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
+
+      if (res.ok) {
+        sendGAEvent("event", "generate_lead", {
+          service: String(data.service || "unspecified"),
+        });
+      }
 
       setStatus(res.ok ? "success" : "error");
     } catch {
@@ -48,6 +61,12 @@ export const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Honeypot: kept out of the layout and out of the tab order, so only bots fill it */}
+      <div className="absolute left-[-9999px]" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-1.5">
           <label htmlFor="name" className="text-sm font-medium">
@@ -97,6 +116,7 @@ export const ContactForm = () => {
           <select
             id="service"
             name="service"
+            defaultValue={defaultService}
             className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             <option value="">{t("form.service.placeholder")}</option>
