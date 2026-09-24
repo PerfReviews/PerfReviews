@@ -44,6 +44,14 @@ const nextConfig = {
         source: "/profile-guide/:path*",
         destination: "https://perf-profile-field-guide.vercel.app/profile-guide/:path*",
       },
+      {
+        source: "/rendering-guide",
+        destination: "https://bytes-to-pixels.vercel.app/rendering-guide",
+      },
+      {
+        source: "/rendering-guide/:path*",
+        destination: "https://bytes-to-pixels.vercel.app/rendering-guide/:path*",
+      },
     ];
   },
   async redirects() {
