@@ -44,6 +44,14 @@ const nextConfig = {
         source: "/profile-guide/:path*",
         destination: "https://perf-profile-field-guide.vercel.app/profile-guide/:path*",
       },
+      {
+        source: "/har-trace-viewer",
+        destination: "https://har-trace-viewer-web.vercel.app/har-trace-viewer",
+      },
+      {
+        source: "/har-trace-viewer/:path*",
+        destination: "https://har-trace-viewer-web.vercel.app/har-trace-viewer/:path*",
+      },
     ];
   },
   async redirects() {
