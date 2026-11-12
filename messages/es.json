@@ -189,12 +189,20 @@
     },
     "title": "Herramientas de Web Performance",
     "description": "Herramientas y plataformas que utilizo en mi día a día para analizar, monitorizar y optimizar el rendimiento web de proyectos de cualquier escala.",
-    "primary": {
-      "title": "Herramientas principales de auditoría",
+    "own": {
+      "title": "Herramientas propias",
+      "description": "Herramientas que desarrollo y mantengo, nacidas de auditorías reales.",
       "snippets": {
         "title": "WebPerf Snippets",
         "description": "Colección de snippets para la consola del navegador con scripts listos para analizar Core Web Vitals, detectar imágenes sin optimizar, auditar recursos críticos y debugging de JavaScript, ideal para auditorías rápidas sin necesidad de herramientas adicionales."
       },
+      "har-trace-viewer": {
+        "title": "HAR Trace Viewer",
+        "description": "Convierte un archivo HAR y una traza de Chrome en un diagrama paso a paso de la carga de una página a través del navegador, el edge de la CDN, el origen y los terceros, con recomendaciones de caché y métricas. Funciona íntegramente en tu navegador, así que los archivos no salen de tu equipo."
+      }
+    },
+    "primary": {
+      "title": "Herramientas principales de auditoría",
       "devtools": {
         "title": "Chrome DevTools",
         "description": "Herramienta fundamental para análisis de performance en tiempo real con Performance panel para identificar cuellos de botella, Lighthouse para auditorías completas, Coverage para detectar código no utilizado y Network panel para optimizar recursos."

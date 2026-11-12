@@ -37,11 +37,20 @@ export async function generateMetadata({
   };
 }
 
-const tools = [
+const ownTools = [
   {
     key: "snippets",
-    url: "https://webperf-snippets.nucliweb.net",
+    href: "https://webperf-snippets.net/",
+    external: true,
   },
+  {
+    key: "har-trace-viewer",
+    href: "/har-trace-viewer",
+    external: false,
+  },
+];
+
+const tools = [
   {
     key: "devtools",
     url: "https://developer.chrome.com/docs/devtools",
@@ -81,6 +90,45 @@ export default async function ToolsPage({ params }: ToolsPageProps) {
               {t("description")}
             </p>
           </div>
+
+          <section className="space-y-4">
+            <div className="space-y-1">
+              <h2 className="text-xl md:text-2xl font-semibold">
+                {t("own.title")}
+              </h2>
+              <p className="text-muted-foreground">{t("own.description")}</p>
+            </div>
+
+            <ul className="grid md:grid-cols-2 gap-4">
+              {ownTools.map((tool) => (
+                <li key={tool.key}>
+                  <a
+                    href={tool.href}
+                    {...(tool.external && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
+                    className="group block h-full rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary"
+                  >
+                    <div className="flex items-start gap-2">
+                      <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
+                        {t(`own.${tool.key}.title`)}
+                      </h3>
+                      <Icon
+                        size="sm"
+                        className="text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1"
+                      >
+                        {tool.external ? <ExternalLink /> : <ArrowRight />}
+                      </Icon>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                      {t(`own.${tool.key}.description`)}
+                    </p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
 
           <section className="space-y-4">
             <h2 className="text-xl md:text-2xl font-semibold">

@@ -189,12 +189,20 @@
     },
     "title": "Web Performance Tools",
     "description": "Tools and platforms I use daily to analyze, monitor, and optimize web performance for projects of any scale.",
-    "primary": {
-      "title": "Primary audit tools",
+    "own": {
+      "title": "My own tools",
+      "description": "Tools I build and maintain, born out of real audits.",
       "snippets": {
         "title": "WebPerf Snippets",
         "description": "Collection of browser console snippets with ready-to-use scripts to analyze Core Web Vitals, detect unoptimized images, audit critical resources, and debug JavaScript, ideal for quick audits without additional tools."
       },
+      "har-trace-viewer": {
+        "title": "HAR Trace Viewer",
+        "description": "Turns a HAR file and a Chrome trace into a step-by-step diagram of a page load through the browser, CDN edge, origin, and third parties, with cache recommendations and metrics. Runs entirely in your browser, so the files never leave your machine."
+      }
+    },
+    "primary": {
+      "title": "Primary audit tools",
       "devtools": {
         "title": "Chrome DevTools",
         "description": "Essential tool for real-time performance analysis with Performance panel to identify bottlenecks, Lighthouse for complete audits, Coverage to detect unused code, and Network panel to optimize resources."
